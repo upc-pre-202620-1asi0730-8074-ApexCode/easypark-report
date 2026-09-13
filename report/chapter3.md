@@ -1,7 +1,7 @@
-﻿## Capítulo III: Requirements Specification
+﻿# Capítulo III: Requirements Specification
 
-### 3.1. User Stories
+## 3.1. User Stories
 
-### 3.2. Impact Mapping
+## 3.2. Impact Mapping
 
-### 3.3. Product Backlog
+## 3.3. Product Backlog

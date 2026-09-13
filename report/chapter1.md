@@ -1,4 +1,6 @@
-﻿## 1.1 Startup Profile
+﻿# Capítulo I: Introducción
+
+## 1.1 Startup Profile
 
 ### 1.1.1 Descripcion de la Startup
 

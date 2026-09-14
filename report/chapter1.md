@@ -65,4 +65,10 @@ La magnitud del problema depende de la demanda y del lugar. Se estima que los co
 ### Statement 4
 ### Statement 5
 #### 1.2.2.4. Lean UX Canvas
+
+Link del canva: [https://canva.link/tmpird6tydk3ppn](https://canva.link/tmpird6tydk3ppn)
+
+*Figura 1 (Lean UX Canvas)*
+![Lean UX Canvas](../assets/images/uxcanva.png)
+
 ### 1.3. Segmentos objetivo

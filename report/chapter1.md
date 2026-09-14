@@ -25,9 +25,9 @@ Buscamos conectar las necesidades de los conductores con las operaciones de los 
 |--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ![Sergi Photo](../assets/images/sergi-photo.jpg)       | **Evangelista Ygnacio, Sergio Joaquin (U202211295)**<br><br>Estudiante de Ingeniería de Software, organizado, responsable y orientado a resultados. Apasionado por el aprendizaje continuo y la actualización constante en nuevas tecnologías, metodologías y buenas prácticas. Me adapto con facilidad a diferentes entornos y busco aportar soluciones eficientes y proactivas. |
 | ![Stephano Photo](../assets/images/stephano-photo.png) | **Negrón Muñoz, Cayo Manuel Stefano (U202517482)**<br><br>Estudiante de Ingeniería de Software y Bachiller en Derecho. Interesado en complementar ambas áreas mediante el aprendizaje de lenguajes de programación y la resolución de problemas con herramientas digitales. Valoro la puntualidad, el compromiso y el trabajo en equipo.                                          |
-| ![Alexis Photo](../assets/images/alexis-photo.png)     | **Martin Farro, Alexis Sebastian**<br><br>Estudiante de Ingeniería de Software. Disciplinado y constante, cualidades desarrolladas a través de la natación que aplico para mantener el enfoque y superar obstáculos. Enfocado en resolver problemas de manera metódica y con atención al detalle.                                                                                 |
+| ![Alexis Photo](../assets/images/alexis-photo.png)     | **Martin Farro, Alexis Sebastian(U202515871)**<br><br>Estudiante de Ingeniería de Software. Disciplinado y constante, cualidades desarrolladas a través de la natación que aplico para mantener el enfoque y superar obstáculos. Enfocado en resolver problemas de manera metódica y con atención al detalle.                                                                               |
 | ![Alvar Photo](../assets/images/alvar-photo.png)       | **Córdova, Alvar Lucas (U202324461)**<br><br>Estudiante de Ingeniería de Software. Me considero una persona productiva y apasionada por el aprendizaje continuo de temas específicos a través de documentación y blogs técnicos. Actualmente especializándome en la tecnología .NET.                                                                                              |
-| ![Arturo Photo](../assets/images/arturo-photo.png)     | **Saravia Huaricancha, Arturo Axel**<br><br>Estudiante de Ingeniería de Software y desarrollador desde hace tres años. Apasionado por crear proyectos personales y brindar soluciones a comunidades que buscan mejorar u optimizar su administración.                                                                                                                             |
+| ![Arturo Photo](../assets/images/arturo-photo.png)     | **Saravia Huaricancha, Arturo Axel (U202312447)**<br><br>Estudiante de Ingeniería de Software y desarrollador desde hace tres años. Apasionado por crear proyectos personales y brindar soluciones a comunidades que buscan mejorar u optimizar su administración.                                                                                                                |
 
 
 ## 1.2 Solution Profile
@@ -75,7 +75,7 @@ Las soluciones existentes no ofrecen una manera sencilla de conectar las necesid
 #### 1.2.2.2. Lean UX Assumptions
 **Business Assumptions**
 - Creemos que existe una oportunidad de mercado desatendida entre estacionamientos pequeños y medianos que aún no cuentan con una solución digital especializada y accesible.
-- Creemos que EasyPark puede diferenciarse de otras soluciones al atender, dentro de una misma plataforma, tanto las necesidades de los administradores como las de los conductores.
+- Creemos que podemos diferenciarnos de otras soluciones al atender, dentro de una misma plataforma, tanto las necesidades de los administradores como las de los conductores.
 - Creemos que es técnicamente viable ofrecer una plataforma web que no requiera una inversión elevada en hardware o infraestructura especializada por parte de los estacionamientos, lo que facilitará su adopción.
 - Creemos que contamos con la capacidad de construir y mantener una plataforma confiable que integre en tiempo real la información de disponibilidad, ingresos y salidas.
 - Creemos que los administradores de estacionamientos estarán dispuestos a pagar una suscripción mensual o comisión por el uso de la plataforma, a cambio de mejorar el control de su operación.
@@ -84,11 +84,11 @@ Las soluciones existentes no ofrecen una manera sencilla de conectar las necesid
 - Creemos que es posible sostener un modelo de atención y soporte a administradores y conductores sin requerir una estructura operativa excesivamente grande en esta etapa inicial.
 
 **Business Outcome Assumptions**
-- Creemos que EasyPark logrará una alta tasa de retención de estacionamientos administradores una vez que adopten la plataforma, gracias al valor percibido en el control de su operación.
-- Creemos que EasyPark podrá adquirir nuevos estacionamientos administrados a un costo de adquisición razonable mediante recomendaciones y crecimiento orgánico dentro de las zonas donde ya opera.
-- Creemos que a medida que aumente el número de conductores activos en la plataforma, aumentará también el atractivo de EasyPark para nuevos estacionamientos administradores.
-- Creemos que EasyPark podrá generar ingresos recurrentes sostenibles a partir de las suscripciones o comisiones cobradas a los administradores de estacionamientos.
-- Creemos que un mayor uso de la plataforma por parte de los conductores (frecuencia de búsquedas y reservas) se traducirá en mayores ingresos para EasyPark a través de funcionalidades premium o comisiones.
+- Lograr una alta tasa de retención de estacionamientos administradores una vez que adopten la plataforma, gracias al valor percibido en el control de su operación.
+- Adquirir nuevos estacionamientos administrados a un costo de adquisición razonable mediante recomendaciones y crecimiento orgánico dentro de las zonas donde ya opera.
+- Aumentar el número de conductores activos en la plataforma, aumentará también el atractivo para nuevos estacionamientos administradores.
+- Generar ingresos recurrentes sostenibles a partir de las suscripciones o comisiones cobradas a los administradores de estacionamientos.
+- Generar un mayor uso de la plataforma por parte de los conductores (frecuencia de búsquedas y reservas) se traducirá en mayores ingresos a través de funcionalidades premium o comisiones.
 
 **User Assumptions**
 - Creemos que nuestros principales usuarios serán los administradores o personal operativo de estacionamientos y los conductores o usuarios finales.

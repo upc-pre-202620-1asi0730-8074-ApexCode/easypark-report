@@ -21,13 +21,13 @@ Buscamos conectar las necesidades de los conductores con las operaciones de los 
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
-| Foto | Descripción |
-| --- | --- |
-| ![Sergi Photo](../assets/images/sergi-photo.jpg) | **Evangelista Ygnacio, Sergio Joaquin (U202211295)**<br><br>Estudiante de Ingeniería de Software, organizado, responsable y orientado a resultados. Apasionado por el aprendizaje continuo y la actualización constante en nuevas tecnologías, metodologías y buenas prácticas. Me adapto con facilidad a diferentes entornos y busco aportar soluciones eficientes y proactivas. |
-| | |
-| | |
-| | |
-| | |
+| Foto                                                   | Descripción                                                                                                                                                                                                                                                                                                                                                                       |
+|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![Sergi Photo](../assets/images/sergi-photo.jpg)       | **Evangelista Ygnacio, Sergio Joaquin (U202211295)**<br><br>Estudiante de Ingeniería de Software, organizado, responsable y orientado a resultados. Apasionado por el aprendizaje continuo y la actualización constante en nuevas tecnologías, metodologías y buenas prácticas. Me adapto con facilidad a diferentes entornos y busco aportar soluciones eficientes y proactivas. |
+| ![Stephano Photo](../assets/images/stephano-photo.png) | **Negrón Muñoz, Cayo Manuel Stefano (U202517482)**<br><br>Estudiante de Ingeniería de Software y Bachiller en Derecho. Interesado en complementar ambas áreas mediante el aprendizaje de lenguajes de programación y la resolución de problemas con herramientas digitales. Valoro la puntualidad, el compromiso y el trabajo en equipo.                                          |
+| ![Alexis Photo](../assets/images/alexis-photo.png)     | **Martin Farro, Alexis Sebastian**<br><br>Estudiante de Ingeniería de Software. Disciplinado y constante, cualidades desarrolladas a través de la natación que aplico para mantener el enfoque y superar obstáculos. Enfocado en resolver problemas de manera metódica y con atención al detalle.                                                                                 |
+| ![Alvar Photo](../assets/images/alvar-photo.png)       | **Córdova, Alvar Lucas (U202324461)**<br><br>Estudiante de Ingeniería de Software. Me considero una persona productiva y apasionada por el aprendizaje continuo de temas específicos a través de documentación y blogs técnicos. Actualmente especializándome en la tecnología .NET.                                                                                              |
+| ![Arturo Photo](../assets/images/arturo-photo.png)     | **Saravia Huaricancha, Arturo Axel**<br><br>Estudiante de Ingeniería de Software y desarrollador desde hace tres años. Apasionado por crear proyectos personales y brindar soluciones a comunidades que buscan mejorar u optimizar su administración.                                                                                                                             |
 
 
 ## 1.2 Solution Profile
@@ -66,13 +66,96 @@ La magnitud del problema depende de la demanda y del lugar. Se estima que los co
 
 ### 1.2.2 Lean UX Process
 #### 1.2.2.1. Lean UX Problem Statements
+Actualmente, la gestión de estacionamientos pequeños y medianos depende en gran medida de procesos manuales, como cuadernos, tickets físicos y observación directa, para controlar el ingreso, salida y disponibilidad de vehículos. Esta situación genera problemas como la falta de información actualizada sobre la ocupación del establecimiento, errores en el registro y menor control de la operación.
+
+Las soluciones existentes no ofrecen una manera sencilla de conectar las necesidades de los conductores con la gestión diaria de estacionamientos pequeños y medianos. Como consecuencia, los conductores no logran conocer con anticipación la disponibilidad real de espacios, lo que los obliga a recorrer diferentes zonas hasta encontrar un lugar, generando pérdida de tiempo y congestión, especialmente durante periodos de alta demanda.
+
+¿Cómo podríamos reducir la desorganización y la falta de información actualizada sobre la disponibilidad de espacios en estacionamientos pequeños y medianos, de manera que administradores y conductores puedan cumplir sus objetivos y sentirse satisfechos con el servicio?
+
 #### 1.2.2.2. Lean UX Assumptions
+**Business Assumptions**
+- Creemos que existe una oportunidad de mercado desatendida entre estacionamientos pequeños y medianos que aún no cuentan con una solución digital especializada y accesible.
+- Creemos que EasyPark puede diferenciarse de otras soluciones al atender, dentro de una misma plataforma, tanto las necesidades de los administradores como las de los conductores.
+- Creemos que es técnicamente viable ofrecer una plataforma web que no requiera una inversión elevada en hardware o infraestructura especializada por parte de los estacionamientos, lo que facilitará su adopción.
+- Creemos que contamos con la capacidad de construir y mantener una plataforma confiable que integre en tiempo real la información de disponibilidad, ingresos y salidas.
+- Creemos que los administradores de estacionamientos estarán dispuestos a pagar una suscripción mensual o comisión por el uso de la plataforma, a cambio de mejorar el control de su operación.
+- Creemos que existe una oportunidad de generar ingresos adicionales mediante funcionalidades premium (por ejemplo, reportes avanzados, reservas anticipadas o mayor visibilidad para los estacionamientos dentro de la app).
+- Creemos que el equipo cuenta con las capacidades técnicas y de soporte necesarias para escalar la solución a más estacionamientos y ciudades conforme crezca la demanda.
+- Creemos que es posible sostener un modelo de atención y soporte a administradores y conductores sin requerir una estructura operativa excesivamente grande en esta etapa inicial.
+
+**Business Outcome Assumptions**
+- Creemos que EasyPark logrará una alta tasa de retención de estacionamientos administradores una vez que adopten la plataforma, gracias al valor percibido en el control de su operación.
+- Creemos que EasyPark podrá adquirir nuevos estacionamientos administrados a un costo de adquisición razonable mediante recomendaciones y crecimiento orgánico dentro de las zonas donde ya opera.
+- Creemos que a medida que aumente el número de conductores activos en la plataforma, aumentará también el atractivo de EasyPark para nuevos estacionamientos administradores.
+- Creemos que EasyPark podrá generar ingresos recurrentes sostenibles a partir de las suscripciones o comisiones cobradas a los administradores de estacionamientos.
+- Creemos que un mayor uso de la plataforma por parte de los conductores (frecuencia de búsquedas y reservas) se traducirá en mayores ingresos para EasyPark a través de funcionalidades premium o comisiones.
+
+**User Assumptions**
+- Creemos que nuestros principales usuarios serán los administradores o personal operativo de estacionamientos y los conductores o usuarios finales.
+- Creemos que los administradores necesitan controlar ingresos, salidas, ocupación y permanencia de vehículos durante su jornada de trabajo.
+- Creemos que algunos administradores actualmente dependen de cuadernos, tickets físicos u observación directa para realizar estas actividades.
+- Creemos que los conductores necesitan conocer la disponibilidad de espacios antes de dirigirse a un estacionamiento.
+- Creemos que los conductores consideran importantes factores como disponibilidad, precio, ubicación y seguridad al elegir dónde estacionar.
+- Creemos que ambos segmentos necesitan una plataforma web sencilla que pueda utilizarse desde diferentes dispositivos.
+
+**User Outcome and Benefit Assumptions**
+
+**Conductores (usuarios de estacionamientos)**
+- Creemos que los conductores quieren encontrar estacionamiento con mayor rapidez.
+- Creemos que quieren conocer la disponibilidad real antes de llegar al establecimiento.
+- Creemos que quieren consultar información clara sobre precios, ubicación y condiciones del estacionamiento.
+- Creemos que quieren reducir el estrés y la incertidumbre asociados con la búsqueda de un espacio.
+- Creemos que valorarán la posibilidad de asegurar un espacio antes de dirigirse al estacionamiento.
+
+**Administradores y el personal operativo de los estacionamientos**
+- Creemos que los administradores quieren conocer rápidamente cuántos espacios se encuentran disponibles y ocupados.
+- Creemos que quieren reducir los errores producidos por registros manuales de vehículos y horarios.
+- Creemos que quieren supervisar el estacionamiento sin depender permanentemente de su presencia física.
+- Creemos que quieren consultar información histórica y reportes que les ayuden a tomar mejores decisiones.
+- Creemos que quieren mantener un mayor control sobre el tiempo de permanencia y uso de los espacios.
+
+**Feature Assumptions**
+- Creemos que una visualización de espacios disponibles y ocupados permitirá conocer con mayor facilidad el estado actual del estacionamiento.
+- Creemos que un registro digital de ingresos y salidas reducirá la dependencia de cuadernos y tickets físicos.
+- Creemos que la gestión de zonas y espacios según el tipo de usuario permitirá organizar mejor el uso del estacionamiento.
+- Creemos que un sistema de alertas sobre tiempo de permanencia o situaciones irregulares ayudará a los administradores a detectar problemas con mayor rapidez.
+- Creemos que un panel de control para administradores facilitará la supervisión de la operación y la consulta de información relevante.
+- Creemos que la generación de reportes de ocupación y movimientos ayudará a los administradores a conocer mejor el funcionamiento de su negocio.
+- Creemos que una función de reserva de espacios permitirá a los conductores reducir la incertidumbre de encontrar estacionamiento al llegar a su destino.
+
 #### 1.2.2.3. Lean UX Hypothesis Statements
-### Statement 1
-### Statement 2
-### Statement 3
-### Statement 4
-### Statement 5
+
+**Hipótesis 1:**
+
+Creemos que lograremos reducir el tiempo dedicado a identificar espacios disponibles si los administradores o personal operativo pueden conocer rápidamente el estado de ocupación del estacionamiento mediante una visualización de espacios disponibles y ocupados.
+
+Lo sabremos porque veremos una reducción en el tiempo promedio que toma verificar la disponibilidad (medido antes/después de usar la plataforma) y un aumento en la frecuencia diaria de consulta del panel de visualización.
+
+**Hipótesis 2:**
+
+Creemos que lograremos disminuir los errores asociados al registro manual si los administradores o personal operativo pueden controlar de manera organizada los movimientos de los vehículos mediante un registro digital de ingresos y salidas.
+
+Lo sabremos porque veremos una reducción en el número de incidencias reportadas por registros incorrectos o inconsistentes (por ejemplo, vehículos sin salida registrada) en comparación con el método manual previo.
+
+**Hipótesis 3:**
+
+Creemos que lograremos mejorar la organización y aprovechamiento de los espacios si los administradores o personal operativo pueden distribuir adecuadamente los vehículos mediante una gestión de zonas y espacios según el tipo de usuario.
+
+Lo sabremos porque veremos un aumento en el porcentaje de ocupación efectiva del estacionamiento y una reducción en el tiempo que los vehículos permanecen sin asignación de zona.
+
+**Hipótesis 4:**
+
+Creemos que lograremos mejorar la supervisión de la operación si los administradores o personal operativo pueden consultar información relevante de manera centralizada mediante un panel de control para administradores.
+
+Lo sabremos porque veremos un aumento en la frecuencia de uso del panel de control por parte de los administradores y una reducción en el tiempo que dedican a supervisar la operación de forma presencial.
+
+**Hipótesis 5:**
+
+Creemos que lograremos reducir el tiempo y la incertidumbre asociados con la búsqueda de estacionamiento si los conductores y usuarios finales pueden asegurar previamente un espacio disponible mediante una función de reserva de espacios.
+
+Lo sabremos porque veremos un aumento en el número de reservas realizadas antes de llegar al establecimiento y una reducción en el tiempo promedio que los conductores reportan haber tardado en encontrar estacionamiento.
+
+
 #### 1.2.2.4. Lean UX Canvas
 
 Link del canva: [https://canva.link/tmpird6tydk3ppn](https://canva.link/tmpird6tydk3ppn)

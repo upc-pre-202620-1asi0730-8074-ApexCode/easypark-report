@@ -3,8 +3,10 @@
 ## 1.1 Startup Profile
 
 ### 1.1.1 Descripcion de la Startup
+ApexCode es una startup tecnológica enfocada en el desarrollo de soluciones digitales para la gestión inteligente de estacionamientos. Nos dedicamos a crear plataformas que conectan la operación de los establecimientos con información útil para optimizar el uso de los espacios y mejorar la experiencia de los conductores. En ApexCode, buscamos transformar procesos tradicionales en sistemas más eficientes, accesibles y escalables, integrando progresivamente tecnologías como el Internet de las Cosas (IoT) para construir soluciones capaces de adaptarse a las necesidades de la movilidad del futuro.
 
 ### 1.1.2 Perfiles de integrantes del equipo
+
 
 ## 1.2 Solution Profile
 

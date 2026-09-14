@@ -32,6 +32,8 @@ Buscamos conectar las necesidades de los conductores con las operaciones de los 
 
 ## 1.2 Solution Profile
 
+### 1.2.1 Antecedentes y problemática
+
 **Técnica 5W2H**
 
 **1. ¿Quiénes están involucrados o afectados? (Who?)**
@@ -62,7 +64,6 @@ La problemática se manifiesta mediante registros incompletos o difíciles de co
 
 La magnitud del problema depende de la demanda y del lugar. Se estima que los conductores pueden tardar entre 7 y 30 minutos buscando estacionamiento en zonas concurridas. Por lo que la búsqueda puede representar una pérdida considerable de tiempo, especialmente cuando la disponibilidad real de los espacios no se conoce con anticipación. Para los administradores, estimamos que cuentan con errores en registros, pagos o control de vehículos también pueden generar pérdidas económicas y dificultades para operar correctamente el negocio.
 
-### 1.2.1 Antecedentes y problemática
 ### 1.2.2 Lean UX Process
 #### 1.2.2.1. Lean UX Problem Statements
 #### 1.2.2.2. Lean UX Assumptions

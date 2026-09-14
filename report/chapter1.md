@@ -21,6 +21,14 @@ Buscamos conectar las necesidades de los conductores con las operaciones de los 
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
+| Foto | Descripción |
+| --- | --- |
+| ![Sergi Photo](../assets/images/sergi-photo.jpg) | **Evangelista Ygnacio, Sergio Joaquin (U202211295)**<br><br>Estudiante de Ingeniería de Software, organizado, responsable y orientado a resultados. Apasionado por el aprendizaje continuo y la actualización constante en nuevas tecnologías, metodologías y buenas prácticas. Me adapto con facilidad a diferentes entornos y busco aportar soluciones eficientes y proactivas. |
+| | |
+| | |
+| | |
+| | |
+
 
 ## 1.2 Solution Profile
 
@@ -28,7 +36,7 @@ Buscamos conectar las necesidades de los conductores con las operaciones de los 
 
 **1. ¿Quiénes están involucrados o afectados? (Who?)**
 
-La problemática afecta principalmente a dos grupos. Por un lado, se encuentran los Conductores (usuarios de estacionamientos), quienes necesitan encontrar un espacio disponible de manera rápida, conocer las condiciones del servicio y evitar perder tiempo buscando un lugar. Y por otro lado, están los administradores y el personal operativo de los estacionamientos, responsables de controlar los ingresos y salidas, conocer la disponibilidad de espacios, gestionar los pagos y mantener organizada la operación. De manera indirecta, también se ven afectadas las empresas o instituciones propietarias de estos establecimientos, debido a que una mala gestión puede perjudicar la experiencia de sus clientes.
+La problemática afecta principalmente a dos grupos. Por un lado, se encuentran los **Conductores (usuarios de estacionamientos)**, quienes necesitan encontrar un espacio disponible de manera rápida, conocer las condiciones del servicio y evitar perder tiempo buscando un lugar. Y por otro lado, están los **Administradores y el personal operativo de los estacionamientos**, responsables de controlar los ingresos y salidas, conocer la disponibilidad de espacios, gestionar los pagos y mantener organizada la operación. De manera indirecta, también se ven afectadas las empresas o instituciones propietarias de estos establecimientos, debido a que una mala gestión puede perjudicar la experiencia de sus clientes.
 
 **2. ¿Qué ocurre o qué problema se presenta? (What?)**
 
@@ -72,3 +80,23 @@ Link del canva: [https://canva.link/tmpird6tydk3ppn](https://canva.link/tmpird6t
 ![Lean UX Canvas](../assets/images/uxcanva.png)
 
 ### 1.3. Segmentos objetivo
+
+**Primer Segmento Objetivo - Conductores (usuarios de estacionamientos)**
+
+- **Demográfico:** Hombres y mujeres comprendidos entre los 18 y 65 años, de ocupaciones variadas que posean y conduzcan un vehículo.
+
+- **Psicográfico:** Valoren altamente su tiempo, la comodidad y puntualidad. Están orientados a la reducción del estrés en su rutina diaria y buscan experiencias fluidas que les eviten frustraciones y reduzcan su ansiedad antes de llegar a su destino como trabajo, citas, compras u ocio. Buscan seguridad para sus vehículos y predictibilidad.
+
+- **Conductual:** Tienen un dominio elemental en el uso de smartphones y herramientas de navegación (como Waze o Google Maps). Frecuencia de uso recurrente, acuden a la plataforma cada vez que visitan distintos establecimientos. Buscan localizar con rapidez un espacio libre, disminuir el tiempo dedicado a la búsqueda y evitar quedar atrapados en el tráfico. Están dispuestos a adoptar nuevas aplicaciones si estas ofrecen un beneficio inmediato y claro.
+
+- **Geográfico:** Residentes en Perú. Se desenvuelven principalmente en zonas urbanas de alta densidad poblacional y vehicular, centros comerciales, zonas empresariales y casos urbanos con conectividad plena a internet móvil.
+
+**Segundo Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
+
+- **Demográfico:** Representados por personal de seguridad, supervisores en campo y administradores de instalaciones. Hombres y mujeres de entre 18 y 60 años, con nivel educativo técnico o superior (dependiendo del cargo). Son los responsables directos de la operación, la seguridad y la rentabilidad del recinto.
+
+- **Psicográfico:** Orientados al orden, la seguridad, la eficiencia operativa y el servicio al cliente. Valoran tener el control total de la capacidad del recinto y reducir las quejas de los usuarios. Buscan herramientas tecnológicas que minimicen el error humano, faciliten su trabajo diario y mejoren la imagen del establecimiento frente a los conductores.
+
+- **Conductual:** Poseen un manejo básico o intermedio de herramientas digitales para la gestión de estacionamientos y el control de accesos. Recurren a la plataforma de manera constante a lo largo de su jornada laboral para registrar ingresos, monitorear la disponibilidad en tiempo real y administrar los espacios disponibles. Prefieren interfaces intuitivas que les permitan organizar mejor el recinto y controlar el flujo vehicular sin ralentizar la entrada y salida.
+
+- **Geográfico:** Operan en zonas urbanas e infraestructuras comerciales o empresariales del Perú (como Lima Metropolitana y principales provincias). Trabajan en recintos que cuentan con puntos de control de acceso, garitas y una conexión a internet estable o redes locales.

@@ -2,8 +2,6 @@
 
 ## 3.1. User Stories
 
-
-
 ### US01 - Registrar datos personales
 
 | Campo | Detalle |
@@ -665,9 +663,6 @@
 | **Criterio de aceptación 2** | Dado que no confirmo la actualización, cuando otros usuarios consultan la zona, entonces se mantiene la información vigente anterior. |
 
 
-
-
-
 ## 3.2. Impact Mapping
 
 (oparafrasear)
@@ -683,9 +678,83 @@ El Impact Mapping es una herramienta de planificación estrategica que nos permi
 ![Impact Map Administradores](../assets/images/Impact map Administradores.png)
 
 
-
-
-
 ## 3.3. Product Backlog
+Link del Trello : https://trello.com/b/KxGrDhN2/sprintseasypark
+
+![Product Backlog](../assets/images/ProductBacklog.png)
+
+| # | ID | Título | Descripción | SP |
+|---:|---|---|---|---:|
+| 1 | US-03 | Consultar disponibilidad de espacios | Como conductor, deseo conocer la disponibilidad de espacios para decidir si dirigirme al estacionamiento. | 3 |
+| 2 | US-01 | Buscar estacionamientos por ubicación | Como conductor, deseo buscar estacionamientos según una ubicación para encontrar alternativas cercanas. | 5 |
+| 3 | US-11 | Reservar espacio | Como conductor, deseo reservar un espacio para tener mayor certeza de encontrar estacionamiento al llegar. | 8 |
+| 4 | US-19 | Registrar ingreso de vehículo | Como administrador, deseo registrar el ingreso de un vehículo para mantener actualizada la ocupación. | 5 |
+| 5 | US-20 | Registrar salida de vehículo | Como administrador, deseo registrar la salida de un vehículo para liberar el espacio utilizado. | 5 |
+| 6 | US-21 | Consultar ocupación actual | Como administrador, deseo conocer la ocupación actual para saber cuántos espacios se encuentran disponibles. | 3 |
+| 7 | US-04 | Consultar tarifas | Como conductor, deseo conocer las tarifas para evaluar el costo antes de utilizar un estacionamiento. | 2 |
+| 8 | US-05 | Consultar ubicación | Como conductor, deseo conocer la ubicación del estacionamiento para evaluar su cercanía a mi destino. | 3 |
+| 9 | US-41 | Conocer EasyPark | Como visitante, deseo conocer qué es EasyPark para comprender el propósito de la solución. | 2 |
+| 10 | US-42 | Conocer beneficios para conductores | Como visitante conductor, deseo conocer los beneficios de EasyPark para evaluar si satisface mis necesidades. | 2 |
+| 11 | US-43 | Conocer beneficios para administradores | Como visitante administrador, deseo conocer los beneficios de EasyPark para evaluar su utilidad. | 2 |
+| 12 | US-50 | Acceder a la aplicación web | Como visitante, deseo acceder a la aplicación EasyPark para comenzar a utilizar el servicio. | 2 |
+| 13 | TS-03 | Servicio de disponibilidad | Como Developer, deseo consultar disponibilidad mediante el RESTful API para proporcionar información actualizada. | 5 |
+| 14 | TS-05 | Servicio de ingreso de vehículos | Como Developer, deseo registrar ingresos mediante el RESTful API para mantener actualizada la operación. | 5 |
+| 15 | TS-06 | Servicio de salida de vehículos | Como Developer, deseo registrar salidas mediante el RESTful API para liberar los espacios utilizados. | 5 |
+| 16 | TS-08 | Servicio de creación de reservas | Como Developer, deseo crear reservas mediante el RESTful API para permitir que los clientes aseguren espacios. | 8 |
+| 17 | US-17 | Validar disponibilidad antes de reservar | Como conductor, deseo verificar la disponibilidad antes de confirmar una reserva para evitar inconsistencias. | 5 |
+| 18 | US-12 | Consultar reserva activa | Como conductor, deseo consultar mi reserva para comprobar que continúa vigente. | 3 |
+| 19 | US-14 | Recibir confirmación de reserva | Como conductor, deseo recibir confirmación de mi reserva para saber que fue registrada correctamente. | 3 |
+| 20 | US-13 | Cancelar reserva | Como conductor, deseo cancelar una reserva que ya no utilizaré para liberar el espacio. | 5 |
+| 21 | TS-09 | Servicio de consulta de reservas | Como Developer, deseo consultar reservas mediante el RESTful API para proporcionar su información a las aplicaciones cliente. | 3 |
+| 22 | TS-10 | Servicio de cancelación de reservas | Como Developer, deseo cancelar reservas mediante el RESTful API para liberar espacios. | 5 |
+| 23 | US-29 | Recibir alerta por permanencia | Como administrador, deseo conocer cuando un vehículo excede el tiempo establecido para detectar situaciones irregulares. | 5 |
+| 24 | US-35 | Supervisar estacionamiento remotamente | Como administrador, deseo consultar el estado del estacionamiento sin estar presente físicamente. | 5 |
+| 25 | US-36 | Notificación de tiempo restante | Como conductor, deseo conocer el tiempo restante de mi estacionamiento para evitar exceder el periodo previsto. | 3 |
+| 26 | US-37 | Notificación de vencimiento | Como conductor, deseo recibir un aviso cuando finalice mi periodo de estacionamiento. | 3 |
+| 27 | US-32 | Consultar reporte de ocupación | Como administrador, deseo consultar reportes de ocupación para analizar el uso de los espacios. | 5 |
+| 28 | US-33 | Consultar reporte de movimientos | Como administrador, deseo consultar reportes de ingresos y salidas para analizar el flujo de vehículos. | 5 |
+| 29 | US-34 | Consultar tiempos de permanencia | Como administrador, deseo consultar los tiempos de permanencia para conocer el uso del estacionamiento. | 3 |
+| 30 | TS-13 | Servicio de alertas | Como Developer, deseo consultar y actualizar alertas mediante el RESTful API para soportar la supervisión. | 5 |
+| 31 | TS-14 | Servicio de reportes de ocupación | Como Developer, deseo obtener información de ocupación mediante el RESTful API para generar reportes. | 5 |
+| 32 | TS-15 | Servicio de reportes de movimientos | Como Developer, deseo obtener movimientos mediante el RESTful API para analizar ingresos y salidas. | 5 |
+| 33 | US-22 | Consultar vehículo estacionado | Como administrador, deseo consultar un vehículo para conocer su ingreso y permanencia. | 3 |
+| 34 | US-23 | Registrar espacios | Como administrador, deseo registrar los espacios de mi estacionamiento para controlar su capacidad. | 3 |
+| 35 | US-24 | Actualizar estado de espacio | Como administrador, deseo actualizar el estado de un espacio para reflejar su condición actual. | 3 |
+| 36 | US-25 | Gestionar zonas | Como administrador, deseo organizar los espacios por zonas para distribuir mejor los vehículos. | 5 |
+| 37 | US-26 | Clasificar espacios según tipo de usuario | Como administrador, deseo clasificar espacios según el tipo de usuario para mantener organizada su distribución. | 5 |
+| 38 | US-27 | Reasignar vehículo | Como administrador, deseo reasignar un vehículo a otro espacio para resolver cambios operativos. | 5 |
+| 39 | US-28 | Consultar historial de movimientos | Como administrador, deseo consultar ingresos y salidas anteriores para disponer de un registro confiable. | 3 |
+| 40 | TS-07 | Servicio de ocupación | Como Developer, deseo consultar la ocupación mediante el RESTful API para obtener el estado actual del estacionamiento. | 3 |
+| 41 | TS-11 | Servicio de gestión de espacios | Como Developer, deseo gestionar espacios mediante el RESTful API para administrar la capacidad. | 5 |
+| 42 | TS-12 | Servicio de gestión de zonas | Como Developer, deseo gestionar zonas mediante el RESTful API para soportar la organización de espacios. | 5 |
+| 43 | US-02 | Consultar estacionamientos disponibles | Como conductor, deseo consultar estacionamientos disponibles para reducir el tiempo de búsqueda. | 3 |
+| 44 | US-06 | Consultar características del estacionamiento | Como conductor, deseo conocer las características del estacionamiento para elegir una alternativa adecuada. | 2 |
+| 45 | US-07 | Filtrar por disponibilidad | Como conductor, deseo filtrar estacionamientos con espacios disponibles para evitar alternativas ocupadas. | 3 |
+| 46 | US-08 | Filtrar por tarifa | Como conductor, deseo filtrar estacionamientos según su tarifa para ajustarme a mi presupuesto. | 3 |
+| 47 | US-09 | Ordenar por cercanía | Como conductor, deseo ordenar estacionamientos según su cercanía para encontrar los más próximos. | 5 |
+| 48 | US-10 | Comparar estacionamientos | Como conductor, deseo comparar estacionamientos para seleccionar la alternativa más conveniente. | 5 |
+| 49 | TS-01 | Servicio de búsqueda de estacionamientos | Como Developer, deseo obtener estacionamientos mediante el RESTful API para implementar búsquedas. | 5 |
+| 50 | TS-02 | Servicio de detalle de estacionamiento | Como Developer, deseo consultar los datos de un estacionamiento mediante el RESTful API. | 3 |
+| 51 | TS-04 | Servicio de tarifas | Como Developer, deseo consultar tarifas mediante el RESTful API para proporcionar información económica. | 3 |
+| 52 | US-15 | Consultar historial de reservas | Como conductor, deseo consultar mis reservas anteriores para revisar los estacionamientos utilizados. | 3 |
+| 53 | US-16 | Consultar estado de reserva | Como conductor, deseo conocer el estado de mi reserva para saber si continúa activa. | 2 |
+| 54 | US-18 | Consultar datos de la reserva | Como conductor, deseo consultar los datos de mi reserva para conocer las condiciones asociadas. | 2 |
+| 55 | US-30 | Consultar alertas activas | Como administrador, deseo consultar las alertas activas para identificar situaciones que requieren atención. | 3 |
+| 56 | US-31 | Resolver alerta | Como administrador, deseo marcar una alerta como resuelta para mantener actualizado el seguimiento. | 3 |
+| 57 | US-38 | Confirmación de ingreso | Como conductor, deseo recibir confirmación de mi ingreso para saber que fue registrado correctamente. | 2 |
+| 58 | US-39 | Confirmación de salida | Como conductor, deseo recibir confirmación de mi salida para saber que mi permanencia finalizó correctamente. | 2 |
+| 59 | US-40 | Recordatorio de reserva | Como conductor, deseo recibir un recordatorio de una reserva próxima para no olvidarla. | 3 |
+| 60 | TS-16 | Servicio de notificaciones | Como Developer, deseo obtener eventos de notificación mediante el RESTful API para informar a los conductores. | 5 |
+| 61 | US-44 | Conocer funcionalidades principales | Como visitante, deseo conocer las funcionalidades principales para comprender cómo funciona EasyPark. | 2 |
+| 62 | US-45 | Conocer funcionamiento de reservas | Como visitante conductor, deseo conocer cómo funcionan las reservas antes de utilizar EasyPark. | 2 |
+| 63 | US-46 | Conocer gestión digital para administradores | Como visitante administrador, deseo conocer cómo EasyPark digitaliza la operación. | 2 |
+| 64 | US-47 | Conocer integración progresiva con IoT | Como visitante administrador, deseo conocer la posibilidad de incorporar IoT progresivamente. | 2 |
+| 65 | US-48 | Consultar preguntas frecuentes | Como visitante, deseo consultar respuestas a preguntas frecuentes para resolver dudas. | 2 |
+| 66 | US-49 | Contactar con EasyPark | Como visitante, deseo conocer los medios de contacto para comunicarme con EasyPark. | 2 |
+
+
+
+
+
 
 

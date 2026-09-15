@@ -39,20 +39,20 @@ Proyecto: **EasyPark**
       <td style="padding: 8px; border: 1px solid #666; text-align: center;">Evangelista Ygnacio, Sergio Joaquin</td>
     </tr>
     <tr>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202111461</td>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">Carbajal Santivañez, Sebastian Aaron</td>
+      <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202517482</td>
+      <td style="padding: 8px; border: 1px solid #666; text-align: center;">Negrón Muñoz, Cayo Manuel Stefano</td>
     </tr>
     <tr>
       <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202515871</td>
       <td style="padding: 8px; border: 1px solid #666; text-align: center;">Martin Farro, Alexis Sebastian</td>
     </tr>
     <tr>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202322849</td>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">Viza Quispe, Marlon Packard</td>
+      <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202324461</td>
+      <td style="padding: 8px; border: 1px solid #666; text-align: center;">Córdova, Alvar Lucas</td>
     </tr>
     <tr>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202411378</td>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">Osorio Ramirez, Eduardo Jesus</td>
+      <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202312447</td>
+      <td style="padding: 8px; border: 1px solid #666; text-align: center;">Saravia Huaricancha, Arturo Axel</td>
     </tr>
   </tbody>
 </table>
@@ -75,7 +75,7 @@ Proyecto: **EasyPark**
 | 0.1.1 | 13/9/26 | @Sergi9017 | docs: añadir descripción del startup |
 | 0.1.2 | 13/9/26 | @Sergi9017 | docs: añadir todos los puntos de solution profile |
 | 0.1.3 | 13/9/26 | @Sergi9017 | docs: añadir segmentos objetivo |
-| 0.1.4 | 13/9/26 |            | docs: añadir todos los puntos de competidores |
+| 0.1.4 | 14/9/26 | @axismf    | docs: añadir todos los puntos de competidores |
 | 0.1.5 | 13/9/26 |            | docs: añadir todos los puntos de entrevistas |
 | 0.1.6 | 13/9/26 |            | docs: añadir las imagenes del needfinding |
 | 0.1.7 | 13/9/26 |            | docs: añadir todos los puntos del capitulo 3 |

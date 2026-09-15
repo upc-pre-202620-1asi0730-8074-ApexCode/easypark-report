@@ -670,4 +670,22 @@
 
 ## 3.2. Impact Mapping
 
+(oparafrasear)
+El Impact Mapping es una herramienta de planificación estrategica que nos permite conectar los objetivos de negocio de FruitLogix con los comportamientos de cada segmento objetivo.
+
+#### Impact Map - Segmento 1: Conductores (usuarios de estacionamientos)
+
+
+![Impact Map Conductores](../assets/images/Impact map Conductores.png)
+
+#### Impact Map - Segmento 2: Administradores y el personal operativo de los estacionamientos
+
+![Impact Map Administradores](../assets/images/Impact map Administradores.png)
+
+
+
+
+
 ## 3.3. Product Backlog
+
+

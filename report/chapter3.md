@@ -681,8 +681,7 @@ El Impact Mapping es una técnica de planificación estratégica que permite rel
 ## 3.3. Product Backlog
 Link del Trello : https://trello.com/b/KxGrDhN2/sprintseasypark
 
-<img src="../assets/images/ProductBacklog.png" >
-
+<img src="../assets/images/ProductBacklog.PNG" >
 
 | # | ID | Título | Descripción | SP |
 |---:|---|---|---|---:|

@@ -264,7 +264,50 @@ En conjunto, estas estrategias permiten que EasyPark compita mediante una propue
 
 ### 2.2.1. Diseño de entrevistas
 
+Para cada segmento se definieron preguntas principales (orientadas a entender comportamientos, problemas y contexto de uso) y preguntas complementarias, agrupadas en dos bloques: datos demográficos (género, edad, distrito de residencia, estado civil, familia, ocupación) y otras características necesarias para construir lo necesario para el NeedFinding.
+
+**Primer Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
+
+Preguntas principales
+
+1.	¿Cómo gestiona actualmente la disponibilidad de espacios en su estacionamiento?
+2.	¿Qué herramientas o sistemas utiliza hoy para registrar el ingreso y salida de vehículos?
+3.	¿Cómo diferencia entre distintos tipos de usuarios (clientes, abonados, personal, delivery)?
+4.	¿Qué problemas enfrenta con mayor frecuencia en horas de alta demanda?
+5.	¿Cómo se entera de que un espacio quedó libre o fue ocupado?
+6.	¿Qué situaciones ocurren cuando un vehículo permanece más tiempo del pagado o autorizado?
+7.	¿Cómo maneja actualmente el cobro y la conciliación de pagos al final del día?
+8.	¿Qué tan fácil es para usted saber, en un momento dado, cuántos espacios libres tiene?
+9.	¿Ha utilizado alguna aplicación o sistema digital para la gestión de su estacionamiento? ¿Cuál fue su experiencia?
+10.	¿Qué limitaciones encuentra en las herramientas que usa actualmente?
+11.	¿Qué tipo de reportes o estadísticas le gustaría tener sobre el uso de su estacionamiento?
+12.	¿Cómo cree que una aplicación que muestre disponibilidad en tiempo real afectaría su operación diaria?
+13.	¿Qué nivel de inversión estaría dispuesto a asumir para digitalizar la gestión de su estacionamiento?
+14.	¿Qué tan importante es para usted poder supervisar el estacionamiento de forma remota?
+15.	¿Qué le generaría más confianza para adoptar una nueva solución tecnológica como EasyPark?
+
+**Segundo Segmento Objetivo - Conductores (usuarios de estacionamientos)**
+
+Preguntas principales
+
+1.	¿Cómo describiría su experiencia habitual al buscar estacionamiento en zonas concurridas?
+2.	¿En qué momentos o lugares le resulta más difícil encontrar un espacio disponible?
+3.	¿Cuánto tiempo suele tardar, en promedio, en encontrar dónde estacionar?
+4.	¿Qué hace cuando llega a un lugar y no encuentra espacio disponible?
+5.	¿Ha usado alguna app para buscar, reservar o pagar estacionamiento? ¿Cuál fue su experiencia?
+6.	¿Qué información necesita saber antes de decidir a qué estacionamiento dirigirse (precio, distancia, disponibilidad)?
+7.	¿Cómo prefiere pagar por el estacionamiento: efectivo, tarjeta, app, otro?
+8.	¿Qué tan importante es para usted poder reservar un espacio con anticipación?
+9.	¿Ha tenido problemas relacionados con cobros incorrectos o falta de claridad en las tarifas?
+10.	¿Qué le frustra más del proceso de estacionar en general?
+11.	¿Qué valoraría más en una app de estacionamiento: rapidez, precio, seguridad, comodidad?
+12.	¿Le preocupa la seguridad de su vehículo mientras está estacionado? ¿Por qué?
+13.	¿Qué tan dispuesto estaría a pagar un poco más por la certeza de encontrar espacio disponible?
+14.	¿Qué tipo de notificaciones le gustaría recibir mientras usa un estacionamiento (tiempo restante, salida, etc.)?
+
 ### 2.2.2. Registro de entrevistas
+
+
 
 ### 2.2.3. Análisis de entrevistas
 

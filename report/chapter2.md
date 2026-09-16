@@ -307,10 +307,67 @@ Preguntas principales
 
 ### 2.2.2. Registro de entrevistas
 
+**Primer Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
+
+| Campo | ![Entrevista1](../assets/images/EntrevistaAdmin1.PNG) <br/> Entrevista 1 | ![Entrevista2](../assets/images/EntrevistaAdmin2.PNG) <br/> Entrevista 2 | ![Entrevista3](../assets/images/EntrevistaAdmin3.PNG) <br/> Entrevista 3 | ![Entrevista4](../assets/images/EntrevistaAdmin4.PNG) <br/> Entrevista 4 |
+|---|--------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------|
+| **Nombre** | Uziel Procopio                                                           | Diego Cuartas                                                            | Braulio                                                                 | Arístides                                                              |
+| **Edad** | 28 años                                                                  | 25 años                                                                  | 42 años                                                                 | 61 años                                                                |
+| **Rol / Tiempo** | Administrador (7-8 meses)                                                | Administrador (9 meses)                                                  | Administrador y dueño (5 años)                                          | Administrador (10 años)                                                |
+| **Ubicación** | Lima                                                                     | Centro de Lima                                                           | Lima                                                                    | Lima                                                                   |
+
+Resumen – Uziel Procopio
+
+La entrevista a Uziel Procopio, administrador de 28 años con 7-8 meses en el rubro, evidenció que su mayor dolor es la falta de visibilidad de espacios y control operativo, gestionado enteramente con una libreta física. Esta dependencia provoca pérdidas irreparables de datos ante extravíos y desorden en horas punta, derivando en autos mal estacionados. Enfrenta serios problemas para detectar vehículos abandonados o con sobretiempo al no contar con alertas automáticas. El cobro se realiza calculando manualmente las horas sobre el cuaderno sin emitir comprobantes digitales. Aunque intentó usar una app anteriormente, la complejidad de la interfaz le dejó una mala experiencia y desconfianza hacia soluciones tecnológicas.
+
+Resumen – Diego Cuartas
+
+La entrevista a Diego Cuartas, administrador de 25 años con 9 meses de experiencia en el centro de Lima, reveló una gestión basada en la observación directa y tickets de papel. Al operar "a ojo", sufre interrupciones operativas por fallas físicas como el desabastecimiento de papel de ticket o la pérdida de señal al procesar pagos digitales. Los excedentes de tiempo los maneja agregando tarifas adicionales al cálculo del reloj, expuesto a errores. Su mayor frustración son las congestiones en horas de alta demanda y los incidentes que afectan la reputación del negocio. Valora la supervisión remota y estadísticas de afluencia, mostrando alta disposición a invertir en digitalización si le facilita el trabajo.
+
+Resumen – Braulio
+
+La entrevista a Braulio, administrador y propietario de 42 años con 5 años de experiencia, reflejó una dependencia absoluta de su presencia física para el correcto funcionamiento del local. Su control manual en cuadernos genera descuadres de caja y cobros no realizados cuando personal de apoyo lo cubre. En alta demanda sufre por sobreaforo al no tener un conteo real de espacios, obligándolo a reacomodar autos o pedir el retiro anticipado de clientes. La falta de registros digitales dificulta responder ante reclamos por tiempo o llevar la contabilidad del negocio. Descartó aplicaciones del mercado por percibirlas diseñadas para empresas más grandes.
+
+Resumen – Arístides
+
+La entrevista a Arístides, administrador de 61 años con 10 años de trayectoria, expuso un modelo tradicional basado en tickets manuales y registro tipo Kardex, apoyado solo por cámaras para monitoreo visual. En horas punta, el llenado manual de tickets genera cuellos de botella que se agravan al dar vuelto en efectivo con billetes de alta denominación. Su principal limitación es la ausencia de reportes y estadísticas para analizar variaciones de demanda por turnos o estaciones. Aunque reconoce que su negocio ha quedado desfasado tecnológicamente, está dispuesto a invertir en modernización y control en tiempo real si recibe la capacitación adecuada.
+
+**Segundo Segmento Objetivo - Conductores (usuarios de estacionamientos)**
+
+| Campo | ![Entrevista1](../assets/images/EntrevistaConductor1.PNG) <br/> Entrevista 1 | ![Entrevista2](../assets/images/EntrevistaConductor2.PNG) <br/> Entrevista 2 | ![Entrevista3](../assets/images/EntrevistaConductor3.PNG) <br/> Entrevista 3 | ![Entrevista4](../assets/images/EntrevistaConductor4.PNG) <br/> Entrevista 4 |
+|---|-----------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| **Nombre** | Esteban Chavez                                                              | Nicolay Soto                                                                 | Joaquín                                                                      | Kevin Romero                                                                 |
+| **Edad** | 20 años                                                                     | 22 años                                                                      | 22 años                                                                      | 31 años                                                                      |
+| **Ocupación** | Estudiante de Ingeniería de Software                                        | Estudiante                                                                   | Estudiante de Medicina (USMP)                                                | Analista de ciberseguridad                                                   |
+| **Principal problema** | Pérdida de tiempo buscando estacionamiento                                  | Estrés y dificultad para encontrar espacio                                   | Incertidumbre sobre disponibilidad real                                      | Pérdida de tiempo y combustible                                              |
+| **Tiempo buscando estacionamiento** | 20-30 min                                                                   | 7-10 min                                                                     | Da vueltas hasta encontrar cupo                                              | 10-15 min en hora punta; 5-10 min en baja afluencia                          |
+| **Problema con disponibilidad** | Apps muestran espacios que ya están ocupados                                | Dificultad para encontrar espacios                                           | Apps sin disponibilidad en tiempo real                                       | Debe buscar piso por piso                                                    |
+| **Información que necesita** | Disponibilidad, precio, distancia, permanencia y seguridad                  | Precio y seguridad                                                           | Disponibilidad, precio y seguridad                                           | Distancia, precio y seguridad                                                |
+| **Interés en reservar** | Alto                                                                        | Alto                                                                         | Alto                                                                         | Alto                                                                         |
+| **Disposición a pagar más** | Sí                                                                          | Sí                                                                           | Sí, 20%-30% más                                                              | Sí                                                                           |
+| **Problemas con tarifas** | Cobros adicionales poco claros                                              | Aumento de tarifa por exceder tiempo                                         | Montos distintos a los anunciados                                            | Cobros indebidos frente a precios promocionados                              |
+| **Preocupación por seguridad** | Sí                                                                          | Sí                                                                           | Sí, especialmente por falta de cámaras                                       | Sí, evita dejar el vehículo en la calle                                      |
+| **Notificaciones deseadas** | Tiempo restante, vencimiento, renovación y pago                             | Contador de tiempo restante                                                  | Tiempo restante y vencimiento                                                | Disponibilidad, promociones y servicios adicionales                          |
+| **Funcionalidad más valorada** | Disponibilidad real y reserva anticipada                                    | Rapidez y precio                                                             | Garantía de disponibilidad                                                   | Ubicación exacta del espacio disponible                                      |
+
+Resumen – Esteban Chavez
+
+La entrevista a Esteban Chavez, estudiante de 20 años que conduce hace 4 años, mostró que su principal problema es la pérdida de 20 a 30 minutos buscando aparcamiento en zonas comerciales. Expresa frustración por aplicaciones que muestran datos desactualizados de disponibilidad, viéndose obligado a desviarse a cocheras lejanas. Prioriza conocer disponibilidad real, tarifas, seguridad y tiempo antes de salir, manifestando alta disposición a pagar un costo extra por reservar con anticipación. Prefiere métodos de pago digitales, exige transparencia total de tarifas para evitar sobrecostos y valora recibir alertas del tiempo restante y confirmaciones de pago.
+
+Resumen – Nicolay Soto
+
+La entrevista a Nicolay Soto, estudiante de 22 años con 3 años conduciendo, calificó como "desesperante" la búsqueda de estacionamiento, demorando de 7 a 10 minutos y experimentando estrés que afecta el tránsito. Tras intentar usar Waze sin éxito para este fin, respalda la reserva anticipada pagando un adicional con tal de asegurar un sitio. Sus factores clave de decisión son el precio, la velocidad del servicio y la seguridad del vehículo ante daños. Muestra molestia por autos mal estacionados que reducen cupos y por aumentos de tarifa derivados del tráfico, valorando notificaciones con contadores para evitar cobros extra.
+
+Resumen – Joaquín
+
+La entrevista a Joaquín, estudiante de medicina de 22 años, evidenció su mayor dolor en la incertidumbre de disponibilidad en momentos donde la puntualidad es crítica, como clases o guardias clínicas. Relató fallas en apps probadas anteriormente ("la app decía una cosa y la realidad era otra"), lo que lo obliga a dar vueltas, aparcar en zonas no autorizadas o pagar cocheras costosas. Denuncia falta de transparencia y cobros indebidos en pagos manuales, inclinándose por pagos digitales. Estaría dispuesto a pagar entre 20% y 30% más por una reserva garantizada, valorando además notificaciones sobre el vencimiento del tiempo.
+
+Resumen – Kevin Romero
+
+La entrevista a Kevin Romero, analista de ciberseguridad de 31 años, describió la búsqueda en centros comerciales como un proceso "pesado" que le hace perder de 5 a 15 minutos y gastar combustible extra. Evalúa la elección según la prisa (distancia) o la disponibilidad de tiempo (precio), y resalta la frustración de buscar piso por piso. Valora la reserva previa por seguridad ante el riesgo de la calle y muestra preferencia por pagos digitales (Yape, Plin, tarjetas), habiendo experimentado cobros que no coincidían con lo anunciado. Exige que una app le indique el espacio exacto disponible y envíe alertas de promociones o servicios.
 
 
 ### 2.2.3. Análisis de entrevistas
-
 
 A partir de las ocho entrevistas realizadas, se analizaron por separado los dos segmentos objetivo de EasyPark: administradores o personal operativo de estacionamientos y conductores o usuarios finales. Cada segmento estuvo conformado por cuatro entrevistados.
 

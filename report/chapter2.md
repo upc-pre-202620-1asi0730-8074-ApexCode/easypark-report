@@ -310,11 +310,11 @@ Preguntas principales
 **Primer Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
 
 | Campo | ![Entrevista1](../assets/images/EntrevistaAdmin1.PNG) <br/> Entrevista 1 | ![Entrevista2](../assets/images/EntrevistaAdmin2.PNG) <br/> Entrevista 2 | ![Entrevista3](../assets/images/EntrevistaAdmin3.PNG) <br/> Entrevista 3 | ![Entrevista4](../assets/images/EntrevistaAdmin4.PNG) <br/> Entrevista 4 |
-|---|--------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------|
-| **Nombre** | Uziel Procopio                                                           | Diego Cuartas                                                            | Braulio                                                                 | Arístides                                                              |
-| **Edad** | 28 años                                                                  | 25 años                                                                  | 42 años                                                                 | 61 años                                                                |
-| **Rol / Tiempo** | Administrador (7-8 meses)                                                | Administrador (9 meses)                                                  | Administrador y dueño (5 años)                                          | Administrador (10 años)                                                |
-| **Ubicación** | Lima                                                                     | Centro de Lima                                                           | Lima                                                                    | Lima                                                                   |
+|---|--------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| **Nombre** | Uziel Procopio                                                           | Diego Cuartas                                                            | Braulio                                                                 | Arístides Aguirre                                                        |
+| **Edad** | 28 años                                                                  | 25 años                                                                  | 42 años                                                                 | 61 años                                                                  |
+| **Rol / Tiempo** | Administrador (7-8 meses)                                                | Administrador (9 meses)                                                  | Administrador y dueño (5 años)                                          | Administrador (10 años)                                                  |
+| **Ubicación** | Lima                                                                     | Centro de Lima                                                           | Lima                                                                    | Lima                                                                     |
 
 Resumen – Uziel Procopio
 
@@ -328,7 +328,7 @@ Resumen – Braulio
 
 La entrevista a Braulio, administrador y propietario de 42 años con 5 años de experiencia, reflejó una dependencia absoluta de su presencia física para el correcto funcionamiento del local. Su control manual en cuadernos genera descuadres de caja y cobros no realizados cuando personal de apoyo lo cubre. En alta demanda sufre por sobreaforo al no tener un conteo real de espacios, obligándolo a reacomodar autos o pedir el retiro anticipado de clientes. La falta de registros digitales dificulta responder ante reclamos por tiempo o llevar la contabilidad del negocio. Descartó aplicaciones del mercado por percibirlas diseñadas para empresas más grandes.
 
-Resumen – Arístides
+Resumen – Arístides Aguirre
 
 La entrevista a Arístides, administrador de 61 años con 10 años de trayectoria, expuso un modelo tradicional basado en tickets manuales y registro tipo Kardex, apoyado solo por cámaras para monitoreo visual. En horas punta, el llenado manual de tickets genera cuellos de botella que se agravan al dar vuelto en efectivo con billetes de alta denominación. Su principal limitación es la ausencia de reportes y estadísticas para analizar variaciones de demanda por turnos o estaciones. Aunque reconoce que su negocio ha quedado desfasado tecnológicamente, está dispuesto a invertir en modernización y control en tiempo real si recibe la capacitación adecuada.
 
@@ -674,9 +674,6 @@ En Preparar la operación, revisa el estado general del local para conocer los e
 <img src="../assets/images/As-Is Scenario Map es de Luis Fernández Conductor.png">
 
 En Planificar el desplazamiento, calcula tiempos y posibles sitios donde aparcar sintiendo incertidumbre por no saber si hallará lugar. En Buscar estacionamiento, recorre calles cercanas usando mapas o referencias con preocupación por el tiempo perdido. Durante Evaluar alternativas, compara opciones por precio, distancia y seguridad con duda ante la falta de datos actualizados. En Confirmar disponibilidad, consulta de forma presencial la tarifa y cupos con tensión por el riesgo de encontrar el local lleno. Finalmente, en Estacionar y retirarse, aparca, realiza sus actividades y paga el servicio, sintiendo alivio al completar la salida sin demoras.
-
-
-
 
 
 

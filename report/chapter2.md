@@ -1,9 +1,5 @@
 ﻿# Capítulo II: Requirements Elicitation & Analysis
 
-
-
-
-
 ## 2.1. Competidores
 
 Para comprender el entorno competitivo de EasyPark, se identificaron tres soluciones digitales relacionadas con la búsqueda y gestión de estacionamientos. La selección considera competidores directos e indirectos que atienden necesidades similares de los conductores y administradores.
@@ -20,8 +16,6 @@ Los competidores seleccionados permiten comparar EasyPark con una red peruana co
 
 El análisis competitivo tiene como objetivo conocer cómo las soluciones existentes atienden las necesidades de los conductores y administradores de estacionamientos. Esta comparación permite reconocer sus fortalezas y limitaciones, identificar oportunidades del mercado y establecer una propuesta de valor diferenciada para EasyPark.
 
-
-
 #### Competitive Analysis Landscape
 <table>
   <tr>
@@ -31,14 +25,27 @@ El análisis competitivo tiene como objetivo conocer cómo las soluciones existe
     <th colspan="2">¿Por qué llevar a cabo este análisis?</th>
     <td colspan="4">Buscamos responder la siguiente pregunta: ¿cómo puede EasyPark diferenciarse de las soluciones actuales para ofrecer, dentro de una misma plataforma, información confiable a los conductores y herramientas accesibles de gestión para los administradores de estacionamientos independientes?</td>
   </tr>
-  <tr>
-    <th>Perfil</th>
-    <th>Criterio</th>
-    <th>EasyPark (propuesta académica)</th>
-    <th><a href="https://apparka.pe/">Apparka</a></th>
-    <th><a href="https://ipark.pe/staging/7006/propuesta/">iPark</a></th>
-    <th><a href="https://business.parkopedia.com/home">Parkopedia</a></th>
-  </tr>
+<tr>
+  <th>Perfil</th>
+  <th>Criterio</th>
+  <th>
+    <img src="../assets/images/EasyPark.jpeg" width="60"><br/>
+    <strong>EasyPark</strong><br/>
+    <small>(propuesta académica)</small>
+  </th>
+  <th>
+    <img src="../assets/images/Apparka.jpg" width="60"><br/>
+    <a href="https://apparka.pe/">Apparka</a>
+  </th>
+  <th>
+    <img src="../assets/images/ipark.png" width="60"><br/>
+    <a href="https://ipark.pe/staging/7006/propuesta/">iPark</a>
+  </th>
+  <th>
+    <img src="../assets/images/parkopedia.png" width="60"><br/>
+    <a href="https://business.parkopedia.com/home">Parkopedia</a>
+  </th>
+</tr>
 
   <tr>
     <th rowspan="2">Perfil</th>
@@ -129,8 +136,6 @@ El análisis competitivo tiene como objetivo conocer cómo las soluciones existe
     <td>Competidores locales con relaciones directas con los operadores, diferencias regulatorias entre países, problemas en la exactitud de los datos y dependencia de fabricantes y proveedores tecnológicos.</td>
   </tr>
 </table>
-
-
 
 #### Resultado del análisis competitivo
 
@@ -255,10 +260,6 @@ Durante el análisis se identificó una empresa internacional que ya utiliza el 
 
 En conjunto, estas estrategias permiten que EasyPark compita mediante una propuesta centrada en la integración de ambos segmentos, la incorporación de diferentes operadores, la confiabilidad de los datos y la digitalización progresiva. Las tácticas planteadas convierten estas orientaciones generales en acciones que pueden desarrollarse y validarse durante la implementación del producto.
 
-
-
-
-
 ## 2.2. Entrevistas
 
 ### 2.2.1. Diseño de entrevistas
@@ -340,15 +341,18 @@ En el segmento de administradores se identificaron problemas relacionados con lo
 
 Estos resultados se utilizarán para construir los User Personas, el User Task Matrix, los User Journey Maps, los Empathy Maps y los As-Is Scenario Maps. Los artefactos representarán la experiencia actual de cada segmento sin considerar todavía la existencia de EasyPark.
 
-
-
 ### 2.3.1. User Personas
+**Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
 
 <img src="../assets/images/Carlos Mendoza User Personas.png">
+
+Carlos Mendoza representa al segmento pragmático de administradores, con un tamaño de mercado del 75%. Se definió como un hombre de 45 años ubicado en Lima, reflejando el perfil de propietario y administrador de un estacionamiento privado pequeño que gestiona ingresos, salidas y cobros mediante cuadernos o tickets. Sus metas de digitalizar el registro de vehículos, visualizar espacios libres/ocupados en tiempo real, organizar clientes y consultar reportes responden a su necesidad de controlar el negocio sin depender de registros físicos ni de su presencia constante. Sus frustraciones sobre registros incompletos o perdidos, desconocimiento de espacios disponibles, congestión en horas punta, diferencias de cobro y aplicaciones complejas para grandes empresas reflejan la vulnerabilidad de una operación manual. Sus canales y tecnología incluyen smartphones, email, WhatsApp, website y plataformas multidispositivo (iOS, Windows), evidenciando un perfil dispuesto a incorporar tecnología de forma progresiva, accesible y orientada a la simplicidad operativa.
+
+**Segmento Objetivo - Conductores (usuarios de estacionamientos)**
+
 <img src="../assets/images/Luis Fernández User Personas.png">
 
-
-
+Luis Fernández representa al segmento de planificadores digitales, con un tamaño de mercado del 56%. Se definió como un hombre de 27 años ubicado en Lima, reflejando el perfil de un estudiante universitario y conductor habitual que se desplaza a zonas comerciales y de estudio, tardando entre 5 y 30 minutos en hallar estacionamiento. Sus metas de consultar la disponibilidad real antes de salir, comparar tarifas y distancias, reservar un espacio seguro con anticipación y realizar pagos mediante tarjetas o billeteras digitales responden a su motivación de llegar puntual y evitar dar vueltas innecesarias. Sus frustraciones por información desactualizada en apps, cobros diferentes a los anunciados, temor a robos o daños y falta de avisos antes de que incremente la tarifa reflejan la ineficiencia de la oferta actual. Sus canales y tecnología incluyen smartphones, website, WhatsApp e interacciones presenciales con soporte en dispositivos móviles (iOS y escritorio), evidenciando un perfil con alto dominio digital dispuesto a adoptar soluciones ágiles y transparentes.
 
 ### 2.3.2. User Task Matrix
 
@@ -529,22 +533,47 @@ Los resultados evidencian que los problemas de ambos segmentos están relacionad
 
 ### 2.3.3. User Journey Mapping
 
+**Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
+
 <img src="../assets/images/Carlos Mendoza Administrador User Journey Mapping.png">
+
+El User Journey Map de Carlos Mendoza (Administrador) resume su experiencia operativa a lo largo de cinco etapas. En Preparar, busca dejar listos espacios, registros y caja, pero enfrenta la traba de depender de procesos manuales. En Registrar Ingreso, anota placas y entrega tickets manualmente con aprehensión a cometer errores o generar colas por la lentitud del registro. Durante Controlar Ocupación, cuenta espacios manualmente para saber la disponibilidad, sufriendo incertidumbre por conteos inexactos. En Supervisar, revisa tiempos y coordina al personal con temor por no contar con alertas automáticas. Finalmente, en Cobrar y Cerrar, calcula tarifas y cuadra caja buscando serenidad, aunque expuesto a diferencias de cobro; abriendo así la oportunidad de digitalizar zonas, automatizar tarifas y monitorear la ocupación en tiempo real.
+
+**Segmento Objetivo - Conductores (usuarios de estacionamientos)**
+
 <img src="../assets/images/Luis Fernández Conductor User Journey Mapping.png">
+
+El User Journey Map de Luis Fernández (Conductor) resume su experiencia en el proceso de estacionamiento a lo largo de sus cinco etapas. En Planificar, busca llegar puntual revisando rutas y cocheras conocidas con anticipación, enfrentando la falta de información sobre disponibilidad previa. En Buscar, compara opciones por distancia, precio y seguridad con aprehensión debido a datos dispersos o desactualizados. Durante Verificar, conduce al lugar y pregunta si hay sitio con temor a encontrar el local lleno. En Estacionar, recorre el establecimiento buscando un sitio libre con frustración por perder tiempo maniobrando. Finalmente, en Pagar y Salir, controla su tiempo y realiza el pago buscando serenidad, aunque expuesto a cobros inesperados y colas; evidenciando la oportunidad de centralizar información, permitir reservas anticipadas y habilitar pagos digitales.
 
 ### 2.3.4. Empathy Mapping
 
+**Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
 
 <img src="../assets/images/Carlos Mendoza Empathy Map.png">
+
+El Empathy Map de Carlos Mendoza refleja la experiencia de un administrador de estacionamiento enfocado en el control operativo y la precisión del flujo vehicular. En Think & Feel busca controlar el negocio sin perder datos, preocupado por errores al ausentarse o por la congestión en horas punta. En See nota un flujo vehicular constante gestionado con cuadernos y tickets manuales, evidenciando diferencias entre registros, ocupación real y caja. En Hear percibe preguntas sobre disponibilidad, quejas por demoras y recomendaciones para digitalizar el control. En Say afirma que "la libreta es la fuente de la verdad" y que su presencia es indispensable para evitar el caos. En Do registra placas a mano, recorre el local para contar espacios y cuadra la caja al final del día. Sus Pains clave son los errores manuales, la falta de ocupación en tiempo real y la dependencia de su presencia física; mientras que sus Gains principales son visualizar la ocupación en tiempo real, automatizar cobros, recibir alertas remotas y obtener reportes claros mediante una solución simple.
+
+**Segmento Objetivo - Conductores (usuarios de estacionamientos)**
+
 <img src="../assets/images/Luis Fernández Empathy Map.png">
+
+El Empathy Map de Luis Fernández refleja la experiencia de un conductor cuya prioridad es encontrar un estacionamiento seguro, llegar puntual y evitar la pérdida de tiempo. En Think & Feel busca llegar a tiempo sin dar vueltas, preocupado por la seguridad de su auto y la información desactualizada de tarifas. En See observa cocheras llenas, autos dando vueltas y datos en apps o mapas que no coinciden con la realidad. En Hear percibe recomendaciones sobre cocheras, comentarios sobre inseguridad e indicaciones de personal que cambian al llegar. En Say califica la búsqueda como "desesperante", expresando que estaría dispuesto a pagar más por asegurar un sitio. En Do planifica salidas, compara opciones en GPS y pierde entre 7 y 30 minutos dando vueltas. Sus Pains clave son la disponibilidad desactualizada, la pérdida de tiempo/combustible y la falta de reservas; mientras que sus Gains principales son conocer la disponibilidad en tiempo real, reservar espacio con anticipación, comparar opciones fácilmente y pagar digitalmente.
 
 ### 2.3.5. As-Is Scenario Mapping
 
+El “As-is Scenario Mapping” nos permitirá obtener una visión clara del estado actual de la operación, identificando las principales brechas y áreas con potencial de optimización. A partir de este diagnóstico, podremos establecer prioridades y definir iniciativas concretas que nos acerquen a los resultados esperados.
+
+**Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
 
 <img src="../assets/images/As-Is Scenario Map de Carlos Mendoza Administrador.png">
+
+En Preparar la operación, revisa el estado general del local para conocer los espacios disponibles antes de recibir vehículos, manteniéndose en atención. En Registrar el ingreso, toma los datos del vehículo y la hora exacta antes del acceso, operando con concentración para evitar problemas futuros en el cobro. Durante Controlar la ocupación, verifica ingresos y salidas para mantener una estimación de espacios libres, enfrentando preocupación en horas de alta demanda por la dificultad de actualizar la información. En Atender y supervisar, responde dudas sobre tarifas y disponibilidad mientras vigila el movimiento general, sintiendo presión por gestionar múltiples tareas simultáneas. Finalmente, en Gestionar cobro y salida, calcula el tiempo de permanencia, cobra el importe y registra la salida, experimentando alivio al liberar el espacio correctamente y cerrar la operación sin descuadres.
+
+**Segmento Objetivo - Conductores (usuarios de estacionamientos)**
+
 <img src="../assets/images/As-Is Scenario Map es de Luis Fernández Conductor.png">
 
-
+En Planificar el desplazamiento, calcula tiempos y posibles sitios donde aparcar sintiendo incertidumbre por no saber si hallará lugar. En Buscar estacionamiento, recorre calles cercanas usando mapas o referencias con preocupación por el tiempo perdido. Durante Evaluar alternativas, compara opciones por precio, distancia y seguridad con duda ante la falta de datos actualizados. En Confirmar disponibilidad, consulta de forma presencial la tarifa y cupos con tensión por el riesgo de encontrar el local lleno. Finalmente, en Estacionar y retirarse, aparca, realiza sus actividades y paga el servicio, sintiendo alivio al completar la salida sin demoras.
 
 
 

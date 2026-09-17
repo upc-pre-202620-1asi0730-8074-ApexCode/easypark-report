@@ -165,17 +165,7 @@ Link del canva: [https://canva.link/tmpird6tydk3ppn](https://canva.link/tmpird6t
 
 ### 1.3. Segmentos objetivo
 
-**Primer Segmento Objetivo - Conductores (usuarios de estacionamientos)**
-
-- **Demográfico:** Hombres y mujeres comprendidos entre los 18 y 65 años, de ocupaciones variadas que posean y conduzcan un vehículo.
-
-- **Psicográfico:** Valoren altamente su tiempo, la comodidad y puntualidad. Están orientados a la reducción del estrés en su rutina diaria y buscan experiencias fluidas que les eviten frustraciones y reduzcan su ansiedad antes de llegar a su destino como trabajo, citas, compras u ocio. Buscan seguridad para sus vehículos y predictibilidad.
-
-- **Conductual:** Tienen un dominio elemental en el uso de smartphones y herramientas de navegación (como Waze o Google Maps). Frecuencia de uso recurrente, acuden a la plataforma cada vez que visitan distintos establecimientos. Buscan localizar con rapidez un espacio libre, disminuir el tiempo dedicado a la búsqueda y evitar quedar atrapados en el tráfico. Están dispuestos a adoptar nuevas aplicaciones si estas ofrecen un beneficio inmediato y claro.
-
-- **Geográfico:** Residentes en Perú. Se desenvuelven principalmente en zonas urbanas de alta densidad poblacional y vehicular, centros comerciales, zonas empresariales y casos urbanos con conectividad plena a internet móvil.
-
-**Segundo Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
+**Primer Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
 
 - **Demográfico:** Representados por personal de seguridad, supervisores en campo y administradores de instalaciones. Hombres y mujeres de entre 18 y 60 años, con nivel educativo técnico o superior (dependiendo del cargo). Son los responsables directos de la operación, la seguridad y la rentabilidad del recinto.
 
@@ -184,3 +174,14 @@ Link del canva: [https://canva.link/tmpird6tydk3ppn](https://canva.link/tmpird6t
 - **Conductual:** Poseen un manejo básico o intermedio de herramientas digitales para la gestión de estacionamientos y el control de accesos. Recurren a la plataforma de manera constante a lo largo de su jornada laboral para registrar ingresos, monitorear la disponibilidad en tiempo real y administrar los espacios disponibles. Prefieren interfaces intuitivas que les permitan organizar mejor el recinto y controlar el flujo vehicular sin ralentizar la entrada y salida.
 
 - **Geográfico:** Operan en zonas urbanas e infraestructuras comerciales o empresariales del Perú (como Lima Metropolitana y principales provincias). Trabajan en recintos que cuentan con puntos de control de acceso, garitas y una conexión a internet estable o redes locales.
+
+
+**Segundo Segmento Objetivo - Conductores (usuarios de estacionamientos)**
+
+- **Demográfico:** Hombres y mujeres comprendidos entre los 18 y 65 años, de ocupaciones variadas que posean y conduzcan un vehículo.
+
+- **Psicográfico:** Valoren altamente su tiempo, la comodidad y puntualidad. Están orientados a la reducción del estrés en su rutina diaria y buscan experiencias fluidas que les eviten frustraciones y reduzcan su ansiedad antes de llegar a su destino como trabajo, citas, compras u ocio. Buscan seguridad para sus vehículos y predictibilidad.
+
+- **Conductual:** Tienen un dominio elemental en el uso de smartphones y herramientas de navegación (como Waze o Google Maps). Frecuencia de uso recurrente, acuden a la plataforma cada vez que visitan distintos establecimientos. Buscan localizar con rapidez un espacio libre, disminuir el tiempo dedicado a la búsqueda y evitar quedar atrapados en el tráfico. Están dispuestos a adoptar nuevas aplicaciones si estas ofrecen un beneficio inmediato y claro.
+
+- **Geográfico:** Residentes en Perú. Se desenvuelven principalmente en zonas urbanas de alta densidad poblacional y vehicular, centros comerciales, zonas empresariales y casos urbanos con conectividad plena a internet móvil.

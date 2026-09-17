@@ -67,3 +67,101 @@ En esta sección se especifica la configuración y los pasos necesarios para el 
 | Producto | Entorno de Despliegue | Pipeline / Herramienta |
 |---|---|---|
 | **Landing Page** |  GitHub Pages | GitHub Actions |
+
+## 5.2 Landing Page, Services & Applications Implementation.
+
+En esta sección se describe el proceso de implementación del producto EasyPark, incluyendo el desarrollo, pruebas, documentación y despliegue del Landing Page. Para este avance, se implementó la primera versión del Landing Page, orientada a presentar la propuesta de valor del sistema. El desarrollo se realizó utilizando tecnologías web y GitHub como herramienta de control de versiones.
+
+### 5.2.1 Sprint 1
+
+En esta sección se presenta el avance del Sprint 1 en términos de desarrollo del producto y trabajo colaborativo del equipo. Durante este sprint se realizó la implementación de la primera versión del Landing Page de EasyPark, enfocada en presentar la propuesta de valor del sistema.
+
+Asimismo, se incluyen las evidencias relacionadas con la planificación del sprint, la organización del equipo, el backlog definido, el desarrollo realizado, así como los resultados obtenidos y la colaboración durante el proceso.
+
+#### 5.2.1.1 Sprint Planning 1.
+En esta sección se describen los principales acuerdos y definiciones realizadas durante el Sprint Planning del Sprint 1, enfocado en la implementación del Landing Page de EasyPark.
+
+<table>
+  <tr>
+    <th>Sprint #</th>
+    <td>Sprint 1</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Sprint Planning Background</th>
+  </tr>
+
+  <tr>
+    <td>Date</td>
+    <td>2026 - 09 - 15</td>
+  </tr>
+
+  <tr>
+    <td>Time</td>
+    <td>17:30</td>
+  </tr>
+
+  <tr>
+    <td>Prepared By</td>
+    <td>Evangelista Ygnacio, Sergio Joaquin</td>
+  </tr>
+
+  <tr>
+    <td>Attendees (to planning meeting)</td>
+    <td>
+      Saravia Huaricancha, Arturo Axel Negón Muñoz, Cayo Manuel Stefano Martín Farón,
+      Alexis Sebastián Lucas Córdova, Alvar
+    </td>
+  </tr>
+
+  <tr>
+    <td>Sprint 1 Review Summary</td>
+    <td>
+      Durante el Sprint 1 se logró implementar correctamente el Landing Page
+      responsive de EasyPark, incluyendo navegación entre secciones, adaptación
+      móvil y soporte multilenguaje. Además, el equipo consolidó la estructura
+      base del frontend y definió estándares iniciales de trabajo colaborativo
+      utilizando GitFlow y Trello para la gestión de tareas.
+    </td>
+  </tr>
+
+  <tr>
+    <td>Sprint 1 Retrospective Summary</td>
+    <td>
+      El equipo identificó como principal fortaleza la buena distribución de
+      tareas y la comunicación constante durante el desarrollo del Sprint 1.
+      Sin embargo, se detectaron pequeños retrasos en la integración de
+      componentes y validaciones responsive, por lo que para este sprint se
+      acordó mejorar la coordinación durante los merges y aumentar la
+      frecuencia de revisiones entre integrantes.
+    </td>
+  </tr>
+</table>
+
+#### 5.2.1.2 Aspect Leaders and Collaborators.
+
+En esta sección se define la matriz de liderazgo y colaboración (LACX) del Sprint 1, la cual permite identificar claramente las responsabilidades de cada integrante del equipo en los distintos aspectos del desarrollo.
+
+Para este sprint, los principales aspectos considerados están relacionados con la implementación del Landing Page,incluyendo la estructura visual, navegación entre secciones y adaptación responsive.
+
+Estos aspectos fueron definidos en base a las funcionalidades abordadas en el sprint y permiten organizar de manera eficiente el trabajo del equipo.
+
+| **Team Member (Last Name, First Name)** | **GitHub Username** | **Estructura del Landing Page** | **Navegación entre Secciones** | **Diseño Responsive** |
+|---|---|---|---|---|
+| Evangelista Ygnacio, Sergio Joaquin | Sergi9017 | C | L | C |
+| Saravia Huaricancha, Arturo Axel | thunder053 | L | C | C |
+| Negrón Muñoz, Cayo Manuel Stefano | fano1106-n | C | C | C |
+| Martín Farro, Alexis Sebastián | axismf | C | C | C |
+| Lucas Córdova, Alvar | Alvarl C | C | C | L |
+
+#### 5.2.1.3 Sprint Backlog 1.
+
+#### 5.2.1.4 Development Evidence for Sprint Review.
+
+#### 5.2.1.5 Execution Evidence for Sprint Review.
+
+#### 5.2.1.6 Services Documentation Evidence for Sprint Review.
+
+#### 5.2.1.7 Software Deployment Evidence for Sprint Review.
+
+#### 5.2.1.8 Team Collaboration Insights during Sprint.

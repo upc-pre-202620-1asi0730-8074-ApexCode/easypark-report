@@ -678,6 +678,19 @@ En Planificar el desplazamiento, calcula tiempos y posibles sitios donde aparcar
 
 
 ## 2.4. Big Picture EventStorming
+Se utilizó la guía Step-by-Step Guide de Philippe Bourgau, proporcionada en la rúbrica del Final Problem Statement, para llevar a cabo el proceso de Big Picture Event Storming, siguiendo sus etapas:
+
+* Open
+* Explore
+* Close
+
+![Big Brainstorm.jpg](../assets/images/Big%20Brainstorm.jpg)
+
+![Brainstorm 1 Open.jpg](../assets/images/Brainstorm%201%20Open.jpg)
+
+![Brainstorm 2 Explore.jpg](../assets/images/Brainstorm%202%20Explore.jpg)
+
+![Brainstorm 3 Close.jpg](../assets/images/Brainstorm%203%20Close.jpg)
 
 ## 2.5. Ubiquitous Language
 El Ubiquitous Language define un conjunto de términos compartidos entre todos los actores del dominio de negocio (Conductores y Administradores), con el objetivo  de eliminar ambigüedades y asegurar una comunicación clara dentro del equipo y con los stakeholders.

@@ -702,7 +702,7 @@ A continuación, se presenta el glosario de términos clave del dominio de la ca
 
 •	**Alerta de Permanencia / Overstay Alert (Situación Irregular)**: Notificación automática del sistema, dirigida al administrador, la cual se activa al detectarse que un vehículo ha excedido el umbral de tiempo pagado o permitido.
 
-•	Conductor / Driver (Usuario Final): Persona natural que opera un vehículo y emplea la plataforma digital para realizar procesos de búsqueda, comparación, reserva y pago de espacios de estacionamiento.
+•	**Conductor / Driver (Usuario Final)**: Persona natural que opera un vehículo y emplea la plataforma digital para realizar procesos de búsqueda, comparación, reserva y pago de espacios de estacionamiento.
 
 •	**Disponibilidad / Availability:** Métrica dinámica en tiempo real que cuantifica la cantidad exacta de espacios libres en un estacionamiento. Esta variable es requisito indispensable para la validación algorítmica de ingresos y reservas.
 

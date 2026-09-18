@@ -161,6 +161,7 @@ Para la gestión del Sprint Backlog, se utilizó una herramienta de control de t
 A continuación, se presenta el tablero correspondiente al Sprint 1 junto con su enlace:
 https://trello.com/b/KxGrDhN2/sprintseasypark
 
+
 | Sprint # | User Story                                         | Work-Item / Task                 | Descripción                                                            | Estimación (Horas) | Assigned To | Status |
 |---|----------------------------------------------------|----------------------------------|------------------------------------------------------------------------|---:|---|---|
 | Sprint 1 | US-41 Conocer EasyPark                             | Setup Static Proj                | Inicializar el repositorio                                             | 4 | Sergio | Done |
@@ -173,15 +174,40 @@ https://trello.com/b/KxGrDhN2/sprintseasypark
 | Sprint 1 | US-48 Consultar preguntas frecuentes               | Estructurar FAQ                  | Maquetar lista de preguntas                                            | 4 | Cayo | Done |
 | Sprint 1 | US-49 Contactar con EasyPark                       | Maquetar footer                  | Añadir información de contacto                                         | 2 | Alvar | Done |
 | Sprint 1 | US-50 Acceder a la aplicación web                  | Header / Navbar                  | Implementar la barra de navegación superior                            | 4 | Arturo | Done |
+![Backlog - Trello.png](../assets/images/Backlog%20-%20Trello.png)
 
 #### 5.2.1.4 Development Evidence for Sprint Review.
 
 #### 5.2.1.5 Execution Evidence for Sprint Review.
 
+1. Captura de la Landing Page
+![Landing Page - Register Button.png](../assets/images/Landing%20Page%20-%20Register%20Button.png)
+
+2. Captura del apartado "Quienes somos": 
+![Landing Page - Info.png](../assets/images/Landing%20Page%20-%20Info.png)
+
+3. Captura del apartado "Beneficios":
+![Landing Page - Benefits.png](../assets/images/Landing%20Page%20-%20Benefits.png)
+
+4. Captura del apartado "Funcionalidades":
+![Landing Page - Functionalities.png](../assets/images/Landing%20Page%20-%20Functionalities.png)
+
+5. Captura del apartado "Precios":
+![Landing Page - Plans.png](../assets/images/Landing%20Page%20-%20Plans.png)
+
+6. Captura del apartado "Testimonios":
+![Landing Page - Testimonials.png](../assets/images/Landing%20Page%20-%20Testimonials.png)
+
+7. Captura del apartado "FAQ (frequently asked questions)":
+![Landing Page - FAQ.png](../assets/images/Landing%20Page%20-%20FAQ.png)
+
+8. Captura del apartado "Contacto" 
+![Landing Page - Contact.png](../assets/images/Landing%20Page%20-%20Contact.png)
+
 #### 5.2.1.6 Services Documentation Evidence for Sprint Review.
+N/A. Durante el Sprint 1 el esfuerzo de desarrollo se enfocó exclusivamente en la creación del sitio web estático promocional (Landing Page), por lo que aún no se han implementado APIs RESTful ni Endpoints backend que requieran ser documentados a través de Swagger/OpenAPI. Esta documentación se estructurará a partir del Sprint 2.
 
 #### 5.2.1.7 Software Deployment Evidence for Sprint Review.
 
 #### 5.2.1.8 Team Collaboration Insights during Sprint.
 
-###

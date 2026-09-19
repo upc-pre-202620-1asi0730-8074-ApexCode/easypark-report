@@ -14,3 +14,58 @@ Los resultados obtenidos a partir del análisis funcional, la definición de Use
 Durante el desarrollo del proyecto, se utilizaron herramientas de diseño, modelado y dinámicas como el EventStorming que permitieron estructurar de manera clara las funcionalidades del sistema bajo el enfoque de Domain-Driven Design. La elaboración de diagramas (clases, arquitectura de software y base de datos) facilitó la comprensión de la lógica de los Bounded Contexts y la relación entre sus elementos, permitiendo tomar decisiones más acertadas en el diseño técnico. Asimismo, la organización del trabajo mediante el Product Backlog y la priorización de Sprints facilitó una mejor gestión del desarrollo y distribución de tareas dentro del equipo para poder tener resultados como lo fue la Landing Page. 
 
 Finalmente, se concluye que EasyPark no solo responde a una necesidad real de reducir el tiempo y estrés al buscar estacionamiento, sino que también representa una oportunidad para que los negocios mejoren significativamente su eficiencia de control, reduzcan pérdidas por registros erróneos y optimicen su supervisión mediante el uso de tecnología.
+
+# Bibliografía
+
+Career Foundry. (s.f.). What are user flows in User Experience (UX) Design? CareerFoundry.
+https://careerfoundry.com/en/blog/ux-design/what-are-user-flows/
+
+Conventional Commits. (s.f.). Conventional Commits 1.0.0. https://www.conventionalcommits.org/
+
+Dittrich, J. (s.f.). A beginner's guide to finding user needs. https://jdittrich.github.io/userNeedResearchBook/
+
+Domain Storytelling. (s.f.). Domain storytelling and requirements. https://domainstorytelling.org/#dst-requirements
+
+Driessen, V. (2010). A successful Git branching model. nvie.com. https://nvie.com/posts/a-successful-git-branchingmodel/
+
+DZone. (s.f.). Acceptance criteria in Scrum: Explanation, examples, and template.
+https://dzone.com/articles/acceptance-criteria-in-software-explanation-exampl
+
+IBM. (s.f.-a). As-is scenario map: Build a better understanding of your users' current experience.
+https://www.ibm.com/design/thinking/page/toolkit/activity/as-is-scenario-map
+
+IBM. (s.f.-b). Empathy map: Build empathy for your users through a conversation informed by your team's observations.
+https://www.ibm.com/design/thinking/page/toolkit/activity/empathy-map
+
+IBM. (s.f.-c). To-be scenario map: Draft a vision of your user's future experience to show how your ideas address their
+current needs. https://www.ibm.com/design/thinking/page/toolkit/activity/to-be-scenario-map
+
+Nielsen Norman Group. (s.f.-a). Design systems 101. https://www.nngroup.com/articles/design-systems-101/
+
+Nielsen Norman Group. (s.f.-b). Empathy mapping: The first step in design thinking.
+https://www.nngroup.com/articles/empathy-mapping/
+
+Open Practice Library. (s.f.-b). Ubiquitous language: Unambiguously define the terms and concepts of a business
+domain. https://openpracticelibrary.com/practice/ubiquitous-language/
+
+Scribd. (s.f.). Lean UX – Chapter 3. https://www.scribd.com/document/655516553/Leanux-Sampler
+
+The DDD by Examples Community. (s.f.-a). Big Picture EventStorming. GitHub. https://github.com/ddd-byexamples/library/blob/master/docs/big-picture.md
+
+The DDD by Examples Community. (s.f.-b). Design-level EventStorming. GitHub. https://github.com/ddd-byexamples/library/blob/master/docs/design-level.md
+
+The Markdown Guide. (s.f.). The Markdown Guide. https://www.markdownguide.org/
+
+UXforTheMasses. (s.f.). A step-by-step guide to scenario mapping. http://www.uxforthemasses.com/scenario-mapping/
+
+UXPressia. (s.f.-a). How to create an Impact Map in 4 easy steps? https://uxpressia.com/blog/build-impact-map-4-easysteps
+
+UXPressia. (s.f.-b). User vs. buyer persona: Differences and free template. https://uxpressia.com/blog/user-persona-vsbuyer-persona-difference
+
+Zhurb, A. [connect2grp]. (s.f.). Using PlantUML for creating clear and concise diagrams. Medium.
+https://connect2grp.medium.com/using-plantuml-for-creating-clear-and-concise-diagrams-2fc621529560
+
+
+noamtamim. (s.f.). How to use PlantUML with Markdown [Gist]. GitHub.
+https://gist.github.com/noamtamim/f11982b28602bd7e604c233fbe9d910f
+# Anexos

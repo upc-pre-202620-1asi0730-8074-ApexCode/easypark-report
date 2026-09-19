@@ -1,6 +1,5 @@
 # Conclusiones
 
-
 ## Conclusiones y Recomendaciones
 
 Existe una clara necesidad en el sector de la movilidad urbana y la gestión de estacionamientos de contar con una plataforma digital confiable que permita administrar de manera eficiente la disponibilidad de espacios, controlar los ingresos y salidas, y realizar búsquedas de ubicaciones en tiempo real. Los distintos actores involucrados, como administradores de estacionamientos, personal operativo y conductores, requieren herramientas que centralicen la información y reduzcan los errores operativos derivados del uso de métodos manuales y tickets físicos. 
@@ -68,4 +67,30 @@ https://connect2grp.medium.com/using-plantuml-for-creating-clear-and-concise-dia
 
 noamtamim. (s.f.). How to use PlantUML with Markdown [Gist]. GitHub.
 https://gist.github.com/noamtamim/f11982b28602bd7e604c233fbe9d910f
+
 # Anexos
+
+## Anexo A. Videos de Exposiciones
+
+| Entrega | Título                                                                                                   | Enlace        |
+|--------|----------------------------------------------------------------------------------------------------------|---------------|
+| AV1 | Presentación de la propuesta de negocio, Lean UX Process y primera versión del Landing Page|  |
+
+## Anexo B. Repositorios del Proyecto
+
+| Descripción | Enlace |
+|------------|--------|
+| Repositorio del Informe del Proyecto | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report       |
+| Repositorio de la Landing Page | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-landing |
+
+## Anexo C. Enlaces de Despliegue (Deployment)
+
+| Descripción | Enlace |
+|------------|--------|
+| Deployment de la Landing Page en GitHub Pages | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/ |
+
+## Anexo D. Diseño
+
+| Descripción | Enlace                                                                                               |
+|------------|------------------------------------------------------------------------------------------------------|
+| Link del Figma del Trabajo | https://www.figma.com/design/kNri7YrOA48AbqzttpgeZw/apex-code?node-id=48-3&p=f&t=RGPO5DCljllWouH8-0  |

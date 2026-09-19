@@ -2,666 +2,555 @@
 
 ## 3.1. User Stories
 
-### US01 - Registrar datos personales
+### US01 - Buscar estacionamientos por ubicación
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US01 |
-| **Epic ID** | EP01 |
-| **Título** | Registrar datos personales |
-| **Descripción** | Como Voluntario espontáneo, deseo registrar mis datos personales para poder participar en una actividad de apoyo ambiental. |
-| **Criterio de aceptación 1** | Dado que completo los datos obligatorios, cuando confirmo el registro, entonces mi información queda registrada. |
-| **Criterio de aceptación 2** | Dado que falta información obligatoria, cuando intento continuar, entonces se indican los datos pendientes. |
+| **Epic ID** | EP-01 |
+| **Título** | Buscar estacionamientos por ubicación |
+| **Descripción** | Como conductor, quiero buscar estacionamientos según una ubicación para encontrar alternativas cercanas a mi destino. |
+| **Criterio de aceptación 1** | Dado que existen estacionamientos registrados, cuando proporciona una ubicación válida, entonces el sistema devuelve los estacionamientos correspondientes. |
+| **Criterio de aceptación 2** | Dado que no existen coincidencias, cuando realiza la búsqueda, entonces el sistema informa que no existen resultados. |
 
-### US02 - Registrar experiencia previa
+### US02 - Consultar estacionamientos disponibles
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US02 |
-| **Epic ID** | EP01 |
-| **Título** | Registrar experiencia previa |
-| **Descripción** | Como Voluntario espontáneo, deseo indicar mi experiencia previa para que sea considerada al asignarme una tarea. |
-| **Criterio de aceptación 1** | Dado que tengo experiencia previa, cuando la registro, entonces queda asociada a mi perfil. |
-| **Criterio de aceptación 2** | Dado que no tengo experiencia, cuando lo indico, entonces puedo continuar con el registro. |
+| **Epic ID** | EP-01 |
+| **Título** | Consultar estacionamientos disponibles |
+| **Descripción** | Como conductor, quiero consultar estacionamientos disponibles para reducir el tiempo dedicado a buscar un espacio. |
+| **Criterio de aceptación 1** | Dado que existen estacionamientos disponibles, cuando realiza la consulta, entonces el sistema proporciona los establecimientos disponibles. |
+| **Criterio de aceptación 2** | Dado que no existen establecimientos disponibles, cuando realiza la consulta, entonces el sistema informa dicha situación. |
 
-### US03 - Registrar habilidades
+### US03 - Consultar disponibilidad de espacios
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US03 |
-| **Epic ID** | EP01 |
-| **Título** | Registrar habilidades |
-| **Descripción** | Como Voluntario espontáneo, deseo registrar mis habilidades para que el coordinador conozca qué actividades puedo realizar. |
-| **Criterio de aceptación 1** | Dado que poseo determinadas habilidades, cuando las registro, entonces quedan asociadas a mi perfil. |
-| **Criterio de aceptación 2** | Dado que actualizo una habilidad, cuando guardo el cambio, entonces mi perfil queda actualizado. |
+| **Epic ID** | EP-01 |
+| **Título** | Consultar disponibilidad de espacios |
+| **Descripción** | Como conductor, quiero conocer la disponibilidad de espacios para decidir si dirigirme al estacionamiento. |
+| **Criterio de aceptación 1** | Dado un estacionamiento registrado, cuando consulta su disponibilidad, entonces el sistema proporciona la cantidad de espacios disponibles. |
+| **Criterio de aceptación 2** | Dado que ocurre un ingreso o salida, cuando el movimiento se registra correctamente, entonces la disponibilidad se actualiza. |
 
-### US04 - Registrar disponibilidad
+### US04 - Consultar tarifas
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US04 |
-| **Epic ID** | EP01 |
-| **Título** | Registrar disponibilidad |
-| **Descripción** | Como Voluntario espontáneo, deseo indicar mi disponibilidad para que puedan asignarme actividades dentro del tiempo que puedo colaborar. |
-| **Criterio de aceptación 1** | Dado que conozco mi disponibilidad, cuando registro el periodo, entonces queda almacenado. |
-| **Criterio de aceptación 2** | Dado que mi disponibilidad cambia, cuando la actualizo, entonces se registra el nuevo periodo. |
+| **Epic ID** | EP-01 |
+| **Título** | Consultar tarifas |
+| **Descripción** | Como conductor, quiero conocer las tarifas para evaluar el costo antes de utilizar un estacionamiento. |
+| **Criterio de aceptación 1** | Dado que existen tarifas vigentes, cuando consulta el estacionamiento, entonces el sistema proporciona las tarifas correspondientes. |
+| **Criterio de aceptación 2** | Dado que una tarifa ha sido actualizada, cuando vuelve a consultarla, entonces el sistema proporciona la tarifa vigente. |
 
-### US05 - Consultar perfil
+### US05 - Consultar ubicación
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US05 |
-| **Epic ID** | EP01 |
-| **Título** | Consultar perfil |
-| **Descripción** | Como Voluntario espontáneo, deseo consultar mi perfil para verificar la información que he registrado. |
-| **Criterio de aceptación 1** | Dado que tengo un perfil registrado, cuando lo consulto, entonces puedo visualizar mis datos. |
-| **Criterio de aceptación 2** | Dado que actualicé información, cuando vuelvo a consultarlo, entonces aparecen los datos actuales. |
+| **Epic ID** | EP-01 |
+| **Título** | Consultar ubicación |
+| **Descripción** | Como conductor, quiero conocer la ubicación del estacionamiento para evaluar su cercanía a mi destino. |
+| **Criterio de aceptación 1** | Dado un estacionamiento registrado, cuando consulta su información, entonces el sistema proporciona su ubicación. |
+| **Criterio de aceptación 2** | Dado que la ubicación no está disponible, cuando realiza la consulta, entonces el sistema informa que no existe dicha información. |
 
-### US06 - Actualizar información personal
+### US06 - Consultar características del estacionamiento
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US06 |
-| **Epic ID** | EP01 |
-| **Título** | Actualizar información personal |
-| **Descripción** | Como Voluntario espontáneo, deseo actualizar mis datos para mantener correcta mi información durante la emergencia. |
-| **Criterio de aceptación 1** | Dado que mi perfil existe, cuando ingreso información válida, entonces los cambios quedan registrados. |
-| **Criterio de aceptación 2** | Dado que ingreso información inválida, cuando intento guardar, entonces se mantienen los datos anteriores. |
+| **Epic ID** | EP-01 |
+| **Título** | Consultar características del estacionamiento |
+| **Descripción** | Como conductor, quiero conocer las características de un estacionamiento para elegir una alternativa adecuada. |
+| **Criterio de aceptación 1** | Dado que existen características registradas, cuando consulta el estacionamiento, entonces el sistema proporciona dicha información. |
+| **Criterio de aceptación 2** | Dado que una característica cambia, cuando se actualiza la información, entonces el sistema proporciona los datos vigentes. |
 
-### US07 - Consultar voluntarios registrados
+### US07 - Filtrar por disponibilidad
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US07 |
-| **Epic ID** | EP01 |
-| **Título** | Consultar voluntarios registrados |
-| **Descripción** | Como Coordinador de crisis, deseo consultar los voluntarios registrados para conocer quiénes se encuentran disponibles. |
-| **Criterio de aceptación 1** | Dado que existen voluntarios registrados, cuando realizo la consulta, entonces obtengo la lista correspondiente. |
-| **Criterio de aceptación 2** | Dado que no existen voluntarios, cuando consulto, entonces se informa que no hay participantes registrados. |
+| **Epic ID** | EP-01 |
+| **Título** | Filtrar por disponibilidad |
+| **Descripción** | Como conductor, quiero filtrar estacionamientos con espacios disponibles para evitar revisar establecimientos ocupados. |
+| **Criterio de aceptación 1** | Dado un conjunto de estacionamientos, cuando solicita únicamente aquellos con disponibilidad, entonces el sistema devuelve los que cumplen la condición. |
+| **Criterio de aceptación 2** | Dado que ninguno cumple el criterio, cuando aplica el filtro, entonces el sistema informa que no existen resultados. |
 
-### US08 - Consultar perfil de voluntario
+### US08 - Filtrar por tarifa
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US08 |
-| **Epic ID** | EP01 |
-| **Título** | Consultar perfil de voluntario |
-| **Descripción** | Como Coordinador de crisis, deseo consultar el perfil de un voluntario para conocer su experiencia y habilidades antes de asignarle una actividad. |
-| **Criterio de aceptación 1** | Dado que el voluntario está registrado, cuando consulto su perfil, entonces obtengo su información. |
-| **Criterio de aceptación 2** | Dado que el voluntario no existe, cuando intento consultarlo, entonces se informa que no fue encontrado. |
+| **Epic ID** | EP-01 |
+| **Título** | Filtrar por tarifa |
+| **Descripción** | Como conductor, quiero filtrar estacionamientos según su tarifa para encontrar alternativas acordes con mi presupuesto. |
+| **Criterio de aceptación 1** | Dado un rango de tarifa válido, cuando aplica el filtro, entonces el sistema proporciona establecimientos dentro del rango. |
+| **Criterio de aceptación 2** | Dado que ninguno cumple el criterio, cuando aplica el filtro, entonces el sistema informa que no existen resultados. |
 
-### US09 - Consultar capacitación inicial
+### US09 - Ordenar por cercanía
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US09 |
-| **Epic ID** | EP02 |
-| **Título** | Consultar capacitación inicial |
-| **Descripción** | Como Voluntario espontáneo, deseo recibir una capacitación básica para conocer los riesgos antes de iniciar mis actividades. |
-| **Criterio de aceptación 1** | Dado que debo participar en una actividad, cuando accedo a la capacitación, entonces puedo revisar las indicaciones de seguridad. |
-| **Criterio de aceptación 2** | Dado que no la he completado, cuando intento continuar, entonces se informa que está pendiente. |
+| **Epic ID** | EP-01 |
+| **Título** | Ordenar por cercanía |
+| **Descripción** | Como conductor, quiero ordenar estacionamientos según su cercanía para encontrar rápidamente los más próximos. |
+| **Criterio de aceptación 1** | Dado que existen varios estacionamientos con ubicación conocida, cuando solicita ordenarlos por cercanía, entonces el sistema devuelve los resultados ordenados. |
+| **Criterio de aceptación 2** | Dado que existen establecimientos sin información suficiente, cuando se realiza el ordenamiento, entonces el sistema evita utilizarlos para calcular la proximidad. |
 
-### US10 - Visualizar instrucciones de seguridad
+### US10 - Comparar estacionamientos
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US10 |
-| **Epic ID** | EP02 |
-| **Título** | Visualizar instrucciones de seguridad |
-| **Descripción** | Como Voluntario espontáneo, deseo consultar instrucciones visuales para comprender rápidamente las medidas de seguridad. |
-| **Criterio de aceptación 1** | Dado que existen instrucciones para mi actividad, cuando las consulto, entonces puedo conocer las principales medidas de seguridad. |
-| **Criterio de aceptación 2** | Dado que una instrucción cambia, cuando vuelvo a consultarla, entonces aparece la versión actualizada. |
+| **Epic ID** | EP-01 |
+| **Título** | Comparar estacionamientos |
+| **Descripción** | Como conductor, quiero comparar estacionamientos para seleccionar la alternativa que mejor se adapte a mis necesidades. |
+| **Criterio de aceptación 1** | Dado que existen varios estacionamientos, cuando consulta sus características, entonces el sistema proporciona información comparable de disponibilidad, tarifa y ubicación. |
+| **Criterio de aceptación 2** | Dado que falta información de un establecimiento, cuando se realiza la comparación, entonces el sistema identifica los datos no disponibles. |
 
-### US11 - Confirmar capacitación
+### US11 - Reservar espacio
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US11 |
-| **Epic ID** | EP02 |
-| **Título** | Confirmar capacitación |
-| **Descripción** | Como Voluntario espontáneo, deseo confirmar que completé mi capacitación para dejar constancia de que recibí las indicaciones necesarias. |
-| **Criterio de aceptación 1** | Dado que revisé el contenido obligatorio, cuando confirmo la capacitación, entonces queda registrada como completada. |
-| **Criterio de aceptación 2** | Dado que falta contenido obligatorio, cuando intento finalizarla, entonces permanece pendiente. |
+| **Epic ID** | EP-02 |
+| **Título** | Reservar espacio |
+| **Descripción** | Como conductor, quiero reservar un espacio para tener mayor certeza de encontrar estacionamiento al llegar. |
+| **Criterio de aceptación 1** | Dado que existe disponibilidad, cuando realiza una solicitud válida, entonces el sistema registra la reserva. |
+| **Criterio de aceptación 2** | Dado que no existe disponibilidad, cuando intenta reservar, entonces el sistema rechaza la solicitud. |
 
-### US12 - Consultar historial de capacitaciones
+### US12 - Consultar reserva activa
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US12 |
-| **Epic ID** | EP02 |
-| **Título** | Consultar historial de capacitaciones |
-| **Descripción** | Como Voluntario espontáneo, deseo revisar las capacitaciones realizadas para conocer qué indicaciones ya he recibido. |
-| **Criterio de aceptación 1** | Dado que completé capacitaciones, cuando consulto mi historial, entonces obtengo los registros. |
-| **Criterio de aceptación 2** | Dado que no tengo capacitaciones anteriores, cuando consulto, entonces se informa que no existen registros. |
+| **Epic ID** | EP-02 |
+| **Título** | Consultar reserva activa |
+| **Descripción** | Como conductor, quiero consultar mi reserva para comprobar que continúa vigente. |
+| **Criterio de aceptación 1** | Dado que posee una reserva activa, cuando la consulta, entonces el sistema proporciona sus datos y estado. |
+| **Criterio de aceptación 2** | Dado que no posee reservas activas, cuando realiza la consulta, entonces el sistema informa dicha situación. |
 
-### US13 - Verificar capacitación
+### US13 - Cancelar reserva
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US13 |
-| **Epic ID** | EP02 |
-| **Título** | Verificar capacitación |
-| **Descripción** | Como Coordinador de crisis, deseo verificar la capacitación de un voluntario para evitar asignarlo a una actividad sin preparación. |
-| **Criterio de aceptación 1** | Dado que el voluntario completó la capacitación, cuando consulto su estado, entonces aparece como completada. |
-| **Criterio de aceptación 2** | Dado que no la completó, cuando consulto, entonces aparece como pendiente. |
+| **Epic ID** | EP-02 |
+| **Título** | Cancelar reserva |
+| **Descripción** | Como conductor, quiero cancelar una reserva que ya no utilizaré para liberar el espacio. |
+| **Criterio de aceptación 1** | Dado que existe una reserva cancelable, cuando solicita cancelarla, entonces el sistema cambia su estado y libera el espacio. |
+| **Criterio de aceptación 2** | Dado que la reserva ya no puede cancelarse, cuando solicita la cancelación, entonces el sistema rechaza la operación. |
 
-### US14 - Registrar recomendaciones de seguridad
+### US14 - Recibir confirmación de reserva
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US14 |
-| **Epic ID** | EP02 |
-| **Título** | Registrar recomendaciones de seguridad |
-| **Descripción** | Como Especialista ambiental, deseo registrar recomendaciones de seguridad para que sean conocidas antes de realizar una actividad. |
-| **Criterio de aceptación 1** | Dado que identifico una recomendación, cuando la registro, entonces queda disponible. |
-| **Criterio de aceptación 2** | Dado que falta información necesaria, cuando intento registrarla, entonces el proceso no se completa. |
+| **Epic ID** | EP-02 |
+| **Título** | Recibir confirmación de reserva |
+| **Descripción** | Como conductor, quiero recibir una confirmación de mi reserva para saber que fue registrada correctamente. |
+| **Criterio de aceptación 1** | Dado que una reserva se registra correctamente, cuando finaliza el proceso, entonces el sistema genera una confirmación. |
+| **Criterio de aceptación 2** | Dado que la reserva no pudo registrarse, cuando finaliza el intento, entonces el sistema informa que no fue confirmada. |
 
-### US15 - Actualizar recomendaciones
+### US15 - Consultar historial de reservas
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US15 |
-| **Epic ID** | EP02 |
-| **Título** | Actualizar recomendaciones |
-| **Descripción** | Como Especialista ambiental, deseo actualizar las recomendaciones de seguridad cuando cambien las condiciones de una zona. |
-| **Criterio de aceptación 1** | Dado que existe una recomendación, cuando la modifico, entonces queda actualizada. |
-| **Criterio de aceptación 2** | Dado que el cambio no es válido, cuando intento guardarlo, entonces se conserva la información anterior. |
+| **Epic ID** | EP-02 |
+| **Título** | Consultar historial de reservas |
+| **Descripción** | Como conductor, quiero consultar mis reservas anteriores para revisar los estacionamientos que he utilizado. |
+| **Criterio de aceptación 1** | Dado que existen reservas anteriores, cuando consulta su historial, entonces el sistema proporciona los registros asociados. |
+| **Criterio de aceptación 2** | Dado que no existen reservas anteriores, cuando consulta el historial, entonces el sistema informa que no existen registros. |
 
-### US16 - Registrar zona afectada
+### US16 - Consultar estado de reserva
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US16 |
-| **Epic ID** | EP03 |
-| **Título** | Registrar zona afectada |
-| **Descripción** | Como Especialista ambiental, deseo registrar una zona afectada para documentar dónde se realizarán las actividades. |
-| **Criterio de aceptación 1** | Dado que cuento con los datos de la zona, cuando la registro, entonces queda disponible para evaluación. |
-| **Criterio de aceptación 2** | Dado que faltan datos obligatorios, cuando intento registrarla, entonces el proceso no se completa. |
+| **Epic ID** | EP-02 |
+| **Título** | Consultar estado de reserva |
+| **Descripción** | Como conductor, quiero conocer el estado de mi reserva para saber si continúa activa, fue cancelada o finalizó. |
+| **Criterio de aceptación 1** | Dado que existe una reserva, cuando consulta su estado, entonces el sistema proporciona su condición vigente. |
+| **Criterio de aceptación 2** | Dado que el estado cambia, cuando vuelve a realizar la consulta, entonces el sistema proporciona el nuevo estado. |
 
-### US17 - Definir nivel de riesgo
+### US17 - Validar disponibilidad antes de reservar
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US17 |
-| **Epic ID** | EP03 |
-| **Título** | Definir nivel de riesgo |
-| **Descripción** | Como Especialista ambiental, deseo definir el nivel de riesgo de una zona para informar sobre las condiciones existentes. |
-| **Criterio de aceptación 1** | Dado que evalué una zona, cuando registro su nivel de riesgo, entonces queda asociado a ella. |
-| **Criterio de aceptación 2** | Dado que las condiciones cambian, cuando actualizo el riesgo, entonces queda registrado el nuevo nivel. |
+| **Epic ID** | EP-02 |
+| **Título** | Validar disponibilidad antes de reservar |
+| **Descripción** | Como conductor, quiero verificar que exista disponibilidad antes de confirmar una reserva para evitar inconsistencias. |
+| **Criterio de aceptación 1** | Dado que desea reservar, cuando el sistema valida la disponibilidad y existen espacios, entonces permite registrar la reserva. |
+| **Criterio de aceptación 2** | Dado que ya no existen espacios, cuando se realiza la validación, entonces el sistema impide registrar una nueva reserva. |
 
-### US18 - Registrar riesgos identificados
+### US18 - Consultar datos de la reserva
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US18 |
-| **Epic ID** | EP03 |
-| **Título** | Registrar riesgos identificados |
-| **Descripción** | Como Especialista ambiental, deseo registrar los riesgos encontrados para que los demás participantes puedan conocerlos. |
-| **Criterio de aceptación 1** | Dado que identifico un riesgo, cuando lo registro, entonces queda asociado a la zona. |
-| **Criterio de aceptación 2** | Dado que un riesgo deja de existir, cuando actualizo la evaluación, entonces se refleja el cambio. |
+| **Epic ID** | EP-02 |
+| **Título** | Consultar datos de la reserva |
+| **Descripción** | Como conductor, quiero consultar los datos de mi reserva para conocer las condiciones asociadas. |
+| **Criterio de aceptación 1** | Dado que existe una reserva, cuando la consulta, entonces el sistema proporciona el estacionamiento, estado y periodo asociado. |
+| **Criterio de aceptación 2** | Dado que la reserva no existe, cuando intenta consultarla, entonces el sistema informa que no se encontró el registro. |
 
-### US19 - Definir actividades permitidas
+### US19 - Registrar ingreso de vehículo
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US19 |
-| **Epic ID** | EP03 |
-| **Título** | Definir actividades permitidas |
-| **Descripción** | Como Especialista ambiental, deseo indicar qué actividades pueden realizarse en una zona para evitar trabajos inadecuados. |
-| **Criterio de aceptación 1** | Dado que una zona fue evaluada, cuando defino actividades permitidas, entonces quedan registradas. |
-| **Criterio de aceptación 2** | Dado que cambia el nivel de riesgo, cuando actualizo las actividades, entonces quedan vigentes las nuevas condiciones. |
+| **Epic ID** | EP-03 |
+| **Título** | Registrar ingreso de vehículo |
+| **Descripción** | Como administrador, quiero registrar el ingreso de un vehículo para mantener actualizada la ocupación. |
+| **Criterio de aceptación 1** | Dado que existe capacidad disponible, cuando registra un ingreso válido, entonces el sistema almacena el movimiento. |
+| **Criterio de aceptación 2** | Dado que el ingreso se registra correctamente, cuando finaliza la operación, entonces el sistema actualiza la ocupación. |
 
-### US20 - Definir experiencia requerida
+### US20 - Registrar salida de vehículo
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US20 |
-| **Epic ID** | EP03 |
-| **Título** | Definir experiencia requerida |
-| **Descripción** | Como Especialista ambiental, deseo indicar la experiencia necesaria para una actividad para evitar que participe una persona sin preparación suficiente. |
-| **Criterio de aceptación 1** | Dado que una tarea requiere experiencia, cuando defino el requisito, entonces queda asociado. |
-| **Criterio de aceptación 2** | Dado que el requisito cambia, cuando lo actualizo, entonces queda registrada la nueva condición. |
+| **Epic ID** | EP-03 |
+| **Título** | Registrar salida de vehículo |
+| **Descripción** | Como administrador, quiero registrar la salida de un vehículo para liberar el espacio utilizado. |
+| **Criterio de aceptación 1** | Dado que existe un ingreso activo, cuando registra la salida, entonces el sistema almacena el movimiento. |
+| **Criterio de aceptación 2** | Dado que la salida se registra correctamente, cuando finaliza la operación, entonces el sistema libera el espacio asociado. |
 
-### US21 - Consultar riesgos de una zona
+### US21 - Consultar ocupación actual
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US21 |
-| **Epic ID** | EP03 |
-| **Título** | Consultar riesgos de una zona |
-| **Descripción** | Como Coordinador de crisis, deseo consultar los riesgos de una zona para considerarlos antes de asignar voluntarios. |
-| **Criterio de aceptación 1** | Dado que existen riesgos registrados, cuando consulto la zona, entonces puedo conocerlos. |
-| **Criterio de aceptación 2** | Dado que no existe información de riesgos, cuando consulto, entonces se informa que aún no hay una evaluación disponible. |
+| **Epic ID** | EP-03 |
+| **Título** | Consultar ocupación actual |
+| **Descripción** | Como administrador, quiero conocer la ocupación actual para saber cuántos espacios se encuentran disponibles. |
+| **Criterio de aceptación 1** | Dado que existen movimientos registrados, cuando consulta la ocupación, entonces el sistema proporciona espacios disponibles y ocupados. |
+| **Criterio de aceptación 2** | Dado que ocurre un nuevo movimiento, cuando se registra correctamente, entonces la ocupación se actualiza. |
 
-### US22 - Consultar riesgos de mi zona
+### US22 - Consultar vehículo estacionado
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US22 |
-| **Epic ID** | EP03 |
-| **Título** | Consultar riesgos de mi zona |
-| **Descripción** | Como Voluntario espontáneo, deseo conocer los riesgos de mi zona asignada para tomar las precauciones correspondientes. |
-| **Criterio de aceptación 1** | Dado que tengo una zona asignada, cuando consulto sus condiciones, entonces puedo conocer los riesgos. |
-| **Criterio de aceptación 2** | Dado que las condiciones cambian, cuando vuelvo a consultar, entonces observo la información actualizada. |
+| **Epic ID** | EP-03 |
+| **Título** | Consultar vehículo estacionado |
+| **Descripción** | Como administrador, quiero consultar un vehículo para conocer su ingreso y permanencia. |
+| **Criterio de aceptación 1** | Dado que existe un ingreso activo para el vehículo, cuando realiza la consulta, entonces el sistema proporciona la información registrada. |
+| **Criterio de aceptación 2** | Dado que el vehículo no posee ingreso activo, cuando realiza la consulta, entonces el sistema informa dicha situación. |
 
-### US23 - Actualizar estado de una zona
+### US23 - Registrar espacios
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US23 |
-| **Epic ID** | EP03 |
-| **Título** | Actualizar estado de una zona |
-| **Descripción** | Como Especialista ambiental, deseo actualizar el estado de una zona para indicar si las actividades pueden continuar. |
-| **Criterio de aceptación 1** | Dado que cambian las condiciones, cuando actualizo el estado, entonces queda registrada la nueva condición. |
-| **Criterio de aceptación 2** | Dado que la zona deja de ser apta, cuando actualizo su estado, entonces los coordinadores pueden identificar la restricción. |
+| **Epic ID** | EP-03 |
+| **Título** | Registrar espacios |
+| **Descripción** | Como administrador, quiero registrar los espacios de mi estacionamiento para mantener control sobre su capacidad. |
+| **Criterio de aceptación 1** | Dado que se proporcionan datos válidos, cuando registra un espacio, entonces el sistema lo incorpora al estacionamiento. |
+| **Criterio de aceptación 2** | Dado que el espacio ya existe, cuando intenta registrarlo nuevamente, entonces el sistema rechaza el duplicado. |
 
-### US24 - Crear tarea
+### US24 - Actualizar estado de espacio
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US24 |
-| **Epic ID** | EP04 |
-| **Título** | Crear tarea |
-| **Descripción** | Como Coordinador de crisis, deseo registrar una tarea para organizar las actividades necesarias durante una emergencia. |
-| **Criterio de aceptación 1** | Dado que existe una actividad necesaria, cuando registro sus datos, entonces la tarea queda creada. |
-| **Criterio de aceptación 2** | Dado que faltan datos obligatorios, cuando intento crearla, entonces no queda registrada. |
+| **Epic ID** | EP-03 |
+| **Título** | Actualizar estado de espacio |
+| **Descripción** | Como administrador, quiero actualizar el estado de un espacio para reflejar correctamente su condición. |
+| **Criterio de aceptación 1** | Dado que existe un espacio registrado, cuando cambia válidamente su estado, entonces el sistema conserva la nueva condición. |
+| **Criterio de aceptación 2** | Dado que el cambio solicitado no es válido, cuando intenta actualizarlo, entonces el sistema rechaza la operación. |
 
-### US25 - Asociar tarea a una zona
+### US25 - Gestionar zonas
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US25 |
-| **Epic ID** | EP04 |
-| **Título** | Asociar tarea a una zona |
-| **Descripción** | Como Coordinador de crisis, deseo asociar una tarea con una zona para indicar dónde debe realizarse. |
-| **Criterio de aceptación 1** | Dado que la tarea y la zona existen, cuando las relaciono, entonces la tarea queda asociada a esa zona. |
-| **Criterio de aceptación 2** | Dado que la zona no permite la actividad, cuando intento asociarla, entonces se informa la restricción. |
+| **Epic ID** | EP-03 |
+| **Título** | Gestionar zonas |
+| **Descripción** | Como administrador, quiero organizar los espacios por zonas para distribuir mejor los vehículos. |
+| **Criterio de aceptación 1** | Dado que existen espacios registrados, cuando los asigna a una zona válida, entonces el sistema conserva la clasificación. |
+| **Criterio de aceptación 2** | Dado que modifica una zona, cuando guarda los cambios, entonces el sistema mantiene actualizadas sus asociaciones. |
 
-### US26 - Asignar voluntario a una tarea
+### US26 - Clasificar espacios según tipo de usuario
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US26 |
-| **Epic ID** | EP04 |
-| **Título** | Asignar voluntario a una tarea |
-| **Descripción** | Como Coordinador de crisis, deseo asignar un voluntario a una tarea para organizar las labores de apoyo. |
-| **Criterio de aceptación 1** | Dado que el voluntario cumple los requisitos, cuando lo asigno, entonces queda relacionado con la tarea. |
-| **Criterio de aceptación 2** | Dado que no cumple un requisito obligatorio, cuando intento asignarlo, entonces la asignación es rechazada. |
+| **Epic ID** | EP-03 |
+| **Título** | Clasificar espacios según tipo de usuario |
+| **Descripción** | Como administrador, quiero clasificar espacios según el tipo de usuario para mantener organizada su distribución. |
+| **Criterio de aceptación 1** | Dado un espacio registrado, cuando se asigna a un tipo de usuario válido, entonces el sistema conserva la clasificación. |
+| **Criterio de aceptación 2** | Dado que cambia el tipo asignado, cuando registra la modificación, entonces el sistema actualiza la clasificación. |
 
-### US27 - Consultar tarea asignada
+### US27 - Reasignar vehículo
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US27 |
-| **Epic ID** | EP04 |
-| **Título** | Consultar tarea asignada |
-| **Descripción** | Como Voluntario espontáneo, deseo consultar mi tarea para saber qué actividad debo realizar. |
-| **Criterio de aceptación 1** | Dado que tengo una tarea asignada, cuando la consulto, entonces puedo conocer sus detalles. |
-| **Criterio de aceptación 2** | Dado que todavía no tengo una tarea, cuando consulto, entonces se informa que no existen asignaciones. |
+| **Epic ID** | EP-03 |
+| **Título** | Reasignar vehículo |
+| **Descripción** | Como administrador, quiero reasignar un vehículo a otro espacio para resolver cambios operativos. |
+| **Criterio de aceptación 1** | Dado un vehículo estacionado y otro espacio disponible, cuando realiza una reasignación válida, entonces el sistema actualiza el espacio asociado. |
+| **Criterio de aceptación 2** | Dado que el nuevo espacio está ocupado, cuando intenta reasignarlo, entonces el sistema rechaza la operación. |
 
-### US28 - Consultar zona asignada
+### US28 - Consultar historial de movimientos
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US28 |
-| **Epic ID** | EP04 |
-| **Título** | Consultar zona asignada |
-| **Descripción** | Como Voluntario espontáneo, deseo conocer mi zona de trabajo para saber dónde debo realizar mi actividad. |
-| **Criterio de aceptación 1** | Dado que mi tarea tiene una zona, cuando consulto la actividad, entonces puedo conocerla. |
-| **Criterio de aceptación 2** | Dado que todavía no tiene una zona asociada, cuando consulto, entonces se informa que está pendiente. |
+| **Epic ID** | EP-03 |
+| **Título** | Consultar historial de movimientos |
+| **Descripción** | Como administrador, quiero consultar ingresos y salidas anteriores para disponer de un registro confiable de la operación. |
+| **Criterio de aceptación 1** | Dado que existen movimientos almacenados, cuando consulta el historial, entonces el sistema proporciona los registros correspondientes. |
+| **Criterio de aceptación 2** | Dado un periodo válido, cuando realiza la consulta, entonces el sistema proporciona únicamente los registros de dicho periodo. |
 
-### US29 - Consultar requisitos de tarea
+### US29 - Recibir alerta por permanencia
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US29 |
-| **Epic ID** | EP04 |
-| **Título** | Consultar requisitos de tarea |
-| **Descripción** | Como Voluntario espontáneo, deseo conocer los requisitos de mi tarea para saber qué preparación y protección necesito. |
-| **Criterio de aceptación 1** | Dado que tengo una tarea asignada, cuando consulto sus requisitos, entonces puedo revisar experiencia, capacitación y EPP necesarios. |
-| **Criterio de aceptación 2** | Dado que un requisito cambia, cuando vuelvo a consultar, entonces obtengo la información actualizada. |
+| **Epic ID** | EP-04 |
+| **Título** | Recibir alerta por permanencia |
+| **Descripción** | Como administrador, quiero conocer cuando un vehículo excede el tiempo establecido para detectar situaciones irregulares. |
+| **Criterio de aceptación 1** | Dado que un vehículo supera el tiempo configurado, cuando se cumple la condición, entonces el sistema genera una alerta. |
+| **Criterio de aceptación 2** | Dado que todavía no supera el tiempo establecido, cuando se evalúa su permanencia, entonces el sistema no genera dicha alerta. |
 
-### US30 - Reasignar voluntario
+### US30 - Consultar alertas activas
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US30 |
-| **Epic ID** | EP04 |
-| **Título** | Reasignar voluntario |
-| **Descripción** | Como Coordinador de crisis, deseo reasignar a un voluntario para responder a cambios en las necesidades de la emergencia. |
-| **Criterio de aceptación 1** | Dado que el voluntario cumple los requisitos de otra tarea, cuando lo reasigno, entonces queda asociado a ella. |
-| **Criterio de aceptación 2** | Dado que no cumple los requisitos, cuando intento reasignarlo, entonces el cambio no se realiza. |
+| **Epic ID** | EP-04 |
+| **Título** | Consultar alertas activas |
+| **Descripción** | Como administrador, quiero consultar las alertas activas para identificar situaciones que requieren atención. |
+| **Criterio de aceptación 1** | Dado que existen alertas pendientes, cuando las consulta, entonces el sistema proporciona las alertas activas. |
+| **Criterio de aceptación 2** | Dado que no existen alertas pendientes, cuando realiza la consulta, entonces el sistema informa dicha situación. |
 
-### US31 - Consultar tareas por zona
+### US31 - Resolver alerta
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US31 |
-| **Epic ID** | EP04 |
-| **Título** | Consultar tareas por zona |
-| **Descripción** | Como Coordinador de crisis, deseo consultar las tareas de una zona para conocer las actividades que deben realizarse. |
-| **Criterio de aceptación 1** | Dado que existen tareas asociadas, cuando consulto la zona, entonces obtengo sus actividades. |
-| **Criterio de aceptación 2** | Dado que no existen tareas, cuando consulto, entonces se informa que no hay actividades registradas. |
+| **Epic ID** | EP-04 |
+| **Título** | Resolver alerta |
+| **Descripción** | Como administrador, quiero marcar una alerta como resuelta para mantener actualizado el seguimiento de incidencias. |
+| **Criterio de aceptación 1** | Dado que existe una alerta activa, cuando registra su resolución, entonces el sistema cambia su estado a resuelta. |
+| **Criterio de aceptación 2** | Dado que la alerta ya está resuelta, cuando vuelve a consultarla, entonces conserva dicho estado. |
 
-### US32 - Iniciar tarea
+### US32 - Consultar reporte de ocupación
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US32 |
-| **Epic ID** | EP04 |
-| **Título** | Iniciar tarea |
-| **Descripción** | Como Voluntario espontáneo, deseo indicar cuando comienzo una tarea para mantener actualizado el seguimiento de mi actividad. |
-| **Criterio de aceptación 1** | Dado que tengo una tarea asignada, cuando la inicio, entonces cambia a estado en ejecución. |
-| **Criterio de aceptación 2** | Dado que no soy responsable de la tarea, cuando intento iniciarla, entonces la operación es rechazada. |
+| **Epic ID** | EP-04 |
+| **Título** | Consultar reporte de ocupación |
+| **Descripción** | Como administrador, quiero consultar reportes de ocupación para analizar el uso de los espacios. |
+| **Criterio de aceptación 1** | Dado que existen datos de ocupación, cuando solicita un reporte para un periodo válido, entonces el sistema proporciona la información correspondiente. |
+| **Criterio de aceptación 2** | Dado que no existen registros para el periodo, cuando genera el reporte, entonces el sistema informa que no existen datos. |
 
-### US33 - Finalizar tarea
+### US33 - Consultar reporte de movimientos
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US33 |
-| **Epic ID** | EP04 |
-| **Título** | Finalizar tarea |
-| **Descripción** | Como Voluntario espontáneo, deseo indicar cuando termino una tarea para que el coordinador conozca que fue completada. |
-| **Criterio de aceptación 1** | Dado que mi tarea está en ejecución, cuando confirmo su finalización, entonces queda completada. |
-| **Criterio de aceptación 2** | Dado que no fue iniciada, cuando intento finalizarla, entonces se informa que primero debe comenzar. |
+| **Epic ID** | EP-04 |
+| **Título** | Consultar reporte de movimientos |
+| **Descripción** | Como administrador, quiero consultar reportes de ingresos y salidas para analizar el flujo de vehículos. |
+| **Criterio de aceptación 1** | Dado que existen movimientos registrados, cuando solicita el reporte, entonces el sistema proporciona los registros correspondientes. |
+| **Criterio de aceptación 2** | Dado un periodo específico, cuando genera el reporte, entonces únicamente considera los movimientos pertenecientes a dicho periodo. |
 
-### US34 - Consultar avance de tareas
+### US34 - Consultar tiempos de permanencia
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US34 |
-| **Epic ID** | EP04 |
-| **Título** | Consultar avance de tareas |
-| **Descripción** | Como Coordinador de crisis, deseo consultar el avance de las tareas para identificar cuáles están pendientes, en ejecución o completadas. |
-| **Criterio de aceptación 1** | Dado que existen tareas registradas, cuando consulto su avance, entonces obtengo su estado actual. |
-| **Criterio de aceptación 2** | Dado que una tarea cambia de estado, cuando vuelvo a consultar, entonces el cambio queda reflejado. |
+| **Epic ID** | EP-04 |
+| **Título** | Consultar tiempos de permanencia |
+| **Descripción** | Como administrador, quiero consultar los tiempos de permanencia para comprender cuánto utilizan los clientes el estacionamiento. |
+| **Criterio de aceptación 1** | Dado que existen ingresos y salidas registrados, cuando consulta la permanencia, entonces el sistema proporciona la duración correspondiente. |
+| **Criterio de aceptación 2** | Dado que un vehículo continúa dentro del estacionamiento, cuando realiza la consulta, entonces el sistema proporciona su permanencia actual. |
 
-### US35 - Definir EPP requerido
+### US35 - Supervisar estacionamiento remotamente
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US35 |
-| **Epic ID** | EP05 |
-| **Título** | Definir EPP requerido |
-| **Descripción** | Como Especialista ambiental, deseo definir el EPP requerido para una actividad para proteger a los voluntarios frente a los riesgos existentes. |
-| **Criterio de aceptación 1** | Dado que una actividad presenta riesgos, cuando registro los EPP requeridos, entonces quedan asociados. |
-| **Criterio de aceptación 2** | Dado que los riesgos cambian, cuando actualizo los EPP, entonces quedan registrados los nuevos requisitos. |
+| **Epic ID** | EP-04 |
+| **Título** | Supervisar estacionamiento remotamente |
+| **Descripción** | Como administrador, quiero consultar el estado del estacionamiento sin estar presente físicamente para mantener el control de la operación. |
+| **Criterio de aceptación 1** | Dado que existe información operativa actualizada, cuando consulta el establecimiento, entonces el sistema proporciona su ocupación y movimientos vigentes. |
+| **Criterio de aceptación 2** | Dado que ocurre un nuevo movimiento, cuando se registra, entonces la información operativa se actualiza. |
 
-### US36 - Registrar entrega de EPP
+### US36 - Notificación de tiempo restante
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US36 |
-| **Epic ID** | EP05 |
-| **Título** | Registrar entrega de EPP |
-| **Descripción** | Como Coordinador de crisis, deseo registrar los EPP entregados a un voluntario para saber qué protección recibió. |
-| **Criterio de aceptación 1** | Dado que entrego un EPP, cuando registro la entrega, entonces queda asociado al voluntario. |
-| **Criterio de aceptación 2** | Dado que falta un EPP obligatorio, cuando verifico la entrega, entonces aparece como pendiente. |
+| **Epic ID** | EP-05 |
+| **Título** | Notificación de tiempo restante |
+| **Descripción** | Como conductor, quiero conocer el tiempo restante de mi estacionamiento para evitar exceder el periodo previsto. |
+| **Criterio de aceptación 1** | Dado que posee una estancia activa, cuando se aproxima el vencimiento, entonces el sistema genera una notificación. |
+| **Criterio de aceptación 2** | Dado que todavía no corresponde notificar, cuando se evalúa la permanencia, entonces el sistema no genera la notificación. |
 
-### US37 - Consultar EPP recibido
+### US37 - Notificación de vencimiento
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US37 |
-| **Epic ID** | EP05 |
-| **Título** | Consultar EPP recibido |
-| **Descripción** | Como Voluntario espontáneo, deseo consultar los EPP que me fueron entregados para comprobar que cuento con la protección requerida. |
-| **Criterio de aceptación 1** | Dado que recibí equipos, cuando consulto mi información, entonces puedo conocer los EPP registrados. |
-| **Criterio de aceptación 2** | Dado que falta alguno, cuando consulto, entonces se identifica como pendiente. |
+| **Epic ID** | EP-05 |
+| **Título** | Notificación de vencimiento |
+| **Descripción** | Como conductor, quiero recibir un aviso cuando finalice mi periodo para evitar inconvenientes adicionales. |
+| **Criterio de aceptación 1** | Dado que posee una estancia activa, cuando se alcanza el límite establecido, entonces el sistema genera una notificación de vencimiento. |
+| **Criterio de aceptación 2** | Dado que la estancia finalizó previamente, cuando llega el tiempo original de vencimiento, entonces el sistema no genera una nueva alerta. |
 
-### US38 - Verificar EPP antes del ingreso
+### US38 - Confirmación de ingreso
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US38 |
-| **Epic ID** | EP05 |
-| **Título** | Verificar EPP antes del ingreso |
-| **Descripción** | Como Coordinador de crisis, deseo verificar que el voluntario cuente con el EPP necesario antes de permitir su ingreso. |
-| **Criterio de aceptación 1** | Dado que posee todos los EPP requeridos, cuando realizo la verificación, entonces puede continuar. |
-| **Criterio de aceptación 2** | Dado que falta un EPP obligatorio, cuando verifico, entonces se informa qué elemento falta. |
+| **Epic ID** | EP-05 |
+| **Título** | Confirmación de ingreso |
+| **Descripción** | Como conductor, quiero recibir confirmación de mi ingreso para saber que mi vehículo fue registrado correctamente. |
+| **Criterio de aceptación 1** | Dado que el ingreso se registra satisfactoriamente, cuando finaliza el registro, entonces el sistema genera una confirmación. |
+| **Criterio de aceptación 2** | Dado que el ingreso no pudo registrarse, cuando finaliza el intento, entonces el sistema informa que no fue confirmado. |
 
-### US39 - Registrar devolución de EPP
+### US39 - Confirmación de salida
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US39 |
-| **Epic ID** | EP05 |
-| **Título** | Registrar devolución de EPP |
-| **Descripción** | Como Coordinador de crisis, deseo registrar la devolución de los equipos reutilizables para mantener control sobre los recursos. |
-| **Criterio de aceptación 1** | Dado que el voluntario devuelve un equipo, cuando registro la devolución, entonces queda como devuelto. |
-| **Criterio de aceptación 2** | Dado que todavía conserva un equipo, cuando consulto su registro, entonces aparece como pendiente de devolución. |
+| **Epic ID** | EP-05 |
+| **Título** | Confirmación de salida |
+| **Descripción** | Como conductor, quiero recibir confirmación de mi salida para saber que mi permanencia finalizó correctamente. |
+| **Criterio de aceptación 1** | Dado que la salida se registra satisfactoriamente, cuando finaliza el proceso, entonces el sistema genera una confirmación. |
+| **Criterio de aceptación 2** | Dado que no existe una estancia activa, cuando intenta registrarse la salida, entonces el sistema informa que la operación no puede completarse. |
 
-### US40 - Consultar entregas de EPP
+### US40 - Recordatorio de reserva
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US40 |
-| **Epic ID** | EP05 |
-| **Título** | Consultar entregas de EPP |
-| **Descripción** | Como Coordinador de crisis, deseo consultar las entregas de EPP para conocer qué equipos tiene cada voluntario. |
-| **Criterio de aceptación 1** | Dado que existen entregas registradas, cuando realizo la consulta, entonces obtengo los equipos y voluntarios relacionados. |
-| **Criterio de aceptación 2** | Dado que no existen entregas, cuando consulto, entonces se informa que no hay registros. |
+| **Epic ID** | EP-05 |
+| **Título** | Recordatorio de reserva |
+| **Descripción** | Como conductor, quiero recibir un recordatorio de una reserva próxima para no olvidar el espacio reservado. |
+| **Criterio de aceptación 1** | Dado que posee una reserva futura activa, cuando se aproxima el periodo reservado, entonces el sistema genera un recordatorio. |
+| **Criterio de aceptación 2** | Dado que la reserva fue cancelada, cuando llega el periodo correspondiente, entonces el sistema no genera el recordatorio. |
 
-### US41 - Generar código QR
+### US41 - Conocer EasyPark
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US41 |
-| **Epic ID** | EP06 |
-| **Título** | Generar código QR |
-| **Descripción** | Como Voluntario espontáneo, deseo contar con un código QR asociado a mi registro para facilitar mi identificación. |
-| **Criterio de aceptación 1** | Dado que mi registro está completo, cuando obtengo mi identificación, entonces se genera un código QR asociado a mi perfil. |
-| **Criterio de aceptación 2** | Dado que faltan datos obligatorios, cuando intento obtenerlo, entonces se informa que debo completar mi registro. |
+| **Epic ID** | EP-06 |
+| **Título** | Conocer EasyPark |
+| **Descripción** | Como visitante, quiero conocer qué es EasyPark para comprender el propósito de la solución. |
+| **Criterio de aceptación 1** | Dado que accede al Landing Page, cuando consulta la información de EasyPark, entonces encuentra una descripción de la solución. |
+| **Criterio de aceptación 2** | Dado que consulta la propuesta de valor, cuando revisa la información disponible, entonces identifica el problema que EasyPark busca resolver. |
 
-### US42 - Registrar ingreso con QR
+### US42 - Conocer beneficios para conductores
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US42 |
-| **Epic ID** | EP06 |
-| **Título** | Registrar ingreso con QR |
-| **Descripción** | Como Coordinador de crisis, deseo registrar el ingreso de un voluntario mediante QR para saber quién se encuentra dentro de la zona. |
-| **Criterio de aceptación 1** | Dado que el voluntario está autorizado, cuando escaneo su QR, entonces se registra su ingreso. |
-| **Criterio de aceptación 2** | Dado que el código no es válido, cuando lo escaneo, entonces el ingreso no se registra. |
+| **Epic ID** | EP-06 |
+| **Título** | Conocer beneficios para conductores |
+| **Descripción** | Como visitante conductor, quiero conocer los beneficios de EasyPark para evaluar si la solución satisface mis necesidades. |
+| **Criterio de aceptación 1** | Dado que pertenece al segmento de conductores, cuando consulta los beneficios, entonces encuentra información relevante sobre búsqueda, disponibilidad y reserva. |
+| **Criterio de aceptación 2** | Dado que desea conocer el valor de la solución, cuando revisa la información, entonces identifica los principales beneficios para conductores. |
 
-### US43 - Registrar salida con QR
+### US43 - Conocer beneficios para administradores
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US43 |
-| **Epic ID** | EP06 |
-| **Título** | Registrar salida con QR |
-| **Descripción** | Como Coordinador de crisis, deseo registrar la salida de un voluntario mediante QR para mantener actualizada su permanencia. |
-| **Criterio de aceptación 1** | Dado que tiene un ingreso activo, cuando escaneo su QR al salir, entonces se registra la salida. |
-| **Criterio de aceptación 2** | Dado que no tiene un ingreso registrado, cuando intento registrar su salida, entonces se informa la inconsistencia. |
+| **Epic ID** | EP-06 |
+| **Título** | Conocer beneficios para administradores |
+| **Descripción** | Como visitante administrador, quiero conocer los beneficios de EasyPark para evaluar su utilidad en mi estacionamiento. |
+| **Criterio de aceptación 1** | Dado que pertenece al segmento de administradores, cuando consulta los beneficios, entonces encuentra información sobre gestión, supervisión y reportes. |
+| **Criterio de aceptación 2** | Dado que desea evaluar la solución, cuando consulta sus beneficios, entonces identifica las capacidades dirigidas a administradores. |
 
-### US44 - Consultar estado de ingreso
+### US44 - Conocer funcionalidades principales
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US44 |
-| **Epic ID** | EP06 |
-| **Título** | Consultar estado de ingreso |
-| **Descripción** | Como Voluntario espontáneo, deseo conocer si mi ingreso o salida fue registrado para verificar mi estado dentro de la actividad. |
-| **Criterio de aceptación 1** | Dado que registré mi ingreso, cuando consulto mi estado, entonces aparece como activo. |
-| **Criterio de aceptación 2** | Dado que registré mi salida, cuando consulto, entonces aparece como participación finalizada. |
+| **Epic ID** | EP-06 |
+| **Título** | Conocer funcionalidades principales |
+| **Descripción** | Como visitante, quiero conocer las funcionalidades principales para comprender cómo EasyPark puede resolver el problema. |
+| **Criterio de aceptación 1** | Dado que consulta la información del producto, cuando revisa sus funcionalidades, entonces encuentra las principales capacidades de EasyPark. |
+| **Criterio de aceptación 2** | Dado que una funcionalidad no forma parte de la solución actual, cuando revisa la información, entonces no se presenta como una capacidad disponible. |
 
-### US45 - Consultar voluntarios dentro de la zona
+### US45 - Conocer funcionamiento de reservas
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US45 |
-| **Epic ID** | EP06 |
-| **Título** | Consultar voluntarios dentro de la zona |
-| **Descripción** | Como Coordinador de crisis, deseo conocer qué voluntarios permanecen dentro de una zona para mantener control de las personas presentes. |
-| **Criterio de aceptación 1** | Dado que existen voluntarios con ingreso activo, cuando consulto la zona, entonces obtengo sus registros. |
-| **Criterio de aceptación 2** | Dado que no hay voluntarios activos, cuando consulto, entonces se informa que la zona no tiene participantes registrados. |
+| **Epic ID** | EP-06 |
+| **Título** | Conocer funcionamiento de reservas |
+| **Descripción** | Como visitante conductor, quiero conocer cómo funcionan las reservas para entender el proceso antes de utilizar EasyPark. |
+| **Criterio de aceptación 1** | Dado que consulta la información sobre reservas, cuando revisa su funcionamiento, entonces identifica el propósito de la funcionalidad. |
+| **Criterio de aceptación 2** | Dado que desea conocer sus beneficios, cuando consulta la información, entonces identifica cómo una reserva reduce la incertidumbre de disponibilidad. |
 
-### US46 - Consultar historial de ingreso y salida
+### US46 - Conocer gestión digital para administradores
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US46 |
-| **Epic ID** | EP06 |
-| **Título** | Consultar historial de ingreso y salida |
-| **Descripción** | Como Coordinador de crisis, deseo consultar el historial de ingreso y salida para mantener trazabilidad de la participación de los voluntarios. |
-| **Criterio de aceptación 1** | Dado que existen registros, cuando consulto el historial, entonces obtengo las fechas y horas correspondientes. |
-| **Criterio de aceptación 2** | Dado que un voluntario no tiene movimientos, cuando consulto, entonces se informa que no existen registros. |
+| **Epic ID** | EP-06 |
+| **Título** | Conocer gestión digital para administradores |
+| **Descripción** | Como visitante administrador, quiero conocer cómo EasyPark digitaliza la operación para evaluar su adopción. |
+| **Criterio de aceptación 1** | Dado que consulta información dirigida a administradores, cuando revisa la propuesta, entonces encuentra información sobre registros, ocupación y supervisión. |
+| **Criterio de aceptación 2** | Dado que actualmente utiliza procesos manuales, cuando consulta la solución, entonces identifica alternativas de digitalización disponibles. |
 
-### US47 - Consultar resumen de voluntarios
+### US47 - Conocer integración progresiva con IoT
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US47 |
-| **Epic ID** | EP07 |
-| **Título** | Consultar resumen de voluntarios |
-| **Descripción** | Como Coordinador de crisis, deseo consultar un resumen de voluntarios para conocer rápidamente cuántas personas están participando. |
-| **Criterio de aceptación 1** | Dado que existen voluntarios registrados, cuando consulto el resumen, entonces obtengo la cantidad disponible, asignada y activa. |
-| **Criterio de aceptación 2** | Dado que cambia el estado de un voluntario, cuando actualizo la consulta, entonces el resumen refleja el cambio. |
+| **Epic ID** | EP-06 |
+| **Título** | Conocer integración progresiva con IoT |
+| **Descripción** | Como visitante administrador, quiero conocer la posibilidad de incorporar IoT progresivamente para evaluar futuras mejoras de automatización. |
+| **Criterio de aceptación 1** | Dado que consulta información sobre integración tecnológica, cuando revisa las capacidades futuras, entonces identifica que IoT puede incorporarse progresivamente. |
+| **Criterio de aceptación 2** | Dado que no dispone de sensores, cuando consulta los requisitos iniciales, entonces identifica que el hardware especializado no es obligatorio. |
 
-### US48 - Consultar grupos activos
+### US48 - Consultar preguntas frecuentes
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US48 |
-| **Epic ID** | EP07 |
-| **Título** | Consultar grupos activos |
-| **Descripción** | Como Coordinador de crisis, deseo consultar los grupos de voluntarios activos para supervisar cómo están distribuidas las personas. |
-| **Criterio de aceptación 1** | Dado que existen grupos trabajando, cuando realizo la consulta, entonces puedo conocer sus miembros, tareas y zonas. |
-| **Criterio de aceptación 2** | Dado que no hay grupos activos, cuando consulto, entonces se informa que no existen grupos trabajando. |
+| **Epic ID** | EP-06 |
+| **Título** | Consultar preguntas frecuentes |
+| **Descripción** | Como visitante, quiero consultar respuestas a preguntas frecuentes para resolver dudas antes de utilizar EasyPark. |
+| **Criterio de aceptación 1** | Dado que posee una duda cubierta por la información disponible, cuando consulta las preguntas frecuentes, entonces encuentra una respuesta relacionada. |
+| **Criterio de aceptación 2** | Dado que necesita conocer aspectos generales del servicio, cuando consulta esta información, entonces encuentra respuestas sobre el funcionamiento de EasyPark. |
 
-### US49 - Consultar actividades de un voluntario
+### US49 - Contactar con EasyPark
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US49 |
-| **Epic ID** | EP07 |
-| **Título** | Consultar actividades de un voluntario |
-| **Descripción** | Como Coordinador de crisis, deseo conocer las actividades realizadas por un voluntario para revisar su participación durante la emergencia. |
-| **Criterio de aceptación 1** | Dado que el voluntario realizó actividades, cuando consulto su historial, entonces puedo revisar sus tareas. |
-| **Criterio de aceptación 2** | Dado que no realizó actividades, cuando consulto, entonces se informa que no existen registros. |
+| **Epic ID** | EP-06 |
+| **Título** | Contactar con EasyPark |
+| **Descripción** | Como visitante, quiero conocer los medios de contacto para comunicarme con el equipo responsable de EasyPark. |
+| **Criterio de aceptación 1** | Dado que desea comunicarse con EasyPark, cuando consulta la información de contacto, entonces encuentra los medios disponibles. |
+| **Criterio de aceptación 2** | Dado que pertenece a cualquiera de los segmentos objetivo, cuando busca información de contacto, entonces puede identificar un medio válido de comunicación. |
 
-### US50 - Consultar estado general de zonas
+### US50 - Acceder a la aplicación web
 
 | Campo | Detalle |
 |---|---|
 | **User Story ID** | US50 |
-| **Epic ID** | EP07 |
-| **Título** | Consultar estado general de zonas |
-| **Descripción** | Como Coordinador de crisis, deseo consultar el estado de las zonas para saber dónde se están realizando actividades y cuáles presentan restricciones. |
-| **Criterio de aceptación 1** | Dado que existen zonas registradas, cuando consulto su estado, entonces obtengo la condición de cada una. |
-| **Criterio de aceptación 2** | Dado que el especialista actualiza una zona, cuando vuelvo a consultar, entonces observo el nuevo estado. |
-
-### US51 - Consultar distribución de voluntarios
-
-| Campo | Detalle |
-|---|---|
-| **User Story ID** | US51 |
-| **Epic ID** | EP07 |
-| **Título** | Consultar distribución de voluntarios |
-| **Descripción** | Como Coordinador de crisis, deseo conocer cómo están distribuidos los voluntarios para evitar concentración excesiva o falta de apoyo en alguna zona. |
-| **Criterio de aceptación 1** | Dado que existen voluntarios asignados, cuando consulto la distribución, entonces obtengo la cantidad por zona. |
-| **Criterio de aceptación 2** | Dado que una zona no tiene voluntarios asignados, cuando consulto, entonces puedo identificarla. |
-
-### US52 - Consultar resumen de la emergencia
-
-| Campo | Detalle |
-|---|---|
-| **User Story ID** | US52 |
-| **Epic ID** | EP07 |
-| **Título** | Consultar resumen de la emergencia |
-| **Descripción** | Como Coordinador de crisis, deseo consultar un resumen de las actividades para tener información general de la operación. |
-| **Criterio de aceptación 1** | Dado que existen datos registrados, cuando consulto el resumen, entonces obtengo información sobre voluntarios, tareas y zonas. |
-| **Criterio de aceptación 2** | Dado que existen nuevos registros, cuando actualizo la consulta, entonces aparecen los datos recientes. |
-
-### US53 - Consultar información sin conexión
-
-| Campo | Detalle |
-|---|---|
-| **User Story ID** | US53 |
-| **Epic ID** | EP08 |
-| **Título** | Consultar información sin conexión |
-| **Descripción** | Como Voluntario espontáneo, deseo consultar mi tarea y las indicaciones básicas sin conexión para continuar orientado cuando no exista Internet. |
-| **Criterio de aceptación 1** | Dado que la información fue almacenada previamente, cuando pierdo la conexión, entonces puedo seguir consultándola. |
-| **Criterio de aceptación 2** | Dado que una información nunca fue almacenada, cuando intento consultarla sin Internet, entonces se informa que no está disponible. |
-
-### US54 - Registrar ingreso sin conexión
-
-| Campo | Detalle |
-|---|---|
-| **User Story ID** | US54 |
-| **Epic ID** | EP08 |
-| **Título** | Registrar ingreso sin conexión |
-| **Descripción** | Como Coordinador de crisis, deseo registrar ingresos cuando no existe conexión para mantener el control de los voluntarios en campo. |
-| **Criterio de aceptación 1** | Dado que no existe Internet, cuando registro un ingreso válido, entonces queda almacenado temporalmente. |
-| **Criterio de aceptación 2** | Dado que recupero la conexión, cuando se sincronizan los datos, entonces el ingreso queda registrado de forma definitiva. |
-
-### US55 - Registrar salida sin conexión
-
-| Campo | Detalle |
-|---|---|
-| **User Story ID** | US55 |
-| **Epic ID** | EP08 |
-| **Título** | Registrar salida sin conexión |
-| **Descripción** | Como Coordinador de crisis, deseo registrar salidas sin conexión para mantener actualizado el control de las personas que abandonan la zona. |
-| **Criterio de aceptación 1** | Dado que no tengo Internet, cuando registro una salida, entonces queda almacenada temporalmente. |
-| **Criterio de aceptación 2** | Dado que vuelve la conexión, cuando se realiza la sincronización, entonces la salida queda registrada. |
-
-### US56 - Sincronizar información pendiente
-
-| Campo | Detalle |
-|---|---|
-| **User Story ID** | US56 |
-| **Epic ID** | EP08 |
-| **Título** | Sincronizar información pendiente |
-| **Descripción** | Como Coordinador de crisis, deseo sincronizar la información guardada durante una pérdida de conexión para evitar pérdida de registros. |
-| **Criterio de aceptación 1** | Dado que existen datos pendientes y vuelve Internet, cuando comienza la sincronización, entonces los datos son enviados. |
-| **Criterio de aceptación 2** | Dado que una sincronización falla, cuando vuelve a intentarse, entonces la información pendiente se conserva hasta completarse. |
-
-### US57 - Recibir cambio de tarea
-
-| Campo | Detalle |
-|---|---|
-| **User Story ID** | US57 |
-| **Epic ID** | EP09 |
-| **Título** | Recibir cambio de tarea |
-| **Descripción** | Como Voluntario espontáneo, deseo recibir una notificación cuando cambie mi tarea para conocer rápidamente mi nueva actividad. |
-| **Criterio de aceptación 1** | Dado que el coordinador cambia mi tarea, cuando se confirma la reasignación, entonces recibo el aviso correspondiente. |
-| **Criterio de aceptación 2** | Dado que mi tarea no cambia, cuando consulto mis avisos, entonces no aparece una notificación de reasignación. |
-
-### US58 - Recibir cambio de zona
-
-| Campo | Detalle |
-|---|---|
-| **User Story ID** | US58 |
-| **Epic ID** | EP09 |
-| **Título** | Recibir cambio de zona |
-| **Descripción** | Como Voluntario espontáneo, deseo recibir una notificación cuando cambie mi zona de trabajo para evitar dirigirme al lugar equivocado. |
-| **Criterio de aceptación 1** | Dado que el coordinador cambia mi zona, cuando se confirma el cambio, entonces recibo la información actualizada. |
-| **Criterio de aceptación 2** | Dado que la zona permanece igual, cuando reviso mis avisos, entonces no aparece un cambio de ubicación. |
-
-### US59 - Recibir alerta de seguridad
-
-| Campo | Detalle |
-|---|---|
-| **User Story ID** | US59 |
-| **Epic ID** | EP09 |
-| **Título** | Recibir alerta de seguridad |
-| **Descripción** | Como Voluntario espontáneo, deseo recibir una alerta cuando exista un cambio importante de seguridad para tomar las precauciones necesarias. |
-| **Criterio de aceptación 1** | Dado que el especialista registra un cambio importante en una zona, cuando se publica la actualización, entonces los voluntarios relacionados reciben una alerta. |
-| **Criterio de aceptación 2** | Dado que una zona se declara no apta, cuando se actualiza su estado, entonces se informa a quienes se encuentren asignados. |
-
-### US60 - Comunicar actualización de riesgo
-
-| Campo | Detalle |
-|---|---|
-| **User Story ID** | US60 |
-| **Epic ID** | EP09 |
-| **Título** | Comunicar actualización de riesgo |
-| **Descripción** | Como Especialista ambiental, deseo comunicar una actualización de riesgo para que coordinadores y voluntarios puedan responder ante nuevas condiciones. |
-| **Criterio de aceptación 1** | Dado que identifico un cambio de riesgo, cuando registro y confirmo la actualización, entonces queda disponible para los usuarios relacionados. |
-| **Criterio de aceptación 2** | Dado que no confirmo la actualización, cuando otros usuarios consultan la zona, entonces se mantiene la información vigente anterior. |
-
+| **Epic ID** | EP-06 |
+| **Título** | Acceder a la aplicación web |
+| **Descripción** | Como visitante, quiero acceder a la aplicación EasyPark para comenzar a utilizar el servicio. |
+| **Criterio de aceptación 1** | Dado que el visitante decide utilizar EasyPark, cuando solicita acceder a la aplicación, entonces puede continuar hacia la experiencia web. |
+| **Criterio de aceptación 2** | Dado que el acceso a la aplicación no se encuentra disponible, cuando intenta continuar, entonces recibe información sobre la imposibilidad de acceder. |
 
 ## 3.2. Impact Mapping
 

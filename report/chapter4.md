@@ -583,6 +583,11 @@ El equipo realizó una sesión colaborativa de dos horas, organizada en cuatro m
 
 ![Identity&Access.jpg](../assets/images/Identity%26Access.jpg)
 
+**Reservations:**
+
+![Reservations.jpg](../assets/images/Reservations.jpg)
+
+
 **Flujo del segmento conductor.** Cubre desde la búsqueda hasta la cancelación de la reserva.
 
 ![EventStorming de nivel de diseño del flujo del conductor](../assets/images/es-01-conductor.png)

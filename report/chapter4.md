@@ -607,6 +607,9 @@ El equipo realizó una sesión colaborativa de dos horas, organizada en cuatro m
 
 ![Notification.jpg](../assets/images/Notification.jpg)
 
+**Analytics and Reporting:**
+
+![Analytics.jpg](../assets/images/Analytics.jpg)
 
 
 **Flujo del segmento conductor.** Cubre desde la búsqueda hasta la cancelación de la reserva.

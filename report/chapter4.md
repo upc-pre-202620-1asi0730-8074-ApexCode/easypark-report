@@ -587,6 +587,9 @@ El equipo realizó una sesión colaborativa de dos horas, organizada en cuatro m
 
 ![Reservations.jpg](../assets/images/Reservations.jpg)
 
+**Parking Management:**
+
+![Parking Management.jpg](../assets/images/Parking%20Management.jpg)
 
 **Flujo del segmento conductor.** Cubre desde la búsqueda hasta la cancelación de la reserva.
 

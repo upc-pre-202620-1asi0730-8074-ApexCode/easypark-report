@@ -579,6 +579,10 @@ Partiendo del Big Picture EventStorming del Capítulo II, el equipo profundizó 
 
 El equipo realizó una sesión colaborativa de dos horas, organizada en cuatro momentos: revisión de la línea de tiempo de eventos obtenida en el Big Picture, incorporación de los comandos y actores que los provocan, identificación de los agregados que protegen las reglas de negocio, y descubrimiento de las políticas y los modelos de lectura que conectan un evento con el siguiente comando. Al cerrar la sesión se agruparon los elementos por afinidad de lenguaje y de reglas, y esa agrupación dio origen a los bounded contexts.
 
+**Identity and Access Management:**
+
+![Identity&Access.jpg](../assets/images/Identity%26Access.jpg)
+
 **Flujo del segmento conductor.** Cubre desde la búsqueda hasta la cancelación de la reserva.
 
 ![EventStorming de nivel de diseño del flujo del conductor](../assets/images/es-01-conductor.png)

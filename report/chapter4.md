@@ -579,6 +579,41 @@ Partiendo del Big Picture EventStorming del Capítulo II, el equipo profundizó 
 
 El equipo realizó una sesión colaborativa de dos horas, organizada en cuatro momentos: revisión de la línea de tiempo de eventos obtenida en el Big Picture, incorporación de los comandos y actores que los provocan, identificación de los agregados que protegen las reglas de negocio, y descubrimiento de las políticas y los modelos de lectura que conectan un evento con el siguiente comando. Al cerrar la sesión se agruparon los elementos por afinidad de lenguaje y de reglas, y esa agrupación dio origen a los bounded contexts.
 
+**Identity and Access Management:**
+
+![Identity&Access.jpg](../assets/images/Identity%26Access.jpg)
+
+**Reservations:**
+
+![Reservations.jpg](../assets/images/Reservations.jpg)
+
+**Parking Management:**
+
+![Parking Management.jpg](../assets/images/Parking%20Management.jpg)
+
+**Profiles and vehicles:**
+
+![Profiles & Vehicles.jpg](../assets/images/Profiles%20%26%20Vehicles.jpg)
+
+**Access Control:**
+
+![Access Control.jpg](../assets/images/Access%20Control.jpg)
+
+**Monitoring Alerts:**
+
+![Monitoring Alerts.jpg](../assets/images/Monitoring%20Alerts.jpg)
+
+**Notifications:**
+
+![Notification.jpg](../assets/images/Notification.jpg)
+
+**Analytics and Reporting:**
+
+![Analytics.jpg](../assets/images/Analytics.jpg)
+
+Link del miro: https://miro.com/welcomeonboard/dUN5cGFFVHVQcnNRMmFUeE05QWZScHIydkJBNDNTRlpZRFVDNjhYenJ1emsyK09oTnBYUXJmSHI5TmRrZ0wwc1U2Tm16Yzg3VDFaWHNIMmVocjNhNHI1Z0ZQR29HMUhwVWhhTVltSTV5NGYxZEtHMDg4YVo0QW9GdVB1enl1aGxQdGo1ZEV3bUdPQWRZUHQzSGl6V2NBPT0hdjE=?share_link_id=931450657251
+
+
 **Flujo del segmento conductor.** Cubre desde la búsqueda hasta la cancelación de la reserva.
 
 ![EventStorming de nivel de diseño del flujo del conductor](../assets/images/es-01-conductor.png)

@@ -595,6 +595,10 @@ El equipo realizó una sesión colaborativa de dos horas, organizada en cuatro m
 
 ![Profiles & Vehicles.jpg](../assets/images/Profiles%20%26%20Vehicles.jpg)
 
+**Access Control:**
+
+![Access Control.jpg](../assets/images/Access%20Control.jpg)
+
 **Flujo del segmento conductor.** Cubre desde la búsqueda hasta la cancelación de la reserva.
 
 ![EventStorming de nivel de diseño del flujo del conductor](../assets/images/es-01-conductor.png)

@@ -307,6 +307,8 @@ Preguntas principales
 
 ### 2.2.2. Registro de entrevistas
 
+Link a todas las entrevistas: [https://lix.li/CQeI](https://lix.li/CQeI)
+
 **Primer Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
 
 | Campo | ![Entrevista1](../assets/images/EntrevistaAdmin1.PNG) <br/> Entrevista 1 | ![Entrevista2](../assets/images/EntrevistaAdmin2.PNG) <br/> Entrevista 2 | ![Entrevista3](../assets/images/EntrevistaAdmin3.PNG) <br/> Entrevista 3 | ![Entrevista4](../assets/images/EntrevistaAdmin4.PNG) <br/> Entrevista 4 |

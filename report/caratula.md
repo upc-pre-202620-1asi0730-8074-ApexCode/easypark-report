@@ -82,7 +82,7 @@ https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report
 Para la gestión y control de versiones del proyecto se emplea **GitFlow**, mientras que los mensajes de commit siguen las convenciones establecidas por **Conventional Commits**.
 
 **AV1**
-
+![Project.PNG](../assets/images/Project.PNG)
 
 ## AV1 – Sprint Review (Semana 4)
 

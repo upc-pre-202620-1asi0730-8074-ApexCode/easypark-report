@@ -74,7 +74,7 @@ https://gist.github.com/noamtamim/f11982b28602bd7e604c233fbe9d910f
 
 | Entrega | Título                                                                                                   | Enlace        |
 |--------|----------------------------------------------------------------------------------------------------------|---------------|
-| AV1 | Presentación de la propuesta de negocio, Lean UX Process y primera versión del Landing Page|  |
+| AV1 | Presentación de la propuesta de negocio, Lean UX Process y primera versión del Landing Page| https://lix.li/U50Z |
 
 ## Anexo B. Repositorios del Proyecto
 

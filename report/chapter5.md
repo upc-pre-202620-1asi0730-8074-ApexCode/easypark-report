@@ -178,6 +178,10 @@ https://trello.com/b/KxGrDhN2/sprintseasypark
 
 #### 5.2.1.4 Development Evidence for Sprint Review.
 
+En este Sprint se logró la implementación del Landing Page de EasyPark, desarrollando su estructura principal en HTML y CSS, así como la navegación entre secciones y avances en el diseño responsive.
+
+![AV1landingevidence.PNG](../assets/images/AV1landingevidence.PNG)
+
 #### 5.2.1.5 Execution Evidence for Sprint Review.
 
 1. Captura de la Landing Page

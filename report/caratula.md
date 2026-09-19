@@ -69,32 +69,32 @@ Proyecto: **EasyPark**
 
 # Registro de versiones del informe
 
-| Versión | Fecha   | Autor      | Descripción de modificación |
-| --- |---------|------------| --- |
-| 0.1.0 | 12/9/26 | @Sergi9017 | docs: añadir los puntos previos al capítulo 1 |
-| 0.1.1 | 13/9/26 | @Sergi9017 | docs: añadir descripción del startup |
-| 0.1.2 | 13/9/26 | @Sergi9017 | docs: añadir todos los puntos de solution profile |
-| 0.1.3 | 13/9/26 | @Sergi9017 | docs: añadir segmentos objetivo |
-| 0.1.4 | 14/9/26 | @axismf    | docs: añadir todos los puntos de competidores |
-| 0.1.5 | 13/9/26 |            | docs: añadir todos los puntos de entrevistas |
-| 0.1.6 | 13/9/26 |            | docs: añadir las imagenes del needfinding |
-| 0.1.7 | 13/9/26 |            | docs: añadir todos los puntos del capitulo 3 |
-| 0.1.8 | 13/9/26 |            | docs: añadir todos los puntos de style guidelines |
-| 0.1.9 | 13/9/26 |            | docs: añadir todos los puntos de information architecture |
-| 0.1.10 | 13/9/26 |            | docs: añadir landing page ui design |
-| 0.1.11 | 13/9/26 |            | docs: añadir todos los puntos de web applications ux/ui design  |
-| 0.1.12 | 25/9/26 |            | docs: añadir todos los puntos de domain-driven software architecture  |
-| 0.1.13 | 25/9/26 |            | docs: añadir class diagram y database diagram |
-| 0.1.14 | 25/9/26 |            | docs: añadir todos los puntos de software configuration management |
-| 0.1.15 | 25/9/26 |            | docs: añadir todos los puntos del sprint 1 |
-| 0.1.16 | 25/9/26 |            | docs: añadir los 4 puntos finales |
-| 0.1.17 | 25/9/26 |            | docs: añadir student outcome y report insights |
-| 0.1.18 | 25/9/26 |            | docs: añadir ajustes finales para el av1 |
-| 0.2.0 | 9/9/26  |            | docs: añadir correcciones de la revisión del av1 |
+| Versión | Fecha   | Autor       | Descripción de modificación |
+| --- |---------|-------------| --- |
+| 0.1.0 | 12/9/26 | @Sergi9017  | docs: añadir los puntos previos al capítulo 1 |
+| 0.1.1 | 13/9/26 | @Sergi9017  | docs: añadir descripción del startup |
+| 0.1.2 | 13/9/26 | @Sergi9017  | docs: añadir todos los puntos de solution profile |
+| 0.1.3 | 13/9/26 | @Sergi9017  | docs: añadir segmentos objetivo |
+| 0.1.4 | 14/9/26 | @axismf     | docs: añadir todos los puntos de competidores |
+| 0.1.5 | 13/9/26 | @AlvarLC    | docs: añadir todos los puntos de entrevistas |
+| 0.1.6 | 13/9/26 | @AlvarLC    | docs: añadir las imagenes del needfinding |
+| 0.1.7 | 13/9/26 | @AlvarLC    | docs: añadir todos los puntos del capitulo 3 |
+| 0.1.8 | 13/9/26 | @Sergi9017  | docs: añadir todos los puntos de style guidelines |
+| 0.1.9 | 13/9/26 | @thunder053 | docs: añadir todos los puntos de information architecture |
+| 0.1.10 | 13/9/26 | @thunder053 | docs: añadir landing page ui design |
+| 0.1.11 | 13/9/26 | @thunder053 | docs: añadir todos los puntos de web applications ux/ui design  |
+| 0.1.12 | 25/9/26 | @thunder053 | docs: añadir todos los puntos de domain-driven software architecture  |
+| 0.1.13 | 25/9/26 | @thunder053 | docs: añadir class diagram y database diagram |
+| 0.1.14 | 25/9/26 | @fano1106-n | docs: añadir todos los puntos de software configuration management |
+| 0.1.15 | 25/9/26 | @fano1106-n | docs: añadir todos los puntos del sprint 1 |
+| 0.1.16 | 25/9/26 | @fano1106-n | docs: añadir los 4 puntos finales |
+| 0.1.17 | 25/9/26 | @fano1106-n | docs: añadir student outcome y report insights |
+| 0.1.18 | 25/9/26 | @axismf     | docs: añadir ajustes finales para el av1 |
+| 0.2.0 | 9/9/26  | @Sergi9017  | docs: añadir correcciones de la revisión del av1 |
 
 # Project Report Collaboration Insights
 
-**Repositorio de la documentación del proyecto:** [https://github.com/upc-pre-202620-1asi0729-7737-SportPlus/pulsepower-report/tree/develop](https://github.com/upc-pre-202620-1asi0729-7737-SportPlus/pulsepower-report/tree/develop)
+**Repositorio de la documentación del proyecto:** [https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report)
 
 A continuación, se detallan las actividades realizadas en cada entrega, la participación de los miembros del equipo, y las evidencias correspondientes.
 
@@ -194,12 +194,13 @@ Capítulo V: Product Implementation, Validation & Deployment
 5.2.1.8. Team Collaboration Insights during Sprint
 
 Conclusiones
+
 Bibliografía  
 Anexos
 
-
 # Student Outcome
+
 | Criterio específico | Acciones realizadas | Conclusiones |
 | --- | --- | --- |
-| Comunica oralmente con efectividad a diferentes rangos de audiencia. |
-| Comunica por escrito con efectividad a diferentes rangos de audiencia. |
+| Comunica oralmente con efectividad a diferentes rangos de audiencia. | **AV1:** <br><br> **Evangelista Ygnacio, Sergio Joaquin**: presenté los contenidos del Capítulo I: Introducción, aporté en el Capítulo V: Product Implementation, Validation & Deployment y el Landing Page, aparte que participé junto con mi equipo en la presentación del proyecto, comunicando los avances y resultados correspondientes a las diferentes partes desarrolladas durante el AV1. <br><br> **Negrón Muñoz, Cayo Manuel Stefano**: presentó y explicó los aspectos relacionados con el Capítulo V: Product Implementation, Validation & Deployment. <br><br> **Martin Farro, Alexis Sebastian**: comunicó los contenidos del Capítulo II: Requirements Elicitation & Analysis. <br><br> **Córdova, Alvar Lucas**: explicó los contenidos de los Capítulos II: Requirements Elicitation & Analysis y III: Requirements Specification. <br><br> **Saravia Huaricancha, Arturo Axel**: presentó los aspectos correspondientes al Capítulo IV: Product Design y el Landing Page. | **AV1:** Considero que como equipo logramos comunicar oralmente de manera efectiva los avances del proyecto, distribuyendo la presentación de acuerdo con las responsabilidades de cada integrante. Esto nos permitió explicar las diferentes partes del producto de forma organizada, clara y comprensible para la audiencia. |
+| Comunica por escrito con efectividad a diferentes rangos de audiencia. | **AV1:** <br><br> **Evangelista Ygnacio, Sergio Joaquin**: participé junto con mi equipo en la elaboración y organización de la documentación del proyecto. Desarrollé el Capítulo I: Introducción, el Capítulo V: Product Implementation, Validation & Deployment y el Landing Page. <br><br> **Negrón Muñoz, Cayo Manuel Stefano**: desarrolló el Capítulo V: Product Implementation, Validation & Deployment. <br><br> **Martin Farro, Alexis Sebastian**: desarrolló el Capítulo II: Requirements Elicitation & Analysis. <br><br> **Córdova, Alvar Lucas**: desarrolló los Capítulos II: Requirements Elicitation & Analysis y III: Requirements Specification. <br><br> **Saravia Huaricancha, Arturo Axel**: desarrolló el Capítulo IV: Product Design y el Landing Page. <br><br> | **AV1:** Considero que como equipo logramos comunicar por escrito de manera efectiva la información del proyecto, distribuyendo la elaboración de los capítulos según las responsabilidades asignadas. La organización y documentación de cada sección permitió presentar los avances del AV1 de forma clara, ordenada y comprensible para los lectores. |

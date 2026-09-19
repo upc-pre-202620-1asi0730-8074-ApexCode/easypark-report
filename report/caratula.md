@@ -68,29 +68,9 @@ Proyecto: **EasyPark**
 ---
 
 # Registro de versiones del informe
-
-| Versión | Fecha   | Autor       | Descripción de modificación |
-| --- |---------|-------------| --- |
-| 0.1.0 | 12/9/26 | @Sergi9017  | docs: añadir los puntos previos al capítulo 1 |
-| 0.1.1 | 13/9/26 | @Sergi9017  | docs: añadir descripción del startup |
-| 0.1.2 | 13/9/26 | @Sergi9017  | docs: añadir todos los puntos de solution profile |
-| 0.1.3 | 13/9/26 | @Sergi9017  | docs: añadir segmentos objetivo |
-| 0.1.4 | 14/9/26 | @axismf     | docs: añadir todos los puntos de competidores |
-| 0.1.5 | 13/9/26 | @AlvarLC    | docs: añadir todos los puntos de entrevistas |
-| 0.1.6 | 13/9/26 | @AlvarLC    | docs: añadir las imagenes del needfinding |
-| 0.1.7 | 13/9/26 | @AlvarLC    | docs: añadir todos los puntos del capitulo 3 |
-| 0.1.8 | 13/9/26 | @Sergi9017  | docs: añadir todos los puntos de style guidelines |
-| 0.1.9 | 13/9/26 | @thunder053 | docs: añadir todos los puntos de information architecture |
-| 0.1.10 | 13/9/26 | @thunder053 | docs: añadir landing page ui design |
-| 0.1.11 | 13/9/26 | @thunder053 | docs: añadir todos los puntos de web applications ux/ui design  |
-| 0.1.12 | 25/9/26 | @thunder053 | docs: añadir todos los puntos de domain-driven software architecture  |
-| 0.1.13 | 25/9/26 | @thunder053 | docs: añadir class diagram y database diagram |
-| 0.1.14 | 25/9/26 | @fano1106-n | docs: añadir todos los puntos de software configuration management |
-| 0.1.15 | 25/9/26 | @fano1106-n | docs: añadir todos los puntos del sprint 1 |
-| 0.1.16 | 25/9/26 | @fano1106-n | docs: añadir los 4 puntos finales |
-| 0.1.17 | 25/9/26 | @fano1106-n | docs: añadir student outcome y report insights |
-| 0.1.18 | 25/9/26 | @axismf     | docs: añadir ajustes finales para el av1 |
-| 0.2.0 | 9/9/26  | @Sergi9017  | docs: añadir correcciones de la revisión del av1 |
+| Entregable | Versión | Fecha      | Autor    | Descripción de modificación |
+|------------|---------|------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AV1 | 1.0.0 | 18/09/2026 | ApexCode | Carátula. Registro de Versiones del Informe. Project Report Collaboration Insights. Contenido. Student Outcome. Capítulo I: Introducción. Capítulo II: Requirements Elicitation & Analysis. Capítulo III: Requirements Specification. Capítulo IV: Product Design. Capítulo V: Product Implementation, Validation & Deployment. **5.1. Software Configuration Management:** 5.1.1. Software Development Environment Configuration, 5.1.2. Source Code Management, 5.1.3. Source Code Style Guide & Conventions, 5.1.4. Software Deployment Configuration. **5.2. Landing Page, Services & Applications Implementation:** Sprint 1 (Planning, Aspect Leaders and Collaborators, Sprint Backlog, Development Evidence, Execution Evidence, Services Documentation, Software Deployment, Team Collaboration Insights). Conclusiones. Bibliografía. Anexos. |
 
 # Project Report Collaboration Insights
 

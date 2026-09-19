@@ -74,13 +74,27 @@ Proyecto: **EasyPark**
 
 # Project Report Collaboration Insights
 
-**Repositorio de la documentación del proyecto:** [https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report)
+El repositorio público del informe se encuentra alojado en la organización de GitHub del equipo y está estructurado de acuerdo con la convención de nombres indicada en el enunciado del trabajo final. La documentación ha sido desarrollada en formato **Markdown**, utilizando `README.md` como archivo principal y organizando el contenido mediante carpetas correspondientes a cada capítulo.
 
-A continuación, se detallan las actividades realizadas en cada entrega, la participación de los miembros del equipo, y las evidencias correspondientes.
+**Repositorio del informe:**
+https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report
+
+Para la gestión y control de versiones del proyecto se emplea **GitFlow**, mientras que los mensajes de commit siguen las convenciones establecidas por **Conventional Commits**.
 
 **AV1**
 
-*Report Insights AV1*
+
+## AV1 – Sprint Review (Semana 4)
+
+Durante la elaboración de la entrega **AV1**, el equipo se organizó distribuyendo los capítulos y secciones del informe de acuerdo con las responsabilidades de cada integrante. Se realizaron sesiones de coordinación y revisión conjunta para consolidar los avances del proyecto y preparar la presentación final. Cada integrante participó tanto en el desarrollo de la documentación como en la presentación oral de las partes asignadas.
+
+| **Integrantes** | **Actividades realizadas en el informe y presentación** |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Evangelista Ygnacio, Sergio Joaquin** | Desarrolló el **Capítulo I: Introduction**, participó en la elaboración del **Capítulo V: Product Implementation, Validation & Deployment** y en el desarrollo del **Landing Page**. Durante la presentación del AV1, expuso los contenidos correspondientes al Capítulo I y participó junto con el equipo en la comunicación de los avances y resultados del proyecto. |
+| **Negrón Muñoz, Cayo Manuel Stefano** | Desarrolló y presentó los contenidos relacionados con el **Capítulo V: Product Implementation, Validation & Deployment**, explicando los aspectos correspondientes a la implementación, validación y despliegue del producto. |
+| **Martin Farro, Alexis Sebastian** | Desarrolló y presentó los contenidos correspondientes al **Capítulo II: Requirements Elicitation & Analysis**, explicando los resultados obtenidos durante el levantamiento y análisis de requerimientos. |
+| **Córdova, Alvar Lucas** | Participó en el desarrollo de los **Capítulos II: Requirements Elicitation & Analysis** y **III: Requirements Specification**, además de presentar y explicar los contenidos correspondientes durante la exposición del AV1. |
+| **Saravia Huaricancha, Arturo Axel** | Desarrolló el **Capítulo IV: Product Design** y participó en la elaboración del **Landing Page**. Durante la presentación, explicó los aspectos relacionados con el diseño del producto y la propuesta visual desarrollada. |
 
 # Tabla de contenidos
 

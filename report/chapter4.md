@@ -611,6 +611,8 @@ El equipo realizó una sesión colaborativa de dos horas, organizada en cuatro m
 
 ![Analytics.jpg](../assets/images/Analytics.jpg)
 
+Link del miro: https://miro.com/welcomeonboard/dUN5cGFFVHVQcnNRMmFUeE05QWZScHIydkJBNDNTRlpZRFVDNjhYenJ1emsyK09oTnBYUXJmSHI5TmRrZ0wwc1U2Tm16Yzg3VDFaWHNIMmVocjNhNHI1Z0ZQR29HMUhwVWhhTVltSTV5NGYxZEtHMDg4YVo0QW9GdVB1enl1aGxQdGo1ZEV3bUdPQWRZUHQzSGl6V2NBPT0hdjE=?share_link_id=931450657251
+
 
 **Flujo del segmento conductor.** Cubre desde la búsqueda hasta la cancelación de la reserva.
 

@@ -90,9 +90,9 @@ El análisis competitivo tiene como objetivo conocer cómo las soluciones existe
   <tr>
     <th>Precios y costos</th>
     <td>Acceso gratuito para los conductores. Se propone una suscripción mensual escalonada para los administradores según la capacidad y las funcionalidades requeridas. La incorporación de sensores IoT sería opcional y tendría un costo adicional.</td>
-    <td>La aplicación es gratuita. Las tarifas de estacionamiento, planes de abonado y servicios corporativos dependen de la ubicación, el tiempo de permanencia y las condiciones contratadas.</td>
+    <td>Planes corporativos estimados desde US$ 100 hasta US$ 300 mensuales, más una comisión aproximada del 5% por transacción, dependiendo de la ubicación y capacidad.</td>
     <td>Plan Básico de US$150, Plan Intermedio de US$250 y Plan Avanzado de US$650 mensuales, más IGV. Los planes varían según la cantidad de espacios, transacciones y usuarios requeridos.</td>
-    <td>Las tarifas de estacionamiento dependen de cada operador y ubicación. Los precios de sus soluciones empresariales, datos e integraciones no se muestran públicamente y requieren una cotización comercial.</td>
+    <td>Planes empresariales estimados desde US$ 300 a US$ 800 mensuales, dependiendo del volumen de consultas de datos y el nivel de integración requerida.</td>
   </tr>
   <tr>
     <th>Canales de distribución (web y/o móvil)</th>

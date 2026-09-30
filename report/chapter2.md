@@ -284,7 +284,7 @@ Preguntas principales
 12.	¿Cómo cree que una aplicación que muestre disponibilidad en tiempo real afectaría su operación diaria?
 13.	¿Qué nivel de inversión estaría dispuesto a asumir para digitalizar la gestión de su estacionamiento?
 14.	¿Qué tan importante es para usted poder supervisar el estacionamiento de forma remota?
-15.	¿Qué le generaría más confianza para adoptar una nueva solución tecnológica como EasyPark?
+15.	¿Qué le generaría más confianza para adoptar una nueva solución tecnológica?
 
 **Segundo Segmento Objetivo - Conductores (usuarios de estacionamientos)**
 
@@ -296,11 +296,11 @@ Preguntas principales
 4.	¿Qué hace cuando llega a un lugar y no encuentra espacio disponible?
 5.	¿Ha usado alguna app para buscar, reservar o pagar estacionamiento? ¿Cuál fue su experiencia?
 6.	¿Qué información necesita saber antes de decidir a qué estacionamiento dirigirse (precio, distancia, disponibilidad)?
-7.	¿Cómo prefiere pagar por el estacionamiento: efectivo, tarjeta, app, otro?
+7.	¿Cómo prefiere pagar por el estacionamiento?
 8.	¿Qué tan importante es para usted poder reservar un espacio con anticipación?
 9.	¿Ha tenido problemas relacionados con cobros incorrectos o falta de claridad en las tarifas?
 10.	¿Qué le frustra más del proceso de estacionar en general?
-11.	¿Qué valoraría más en una app de estacionamiento: rapidez, precio, seguridad, comodidad?
+11.	¿Qué valoraría más en una app de estacionamiento?
 12.	¿Le preocupa la seguridad de su vehículo mientras está estacionado? ¿Por qué?
 13.	¿Qué tan dispuesto estaría a pagar un poco más por la certeza de encontrar espacio disponible?
 14.	¿Qué tipo de notificaciones le gustaría recibir mientras usa un estacionamiento (tiempo restante, salida, etc.)?
@@ -309,7 +309,7 @@ Preguntas principales
 
 **Primer Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
 
-| Campo | ![Entrevista1](../assets/images/EntrevistaAdmin1.PNG) <br/> Entrevista 1 | ![Entrevista2](../assets/images/EntrevistaAdmin2.PNG) <br/> Entrevista 2 | ![Entrevista3](../assets/images/EntrevistaAdmin3.PNG) <br/> Entrevista 3 | ![Entrevista4](../assets/images/EntrevistaAdmin4.PNG) <br/> Entrevista 4 |
+| Campo | ![Entrevista1](../assets/images/EntrevistaAdmin1.PNG) <br/> Entrevista 1 | ![Entrevista2](../assets/images/EntrevistaAdmin2.PNG) <br/> Entrevista 2 | ![Entrevista3](![EntrevistaAdmin3.PNG](../assets/images/EntrevistaAdmin3.PNG)) <br/> Entrevista 3 | ![Entrevista4](../assets/images/EntrevistaAdmin4.PNG) <br/> Entrevista 4 |
 |---|--------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | **Nombre** | Uziel Procopio                                                           | Diego Cuartas                                                            | Braulio                                                                 | Arístides Aguirre                                                        |
 | **Edad** | 28 años                                                                  | 25 años                                                                  | 42 años                                                                 | 61 años                                                                  |
@@ -326,7 +326,7 @@ La entrevista a Diego Cuartas, administrador de 25 años con 9 meses de experien
 
 Resumen – Braulio
 
-La entrevista a Braulio, administrador y propietario de 42 años con 5 años de experiencia, reflejó una dependencia absoluta de su presencia física para el correcto funcionamiento del local. Su control manual en cuadernos genera descuadres de caja y cobros no realizados cuando personal de apoyo lo cubre. En alta demanda sufre por sobreaforo al no tener un conteo real de espacios, obligándolo a reacomodar autos o pedir el retiro anticipado de clientes. La falta de registros digitales dificulta responder ante reclamos por tiempo o llevar la contabilidad del negocio. Descartó aplicaciones del mercado por percibirlas diseñadas para empresas más grandes.
+El entrevistado (Braulio, 28 años, administra un estacionamiento privado propio hace 5 años) refleja que su mayor dolor hoy está en la dependencia total de su presencia física para que el negocio funcione bien, ya que todo el control lo lleva en un cuaderno donde anota placa, hora de entrada y monto pagado. Menciona que "si yo no estoy, se arma un lío": cuando su sobrino lo cubre los fines de semana, muchas veces no anota bien los datos o se le olvida cobrar a algún cliente, y esas pérdidas solo las nota Braulio días después al cuadrar caja y encontrar diferencias que no puede explicar.
 
 Resumen – Arístides Aguirre
 

@@ -264,9 +264,16 @@ En conjunto, estas estrategias permiten que EasyPark compita mediante una propue
 
 ### 2.2.1. Diseño de entrevistas
 
-Para cada segmento se definieron preguntas principales (orientadas a entender comportamientos, problemas y contexto de uso) y preguntas complementarias, agrupadas en dos bloques: datos demográficos (género, edad, distrito de residencia, estado civil, familia, ocupación) y otras características necesarias para construir lo necesario para el NeedFinding.
+Para cada segmento se definieron un bloque breve de preguntas demográficas, aplicado al inicio de la entrevista, y preguntas principales orientadas a entender comportamientos, problemas y contexto de uso. Los datos demográficos permitieron caracterizar a cada entrevistado para construir los artefactos del Needfinding.
 
 **Primer Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
+
+Preguntas demográficas
+
+1.	¿Cuál es su nombre y su edad?
+2.	¿Cuál es su rol en el estacionamiento (administrador, propietario o personal operativo)?
+3.	¿Cuánto tiempo lleva en este rubro?
+4.	¿En qué zona o distrito se ubica el estacionamiento que administra?
 
 Preguntas principales
 
@@ -287,6 +294,10 @@ Preguntas principales
 15.	¿Qué le generaría más confianza para adoptar una nueva solución tecnológica?
 
 **Segundo Segmento Objetivo - Conductores (usuarios de estacionamientos)**
+
+1.	¿Cuál es su nombre y su edad?
+2.	¿A qué se dedica (estudia o trabaja)?
+3.	¿Hace cuánto tiempo conduce y con qué frecuencia lo hace?
 
 Preguntas principales
 
@@ -699,7 +710,7 @@ Se utilizó la guía Step-by-Step Guide de Philippe Bourgau, proporcionada en la
 
 ## 2.5. Ubiquitous Language
 El Ubiquitous Language define un conjunto de términos compartidos entre todos los actores del dominio de negocio (Conductores y Administradores), con el objetivo  de eliminar ambigüedades y asegurar una comunicación clara dentro del equipo y con los stakeholders.
-A continuación, se presenta el glosario de términos clave del dominio de la cadena de suministro de frutas utilizado en Easypark.
+A continuación, se presenta el glosario de términos clave del dominio utilizado en Easypark.
 
 •	**Abonado / Subscriber**: Cliente frecuente sujeto a un acuerdo de pago periódico, el cual goza de derechos de acceso a espacios preasignados dentro del recinto.
 

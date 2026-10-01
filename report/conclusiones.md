@@ -74,6 +74,29 @@ UXPressia. (s.f.-b). User vs. buyer persona: Differences and free template. http
 Zhurb, A. [connect2grp]. (s.f.). Using PlantUML for creating clear and concise diagrams. Medium.
 https://connect2grp.medium.com/using-plantuml-for-creating-clear-and-concise-diagrams-2fc621529560
 
-
-
 # Anexos
+
+## Anexo A. Videos de Exposiciones
+
+| Entrega | Título                                                                                                   | Enlace        |
+|--------|----------------------------------------------------------------------------------------------------------|---------------|
+| AV1 | Presentación de la propuesta de negocio, Lean UX Process y primera versión del Landing Page| https://lix.li/U50Z |
+
+## Anexo B. Repositorios del Proyecto
+
+| Descripción | Enlace |
+|------------|--------|
+| Repositorio del Informe del Proyecto | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report       |
+| Repositorio de la Landing Page | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-landing |
+
+## Anexo C. Enlaces de Despliegue (Deployment)
+
+| Descripción | Enlace |
+|------------|--------|
+| Deployment de la Landing Page en GitHub Pages | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/ |
+
+## Anexo D. Diseño
+
+| Descripción | Enlace                                                                                               |
+|------------|------------------------------------------------------------------------------------------------------|
+| Link del Figma del Trabajo | https://www.figma.com/design/kNri7YrOA48AbqzttpgeZw/apex-code?node-id=48-3&p=f&t=RGPO5DCljllWouH8-0  |

@@ -573,58 +573,61 @@ El video de demostración de los prototipos, con la explicación de los principa
 
 ## 4.6. Domain-Driven Software Architecture
 
-Partiendo del Big Picture EventStorming del Capítulo II, el equipo profundizó el modelado del dominio hasta identificar agregados, comandos, eventos, políticas y modelos de lectura, y a partir de ellos delimitó los bounded contexts de la solución. Sobre esa base se elaboró la representación de la arquitectura de software aplicando el C4 Model. Los diagramas de esta sección se elaboraron como *diagram-as-code* con Mermaid; sus fuentes se versionan en la carpeta `diagrams/` del repositorio del informe, de modo que cada cambio en la arquitectura quede registrado con el mismo control de versiones que el código.
+Partiendo del Big Picture EventStorming del Capítulo II, el equipo profundizó el modelado del dominio hasta identificar agregados, comandos, eventos, políticas y modelos de lectura, y a partir de ellos delimitó los bounded contexts de la solución. Sobre esa base se elaboró la representación de la arquitectura de software aplicando el C4 Model. Los diagramas C4 se elaboraron como *diagram-as-code* con Structurizr DSL y se renderizaron con Structurizr, de modo que todos los niveles se generan a partir de un único modelo y se mantienen coherentes entre sí; los diagramas de clases y de base de datos de las secciones 4.7 y 4.8 se elaboraron con Mermaid.
 
 ### 4.6.1. Design-Level EventStorming
 
 El equipo realizó una sesión colaborativa de dos horas, organizada en cuatro momentos: revisión de la línea de tiempo de eventos obtenida en el Big Picture, incorporación de los comandos y actores que los provocan, identificación de los agregados que protegen las reglas de negocio, y descubrimiento de las políticas y los modelos de lectura que conectan un evento con el siguiente comando. Al cerrar la sesión se agruparon los elementos por afinidad de lenguaje y de reglas, y esa agrupación dio origen a los bounded contexts.
 
-**Identity and Access Management:**
+Los tableros de la sesión se presentan a continuación, uno por bounded context.
 
-![Identity&Access.jpg](../assets/images/Identity%26Access.jpg)
+![EventStorming de nivel de diseño del bounded context Identity and Access Management](../assets/images/Identity%26Access.jpg)
 
-**Reservations:**
+**Figura 4.41.** Design-Level EventStorming — Identity and Access Management.
 
-![Reservations.jpg](../assets/images/Reservations.jpg)
+![EventStorming de nivel de diseño del bounded context Reservations](../assets/images/Reservations.jpg)
 
-**Parking Management:**
+**Figura 4.42.** Design-Level EventStorming — Reservations.
 
-![Parking Management.jpg](../assets/images/Parking%20Management.jpg)
+![EventStorming de nivel de diseño del bounded context Parking Management](../assets/images/Parking%20Management.jpg)
 
-**Profiles and vehicles:**
+**Figura 4.43.** Design-Level EventStorming — Parking Management.
 
-![Profiles & Vehicles.jpg](../assets/images/Profiles%20%26%20Vehicles.jpg)
+![EventStorming de nivel de diseño del bounded context Profiles and Vehicles](../assets/images/Profiles%20%26%20Vehicles.jpg)
 
-**Access Control:**
+**Figura 4.44.** Design-Level EventStorming — Profiles and Vehicles.
 
-![Access Control.jpg](../assets/images/Access%20Control.jpg)
+![EventStorming de nivel de diseño del bounded context Access Control](../assets/images/Access%20Control.jpg)
 
-**Monitoring Alerts:**
+**Figura 4.45.** Design-Level EventStorming — Access Control.
 
-![Monitoring Alerts.jpg](../assets/images/Monitoring%20Alerts.jpg)
+![EventStorming de nivel de diseño del bounded context Monitoring and Alerts](../assets/images/Monitoring%20Alerts.jpg)
 
-**Notifications:**
+**Figura 4.46.** Design-Level EventStorming — Monitoring and Alerts.
 
-![Notification.jpg](../assets/images/Notification.jpg)
+![EventStorming de nivel de diseño del bounded context Notifications](../assets/images/Notification.jpg)
 
-**Analytics and Reporting:**
+**Figura 4.47.** Design-Level EventStorming — Notifications.
 
-![Analytics.jpg](../assets/images/Analytics.jpg)
+![EventStorming de nivel de diseño del bounded context Analytics and Reporting](../assets/images/Analytics.jpg)
 
-Link del miro: https://miro.com/welcomeonboard/dUN5cGFFVHVQcnNRMmFUeE05QWZScHIydkJBNDNTRlpZRFVDNjhYenJ1emsyK09oTnBYUXJmSHI5TmRrZ0wwc1U2Tm16Yzg3VDFaWHNIMmVocjNhNHI1Z0ZQR29HMUhwVWhhTVltSTV5NGYxZEtHMDg4YVo0QW9GdVB1enl1aGxQdGo1ZEV3bUdPQWRZUHQzSGl6V2NBPT0hdjE=?share_link_id=931450657251
+**Figura 4.48.** Design-Level EventStorming — Analytics and Reporting.
 
+El tablero completo de la sesión está disponible en Miro: [EasyPark — Design-Level EventStorming](https://miro.com/welcomeonboard/dUN5cGFFVHVQcnNRMmFUeE05QWZScHIydkJBNDNTRlpZRFVDNjhYenJ1emsyK09oTnBYUXJmSHI5TmRrZ0wwc1U2Tm16Yzg3VDFaWHNIMmVocjNhNHI1Z0ZQR29HMUhwVWhhTVltSTV5NGYxZEtHMDg4YVo0QW9GdVB1enl1aGxQdGo1ZEV3bUdPQWRZUHQzSGl6V2NBPT0hdjE=?share_link_id=931450657251).
+
+A partir de esos tableros se consolidaron los dos flujos de extremo a extremo de la solución.
 
 **Flujo del segmento conductor.** Cubre desde la búsqueda hasta la cancelación de la reserva.
 
 ![EventStorming de nivel de diseño del flujo del conductor](../assets/images/es-01-conductor.png)
 
-**Figura 4.41.** Design-Level EventStorming — flujo del conductor.
+**Figura 4.49.** Design-Level EventStorming — flujo del conductor.
 
 **Flujo del segmento administrador.** Cubre la configuración de zonas, el registro de accesos, la detección de alertas y la generación de reportes.
 
 ![EventStorming de nivel de diseño del flujo del administrador](../assets/images/es-02-admin.png)
 
-**Figura 4.42.** Design-Level EventStorming — flujo del administrador y del personal operativo.
+**Figura 4.50.** Design-Level EventStorming — flujo del administrador y del personal operativo.
 
 Las políticas identificadas son el elemento que articula la solución y explican por qué la ocupación puede mantenerse en tiempo real sin sensores: cada movimiento de acceso actualiza el estado del espacio y de la zona; toda estancia que supera el tiempo permitido configurado por el administrador genera una alerta de permanencia; y toda ocupación que supera el umbral de la zona genera una alerta de capacidad. A su vez, las alertas y los cambios de estado de la reserva disparan las notificaciones dirigidas al conductor.
 
@@ -645,7 +648,7 @@ El siguiente cuadro resume, para cada bounded context, el agregado principal, lo
 
 ![Mapa de bounded contexts](../assets/images/es-03-context-map.png)
 
-**Figura 4.43.** Mapa de bounded contexts y relaciones entre subdominios.
+**Figura 4.51.** Mapa de bounded contexts y relaciones entre subdominios.
 
 Los subdominios **core** concentran la ventaja competitiva de EasyPark: *Parking Management*, *Reservations* y *Access Control*. Los de **soporte** —*Monitoring and Alerts*, *Analytics and Reporting* y *Notifications*— reaccionan ante los eventos publicados por los anteriores. Los **genéricos** —*Identity and Access Management* y *Profiles and Vehicles*— resuelven necesidades comunes a cualquier plataforma de servicio. Las relaciones siguen tres patrones: proveedor/cliente entre *Parking Management* y *Reservations*, y entre *Reservations* y *Access Control*; publicación de eventos de dominio hacia los contextos de soporte; y modelo conforme en el caso de *Analytics and Reporting*, que consume la información de ocupación y movimientos tal como la publican los contextos core. La gestión de suscripciones y pagos de los planes comerciales, presente en el Landing Page, se reconoce como un subdominio de soporte previsto para una iteración posterior y por ello no forma parte del alcance modelado.
 
@@ -655,7 +658,7 @@ El diagrama de contexto presenta EasyPark como una sola caja, rodeada por las pe
 
 ![Diagrama de contexto del sistema EasyPark](../assets/images/c4-01-context.png)
 
-**Figura 4.44.** Diagrama de Contexto (C4, nivel 1).
+**Figura 4.52.** Diagrama de Contexto (C4, nivel 1).
 
 Interactúan tres tipos de personas: el **conductor**, que busca, compara, reserva y consulta sus avisos; el **administrador de estacionamiento**, que configura zonas y espacios, supervisa la ocupación y consulta reportes; y el **personal operativo**, que registra ingresos y salidas en el punto de control. EasyPark se apoya en dos sistemas externos de terceros: un **servicio de mapas y geolocalización**, empleado para geocodificar las direcciones de las zonas, mostrar el mapa de resultados y calcular la distancia hasta el destino, y un **servicio de correo transaccional**, que entrega las confirmaciones, los recordatorios y los avisos de vencimiento. Se contempla, además, la integración opcional con **sensores IoT de ocupación** para las zonas que adopten esa tecnología; la solución opera de forma completa sin ellos, mediante registro digital manual o por código QR.
 
@@ -665,7 +668,7 @@ El diagrama de contenedores descompone el sistema en unidades desplegables de fo
 
 ![Diagrama de contenedores del sistema EasyPark](../assets/images/c4-02-container.png)
 
-**Figura 4.45.** Diagrama de Contenedores (C4, nivel 2).
+**Figura 4.53.** Diagrama de Contenedores (C4, nivel 2).
 
 La solución se compone de cuatro contenedores:
 
@@ -678,130 +681,182 @@ La solución se compone de cuatro contenedores:
 
 La comunicación entre la Web Application y el API se realiza mediante JSON sobre HTTPS; el API accede a la base de datos a través de Entity Framework Core con el proveedor Npgsql, y consume los dos servicios externos mediante sus API REST. La separación entre el Landing Page y la Web Application responde a la naturaleza de cada producto: el primero es un sitio estático optimizado para posicionamiento y velocidad de carga, mientras que el segundo requiere estado de sesión y actualización frecuente de datos.
 
+Las principales decisiones de arquitectura que se reflejan en los diagramas C4, junto con el estilo o patrón arquitectónico que materializan, son las siguientes:
+
+| Decisión de arquitectura | Estilo o patrón | Justificación |
+|---|---|---|
+| Separar el Landing Page estático de la Web Application | Sitio estático + *Single-Page Application* | El sitio informativo prioriza SEO y tiempo de carga; la aplicación necesita sesión, enrutamiento por rol y actualización frecuente de datos. |
+| Comunicar los clientes con el backend mediante servicios REST con JSON sobre HTTPS | Cliente-servidor, REST | Contrato uniforme y documentado con OpenAPI, independiente de la tecnología de cada cliente. |
+| Construir el API como un único desplegable dividido en un módulo por bounded context | Monolito modular guiado por DDD | Un equipo de cinco integrantes opera un solo despliegue, sin renunciar a límites de contexto claros que permitan extraer servicios en el futuro. |
+| Organizar cada módulo en capas de presentación, aplicación, dominio e infraestructura | Arquitectura en capas (*Layered Architecture*) | Las reglas de negocio residen en el dominio y no dependen de frameworks, base de datos ni proveedores externos. |
+| Acceder a la persistencia y a los servicios externos mediante interfaces declaradas en el dominio | Puertos y adaptadores (repositorios y *gateways*) | Cambiar el proveedor de mapas, de correo o el motor de base de datos no afecta las reglas de negocio. |
+| Propagar los cambios entre contextos mediante eventos de dominio y un motor de políticas en segundo plano | Arquitectura orientada a eventos (en proceso) | Alertas, notificaciones y métricas reaccionan a los movimientos y reservas sin acoplarse a los contextos que los originan. |
+| Autenticar cada solicitud con JWT de corta duración y *refresh tokens* | Autenticación sin estado (*stateless*) | El API no mantiene sesión en memoria, lo que permite escalarlo horizontalmente. |
+| Persistir todos los contextos en una sola base PostgreSQL con tablas propias por contexto | Base de datos compartida con propiedad por contexto | Se conserva la integridad referencial y cada contexto sigue siendo dueño exclusivo de sus tablas. |
+
 ### 4.6.4. Software Architecture Components Diagrams
 
 Cada contenedor se descompone en los bloques estructurales que lo conforman, con su responsabilidad y su tecnología.
 
 ![Diagrama de componentes del Landing Page](../assets/images/c4-03-components-landing.png)
 
-**Figura 4.46.** Diagrama de Componentes (C4, nivel 3) — Landing Page.
+**Figura 4.54.** Diagrama de Componentes (C4, nivel 3) — Landing Page.
 
 Los componentes del sitio informativo se corresponden con sus secciones y con dos elementos transversales: el módulo de internacionalización, que alterna entre en_US y es_419 y fija el atributo `lang`, y la navegación global, que además de desplazar el contenido resuelve la derivación hacia la Web Application.
 
 ![Diagrama de componentes de la Web Application](../assets/images/c4-04-components-webapp.png)
 
-**Figura 4.47.** Diagrama de Componentes (C4, nivel 3) — Web Application.
+**Figura 4.55.** Diagrama de Componentes (C4, nivel 3) — Web Application.
 
 La aplicación organiza sus componentes en cuatro grupos: el núcleo (App Shell y Router, que aplica los guards por rol, y el módulo de autenticación), los módulos del segmento conductor, los módulos del segmento administrador y los servicios transversales (cliente HTTP con Axios, almacén de estado con Pinia y biblioteca de componentes de interfaz). Ningún módulo de vista accede directamente al API: todas las solicitudes pasan por el cliente HTTP, que adjunta el token y normaliza el tratamiento de errores.
 
 ![Diagrama de componentes del RESTful API](../assets/images/c4-05-components-api.png)
 
-**Figura 4.48.** Diagrama de Componentes (C4, nivel 3) — RESTful API.
+**Figura 4.56.** Diagrama de Componentes (C4, nivel 3) — RESTful API.
 
 El API se estructura en cuatro capas. La **capa de presentación** agrupa un controller por bounded context, documentado con OpenAPI. La **capa de aplicación** contiene los servicios que orquestan comandos y consultas, junto con el motor de políticas, implementado como servicio en segundo plano, que evalúa la permanencia excedida y la capacidad crítica descritas en el EventStorming. La **capa de dominio** concentra agregados, entidades, objetos de valor y reglas de negocio, y no depende de ninguna otra capa. La **capa de infraestructura** implementa los repositorios con Entity Framework Core y las pasarelas hacia los servicios externos, de modo que un cambio de proveedor de mapas o de correo no afecte al dominio. El middleware de seguridad autentica y autoriza cada solicitud antes de que llegue a los controllers.
 
 ## 4.7. Software Object-Oriented Design
 
-Esta sección detalla la implementación prevista de los componentes de cada bounded context. El diseño aplica los principios de Domain-Driven Design: cada contexto expone un agregado raíz que protege sus invariantes, los conceptos sin identidad propia se modelan como objetos de valor inmutables (`EmailAddress`, `PlateNumber`, `Money`, `GeoLocation`, `Address`, `DateRange`), y el acceso a la persistencia se declara mediante interfaces de repositorio en el dominio, cuya implementación reside en la capa de infraestructura. Las enumeraciones representan los estados que ya se comunican en la interfaz mediante badges, de modo que el lenguaje del código coincida con el del producto.
+Esta sección detalla la implementación prevista de los componentes de cada bounded context. El diseño aplica los principios de Domain-Driven Design: cada contexto expone un agregado raíz que protege sus invariantes, los conceptos sin identidad propia se modelan como objetos de valor inmutables (`EmailAddress`, `PlateNumber`, `Money`, `GeoLocation`, `Address`, `DateRange`, `ReservationConfirmation`), y el acceso a la persistencia se declara mediante interfaces de repositorio en el dominio, cuya implementación reside en la capa de infraestructura. Las enumeraciones representan los estados que ya se comunican en la interfaz mediante badges, de modo que el lenguaje del código coincida con el del producto.
+
+Los diagramas de clases aplican las siguientes convenciones de idioma y nomenclatura, alineadas con las convenciones oficiales de C# y .NET, lenguaje y plataforma en que se implementa el RESTful API:
+
+- **Idioma.** Todo el contenido de los diagramas (clases, atributos, métodos, parámetros, valores de enumeración y etiquetas de las relaciones) se escribe en inglés; la narrativa del informe se mantiene en español.
+- **Tipos.** Clases, objetos de valor, enumeraciones y servicios en `PascalCase` y en singular (`ParkingZone`, `PlateNumber`). Las interfaces llevan el prefijo `I` (`IVehicleRepository`) y los comandos el sufijo `Command` (`CreateReservationCommand`).
+- **Miembros.** Atributos y parámetros en `camelCase`, privados (`-`) o protegidos (`#`) para preservar el encapsulamiento; métodos en `PascalCase` con verbo inicial (`RegisterEntry`, `Cancel`). Los valores de las enumeraciones se escriben en `UPPER_SNAKE_CASE`.
+- **Referencias entre agregados.** Un agregado referencia a otro únicamente por su identificador, nombrado `<entidad>Id` (`vehicleId`, `parkingZoneId`, `parkingStayId`); cuando la referencia apunta a una cuenta que cumple un rol, se usa el rol (`driverId`, `operatorId`, `recipientId`). Cada uno de estos atributos corresponde exactamente a una columna `<entidad>_id` del diagrama de base de datos.
+- **Booleanos y fechas.** Los atributos booleanos inician con `is` (`isDefault`, `isEnabled`) y los instantes terminan en `At` (`createdAt`, `occurredAt`).
 
 ### 4.7.1. Class Diagrams
 
 ![Diagrama de clases del bounded context Identity and Access Management](../assets/images/class-01-iam.png)
 
-**Figura 4.49.** Diagrama de clases — Identity and Access Management.
+**Figura 4.57.** Diagrama de clases — Identity and Access Management.
 
 `UserAccount` es el agregado raíz y concentra las reglas de autenticación y de cambio de estado de la cuenta. El rol determina la experiencia que resuelve la Web Application, y los `RefreshToken` permiten renovar la sesión sin volver a solicitar credenciales.
 
 ![Diagrama de clases del bounded context Profiles and Vehicles](../assets/images/class-02-profiles.png)
 
-**Figura 4.50.** Diagrama de clases — Profiles and Vehicles.
+**Figura 4.58.** Diagrama de clases — Profiles and Vehicles.
 
-`Profile` es una clase abstracta especializada en `DriverProfile` y `OperatorProfile`. El conductor administra sus vehículos, identificados por el objeto de valor `PlateNumber`, que normaliza y valida el formato de placa empleado luego en las reservas y en el control de accesos.
+`Profile` es una clase abstracta especializada en `DriverProfile` y `OperatorProfile`. `Vehicle` es el único lugar del modelo donde reside la placa: se identifica por el objeto de valor `PlateNumber`, que normaliza y valida su formato, e `IVehicleRepository` permite localizar un vehículo a partir de ella. Las reservas y el control de accesos no copian la placa, sino que referencian al vehículo por su identificador. Un vehículo puede existir sin propietario (`HasOwner()` devuelve falso) cuando el personal registra en el punto de control una placa que no pertenece a ningún conductor; `AssignOwner` lo vincula al perfil si ese conductor se registra después.
 
 ![Diagrama de clases del bounded context Parking Management](../assets/images/class-03-parking.png)
 
-**Figura 4.51.** Diagrama de clases — Parking Management.
+**Figura 4.59.** Diagrama de clases — Parking Management.
 
 `ParkingZone` compone sus `ParkingSpace` y es responsable de calcular la ocupación y la disponibilidad, evitando que ese cálculo se disperse por la solución. `ParkingSearchService` resuelve la búsqueda, el filtrado y el ordenamiento de la vista del conductor, y delega el cálculo de distancias en la interfaz `IGeolocationGateway`, implementada por la pasarela del servicio de mapas.
 
 ![Diagrama de clases del bounded context Reservations](../assets/images/class-04-reservations.png)
 
-**Figura 4.52.** Diagrama de clases — Reservations.
+**Figura 4.60.** Diagrama de clases — Reservations.
 
-`Reservation` controla su ciclo de vida completo (PENDING, CONFIRMED, ACTIVE, COMPLETED, CANCELLED y EXPIRED) y concentra la regla de cancelación: una reserva solo es cancelable mientras no haya iniciado. `AvailabilityValidationService` verifica la disponibilidad contra *Parking Management* mediante una interfaz, con lo que el contexto no depende de la implementación del otro.
+`Reservation` controla su ciclo de vida completo (PENDING, CONFIRMED, ACTIVE, COMPLETED, CANCELLED y EXPIRED) y concentra la regla de cancelación: una reserva solo es cancelable mientras no haya iniciado. La reserva referencia al conductor que la realiza, al vehículo —y a través de él, a la placa— y al espacio asignado; la zona se obtiene a partir del espacio. `AvailabilityValidationService` verifica la disponibilidad contra *Parking Management* mediante una interfaz, con lo que el contexto no depende de la implementación del otro. `ReservationConfirmation` es un objeto de valor que se genera a partir del código de la reserva y produce el código QR que se presenta en el punto de control.
 
 ![Diagrama de clases del bounded context Access Control](../assets/images/class-05-access.png)
 
-**Figura 4.53.** Diagrama de clases — Access Control.
+**Figura 4.61.** Diagrama de clases — Access Control.
 
-`ParkingStay` representa la permanencia de un vehículo y se compone de uno o dos `AccessMovement` (ingreso y salida). La estancia calcula su duración y determina si excedió el tiempo permitido, condición que origina la alerta correspondiente. `AccessValidationService` resuelve la validación del ingreso y devuelve un `ValidationResult` que explica el motivo del rechazo cuando la placa no coincide o no existe reserva vigente.
+`AccessMovement` registra cada intento de ingreso o salida en el punto de control —incluidos los rechazados— con la zona, el vehículo, el operador que lo registró y el método empleado. `ParkingStay` representa la permanencia de un vehículo y se compone del movimiento de ingreso y, al cerrarse, del de salida; a partir de ambos calcula su duración y determina si excedió el tiempo permitido de la zona, condición que origina la alerta correspondiente. `AccessValidationService` recibe la placa leída, la resuelve a un vehículo mediante `IVehicleGateway` y devuelve un `ValidationResult` que explica el motivo del rechazo cuando la placa no pertenece a ningún conductor o no existe reserva vigente.
 
 ![Diagrama de clases del bounded context Monitoring and Alerts](../assets/images/class-06-monitoring.png)
 
-**Figura 4.54.** Diagrama de clases — Monitoring and Alerts.
+**Figura 4.62.** Diagrama de clases — Monitoring and Alerts.
 
-`Alert` mantiene su estado y registra quién y cuándo la resolvió, dato que alimenta el indicador de tiempo promedio de resolución. `AlertRule` permite que cada administrador configure el umbral de capacidad de sus zonas sin modificar el código.
+`Alert` mantiene su estado y registra qué operador la resolvió y en qué momento, dato que alimenta el indicador de tiempo promedio de resolución. Cada alerta conserva la zona a la que pertenece y, según su tipo, la estancia o el movimiento que la originó; su título no se almacena, porque se deriva del tipo de alerta en el idioma del usuario. `AlertRule` permite que cada administrador configure el umbral de capacidad de sus zonas sin modificar el código.
 
 ![Diagrama de clases del bounded context Analytics and Reporting](../assets/images/class-07-analytics.png)
 
-**Figura 4.55.** Diagrama de clases — Analytics and Reporting.
+**Figura 4.63.** Diagrama de clases — Analytics and Reporting.
 
-`Report` consolida las `OccupancyMetric` del período y expone las operaciones de exportación, mientras que `DashboardSnapshot` es el modelo de lectura que alimenta el panel de control en tiempo real.
+`Report` agrega las `OccupancyMetric` de la zona y del período solicitados, calcula a partir de ellas la recaudación total y la ocupación promedio, y expone las operaciones de exportación. `DashboardSnapshot` es el modelo de lectura que alimenta el panel de control en tiempo real.
 
 ![Diagrama de clases del bounded context Notifications](../assets/images/class-08-notifications.png)
 
-**Figura 4.56.** Diagrama de clases — Notifications.
+**Figura 4.64.** Diagrama de clases — Notifications.
 
-`Notification` registra el canal, el estado y el momento de lectura de cada aviso. `NotificationTemplate` resuelve el contenido según el tipo de evento y la configuración regional, lo que permite entregar los avisos en en_US o es_419 sin duplicar la lógica de envío.
+`Notification` registra el canal, el estado, el momento de lectura y el hecho que la originó —una reserva, una estancia o una alerta—. `NotificationTemplate` define el contenido según el tipo de evento y la configuración regional, lo que permite entregar los avisos en en_US o es_419 sin duplicar la lógica de envío; el tipo de cada notificación se obtiene de su plantilla.
 
 ## 4.8. Database Design
 
-La persistencia se resuelve sobre PostgreSQL 16 mediante Entity Framework Core. El diseño mantiene la separación por bounded context: cada contexto posee sus propias tablas y las referencias hacia otros contextos se establecen por identificador, sin compartir entidades. Las convenciones adoptadas son: nombres de tablas y columnas en inglés y en `snake_case`, tablas en plural, llave primaria `id` de tipo `uuid`, llaves foráneas con el patrón `<entidad>_id`, marcas de tiempo en `timestamp` con zona horaria, montos en `decimal` acompañados de su moneda, y estados almacenados como cadenas controladas que replican las enumeraciones del dominio. Se definen índices sobre las columnas de búsqueda frecuente (`plate`, `district`, `zone_id`, `occurred_at` y `status`) y restricciones de unicidad sobre `users.email`, `vehicles.plate`, `reservations.code` y la combinación de `zone_id` y `code` en los espacios.
+La persistencia se resuelve sobre PostgreSQL 16 mediante Entity Framework Core. El diseño mantiene la separación por bounded context: cada contexto es dueño de sus tablas y las referencias hacia otros contextos se establecen mediante llaves foráneas sobre el identificador, sin duplicar sus datos. El modelo consta de dieciocho tablas.
+
+**Convenciones de nomenclatura.** El diseño de la base de datos aplica las siguientes convenciones:
+
+- **Idioma y formato.** Tablas y columnas en inglés y en `snake_case`. Cada tabla lleva el nombre en plural de la clase que persiste (`UserAccount` → `user_accounts`, `ParkingStay` → `parking_stays`) y cada columna corresponde al atributo homónimo de la clase (`plateNumber` → `plate_number`), con dos reglas de correspondencia: el atributo `type` de una clase se almacena como `<concepto>_type` (`Vehicle.type` → `vehicle_type`), para que el nombre no sea ambiguo en consultas que combinan tablas, y los objetos de valor se descomponen en columnas (`Address` → `street`, `district`, `city`; `Money` → monto y `currency`; `DateRange` → `period_start`, `period_end`).
+- **Llaves primarias.** Columna `id` de tipo `uuid`. Las tablas de asociación (`favorite_zones` y `zone_features`) usan una llave primaria compuesta por las columnas que relacionan, lo que impide registrar dos veces el mismo par.
+- **Llaves foráneas.** Toda llave foránea termina en `_id` y se nombra con la entidad referenciada en singular (`vehicle_id`, `parking_zone_id`, `notification_template_id`). Cuando apunta a `user_accounts`, o cuando una tabla referencia dos veces a la misma, se nombra con el rol que cumple la fila referenciada (`driver_id`, `operator_id`, `recipient_id`, `entry_movement_id`, `exit_movement_id`).
+- **Tipos de dato.** Instantes en `timestamp` con zona horaria y sufijo `_at` (`created_at`, `occurred_at`); fechas sin hora en `date` (`period_start`); booleanos con prefijo `is_` (`is_default`, `is_revoked`); montos en `decimal` acompañados de la columna `currency`.
+- **Estados y clasificaciones.** Los estados se almacenan en una columna `status` y las clasificaciones en `<concepto>_type`, como cadenas controladas que replican las enumeraciones del dominio.
+- **Obligatoriedad.** Las columnas opcionales se señalan como *nullable* en los diagramas; las demás son obligatorias.
+
+Se definen índices sobre las columnas de búsqueda frecuente (`vehicles.plate_number`, `parking_zones.district`, las columnas `parking_zone_id`, `access_movements.occurred_at` y las columnas `status`) y restricciones de unicidad sobre `user_accounts.email`, `vehicles.plate_number`, `reservations.code`, el par (`parking_zone_id`, `code`) en `parking_spaces`, el par (`parking_zone_id`, `alert_type`) en `alert_rules`, el par (`parking_zone_id`, `measured_at`) en `occupancy_metrics` y el par (`notification_type`, `locale`) en `notification_templates`.
+
+**La placa como dato central.** La placa es el dato con el que el personal identifica un vehículo en el punto de control, valida una reserva y consulta un vehículo estacionado. Por eso se almacena una sola vez, en `vehicles.plate_number`, con restricción de unicidad e índice, y todas las tablas que necesitan saber qué vehículo intervino —`reservations` y `access_movements`— lo referencian mediante `vehicle_id`. Si en el punto de control se lee una placa que no pertenece a ningún conductor, el vehículo se incorpora sin propietario (`profile_id` nulo), el movimiento queda registrado con su referencia y se emite la alerta de placa no reconocida. De este modo, la consulta por placa se resuelve con una sola búsqueda indexada y no existen copias de la placa que puedan quedar desactualizadas.
+
+**Normalización.** El modelo se normalizó hasta la tercera forma normal (3FN). El siguiente cuadro resume el criterio de cada forma normal y las decisiones del modelo en que se refleja:
+
+| Forma normal | Criterio | Aplicación en el modelo |
+|---|---|---|
+| 1FN | Cada columna almacena un único valor atómico; no existen listas, valores compuestos ni grupos repetidos. | La dirección de la zona se descompone en `street`, `district` y `city`, y su ubicación en `latitude` y `longitude`. Las características de una zona se registran una por fila en `zone_features`, en lugar de una lista dentro de `parking_zones`. El contenido del código QR no se almacena como texto compuesto: se genera a partir de `reservations.code`. |
+| 2FN | En las tablas con llave compuesta, cada atributo depende de la llave completa. | `favorite_zones.created_at` depende del par conductor–zona y no de uno solo de sus componentes; `zone_features` no tiene atributos fuera de su llave. Las demás tablas tienen llave primaria simple. |
+| 3FN | Ningún atributo no clave depende de otro atributo no clave. | La placa reside solo en `vehicles`. La zona de una reserva o de una estancia se obtiene del espacio asignado. El vehículo de una estancia se obtiene de su movimiento de ingreso, y sus horas de ingreso y salida, de los movimientos que la componen. El rol de una persona se toma de `user_accounts.role`, sin repetirlo en `profiles`. El tipo de una notificación se obtiene de su plantilla y el título de una alerta, de su tipo. Los totales de un reporte se calculan a partir de `occupancy_metrics` y no se almacenan. |
+
+Algunos valores se conservan deliberadamente como dato histórico y no como copia: `reservations.estimated_amount` y `parking_stays.charged_amount` registran el monto vigente al momento de la operación, que no debe variar si la tarifa de la zona cambia después, y `notifications.title` y `notifications.message` guardan el texto efectivamente entregado. Del mismo modo, `occupancy_metrics` es un modelo de lectura que consolida por zona y por hora los movimientos registrados, para que los reportes no recorran el historial completo; se recalcula a partir de `access_movements` y `parking_stays`. La única excepción deliberada a la 3FN es `alerts.parking_zone_id`, que se conserva aun cuando la alerta provenga de una estancia o de un movimiento, porque la zona es el criterio con el que se asignan y filtran las alertas activas y es el único dato de origen de las alertas de capacidad.
 
 ### 4.8.1. Database Diagrams
 
 ![Diagrama de base de datos del bounded context Identity and Access Management](../assets/images/er-01-iam.png)
 
-**Figura 4.57.** Diagrama de base de datos — Identity and Access Management.
+**Figura 4.65.** Diagrama de base de datos — Identity and Access Management.
+
+`user_accounts` concentra las credenciales, el rol y el estado de cada cuenta; `refresh_tokens` registra los tokens de renovación emitidos, de modo que cerrar sesión o suspender una cuenta permita revocarlos.
 
 ![Diagrama de base de datos del bounded context Profiles and Vehicles](../assets/images/er-02-profiles.png)
 
-**Figura 4.58.** Diagrama de base de datos — Profiles and Vehicles.
+**Figura 4.66.** Diagrama de base de datos — Profiles and Vehicles.
 
-La tabla `profiles` resuelve la especialización del dominio con la columna `profile_type`, que distingue el perfil de conductor del de administrador y mantiene en una sola tabla los atributos comunes.
+`profiles` guarda los datos comunes a todas las personas usuarias y `operator_profiles`, solo los que corresponden al personal del estacionamiento (empresa y cargo), de modo que ningún perfil de conductor tenga columnas que no le aplican. `vehicles` es el registro único de placas descrito anteriormente, y `favorite_zones` resuelve la relación de muchos a muchos entre conductores y zonas.
 
 ![Diagrama de base de datos del bounded context Parking Management](../assets/images/er-03-parking.png)
 
-**Figura 4.59.** Diagrama de base de datos — Parking Management.
+**Figura 4.67.** Diagrama de base de datos — Parking Management.
 
-`parking_zones` almacena la dirección descompuesta y las coordenadas necesarias para el cálculo de distancia, junto con la tarifa y el tiempo de permanencia permitido que utiliza el motor de alertas. `parking_spaces` conserva el estado que se refleja en el mapa de espacios.
+`parking_zones` almacena la dirección descompuesta y las coordenadas necesarias para el cálculo de distancia, junto con la tarifa y el tiempo de permanencia permitido que utiliza el motor de alertas. `parking_spaces` conserva el estado que se refleja en el mapa de espacios y la categoría de usuario a la que se destina cada espacio, y `zone_features` registra una característica de la zona por fila.
 
 ![Diagrama de base de datos del bounded context Reservations](../assets/images/er-04-reservations.png)
 
-**Figura 4.60.** Diagrama de base de datos — Reservations.
+**Figura 4.68.** Diagrama de base de datos — Reservations.
+
+`reservations` vincula a la persona que reserva (`driver_id`), el vehículo para el que se reserva (`vehicle_id`) y el espacio asignado (`parking_space_id`). El conductor se registra además del vehículo porque la propiedad de un vehículo puede cambiar con el tiempo, mientras que la autoría de una reserva pasada no. La confirmación no requiere una tabla propia: se registra en `confirmed_at` y su código QR se genera a partir de `code`.
 
 ![Diagrama de base de datos del bounded context Access Control](../assets/images/er-05-access.png)
 
-**Figura 4.61.** Diagrama de base de datos — Access Control.
+**Figura 4.69.** Diagrama de base de datos — Access Control.
 
-`parking_stays` agrupa los movimientos de una misma permanencia; mantener la estancia como tabla propia permite calcular tiempos promedio y detectar permanencias excedidas sin recorrer todo el historial de movimientos.
+`access_movements` registra cada lectura en el punto de control, aceptada o rechazada, con la zona, el vehículo, el operador y el método empleado; `operator_id` queda vacío cuando el movimiento lo registra un sensor IoT. `parking_stays` representa la permanencia y referencia su movimiento de ingreso y, al cerrarse, el de salida, de modo que la duración se obtiene de ambos sin duplicar las horas. La reserva que respalda la estancia es opcional, porque el personal puede aprobar un ingreso que quedó en revisión, y el espacio se actualiza cuando el administrador reasigna el vehículo.
 
 ![Diagrama de base de datos del bounded context Monitoring and Alerts](../assets/images/er-06-monitoring.png)
 
-**Figura 4.62.** Diagrama de base de datos — Monitoring and Alerts.
+**Figura 4.70.** Diagrama de base de datos — Monitoring and Alerts.
+
+`alerts` referencia la zona y, según su tipo, la estancia excedida o el movimiento rechazado que la originó; `operator_id` registra quién la resolvió. `alert_rules` guarda un umbral por zona y por tipo de alerta.
 
 ![Diagrama de base de datos del bounded context Analytics and Reporting](../assets/images/er-07-analytics.png)
 
-**Figura 4.63.** Diagrama de base de datos — Analytics and Reporting.
+**Figura 4.71.** Diagrama de base de datos — Analytics and Reporting.
 
-`occupancy_metrics` almacena las mediciones consolidadas por zona, fecha y hora, lo que evita recalcular los reportes sobre el historial completo de movimientos cada vez que se consulta un período.
+`reports` registra los parámetros de cada reporte generado: operador, zona, tipo y período. Sus totales se calculan sobre `occupancy_metrics`, que almacena las mediciones consolidadas por zona y por hora, lo que evita recalcular los reportes sobre el historial completo de movimientos cada vez que se consulta un período.
 
 ![Diagrama de base de datos del bounded context Notifications](../assets/images/er-08-notifications.png)
 
-**Figura 4.64.** Diagrama de base de datos — Notifications.
+**Figura 4.72.** Diagrama de base de datos — Notifications.
 
-Finalmente, el siguiente diagrama integra las diecisiete tablas de la solución y evidencia las relaciones entre los bounded contexts.
+`notifications` referencia la plantilla con la que se generó y, mediante llaves foráneas opcionales, el hecho que la originó: una reserva, una estancia o una alerta. Al ser referencias explícitas, la base de datos garantiza que el hecho referenciado exista.
+
+Finalmente, el siguiente diagrama integra las dieciocho tablas de la solución y evidencia las relaciones entre los bounded contexts.
 
 ![Diagrama de base de datos integrado](../assets/images/er-09-global.png)
 
-**Figura 4.65.** Diagrama de base de datos integrado de EasyPark.
+**Figura 4.73.** Diagrama de base de datos integrado de EasyPark.

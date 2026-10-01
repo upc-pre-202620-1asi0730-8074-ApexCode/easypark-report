@@ -330,7 +330,7 @@ Preguntas principales
 | **Tiempo en el rubro** | 7-8 meses | 9 meses | 5 años | 10 años |
 | **Ubicación** | La Molina | Lima Centro | San Miguel | Centro de Lima |
 
-Link del video de entrevistas:
+Link del video de entrevistas: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202324461_upc_edu_pe/IQCrCWHN5RbXSpafUiHxx20BAQShg-lHE5CD_tJB5vkZvjM?e=tCVEpb&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
 Resumen – Uziel Procopio
 
@@ -367,7 +367,7 @@ La entrevista a Arístides, administrador de 61 años con 10 años de trayectori
 | **Notificaciones deseadas** | Tiempo restante, vencimiento, renovación y pago | Contador de tiempo restante | Tiempo restante y vencimiento | Disponibilidad, promociones y servicios adicionales |
 | **Funcionalidad más valorada** | Disponibilidad real y reserva anticipada | Rapidez y precio | Garantía de disponibilidad | Ubicación exacta del espacio disponible |
 
-Link del video de entrevistas:
+Link del video de entrevistas: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202324461_upc_edu_pe/IQCrCWHN5RbXSpafUiHxx20BAQShg-lHE5CD_tJB5vkZvjM?e=tCVEpb&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
 Resumen – Esteban Chavez
 

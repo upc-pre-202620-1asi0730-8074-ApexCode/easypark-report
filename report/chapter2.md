@@ -746,7 +746,7 @@ Se utilizó la guía Step-by-Step Guide de Philippe Bourgau para llevar a cabo e
 ![Brainstorm 2 Explore.jpg](../assets/images/Brainstorm%202%20Explore.jpg)
 
 * **Paso 3**: Cierre con Comandos y Políticas (Close)El refinamiento final de la línea de tiempo incorpora los Commands (acciones en azul) y Policies (reglas de negocio en púrpura) que conectan a los actores con los eventos, definiendo el comportamiento automatizado del sistema. Las decisiones arquitectónicas clave incluyen:   Políticas de Reserva y Capacidad: Se establece que cuando el conductor ejecuta el comando Book space, el sistema aplica la política de reducir temporalmente la disponibilidad del estacionamiento (If booked, temporarily reduce availability).   Gestión del Tiempo y Alertas Automatizadas: Al registrar una entrada (Record Entry), se activa una regla de negocio para iniciar el temporizador de estadía (Start duration timer). Si se acerca la hora límite, el sistema envía un recordatorio (Send Reminder); si el vehículo excede el tiempo pagado (If a vehicle exceeds the paid time), se genera automáticamente una alerta de permanencia (Generate Alert) que notifica al administrador (Notify Administrator).   Resolución de Conflictos Operativos: Se estructura el proceso para el manejo de incidencias, donde el administrador audita la advertencia (Check Alert), revisa la información (Revised alert) y ejecuta el comando de resolución (Resolve alert), finalizando con el evento de alerta de parqueo solucionada (Parking Alert resolved).
-  ![Brainstorm 3 Close.jpg](../assets/images/Brainstorm%203%20Close.jpg)
+![Brainstorm 3 Close.jpg](../assets/images/Brainstorm%203%20Close.jpg)
 
 ## 2.5. Ubiquitous Language
 El Ubiquitous Language define un conjunto de términos compartidos entre todos los actores del dominio de negocio (Conductores y Administradores), con el objetivo  de eliminar ambigüedades y asegurar una comunicación clara dentro del equipo y con los stakeholders.
@@ -764,7 +764,9 @@ A continuación, se presenta el glosario de términos clave del dominio utilizad
 
 •	**Espacio / Space (Cupo)**: Unidad física individual y mínima destinada al parqueo de un vehículo. Este elemento transita entre tres estados sistémicos mutuamente excluyentes: Disponible, Ocupado o Reservado.
 
-•	**Estacionamiento / Parking Lot (Establecimiento)**: Infraestructura o espacio físico debidamente delimitado cuya gestión operativa y comercial se realiza mediante la plataforma EasyPark.
+•	**Estacionamiento / Parking Lot (Establecimiento)**: Infraestructura o espacio físico debidamente delimitado cuya gestión operativa y comercial se realiza mediante la plataforma EasyPark. 
+
+•	**Insights Hub / Panel de control**: Módulo web del administrador desde el cual visualiza la ocupación en tiempo real, gestiona las alertas operativas y consulta los reportes del estacionamiento.
 
 •	**Insights Hub / Panel de control**: Módulo web del administrador desde el cual visualiza la ocupación en tiempo real, gestiona las alertas operativas y consulta los reportes del estacionamiento.
 

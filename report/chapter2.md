@@ -768,6 +768,8 @@ A continuación, se presenta el glosario de términos clave del dominio utilizad
 
 •	**Insights Hub / Panel de control**: Módulo web del administrador desde el cual visualiza la ocupación en tiempo real, gestiona las alertas operativas y consulta los reportes del estacionamiento.
 
+•	**Insights Hub / Panel de control**: Módulo web del administrador desde el cual visualiza la ocupación en tiempo real, gestiona las alertas operativas y consulta los reportes del estacionamiento.
+
 •	**Ingreso / Entry (Check-in)**: Evento operativo que registra la llegada oficial de un vehículo al estacionamiento. Este evento altera el estado del espacio asignado a "Ocupado" e inicia el cómputo del tiempo de permanencia.
 
 •	**Notificación de Vencimiento / Expiration Notification (Tiempo Restante)**: Conjunto de alertas preventivas enviadas al conductor mediante la aplicación para informarle sobre la proximidad de la finalización de su reserva o tiempo autorizado. Tienen como objetivo mitigar el riesgo de penalizaciones por exceso de tiempo.

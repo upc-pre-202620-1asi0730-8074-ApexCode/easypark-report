@@ -2,6 +2,7 @@
 
 Repositorio de documentación del proyecto **EasyPark**, desarrollado por un equipo de estudiantes de **Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas (UPC)**.
 
+
 ## Resumen
 
 EasyPark propone una plataforma digital para mejorar la gestión de estacionamientos y la experiencia de los conductores, enfocándose en:
@@ -35,3 +36,26 @@ Este repositorio incluye la documentación del proyecto, abarcando la investigac
 | Martin Farro, Alexis Sebastian       | U202515871 |
 | Córdova, Alvar Lucas          | U202324461 |
 | Saravia Huaricancha, Arturo Axel        | u202312447 |
+
+## Indice del Informe
+
+- [Caratula, registro de versiones y tabla de contenidos](report/caratula.md)
+- [Capitulo I:Introduccion](report/chapter1.md)
+- [Capitulo II: Requirements Elicitation & Analysis](report/chapter2.md)
+- [Capítulo III: Requirements Specification](report/chapter3.md)
+- [Capítulo IV: Product Design](report/chapter4.md)
+- [Capítulo V: Product Implementation, Validation & Deployment](report/chapter5.md)
+- [Sprint 1](report/chapter5.md#521-sprint-1)
+- [Conclusiones](report/conclusiones.md)
+- [Recomendaciones](report/conclusiones.md#recomendaciones)
+- [Bibliografia](report/conclusiones.md#bibliografía)
+- [Anexos](report/conclusiones.md#anexos)
+
+## Convenciones del Trabajo
+
+- Git + GitHub para control de versiones.
+- Estrategia de ramas basada en GitFlow (`main`, `develop`, `feature/*`).
+
+## Estado
+
+Documento actualizado con los entregables registrados hasta Octubre de 2026.

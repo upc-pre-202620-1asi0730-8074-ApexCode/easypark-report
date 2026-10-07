@@ -51,15 +51,15 @@ Para mantener un historial claro, consistente y facilitar la generación automá
 ### 5.1.3. Source Code Style Guide & Conventions
 
 - **Naming Conventions:**
-  - Variables y Métodos: camelCase (ej. `currentTemperature`).
-  - Clases e Interfaces: PascalCase (ej. `LaboratoryController`).
-  - Constantes: UPPER_CASE (ej. `MAX_GAS_LEVEL`).
-  - Archivos CSS/HTML/Componentes: kebab-case (ej. `dashboard-view.component.html`).
+    - Variables y Métodos: camelCase (ej. `currentTemperature`).
+    - Clases e Interfaces: PascalCase (ej. `LaboratoryController`).
+    - Constantes: UPPER_CASE (ej. `MAX_GAS_LEVEL`).
+    - Archivos CSS/HTML/Componentes: kebab-case (ej. `dashboard-view.component.html`).
 
 - **Guías de Estilo por Lenguaje:**
-  - Java: Google Java Style Guide.
-  - TypeScript/Angular: Angular Coding Style Guide y Google TypeScript Style Guide.
-  - HTML/CSS: Google HTML/CSS Style Guide.
+    - Java: Google Java Style Guide.
+    - TypeScript/Angular: Angular Coding Style Guide y Google TypeScript Style Guide.
+    - HTML/CSS: Google HTML/CSS Style Guide.
 ### 5.1.4. Software Deployment Configuration
 
 En esta sección se especifica la configuración y los pasos necesarios para el despliegue de cada uno de los productos que conforman la solución **EasyPark**. Se ha adoptado un enfoque de **Continuous Deployment (CD)** para asegurar que los cambios validados en los repositorios de GitHub se reflejen automáticamente en los entornos de producción mediante **GitHub Actions**.
@@ -189,7 +189,7 @@ https://trello.com/b/KxGrDhN2/sprintseasypark
    ![tb1 Landing Page - About us.png](../assets/images/tb1%20Landing%20Page%20-%20About%20us.png)
 
 3. Captura del apartado "Beneficios":
- ![tb1 Landing Page - Benefits.png](../assets/images/tb1%20Landing%20Page%20-%20Benefits.png)
+   ![tb1 Landing Page - Benefits.png](../assets/images/tb1%20Landing%20Page%20-%20Benefits.png)
 
 4. Captura del apartado "Funcionalidades":
    ![tb1 Landing Page - Features.png](../assets/images/tb1%20Landing%20Page%20-%20Features.png)
@@ -207,10 +207,10 @@ https://trello.com/b/KxGrDhN2/sprintseasypark
    ![tb1 Landing Page - Our Team.png](../assets/images/tb1%20Landing%20Page%20-%20Our%20Team.png)
 
 9. Captura del apartado "Contacto"
-  ![tb 1 Landing Page -Contact.png](../assets/images/tb%201%20Landing%20Page%20-Contact.png)
+   ![tb 1 Landing Page -Contact.png](../assets/images/tb%201%20Landing%20Page%20-Contact.png)
 
 10. Captura del apartado "Pie de pagina"
-  ![tb1 Landing Page - Footer.png](../assets/images/tb1%20Landing%20Page%20-%20Footer.png)
+    ![tb1 Landing Page - Footer.png](../assets/images/tb1%20Landing%20Page%20-%20Footer.png)
 
 #### 5.2.1.6 Services Documentation Evidence for Sprint Review.
 N/A. Durante el Sprint 1 el esfuerzo de desarrollo se enfocó exclusivamente en la creación del sitio web estático promocional (Landing Page), por lo que aún no se han implementado APIs RESTful ni Endpoints backend que requieran ser documentados a través de Swagger/OpenAPI. Esta documentación se estructurará a partir del Sprint 2.
@@ -431,13 +431,16 @@ https://trello.com/b/KxGrDhN2/sprintseasypark
 
 En el Sprint 2 se implementó la primera versión de la Frontend Web Application en el repositorio, con Vue 3, PrimeVue, Pinia, Vue Router, vue-i18n y axios, en JavaScript. El código se organiza por bounded context, y cada uno se divide en las capas domain, application, infrastructure y presentation. Arturo Saravia preparó la base del proyecto.
 
-En el repositorio se aplicaron las correcciones de AV1.
+En el repositorio se aplicaron las correcciones de AV1, como por ejemplo que ahora maneja multiidioma.
+![tb1 Landing Page - Inicio.png](../assets/images/tb1%20Landing%20Page%20-%20Inicio.png)
 Lading page:
 https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/index.html?lang=es
 
 #### 5.2.2.5 Execution Evidence for Sprint Review.
 
-Al cierre del Sprint 2, la Frontend Web Application v1.0.0 se encuentra publicada en: . La aplicación ofrece una experiencia distinta para cada rol
+Al cierre del Sprint 2, la Frontend Web Application v1.0.0 se encuentra publicada en: https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp.
+
+La aplicación ofrece una experiencia distinta para cada rol: el operador (administrador) accede a un panel de control donde visualiza reportes y analíticas, supervisa el monitoreo y las alertas, gestiona las instalaciones y registra los accesos; por su parte, el conductor (usuario) cuenta con funcionalidades para buscar estacionamiento, realizar reservaciones, recibir notificaciones, y administrar su perfil junto con sus vehículos registrados. Las vistas que siguen se capturaron con los datos de la API REST simulada (json-server) y en idioma español; la aplicación puede cambiar a inglés desde el selector de idioma gracias al soporte de internacionalización configurado.
 
 #### 5.2.2.6 Services Documentation Evidence for Sprint Review.
 
@@ -476,6 +479,10 @@ Frontend Web Application: La aplicación se construye con Vite (npm run build), 
 Para el consumo de datos durante este Sprint se utiliza una API REST simulada con json-server (npm run fake-api), que expone los endpoints bajo /api/v1/* e incorpora un middleware de autenticación que emite y valida el token de sesión del módulo IAM. Esto permite validar los flujos de registro, inicio de sesión, gestión de perfil y administración de vehículos de extremo a extremo sin depender aún de infraestructura en la nube.
 
 El despliegue de un backend productivo con base de datos relacional y hosting en la nube está planificado para los siguientes Sprints, una vez que los bounded contexts restantes del equipo estén implementados.
+
+Analíticos de contribución del repositorio con respecto al sprint 2:
+
+![Contribution Sprint2.png](../assets/Contribution%20Sprint2.png)
 
 #### 5.2.2.8 Team Collaboration Insights during Sprint.
 

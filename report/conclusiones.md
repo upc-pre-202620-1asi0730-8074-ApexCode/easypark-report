@@ -90,19 +90,22 @@ https://connect2grp.medium.com/using-plantuml-for-creating-clear-and-concise-dia
 | Entrega | Título                                                                                                   | Enlace        |
 |--------|----------------------------------------------------------------------------------------------------------|---------------|
 | AV1 | Presentación de la propuesta de negocio, Lean UX Process y primera versión del Landing Page| https://lix.li/U50Z |
+| TB1 | Especificación de requisitos (User Stories, Technical Stories, Impact Mapping y Product Backlog) y propuesta de Product Design | https://lix.li/uZ4zu |
 
 ## Anexo B. Repositorios del Proyecto
 
-| Descripción | Enlace |
-|------------|--------|
+| Descripción                          | Enlace |
+|--------------------------------------|--------|
 | Repositorio del Informe del Proyecto | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report       |
-| Repositorio de la Landing Page | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-landing |
+| Repositorio de la Landing Page       | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-landing |
+| Repositorio de la Aplicación Web     | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp |
 
 ## Anexo C. Enlaces de Despliegue (Deployment)
 
-| Descripción | Enlace |
-|------------|--------|
-| Deployment de la Landing Page en GitHub Pages | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/ |
+| Descripción                                          | Enlace |
+|------------------------------------------------------|--------|
+| Deployment de la Landing Page en GitHub Pages        | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/ |
+| Deployment de la Aplicación Web | https://easypark-5ffb2.web.app/ |
 
 ## Anexo D. Diseño
 

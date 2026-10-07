@@ -1,4 +1,4 @@
-# Capítulo II: Requirements Elicitation & Analysis
+﻿# Capítulo II: Requirements Elicitation & Analysis
 
 ## 2.1. Competidores
 
@@ -754,42 +754,40 @@ Se utilizó la guía Step-by-Step Guide de Philippe Bourgau para llevar a cabo e
 El Ubiquitous Language define un conjunto de términos compartidos entre todos los actores del dominio de negocio (Conductores y Administradores), con el objetivo  de eliminar ambigüedades y asegurar una comunicación clara dentro del equipo y con los stakeholders.
 A continuación, se presenta el glosario de términos clave del dominio utilizado en Easypark.
 
-•	**Abonado / Subscriber**: Cliente frecuente sujeto a un acuerdo de pago periódico, el cual goza de derechos de acceso a espacios preasignados dentro del recinto.
+- **Subscriber (Abonado)**: Cliente frecuente sujeto a un acuerdo de pago periódico, el cual goza de derechos de acceso a espacios preasignados dentro del recinto.
 
-• **Administrador / Administrator (Personal Operativo)**: Entidad encargada de la gestión del establecimiento físico, responsable de registrar ingresos, monitorizar la ocupación, y gestionar alertas operativas a través del panel de control central (Insights Hub).
+- **Administrator (Administrador / Personal Operativo)**: Entidad encargada de la gestión del establecimiento físico, responsable de registrar ingresos, monitorizar la ocupación, y gestionar alertas operativas a través del panel de control central (Insights Hub).
 
-•	**Alerta de Permanencia / Overstay Alert (Situación Irregular)**: Notificación automática del sistema, dirigida al administrador, la cual se activa al detectarse que un vehículo ha excedido el umbral de tiempo pagado o permitido.
+- **Overstay Alert (Alerta de Permanencia / Situación Irregular)**: Notificación automática del sistema, dirigida al administrador, la cual se activa al detectarse que un vehículo ha excedido el umbral de tiempo pagado o permitido.
 
-•	**Conductor / Driver (Usuario Final)**: Persona natural que opera un vehículo y emplea la plataforma digital para realizar procesos de búsqueda, comparación, reserva y pago de espacios de estacionamiento.
+- **Driver (Conductor / Usuario Final)**: Persona natural que opera un vehículo y emplea la plataforma digital para realizar procesos de búsqueda, comparación, reserva y pago de espacios de estacionamiento.
 
-•	**Disponibilidad / Availability:** Métrica dinámica en tiempo real que cuantifica la cantidad exacta de espacios libres en un estacionamiento. Esta variable es requisito indispensable para la validación algorítmica de ingresos y reservas.
+- **Availability (Disponibilidad):** Métrica dinámica en tiempo real que cuantifica la cantidad exacta de espacios libres en un estacionamiento. Esta variable es requisito indispensable para la validación algorítmica de ingresos y reservas.
 
-•	**Espacio / Space (Cupo)**: Unidad física individual y mínima destinada al parqueo de un vehículo. Este elemento transita entre tres estados sistémicos mutuamente excluyentes: Disponible, Ocupado o Reservado.
+- **Space (Espacio / Cupo)**: Unidad física individual y mínima destinada al parqueo de un vehículo. Este elemento transita entre tres estados sistémicos mutuamente excluyentes: Disponible, Ocupado o Reservado.
 
-•	**Estacionamiento / Parking Lot (Establecimiento)**: Infraestructura o espacio físico debidamente delimitado cuya gestión operativa y comercial se realiza mediante la plataforma EasyPark. 
+- **Parking Lot (Estacionamiento / Establecimiento)**: Infraestructura o espacio físico debidamente delimitado cuya gestión operativa y comercial se realiza mediante la plataforma EasyPark.
 
-•	**Insights Hub / Panel de control**: Módulo web del administrador desde el cual visualiza la ocupación en tiempo real, gestiona las alertas operativas y consulta los reportes del estacionamiento.
+- **Insights Hub (Panel de control)**: Módulo web del administrador desde el cual visualiza la ocupación en tiempo real, gestiona las alertas operativas y consulta los reportes del estacionamiento.
 
-•	**Insights Hub / Panel de control**: Módulo web del administrador desde el cual visualiza la ocupación en tiempo real, gestiona las alertas operativas y consulta los reportes del estacionamiento.
+- **Entry (Ingreso / Check-in)**: Evento operativo que registra la llegada oficial de un vehículo al estacionamiento. Este evento altera el estado del espacio asignado a "Ocupado" e inicia el cómputo del tiempo de permanencia.
 
-•	**Ingreso / Entry (Check-in)**: Evento operativo que registra la llegada oficial de un vehículo al estacionamiento. Este evento altera el estado del espacio asignado a "Ocupado" e inicia el cómputo del tiempo de permanencia.
+- **Expiration Notification (Notificación de Vencimiento / Tiempo Restante)**: Conjunto de alertas preventivas enviadas al conductor mediante la aplicación para informarle sobre la proximidad de la finalización de su reserva o tiempo autorizado. Tienen como objetivo mitigar el riesgo de penalizaciones por exceso de tiempo.
 
-•	**Notificación de Vencimiento / Expiration Notification (Tiempo Restante)**: Conjunto de alertas preventivas enviadas al conductor mediante la aplicación para informarle sobre la proximidad de la finalización de su reserva o tiempo autorizado. Tienen como objetivo mitigar el riesgo de penalizaciones por exceso de tiempo.
+- **Occupancy (Ocupación)**: Proporción temporal que relaciona el recuento de espacios ocupados respecto a la capacidad total instalada del establecimiento.
 
-•	**Ocupación / Occupancy**: Proporción temporal que relaciona el recuento de espacios ocupados respecto a la capacidad total instalada del establecimiento.
+- **Stay (Permanencia / Duración)**: Intervalo temporal continuo, calculado de manera automática desde el momento de registro de ingreso (Check-in) hasta el evento de salida (Check-out) del vehículo.
 
-•	**Permanencia / Stay (Duración)**: Intervalo temporal continuo, calculado de manera automática desde el momento de registro de ingreso (Check-in) hasta el evento de salida (Check-out) del vehículo.
+- **Reassignment (Reasignación)**: Procedimiento administrativo que consiste en la transferencia lógica y física de un vehículo desde su espacio original hacia otro. Suele ejecutarse para la resolución de contingencias operativas internas.
 
-•	**Reasignación / Reassignment**: Procedimiento administrativo que consiste en la transferencia lógica y física de un vehículo desde su espacio original hacia otro. Suele ejecutarse para la resolución de contingencias operativas internas.
+- **Reservation (Reserva)**: Transacción lógica que garantiza de manera anticipada la asignación de un espacio disponible a un conductor, concretada previo a su arribo físico al establecimiento.
 
-•	**Reserva / Reservation**: Transacción lógica que garantiza de manera anticipada la asignación de un espacio disponible a un conductor, concretada previo a su arribo físico al establecimiento.
+- **Exit (Salida / Check-out)**: Evento operativo que registra la culminación de la estancia del vehículo. Esta transacción restaura el estado del espacio a "Disponible", liberándolo para futuras asignaciones.
 
-•	**Salida / Exit (Check-out)**: Evento operativo que registra la culminación de la estancia del vehículo. Esta transacción restaura el estado del espacio a "Disponible", liberándolo para futuras asignaciones.
+- **Rate (Tarifa)**: Estructura de costos y parámetros de cobro definida por el administrador del estacionamiento. Se emplea como criterio de filtrado en las búsquedas del conductor y como base de cálculo para la facturación final de la permanencia.
 
-•	**Tarifa / Rate**: Estructura de costos y parámetros de cobro definida por el administrador del estacionamiento. Se emplea como criterio de filtrado en las búsquedas del conductor y como base de cálculo para la facturación final de la permanencia.
+- **User Type (Tipo de Usuario)**: Categorización funcional y de control de accesos asignada a zonas o espacios concretos (ej. Cliente, Personal, Delivery). Esta política de negocio está orientada a mantener el orden y prevenir el uso indebido de las instalaciones.
 
-•	**Tipo de Usuario / User Type**: Categorización funcional y de control de accesos asignada a zonas o espacios concretos (ej. Cliente, Personal, Delivery). Esta política de negocio está orientada a mantener el orden y prevenir el uso indebido de las instalaciones.
+- **Vehicle (Vehículo)**: Medio de transporte del conductor, el cual representa la entidad física que ingresa, ocupa un espacio específico y posteriormente abandona el establecimiento.
 
-•	**Vehículo / Vehicle**: Medio de transporte del conductor, el cual representa la entidad física que ingresa, ocupa un espacio específico y posteriormente abandona el establecimiento.
-
-•	**Zona / Zone**: Agrupación lógica y espacial de múltiples espacios, configurada por el administrador para optimizar la distribución, control y clasificación operativa del estacionamiento. 
+- **Zone (Zona)**: Agrupación lógica y espacial de múltiples espacios, configurada por el administrador para optimizar la distribución, control y clasificación operativa del estacionamiento.

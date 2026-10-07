@@ -571,6 +571,10 @@ Los criterios que guiaron las decisiones de interacción fueron los siguientes:
 
 El video de demostración de los prototipos, con la explicación de los principales flujos de interacción de cada producto, se publica en Microsoft Stream y se referencia en el anexo de videos junto con la captura de video correspondiente.
 
+Link del video: [https://lix.li/gflIy](https://lix.li/gflIy)
+
+![Web Prototyping.PNG](../assets/images/Web%20Prototyping.PNG)
+
 ## 4.6. Domain-Driven Software Architecture
 
 Partiendo del Big Picture EventStorming del Capítulo II, el equipo profundizó el modelado del dominio hasta identificar agregados, comandos, eventos, políticas y modelos de lectura, y a partir de ellos delimitó los bounded contexts de la solución. Sobre esa base se elaboró la representación de la arquitectura de software aplicando el C4 Model. Los diagramas C4 se elaboraron como *diagram-as-code* con Structurizr DSL y se renderizaron con Structurizr, de modo que todos los niveles se generan a partir de un único modelo y se mantienen coherentes entre sí; los diagramas de clases y de base de datos de las secciones 4.7 y 4.8 se elaboraron con Mermaid.

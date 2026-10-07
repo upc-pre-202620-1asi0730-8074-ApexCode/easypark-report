@@ -1,4 +1,4 @@
-﻿# Capítulo II: Requirements Elicitation & Analysis
+# Capítulo II: Requirements Elicitation & Analysis
 
 ## 2.1. Competidores
 
@@ -89,10 +89,10 @@ El análisis competitivo tiene como objetivo conocer cómo las soluciones existe
   </tr>
   <tr>
     <th>Precios y costos</th>
-    <td>Acceso gratuito para los conductores: buscar, consultar y reservar no tiene costo. Se propone una suscripción mensual escalonada para los administradores según la cantidad de espacios.</td>
-    <td>La aplicación es gratuita y se descarga sin costo. Las tarifas de estacionamiento las define cada playa de la red. El abonado mensual prepago se contrata en dos modalidades: VIP (acceso garantizado 24/7) y FLEX (tres días por semana), ambas a precio por cotización. Los servicios corporativos (abonado empresarial, preventa de horas y consultoría) también se cotizan según las condiciones contratadas.</td>
-    <td>Plan Básico de S/504, Plan Intermedio de S/840 y Plan Avanzado de S/2,184 mensuales (US$150, US$250 y US$650 más IGV, convertidos a soles con el tipo de cambio del BCRP de S/3.36 por dólar). Cada plan varía según la cantidad de espacios, transacciones y usuarios requeridos.</td>
-    <td>La aplicación es gratuita, con una compra integrada de Parkopedia Premium de alrededor de S/17 a S/27 (US$4.99 a US$7.99 según la tienda) que habilita la disponibilidad en tiempo real. Las tarifas de estacionamiento dependen de cada operador y ubicación. Los precios de sus soluciones empresariales, datos e integraciones no se muestran públicamente y requieren una cotización comercial.</td>
+    <td>Acceso gratuito para los conductores. Se propone una suscripción mensual escalonada para los administradores según la capacidad y las funcionalidades requeridas. La incorporación de sensores IoT sería opcional y tendría un costo adicional.</td>
+    <td>Planes corporativos estimados desde US$ 100 hasta US$ 300 mensuales, más una comisión aproximada del 5% por transacción, dependiendo de la ubicación y capacidad.</td>
+    <td>Plan Básico de US$150, Plan Intermedio de US$250 y Plan Avanzado de US$650 mensuales, más IGV. Los planes varían según la cantidad de espacios, transacciones y usuarios requeridos.</td>
+    <td>Planes empresariales estimados desde US$ 300 a US$ 800 mensuales, dependiendo del volumen de consultas de datos y el nivel de integración requerida.</td>
   </tr>
   <tr>
     <th>Canales de distribución (web y/o móvil)</th>
@@ -319,6 +319,8 @@ Preguntas principales
 14.	¿Qué tipo de notificaciones le gustaría recibir mientras usa un estacionamiento (tiempo restante, salida, etc.)?
 
 ### 2.2.2. Registro de entrevistas
+
+Link a todas las entrevistas: [https://lix.li/CQeI](https://lix.li/CQeI)
 
 **Primer Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
 

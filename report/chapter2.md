@@ -1,4 +1,4 @@
-﻿# Capítulo II: Requirements Elicitation & Analysis
+# Capítulo II: Requirements Elicitation & Analysis
 
 ## 2.1. Competidores
 
@@ -264,9 +264,16 @@ En conjunto, estas estrategias permiten que EasyPark compita mediante una propue
 
 ### 2.2.1. Diseño de entrevistas
 
-Para cada segmento se definieron preguntas principales (orientadas a entender comportamientos, problemas y contexto de uso) y preguntas complementarias, agrupadas en dos bloques: datos demográficos (género, edad, distrito de residencia, estado civil, familia, ocupación) y otras características necesarias para construir lo necesario para el NeedFinding.
+Para cada segmento se definieron un bloque breve de preguntas demográficas, aplicado al inicio de la entrevista, y preguntas principales orientadas a entender comportamientos, problemas y contexto de uso. Los datos demográficos permitieron caracterizar a cada entrevistado para construir los artefactos del Needfinding.
 
 **Primer Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
+
+Preguntas demográficas
+
+1.	¿Cuál es su nombre y su edad?
+2.	¿Cuál es su rol en el estacionamiento (administrador, propietario o personal operativo)?
+3.	¿Cuánto tiempo lleva en este rubro?
+4.	¿En qué zona o distrito se ubica el estacionamiento que administra?
 
 Preguntas principales
 
@@ -281,12 +288,18 @@ Preguntas principales
 9.	¿Ha utilizado alguna aplicación o sistema digital para la gestión de su estacionamiento? ¿Cuál fue su experiencia?
 10.	¿Qué limitaciones encuentra en las herramientas que usa actualmente?
 11.	¿Qué tipo de reportes o estadísticas le gustaría tener sobre el uso de su estacionamiento?
-12.	¿Cómo cree que una aplicación que muestre disponibilidad en tiempo real afectaría su operación diaria?
+12.	¿Qué información le gustaría tener en tiempo real para operar mejor su estacionamiento?
 13.	¿Qué nivel de inversión estaría dispuesto a asumir para digitalizar la gestión de su estacionamiento?
-14.	¿Qué tan importante es para usted poder supervisar el estacionamiento de forma remota?
-15.	¿Qué le generaría más confianza para adoptar una nueva solución tecnológica como EasyPark?
+14.	Cuando usted no está en el estacionamiento, ¿cómo supervisa lo que ocurre?
+15.	¿Qué le generaría más confianza para adoptar una nueva solución tecnológica?
 
 **Segundo Segmento Objetivo - Conductores (usuarios de estacionamientos)**
+
+Preguntas demográficas
+
+1.	¿Cuál es su nombre y su edad?
+2.	¿A qué se dedica (estudia o trabaja)?
+3.	¿Hace cuánto tiempo conduce y con qué frecuencia lo hace?
 
 Preguntas principales
 
@@ -296,11 +309,11 @@ Preguntas principales
 4.	¿Qué hace cuando llega a un lugar y no encuentra espacio disponible?
 5.	¿Ha usado alguna app para buscar, reservar o pagar estacionamiento? ¿Cuál fue su experiencia?
 6.	¿Qué información necesita saber antes de decidir a qué estacionamiento dirigirse (precio, distancia, disponibilidad)?
-7.	¿Cómo prefiere pagar por el estacionamiento: efectivo, tarjeta, app, otro?
-8.	¿Qué tan importante es para usted poder reservar un espacio con anticipación?
+7.	¿Cómo prefiere pagar por el estacionamiento?
+8.	Cuando sabe que irá a una zona concurrida, ¿qué hace para asegurarse de tener dónde estacionar?
 9.	¿Ha tenido problemas relacionados con cobros incorrectos o falta de claridad en las tarifas?
 10.	¿Qué le frustra más del proceso de estacionar en general?
-11.	¿Qué valoraría más en una app de estacionamiento: rapidez, precio, seguridad, comodidad?
+11.	¿Qué valoraría más en una app de estacionamiento?
 12.	¿Le preocupa la seguridad de su vehículo mientras está estacionado? ¿Por qué?
 13.	¿Qué tan dispuesto estaría a pagar un poco más por la certeza de encontrar espacio disponible?
 14.	¿Qué tipo de notificaciones le gustaría recibir mientras usa un estacionamiento (tiempo restante, salida, etc.)?
@@ -312,45 +325,51 @@ Link a todas las entrevistas: [https://lix.li/CQeI](https://lix.li/CQeI)
 **Primer Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
 
 | Campo | ![Entrevista1](../assets/images/EntrevistaAdmin1.PNG) <br/> Entrevista 1 | ![Entrevista2](../assets/images/EntrevistaAdmin2.PNG) <br/> Entrevista 2 | ![Entrevista3](../assets/images/EntrevistaAdmin3.PNG) <br/> Entrevista 3 | ![Entrevista4](../assets/images/EntrevistaAdmin4.PNG) <br/> Entrevista 4 |
-|---|--------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| **Nombre** | Uziel Procopio                                                           | Diego Cuartas                                                            | Braulio                                                                 | Arístides Aguirre                                                        |
-| **Edad** | 28 años                                                                  | 25 años                                                                  | 42 años                                                                 | 61 años                                                                  |
-| **Rol / Tiempo** | Administrador (7-8 meses)                                                | Administrador (9 meses)                                                  | Administrador y dueño (5 años)                                          | Administrador (10 años)                                                  |
-| **Ubicación** | Lima                                                                     | Centro de Lima                                                           | Lima                                                                    | Lima                                                                     |
+|---|---|---|---|---|
+| **Nombre** | Uziel Procopio | Diego Cuartas | Braulio Asenjo | Arístides Aguirre |
+| **Edad** | 28 años | 25 años | 28 años | 61 años |
+| **Rol** | Administrador | Administrador | Administrador y propietario | Administrador |
+| **Tiempo en el rubro** | 7-8 meses | 9 meses | 5 años | 10 años |
+| **Ubicación** | La Molina | Lima Centro | San Miguel | Centro de Lima |
+
+Link del video de entrevistas: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202324461_upc_edu_pe/IQCrCWHN5RbXSpafUiHxx20BAQShg-lHE5CD_tJB5vkZvjM?e=tCVEpb&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
 Resumen – Uziel Procopio
 
-La entrevista a Uziel Procopio, administrador de 28 años con 7-8 meses en el rubro, evidenció que su mayor dolor es la falta de visibilidad de espacios y control operativo, gestionado enteramente con una libreta física. Esta dependencia provoca pérdidas irreparables de datos ante extravíos y desorden en horas punta, derivando en autos mal estacionados. Enfrenta serios problemas para detectar vehículos abandonados o con sobretiempo al no contar con alertas automáticas. El cobro se realiza calculando manualmente las horas sobre el cuaderno sin emitir comprobantes digitales. Aunque intentó usar una app anteriormente, la complejidad de la interfaz le dejó una mala experiencia y desconfianza hacia soluciones tecnológicas.
+La entrevista a Uziel Procopio, administrador de 28 años con 7-8 meses en el rubro, ubicado en La Molina, evidenció que su mayor dolor es la falta de visibilidad de espacios y control operativo, gestionado enteramente con una libreta física. Esta dependencia provoca pérdidas irreparables de datos ante extravíos y desorden en horas punta, derivando en autos mal estacionados. Enfrenta serios problemas para detectar vehículos abandonados o con sobretiempo al no contar con alertas automáticas. El cobro se realiza calculando manualmente las horas sobre el cuaderno sin emitir comprobantes digitales. Aunque intentó usar una app anteriormente, la complejidad de la interfaz le dejó una mala experiencia y desconfianza hacia soluciones tecnológicas.
 
 Resumen – Diego Cuartas
 
 La entrevista a Diego Cuartas, administrador de 25 años con 9 meses de experiencia en el centro de Lima, reveló una gestión basada en la observación directa y tickets de papel. Al operar "a ojo", sufre interrupciones operativas por fallas físicas como el desabastecimiento de papel de ticket o la pérdida de señal al procesar pagos digitales. Los excedentes de tiempo los maneja agregando tarifas adicionales al cálculo del reloj, expuesto a errores. Su mayor frustración son las congestiones en horas de alta demanda y los incidentes que afectan la reputación del negocio. Valora la supervisión remota y estadísticas de afluencia, mostrando alta disposición a invertir en digitalización si le facilita el trabajo.
 
-Resumen – Braulio
+Resumen – Braulio Asenjo
 
-La entrevista a Braulio, administrador y propietario de 42 años con 5 años de experiencia, reflejó una dependencia absoluta de su presencia física para el correcto funcionamiento del local. Su control manual en cuadernos genera descuadres de caja y cobros no realizados cuando personal de apoyo lo cubre. En alta demanda sufre por sobreaforo al no tener un conteo real de espacios, obligándolo a reacomodar autos o pedir el retiro anticipado de clientes. La falta de registros digitales dificulta responder ante reclamos por tiempo o llevar la contabilidad del negocio. Descartó aplicaciones del mercado por percibirlas diseñadas para empresas más grandes.
+La entrevista a Braulio, administrador y propietario de 28 años con 5 años de experiencia en su estacionamiento privado ubicado en San Miguel, reflejó una dependencia total de su presencia física para que el negocio funcione. Todo el control lo lleva en un cuaderno donde anota placa, hora de entrada y monto pagado. Menciona que "si yo no estoy, se arma un lío": cuando su sobrino lo cubre los fines de semana, muchas veces no anota bien los datos o se olvida de cobrar a algún cliente, y esas pérdidas solo las nota días después al cuadrar caja, con diferencias que no puede explicar. En alta demanda sufre por sobreaforo al no tener un conteo real de espacios, lo que lo obliga a reacomodar autos o pedir el retiro anticipado de clientes. La falta de registros digitales dificulta responder ante reclamos por tiempo o llevar la contabilidad del negocio. Descartó aplicaciones del mercado por percibirlas diseñadas para empresas más grandes.
 
 Resumen – Arístides Aguirre
 
-La entrevista a Arístides, administrador de 61 años con 10 años de trayectoria, expuso un modelo tradicional basado en tickets manuales y registro tipo Kardex, apoyado solo por cámaras para monitoreo visual. En horas punta, el llenado manual de tickets genera cuellos de botella que se agravan al dar vuelto en efectivo con billetes de alta denominación. Su principal limitación es la ausencia de reportes y estadísticas para analizar variaciones de demanda por turnos o estaciones. Aunque reconoce que su negocio ha quedado desfasado tecnológicamente, está dispuesto a invertir en modernización y control en tiempo real si recibe la capacitación adecuada.
+La entrevista a Arístides, administrador de 61 años con 10 años de trayectoria ubicado en Lima centro, expuso un modelo tradicional basado en tickets manuales y registro tipo Kardex, apoyado solo por cámaras para monitoreo visual. En horas punta, el llenado manual de tickets genera cuellos de botella que se agravan al dar vuelto en efectivo con billetes de alta denominación. Su principal limitación es la ausencia de reportes y estadísticas para analizar variaciones de demanda por turnos o estaciones. Aunque reconoce que su negocio ha quedado desfasado tecnológicamente, está dispuesto a invertir en modernización y control en tiempo real si recibe la capacitación adecuada.
 
 **Segundo Segmento Objetivo - Conductores (usuarios de estacionamientos)**
 
 | Campo | ![Entrevista1](../assets/images/EntrevistaConductor1.PNG) <br/> Entrevista 1 | ![Entrevista2](../assets/images/EntrevistaConductor2.PNG) <br/> Entrevista 2 | ![Entrevista3](../assets/images/EntrevistaConductor3.PNG) <br/> Entrevista 3 | ![Entrevista4](../assets/images/EntrevistaConductor4.PNG) <br/> Entrevista 4 |
-|---|-----------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| **Nombre** | Esteban Chavez                                                              | Nicolay Soto                                                                 | Joaquín                                                                      | Kevin Romero                                                                 |
-| **Edad** | 20 años                                                                     | 22 años                                                                      | 22 años                                                                      | 31 años                                                                      |
-| **Ocupación** | Estudiante de Ingeniería de Software                                        | Estudiante                                                                   | Estudiante de Medicina (USMP)                                                | Analista de ciberseguridad                                                   |
-| **Principal problema** | Pérdida de tiempo buscando estacionamiento                                  | Estrés y dificultad para encontrar espacio                                   | Incertidumbre sobre disponibilidad real                                      | Pérdida de tiempo y combustible                                              |
-| **Tiempo buscando estacionamiento** | 20-30 min                                                                   | 7-10 min                                                                     | Da vueltas hasta encontrar cupo                                              | 10-15 min en hora punta; 5-10 min en baja afluencia                          |
-| **Problema con disponibilidad** | Apps muestran espacios que ya están ocupados                                | Dificultad para encontrar espacios                                           | Apps sin disponibilidad en tiempo real                                       | Debe buscar piso por piso                                                    |
-| **Información que necesita** | Disponibilidad, precio, distancia, permanencia y seguridad                  | Precio y seguridad                                                           | Disponibilidad, precio y seguridad                                           | Distancia, precio y seguridad                                                |
-| **Interés en reservar** | Alto                                                                        | Alto                                                                         | Alto                                                                         | Alto                                                                         |
-| **Disposición a pagar más** | Sí                                                                          | Sí                                                                           | Sí, 20%-30% más                                                              | Sí                                                                           |
-| **Problemas con tarifas** | Cobros adicionales poco claros                                              | Aumento de tarifa por exceder tiempo                                         | Montos distintos a los anunciados                                            | Cobros indebidos frente a precios promocionados                              |
-| **Preocupación por seguridad** | Sí                                                                          | Sí                                                                           | Sí, especialmente por falta de cámaras                                       | Sí, evita dejar el vehículo en la calle                                      |
-| **Notificaciones deseadas** | Tiempo restante, vencimiento, renovación y pago                             | Contador de tiempo restante                                                  | Tiempo restante y vencimiento                                                | Disponibilidad, promociones y servicios adicionales                          |
-| **Funcionalidad más valorada** | Disponibilidad real y reserva anticipada                                    | Rapidez y precio                                                             | Garantía de disponibilidad                                                   | Ubicación exacta del espacio disponible                                      |
+|---|---|---|---|---|
+| **Nombre** | Esteban Chavez | Nicolay Soto | Joaquín Malaga| Kevin Romero |
+| **Edad** | 20 años | 22 años | 22 años | 31 años |
+| **Ocupación** | Estudiante de Ingeniería de Software | Estudiante | Estudiante de Medicina (USMP) | Analista de ciberseguridad |
+| **Tiempo conduciendo** | 4 años | 3 años | 4 años| 8 años |
+| **Principal problema** | Pérdida de tiempo buscando estacionamiento | Estrés y dificultad para encontrar espacio | Incertidumbre sobre disponibilidad real | Pérdida de tiempo y combustible |
+| **Tiempo buscando estacionamiento** | 20-30 min | 7-10 min | Da vueltas hasta encontrar cupo | 10-15 min en hora punta; 5-10 min en baja afluencia |
+| **Problema con disponibilidad** | Apps muestran espacios que ya están ocupados | Dificultad para encontrar espacios | Apps sin disponibilidad en tiempo real | Debe buscar piso por piso |
+| **Información que necesita** | Disponibilidad, precio, distancia, permanencia y seguridad | Precio y seguridad | Disponibilidad, precio y seguridad | Distancia, precio y seguridad |
+| **Interés en reservar** | Alto | Alto | Alto | Alto |
+| **Disposición a pagar más** | Sí | Sí | Sí, 20%-30% más | Sí |
+| **Problemas con tarifas** | Cobros adicionales poco claros | Aumento de tarifa por exceder tiempo | Montos distintos a los anunciados | Cobros indebidos frente a precios promocionados |
+| **Preocupación por seguridad** | Sí | Sí | Sí, especialmente por falta de cámaras | Sí, evita dejar el vehículo en la calle |
+| **Notificaciones deseadas** | Tiempo restante, vencimiento, renovación y pago | Contador de tiempo restante | Tiempo restante y vencimiento | Disponibilidad, promociones y servicios adicionales |
+| **Funcionalidad más valorada** | Disponibilidad real y reserva anticipada | Rapidez y precio | Garantía de disponibilidad | Ubicación exacta del espacio disponible |
+
+Link del video de entrevistas: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202324461_upc_edu_pe/IQCrCWHN5RbXSpafUiHxx20BAQShg-lHE5CD_tJB5vkZvjM?e=tCVEpb&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
 Resumen – Esteban Chavez
 
@@ -360,13 +379,13 @@ Resumen – Nicolay Soto
 
 La entrevista a Nicolay Soto, estudiante de 22 años con 3 años conduciendo, calificó como "desesperante" la búsqueda de estacionamiento, demorando de 7 a 10 minutos y experimentando estrés que afecta el tránsito. Tras intentar usar Waze sin éxito para este fin, respalda la reserva anticipada pagando un adicional con tal de asegurar un sitio. Sus factores clave de decisión son el precio, la velocidad del servicio y la seguridad del vehículo ante daños. Muestra molestia por autos mal estacionados que reducen cupos y por aumentos de tarifa derivados del tráfico, valorando notificaciones con contadores para evitar cobros extra.
 
-Resumen – Joaquín
+Resumen – Joaquín Malaga
 
-La entrevista a Joaquín, estudiante de medicina de 22 años, evidenció su mayor dolor en la incertidumbre de disponibilidad en momentos donde la puntualidad es crítica, como clases o guardias clínicas. Relató fallas en apps probadas anteriormente ("la app decía una cosa y la realidad era otra"), lo que lo obliga a dar vueltas, aparcar en zonas no autorizadas o pagar cocheras costosas. Denuncia falta de transparencia y cobros indebidos en pagos manuales, inclinándose por pagos digitales. Estaría dispuesto a pagar entre 20% y 30% más por una reserva garantizada, valorando además notificaciones sobre el vencimiento del tiempo.
+La entrevista a Joaquín, estudiante de medicina de 22 años, lleva manejando 4 años evidenció su mayor dolor en la incertidumbre de disponibilidad en momentos donde la puntualidad es crítica, como clases o guardias clínicas. Relató fallas en apps probadas anteriormente ("la app decía una cosa y la realidad era otra"), lo que lo obliga a dar vueltas, aparcar en zonas no autorizadas o pagar cocheras costosas. Denuncia falta de transparencia y cobros indebidos en pagos manuales, inclinándose por pagos digitales. Estaría dispuesto a pagar entre 20% y 30% más por una reserva garantizada, valorando además notificaciones sobre el vencimiento del tiempo.
 
 Resumen – Kevin Romero
 
-La entrevista a Kevin Romero, analista de ciberseguridad de 31 años, describió la búsqueda en centros comerciales como un proceso "pesado" que le hace perder de 5 a 15 minutos y gastar combustible extra. Evalúa la elección según la prisa (distancia) o la disponibilidad de tiempo (precio), y resalta la frustración de buscar piso por piso. Valora la reserva previa por seguridad ante el riesgo de la calle y muestra preferencia por pagos digitales (Yape, Plin, tarjetas), habiendo experimentado cobros que no coincidían con lo anunciado. Exige que una app le indique el espacio exacto disponible y envíe alertas de promociones o servicios.
+La entrevista a Kevin Romero, analista de ciberseguridad de 31 años, maneja desde hace 8 años, describió la búsqueda en centros comerciales como un proceso "pesado" que le hace perder de 5 a 15 minutos y gastar combustible extra. Evalúa la elección según la prisa (distancia) o la disponibilidad de tiempo (precio), y resalta la frustración de buscar piso por piso. Valora la reserva previa por seguridad ante el riesgo de la calle y muestra preferencia por pagos digitales (Yape, Plin, tarjetas), habiendo experimentado cobros que no coincidían con lo anunciado. Exige que una app le indique el espacio exacto disponible y envíe alertas de promociones o servicios.
 
 
 ### 2.2.3. Análisis de entrevistas
@@ -428,6 +447,31 @@ El 75 % prefiere utilizar tarjetas, aplicaciones o billeteras digitales para rea
 
 Respecto a sus características generales, tres entrevistados son estudiantes de entre 20 y 22 años, lo que representa el 75 % de la muestra. Kevin tiene 31 años y trabaja como analista de ciberseguridad, ampliando el perfil hacia conductores profesionales. Todos son conductores habituales y utilizan herramientas digitales relacionadas con movilidad, ubicación o pagos.
 
+#### Criterios para la definición de los User Personas
+
+Para definir los User Personas se agruparon los entrevistados de cada segmento según características objetivas (datos verificables del perfil y del contexto de uso) y subjetivas (motivaciones, actitudes y frustraciones). Los entrevistados que coincidieron en la mayoría de estos criterios conformaron un mismo conjunto, del cual se derivó un arquetipo.
+
+| Tipo | Administradores | Conductores |
+|---|---|---|
+| Objetivas | Edad, rol (administrador o propietario), años de experiencia, distrito, herramientas de control actuales (cuaderno, tickets, Kardex) | Edad, ocupación, años conduciendo, tiempo de búsqueda, forma de pago, herramientas digitales usadas |
+| Subjetivas | Actitud hacia la tecnología, disposición a invertir, principal frustración, necesidad de control remoto | Motivación principal (puntualidad, precio, seguridad), frustración con la disponibilidad, disposición a pagar más, preocupación por la seguridad |
+
+**Conjuntos identificados: administradores**
+
+| Conjunto | Entrevistados | Características en común | Persona |
+|---|---|---|---|
+| Pragmático | Diego, Braulio y Arístides (75 %) | Necesitan reportes y registros confiables, dependen de la supervisión presencial o valoran el control remoto; Diego y Arístides están dispuestos a invertir | **Carlos Mendoza** |
+| Cauteloso con la tecnología | Procopio (25 %) | Poca experiencia en el rubro, mala experiencia previa con una app compleja, control totalmente manual | No se elaboró persona por su baja frecuencia en la muestra |
+
+**Conjuntos identificados: conductores**
+
+| Conjunto | Entrevistados | Características en común | Persona |
+|---|---|---|---|
+| Planificador digital | Esteban, Joaquín y Kevin (75 %) | Prefieren pagos digitales, quieren conocer la disponibilidad antes de salir, valoran la reserva anticipada y las notificaciones | **Luis Fernández** |
+| Sensible a precio y rapidez | Nicolay (25 %) | Prioriza precio y velocidad, busca un contador de tiempo para evitar cobros extra | No se elaboró persona por su baja frecuencia en la muestra |
+
+Se eligieron los conjuntos de mayor frecuencia (75 %) porque concentran las necesidades más repetidas en las entrevistas.
+
 #### Síntesis de los resultados
 
 Los administradores necesitan sustituir o complementar sus procedimientos manuales con herramientas sencillas que permitan controlar la ocupación, registrar movimientos, supervisar remotamente y consultar reportes. Los conductores, por su parte, necesitan información confiable sobre disponibilidad, reservas anticipadas, tarifas transparentes, seguridad, pagos digitales y notificaciones.
@@ -444,17 +488,25 @@ En el segmento de administradores se identificaron problemas relacionados con lo
 Estos resultados se utilizarán para construir los User Personas, el User Task Matrix, los User Journey Maps, los Empathy Maps y los As-Is Scenario Maps. Los artefactos representarán la experiencia actual de cada segmento sin considerar todavía la existencia de EasyPark.
 
 ### 2.3.1. User Personas
+
+Cada User Persona se construyó como un arquetipo a partir de los entrevistados que comparten características similares. Cada entrevistado equivale al 25 % de su segmento.
+
+| User Persona | Segmento | Entrevistados que representa | Proporción de la muestra |
+|---|---|---|---|
+| Carlos Mendoza | Administrador pragmático | Diego, Braulio y Arístides | 75 % (3 de 4) |
+| Luis Fernández | Conductor planificador digital | Esteban, Joaquín y Kevin | 75 % (3 de 4) |
+
 **Segmento Objetivo - Administradores y el personal operativo de los estacionamientos**
 
 <img src="../assets/images/Carlos Mendoza User Personas.png">
 
-Carlos Mendoza representa al segmento pragmático de administradores, con un tamaño de mercado del 75%. Se definió como un hombre de 45 años ubicado en Lima, reflejando el perfil de propietario y administrador de un estacionamiento privado pequeño que gestiona ingresos, salidas y cobros mediante cuadernos o tickets. Sus metas de digitalizar el registro de vehículos, visualizar espacios libres/ocupados en tiempo real, organizar clientes y consultar reportes responden a su necesidad de controlar el negocio sin depender de registros físicos ni de su presencia constante. Sus frustraciones sobre registros incompletos o perdidos, desconocimiento de espacios disponibles, congestión en horas punta, diferencias de cobro y aplicaciones complejas para grandes empresas reflejan la vulnerabilidad de una operación manual. Sus canales y tecnología incluyen smartphones, email, WhatsApp, website y plataformas multidispositivo (iOS, Windows), evidenciando un perfil dispuesto a incorporar tecnología de forma progresiva, accesible y orientada a la simplicidad operativa.
+Carlos Mendoza representa al segmento pragmático de administradores, que corresponde al 75 % de los administradores entrevistados (Diego, Braulio y Arístides). Se definió como un hombre de 38 años ubicado en Lima, reflejando el perfil de propietario y administrador de un estacionamiento privado pequeño que gestiona ingresos, salidas y cobros mediante cuadernos o tickets. Sus metas de digitalizar el registro de vehículos, visualizar espacios libres/ocupados en tiempo real, organizar clientes y consultar reportes responden a su necesidad de controlar el negocio sin depender de registros físicos ni de su presencia constante. Sus frustraciones sobre registros incompletos o perdidos, desconocimiento de espacios disponibles, congestión en horas punta, diferencias de cobro y aplicaciones complejas para grandes empresas reflejan la vulnerabilidad de una operación manual. Sus canales y tecnología incluyen smartphones, email, WhatsApp, website y plataformas multidispositivo (iOS, Windows), evidenciando un perfil dispuesto a incorporar tecnología de forma progresiva, accesible y orientada a la simplicidad operativa.
 
 **Segmento Objetivo - Conductores (usuarios de estacionamientos)**
 
 <img src="../assets/images/Luis Fernández User Personas.png">
 
-Luis Fernández representa al segmento de planificadores digitales, con un tamaño de mercado del 56%. Se definió como un hombre de 27 años ubicado en Lima, reflejando el perfil de un estudiante universitario y conductor habitual que se desplaza a zonas comerciales y de estudio, tardando entre 5 y 30 minutos en hallar estacionamiento. Sus metas de consultar la disponibilidad real antes de salir, comparar tarifas y distancias, reservar un espacio seguro con anticipación y realizar pagos mediante tarjetas o billeteras digitales responden a su motivación de llegar puntual y evitar dar vueltas innecesarias. Sus frustraciones por información desactualizada en apps, cobros diferentes a los anunciados, temor a robos o daños y falta de avisos antes de que incremente la tarifa reflejan la ineficiencia de la oferta actual. Sus canales y tecnología incluyen smartphones, website, WhatsApp e interacciones presenciales con soporte en dispositivos móviles (iOS y escritorio), evidenciando un perfil con alto dominio digital dispuesto a adoptar soluciones ágiles y transparentes.
+Luis Fernández representa al segmento de planificadores digitales, que corresponde al 75 % de los conductores entrevistados (Esteban, Joaquín y Kevin). Se definió como un hombre de 27 años ubicado en Lima, reflejando el perfil de un estudiante universitario y conductor habitual que se desplaza a zonas comerciales y de estudio, tardando entre 5 y 30 minutos en hallar estacionamiento. Sus metas de consultar la disponibilidad real antes de salir, comparar tarifas y distancias, reservar un espacio seguro con anticipación y realizar pagos mediante tarjetas o billeteras digitales responden a su motivación de llegar puntual y evitar dar vueltas innecesarias. Sus frustraciones por información desactualizada en apps, cobros diferentes a los anunciados, temor a robos o daños y falta de avisos antes de que incremente la tarifa reflejan la ineficiencia de la oferta actual. Sus canales y tecnología incluyen smartphones, website, WhatsApp e interacciones presenciales con soporte en dispositivos móviles (iOS y escritorio), evidenciando un perfil con alto dominio digital dispuesto a adoptar soluciones ágiles y transparentes.
 
 ### 2.3.2. User Task Matrix
 
@@ -680,8 +732,7 @@ En Planificar el desplazamiento, calcula tiempos y posibles sitios donde aparcar
 
 
 ## 2.4. Big Picture EventStorming
-Se utilizó la guía Step-by-Step Guide de Philippe Bourgau, proporcionada en la rúbrica del Final Problem Statement, para llevar a cabo el proceso de Big Picture Event Storming, siguiendo sus etapas:
-
+Se utilizó la guía Step-by-Step Guide de Philippe Bourgau para llevar a cabo el proceso de Big Picture EventStorming, siguiendo sus tres etapas:
 * Open
 * Explore
 * Close
@@ -696,12 +747,12 @@ Se utilizó la guía Step-by-Step Guide de Philippe Bourgau, proporcionada en la
 
 ![Brainstorm 2 Explore.jpg](../assets/images/Brainstorm%202%20Explore.jpg)
 
-* **Paso 3**: Cierre con Comandos y Políticas (Close)El refinamiento final de la línea de tiempo incorpora los Comands (acciones en azul) y Policies (reglas de negocio en púrpura) que conectan a los actores con los eventos, definiendo el comportamiento automatizado del sistema. Las decisiones arquitectónicas clave incluyen:   Políticas de Reserva y Capacidad: Se establece que cuando el conductor ejecuta el comando Book space, el sistema aplica la política de reducir temporalmente la disponibilidad del estacionamiento (If booked, temporarily reduce availability).   Gestión del Tiempo y Alertas Automatizadas: Al registrar una entrada (Record Entry), se activa una regla de negocio para iniciar el temporizador de estadía (Start duration timer). Si se acerca la hora límite, el sistema envía un recordatorio (Send Reminder); si el vehículo excede el tiempo pagado (If a vehicle exceeds the paid time), se genera automáticamente una alerta de permanencia (Generate Alert) que notifica al administrador (Notify Administrator).   Resolución de Conflictos Operativos: Se estructura el proceso para el manejo de incidencias, donde el administrador audita la advertencia (Check Alert), revisa la información (Revised alert) y ejecuta el comando de resolución (Resolve alert), finalizando con el evento de alerta de parqueo solucionada (Parking Alert resolved).
+* **Paso 3**: Cierre con Comandos y Políticas (Close)El refinamiento final de la línea de tiempo incorpora los Commands (acciones en azul) y Policies (reglas de negocio en púrpura) que conectan a los actores con los eventos, definiendo el comportamiento automatizado del sistema. Las decisiones arquitectónicas clave incluyen:   Políticas de Reserva y Capacidad: Se establece que cuando el conductor ejecuta el comando Book space, el sistema aplica la política de reducir temporalmente la disponibilidad del estacionamiento (If booked, temporarily reduce availability).   Gestión del Tiempo y Alertas Automatizadas: Al registrar una entrada (Record Entry), se activa una regla de negocio para iniciar el temporizador de estadía (Start duration timer). Si se acerca la hora límite, el sistema envía un recordatorio (Send Reminder); si el vehículo excede el tiempo pagado (If a vehicle exceeds the paid time), se genera automáticamente una alerta de permanencia (Generate Alert) que notifica al administrador (Notify Administrator).   Resolución de Conflictos Operativos: Se estructura el proceso para el manejo de incidencias, donde el administrador audita la advertencia (Check Alert), revisa la información (Revised alert) y ejecuta el comando de resolución (Resolve alert), finalizando con el evento de alerta de parqueo solucionada (Parking Alert resolved).
 ![Brainstorm 3 Close.jpg](../assets/images/Brainstorm%203%20Close.jpg)
 
 ## 2.5. Ubiquitous Language
 El Ubiquitous Language define un conjunto de términos compartidos entre todos los actores del dominio de negocio (Conductores y Administradores), con el objetivo  de eliminar ambigüedades y asegurar una comunicación clara dentro del equipo y con los stakeholders.
-A continuación, se presenta el glosario de términos clave del dominio de la cadena de suministro de frutas utilizado en Easypark.
+A continuación, se presenta el glosario de términos clave del dominio utilizado en Easypark.
 
 •	**Abonado / Subscriber**: Cliente frecuente sujeto a un acuerdo de pago periódico, el cual goza de derechos de acceso a espacios preasignados dentro del recinto.
 
@@ -715,7 +766,11 @@ A continuación, se presenta el glosario de términos clave del dominio de la ca
 
 •	**Espacio / Space (Cupo)**: Unidad física individual y mínima destinada al parqueo de un vehículo. Este elemento transita entre tres estados sistémicos mutuamente excluyentes: Disponible, Ocupado o Reservado.
 
-•	**Estacionamiento / Parking Lot (Establecimiento)**: Infraestructura o espacio físico debidamente delimitado cuya gestión operativa y comercial se realiza mediante la plataforma EasyPark.
+•	**Estacionamiento / Parking Lot (Establecimiento)**: Infraestructura o espacio físico debidamente delimitado cuya gestión operativa y comercial se realiza mediante la plataforma EasyPark. 
+
+•	**Insights Hub / Panel de control**: Módulo web del administrador desde el cual visualiza la ocupación en tiempo real, gestiona las alertas operativas y consulta los reportes del estacionamiento.
+
+•	**Insights Hub / Panel de control**: Módulo web del administrador desde el cual visualiza la ocupación en tiempo real, gestiona las alertas operativas y consulta los reportes del estacionamiento.
 
 •	**Ingreso / Entry (Check-in)**: Evento operativo que registra la llegada oficial de un vehículo al estacionamiento. Este evento altera el estado del espacio asignado a "Ocupado" e inicia el cómputo del tiempo de permanencia.
 

@@ -51,15 +51,15 @@ Para mantener un historial claro, consistente y facilitar la generación automá
 ### 5.1.3. Source Code Style Guide & Conventions
 
 - **Naming Conventions:**
-    - Variables y Métodos: camelCase (ej. `currentTemperature`).
-    - Clases e Interfaces: PascalCase (ej. `LaboratoryController`).
-    - Constantes: UPPER_CASE (ej. `MAX_GAS_LEVEL`).
-    - Archivos CSS/HTML/Componentes: kebab-case (ej. `dashboard-view.component.html`).
+  - Variables y Métodos: camelCase (ej. `currentTemperature`).
+  - Clases e Interfaces: PascalCase (ej. `LaboratoryController`).
+  - Constantes: UPPER_CASE (ej. `MAX_GAS_LEVEL`).
+  - Archivos CSS/HTML/Componentes: kebab-case (ej. `dashboard-view.component.html`).
 
 - **Guías de Estilo por Lenguaje:**
-    - Java: Google Java Style Guide.
-    - TypeScript/Angular: Angular Coding Style Guide y Google TypeScript Style Guide.
-    - HTML/CSS: Google HTML/CSS Style Guide.
+  - Java: Google Java Style Guide.
+  - TypeScript/Angular: Angular Coding Style Guide y Google TypeScript Style Guide.
+  - HTML/CSS: Google HTML/CSS Style Guide.
 ### 5.1.4. Software Deployment Configuration
 
 En esta sección se especifica la configuración y los pasos necesarios para el despliegue de cada uno de los productos que conforman la solución **EasyPark**. Se ha adoptado un enfoque de **Continuous Deployment (CD)** para asegurar que los cambios validados en los repositorios de GitHub se reflejen automáticamente en los entornos de producción mediante **GitHub Actions**.
@@ -109,8 +109,10 @@ En esta sección se describen los principales acuerdos y definiciones realizadas
   <tr>
     <td>Attendees (to planning meeting)</td>
     <td>
-      Saravia Huaricancha, Arturo Axel Negón Muñoz, Cayo Manuel Stefano Martín Farón,
-      Alexis Sebastián Lucas Córdova, Alvar
+      Saravia Huaricancha, Arturo Axel; 
+      Negrón Muñoz, Cayo Manuel Stefano; 
+      Martín Farro, Alexis Sebastián;
+      Lucas Córdova, Alvar;
     </td>
   </tr>
 
@@ -178,35 +180,37 @@ https://trello.com/b/KxGrDhN2/sprintseasypark
 
 #### 5.2.1.4 Development Evidence for Sprint Review.
 
-En este Sprint se logró la implementación del Landing Page de EasyPark, desarrollando su estructura principal en HTML y CSS, así como la navegación entre secciones y avances en el diseño responsive.
-
-![AV1landingevidence.PNG](../assets/images/AV1landingevidence.PNG)
-
 #### 5.2.1.5 Execution Evidence for Sprint Review.
 
 1. Captura de la Landing Page
-![Landing Page - Register Button.png](../assets/images/Landing%20Page%20-%20Register%20Button.png)
+   ![tb1 Landing Page - Inicio.png](../assets/images/tb1%20Landing%20Page%20-%20Inicio.png)
 
-2. Captura del apartado "Quienes somos": 
-![Landing Page - Info.png](../assets/images/Landing%20Page%20-%20Info.png)
+2. Captura del apartado "Quienes somos":
+   ![tb1 Landing Page - About us.png](../assets/images/tb1%20Landing%20Page%20-%20About%20us.png)
 
 3. Captura del apartado "Beneficios":
-![Landing Page - Benefits.png](../assets/images/Landing%20Page%20-%20Benefits.png)
+ ![tb1 Landing Page - Benefits.png](../assets/images/tb1%20Landing%20Page%20-%20Benefits.png)
 
 4. Captura del apartado "Funcionalidades":
-![Landing Page - Functionalities.png](../assets/images/Landing%20Page%20-%20Functionalities.png)
+   ![tb1 Landing Page - Features.png](../assets/images/tb1%20Landing%20Page%20-%20Features.png)
 
-5. Captura del apartado "Precios":
-![Landing Page - Plans.png](../assets/images/Landing%20Page%20-%20Plans.png)
+5. Captura del apartado "Reservas":
+   ![tb1 Landing Page - Bookings.png](../assets/images/tb1%20Landing%20Page%20-%20Bookings.png)
 
-6. Captura del apartado "Testimonios":
-![Landing Page - Testimonials.png](../assets/images/Landing%20Page%20-%20Testimonials.png)
+6. Captura del apartado "Precios":
+   ![tb1 Landing Page -Pricing.png](../assets/images/tb1%20Landing%20Page%20-Pricing.png)
 
-7. Captura del apartado "FAQ (frequently asked questions)":
-![Landing Page - FAQ.png](../assets/images/Landing%20Page%20-%20FAQ.png)
+7. Captura del apartado "Technology":
+   ![tb1 Landing Page - Technology.png](../assets/images/tb1%20Landing%20Page%20-%20Technology.png)
 
-8. Captura del apartado "Contacto" 
-![Landing Page - Contact.png](../assets/images/Landing%20Page%20-%20Contact.png)
+8. Captura del apartado "Nuestro Equipo":
+   ![tb1 Landing Page - Our Team.png](../assets/images/tb1%20Landing%20Page%20-%20Our%20Team.png)
+
+9. Captura del apartado "Contacto"
+  ![tb 1 Landing Page -Contact.png](../assets/images/tb%201%20Landing%20Page%20-Contact.png)
+
+10. Captura del apartado "Pie de pagina"
+  ![tb1 Landing Page - Footer.png](../assets/images/tb1%20Landing%20Page%20-%20Footer.png)
 
 #### 5.2.1.6 Services Documentation Evidence for Sprint Review.
 N/A. Durante el Sprint 1 el esfuerzo de desarrollo se enfocó exclusivamente en la creación del sitio web estático promocional (Landing Page), por lo que aún no se han implementado APIs RESTful ni Endpoints backend que requieran ser documentados a través de Swagger/OpenAPI. Esta documentación se estructurará a partir del Sprint 2.
@@ -219,3 +223,264 @@ Para el despliegue continuo (CI/CD) de este Sprint, se configuró el entorno de 
 #### 5.2.1.8 Team Collaboration Insights during Sprint.
 
 Todos los miembros del equipo han participado activamente en la implementación de los productos del Sprint 1, lo cual se evidencia mediante los reportes de actividad y contribución del repositorio de GitHub de la organización Apex Code Solutions.
+
+### 5.2.2 Sprint 2
+
+#### 5.2.2.1 Sprint Planning
+
+En esta sección se describen los principales acuerdos y definiciones realizadas durante el Sprint Planning del Sprint 1, enfocado en la implementación del Landing Page de EasyPark.
+
+<table>
+  <tr>
+    <th>Sprint #</th>
+    <td>Sprint 2</td>
+  </tr>
+
+  <tr>
+    <th colspan="2">Sprint Planning Background</th>
+  </tr>
+
+  <tr>
+    <td>Date</td>
+    <td>2026 - 10 - 04</td>
+  </tr>
+
+  <tr>
+    <td>Time</td>
+    <td>17:30</td>
+  </tr>
+
+  <tr>
+    <td>Prepared By</td>
+    <td>Evangelista Ygnacio, Sergio Joaquin</td>
+  </tr>
+
+  <tr>
+    <td>Attendees (to planning meeting)</td>
+    <td>
+      Saravia Huaricancha, Arturo Axel; 
+      Negrón Muñoz, Cayo Manuel Stefano; 
+      Martín Farro, Alexis Sebastián;
+      Lucas Córdova, Alvar;
+    </td>
+  </tr>
+
+  <tr>
+    <td>Sprint 1 Review Summary</td>
+    <td>
+      Durante el Sprint 1 se logró implementar correctamente el Landing Page
+      responsive de EasyPark, incluyendo navegación entre secciones, adaptación
+      móvil y soporte multilenguaje. La revisión del AV1 se observó que que la Landing page no manejaba multiidioma, en el BenchMark no se encontraban todos los precios, no se habían colocado Tecnical Stories, no se debían colocar Story Points de 8, tambien realizar una revisión de la BD y separar el capítulo de conclusiones y recomendaciones. 
+    </td>
+  </tr>
+
+  <tr>
+    <td>Sprint 1 Retrospective Summary</td>
+    <td>
+      El equipo mejoró en cuanto participación y hubo mejor comunicación entre los  miembros. Se acordó que cada integrante lidere un bounded context de la Frontend Application en su propia rama y que las correciones de la AV1 se resuelvan dentro del Sprint 2.
+    </td>
+  </tr>
+
+  <tr>
+    <td>Sprint Goal & User Stories</td>
+    <td>
+    </td>
+  </tr>
+
+<tr>
+    <td>Sprint 1 Retrospective Summary</td>
+    <td>
+      Our focus is on que el conductor pueda buscar y reservar un espacio, y el personal operativo pueda registrar el ingreso, la ocupación y la salida de los vehículos en la plataforma.
+      We believe it delivers reducción en el tiempo de búsqueda para conductores y mayor control operativo to los administradores de estacionamientos independientes.
+      This will be confirmed when el conductor complete una reserva en la aplicación y el administrador pueda visualizar el cambio de estado (a "Ocupado" o "Reservado") en su panel de control en tiempo real.
+    </td>
+  </tr>
+
+<tr>
+    <td>Sprint 2 Velocity</td>
+    <td>
+    42
+    </td>
+  </tr>
+
+<tr>
+    <td>Sum of Story Points</td>
+    <td>
+    42
+    </td>
+  </tr>
+
+</table>
+
+#### 5.2.2.2 Aspect Leaders and Collaborators
+Para el Sprint 2, el liderazgo se distribuyó según los Bounded Contexts definidos en el Design-Level EventStorming. La arquitectura se basa en un monolito modular con un contenedor Frontend en Vue 3 y un Backend RESTful API en ASP.NET Core.
+
+
+| **Team Member (Last Name, First Name)** | **GitHub Username** | **Profile and Vehicles** | **Notifications** | **Monitoring and Alerts** | **Parking Management** | **Analytics and Reporting** | **Reservations** | **Access Control** |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Evangelista Ygnacio, Sergio Joaquin | Sergi9017 | C | C | C | L | C | C | C |
+| Saravia Huaricancha, Arturo Axel | thunder053 | L | C | C | C | C | C | L |
+| Negrón Muñoz, Cayo Manuel Stefano | fano1106-n | C | L | C | C | C | C | C |
+| Martín Farro, Alexis Sebastián | axismf | C | C | L | C | C | C | C |
+| Lucas Córdova, Alvar | Alvarl  | C | C | C | C | L | L | C |
+
+#### 5.2.2.3 Sprint Backlog 2
+El Sprint 2 incluye las historias críticas del Product Backlog (Epics 1, 2 y 3) que quedaron en estado To-Do durante el Sprint 1 como se puede observar en el Trello:
+https://trello.com/b/KxGrDhN2/sprintseasypark
+
+**Tablero del proyecto en Trello**. El Product Backlog contiene las User Stories y Technical Stories pendientes, y las listas de cada Sprint registran el avance de sus historias.
+
+<table>
+  <tr>
+    <th>Sprint #</th>
+    <td>Sprint 2</td>
+  </tr>
+
+  <tr>
+    <th> User Story </th>
+    <th> </th>
+    <th> Work-Item / Task </th>
+  </tr>
+
+  <tr>
+    <td>Id</td>
+    <td>Title</td>
+    <td>Description</td>
+    <td>Estimation(Hours)</td>
+    <td>Assigned To</td>
+    <td>Status(To-do/ In-Process / To-Review / Done)</td>
+  </tr>
+
+  <tr>
+    <td> US-01 </td>
+    <td> Buscar Estacionamiento por ubicación </td>
+    <td> Como conductor, deseo buscar estacionamientos cercanos a mi destino para evaluar opciones disponibles.</td>
+    <td> 6</td>
+    <td> Saravia, Arturo</td>
+    <td>Done</td>
+  </tr>
+
+  <tr>
+    <td> US-03 </td>
+    <td> Consultar disponibilidad de espacios</td>
+    <td> Como conductor, deseo ver la disponibilidad en tiempo real para asegurar que encontraré un lugar libre.</td>
+    <td> 5</td>
+    <td> Evangelista, Sergio</td>
+    <td> Done</td>
+  </tr>
+
+  <tr>
+    <td> US-11 </td>
+    <td> Reservar espacio</td>
+    <td> Como conductor, deseo reservar un espacio para tener mayor certeza de encontrar estacionamiento al llegar.</td>
+    <td> 8</td>
+    <td> Lucas, Alvar</td>
+    <td> Done</td>
+  </tr>
+
+  <tr>
+    <td> US-19 </td>
+    <td> Registrar ingreso de vehículo</td>
+    <td> Como administrador, deseo registrar el ingreso (check-in) de un vehículo para iniciar el cómputo de su permanencia.</td>
+    <td> 6</td>
+    <td> Martin, Alexis</td>
+    <td> Done</td>
+  </tr>
+
+  <tr>
+    <td> US-20</td>
+    <td> Registrar salida de vehículo</td>
+    <td> Como administrador, deseo registrar la salida (check-out) de un vehículo para liberar el espacio utilizado.</td>
+    <td> 5</td>
+    <td> Negrón, Cayo</td>
+    <td> Done</td>
+  </tr>
+
+  <tr>
+    <td> US-21 </td>
+    <td> Consultar ocupación actual</td>
+    <td> Como administrador, deseo ver la ocupación de mis zonas (ej. "Zona A - Miraflores: 78%") para monitorear la capacidad.</td>
+    <td> 5</td>
+    <td> Saravia, Arturo</td>
+    <td> Done</td>
+  </tr>
+
+  <tr>
+    <td> TS-03 </td>
+    <td> Servicio de disponibilidad</td>
+    <td> Como Developer, deseo un endpoint REST para consultar los espacios libres según la zona.</td>
+    <td> 6</td>
+    <td> Evangelista, Sergio</td>
+    <td> Done</td>
+  </tr>
+
+  <tr>
+    <td> TS-05 </td>
+    <td> Servicio de ingreso de vehículos</td>
+    <td> Como Developer, deseo un endpoint POST para registrar el evento de ingreso y cambiar el estado del espacio.</td>
+    <td> 6</td>
+    <td> Lucas, Alvar</td>
+    <td> Done/td>
+  </tr>
+
+</table>
+
+![Product Backlog 2.png](../assets/images/Product%20Backlog%202.png)
+
+#### 5.2.2.4 Development Evidence for Sprint Review.
+
+En el Sprint 2 se implementó la primera versión de la Frontend Web Application en el repositorio, con Vue 3, PrimeVue, Pinia, Vue Router, vue-i18n y axios, en JavaScript. El código se organiza por bounded context, y cada uno se divide en las capas domain, application, infrastructure y presentation. Arturo Saravia preparó la base del proyecto.
+
+En el repositorio se aplicaron las correcciones de AV1.
+Lading page:
+https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/index.html?lang=es
+
+#### 5.2.2.5 Execution Evidence for Sprint Review.
+
+Al cierre del Sprint 2, la Frontend Web Application v1.0.0 se encuentra publicada en: . La aplicación ofrece una experiencia distinta para cada rol
+
+#### 5.2.2.6 Services Documentation Evidence for Sprint Review.
+
+Durante este Sprint la Single Page Application consume una API RESTful simulada con json-server, que expone sus recursos bajo el prefijo /api/v1/* siguiendo las convenciones REST. El acceso está protegido mediante un token Bearer emitido por el módulo Identity and Access Management (IAM) durante el inicio de sesión, el cual es adjuntado automáticamente a cada petición por un interceptor de Axios. A continuación se documentan los endpoints implementados y consumidos por los bounded contexts desarrollados en este Sprint:
+
+| **Recurso/Endpoint** | **Bounded Context** | **Verbos HTTP** | **Propósito** |
+| :--- | :--- | :--- | :--- |
+| /api/v1/authentication/sign-in | IAM | POST | Valida las credenciales y emite el token de sesión del usuario. |
+| /api/v1/authentication/sign-up | IAM | POST | Registra una nueva cuenta (conductor u operador). |
+| /api/v1/authentication/password | IAM | PUT | Actualiza la contraseña de la cuenta autenticada. |
+| /api/v1/profiles | Profiles and Vehicles | GET, POST, PUT | Consulta y gestiona el perfil del conductor u operador. |
+| /api/v1/vehicles | Profiles and Vehicles | GET, POST, PUT | Registra y administra los vehículos asociados a un perfil. |
+
+Los demás recursos (parking-facilities, reservations, access-movements, alerts, etc.) se encuentran preconfigurados en la API simulada como contrato de datos para los bounded contexts que se desarrollarán en los siguientes Sprints.
+
+El recorrido de la aplicación es el siguiente:
+
+1.  Apartado de Acceso y registro digital ![EasyPark Admin Accesos y registro digital.png](../assets/images/EasyPark%20Admin%20Accesos%20y%20registro%20digital.png)
+2.  Apartado de registro de usuario ![EasyPark Admin Sign In.png](../assets/images/EasyPark%20Admin%20Sign%20In.png)
+3.  Apartado de Buscar estacionamiento ![EasyPark Admin Find Parking.png](../assets/images/EasyPark%20Admin%20Find%20Parking.png)
+4.  Apartado de reservaciones ![EasyPark Admin My reservations.png](../assets/images/EasyPark%20Admin%20My%20reservations.png)
+5.  Apartado de Notificaciones ![EasyPark Admin Notifications.png](../assets/images/EasyPark%20Admin%20Notifications.png)
+6.  Apartado de monitoreo y alertas ![EasyPark Admin Monitoreo y alertas.png](../assets/images/EasyPark%20Admin%20Monitoreo%20y%20alertas.png)
+7.  Apartado de Mi perfil tipo Admin ![EasyPark Admin Mi perfil.png](../assets/images/EasyPark%20Admin%20Mi%20perfil.png)
+8.  Apartado de Mi perfil tipo Usuario ![EasyPark User My profile.png](../assets/images/EasyPark%20User%20My%20profile.png)
+9.  Apartado de panel de control ![EasyPark Admin panel Control.png](../assets/images/EasyPark%20Admin%20panel%20Control.png)
+10. Apartado de Reportes y analítica ![EasyPark Admin Reportes y Analitica.png](../assets/images/EasyPark%20Admin%20Reportes%20y%20Analitica.png)
+11. Apartado de Registrar accesos ![EasyPark Admin Registrar acceso.png](../assets/images/EasyPark%20Admin%20Registrar%20acceso.png)
+12. Apartado de Instalaciones ![EasyPark Admin Mis instalaciones.png](../assets/images/EasyPark%20Admin%20Mis%20instalaciones.png)
+
+
+#### 5.2.2.7 Software Deployment Evidence for Sprint Review.
+
+Frontend Web Application: La aplicación se construye con Vite (npm run build), generando artefactos estáticos optimizados que pueden previsualizarse con npm run preview. El Landing Page del Sprint 1 continúa publicado y automatizado mediante GitHub Pages.
+
+Para el consumo de datos durante este Sprint se utiliza una API REST simulada con json-server (npm run fake-api), que expone los endpoints bajo /api/v1/* e incorpora un middleware de autenticación que emite y valida el token de sesión del módulo IAM. Esto permite validar los flujos de registro, inicio de sesión, gestión de perfil y administración de vehículos de extremo a extremo sin depender aún de infraestructura en la nube.
+
+El despliegue de un backend productivo con base de datos relacional y hosting en la nube está planificado para los siguientes Sprints, una vez que los bounded contexts restantes del equipo estén implementados.
+
+#### 5.2.2.8 Team Collaboration Insights during Sprint.
+
+El equipo mantuvo un ritmo de trabajo organizado, repartiendo la carga por bounded contexts: en este Sprint se completaron IAM y Profiles and Vehicles, mientras los restantes avanzan en paralelo.
+
+* Se respetó una arquitectura basada en Domain-Driven Design, estructurando cada bounded context en las capas domain/model, application, infrastructure y presentation, lo que mantuvo límites claros entre módulos y evitó que un contexto accediera directamente a la lógica de otro.
+* Se reutilizaron los tokens de diseño y el preset personalizado de PrimeVue en componentes reutilizables de Vue, lo que permitió construir las vistas del conductor (inicio de sesión, registro y perfil) manteniendo total consistencia visual con el Landing Page desarrollado en el Sprint 1.
+* El soporte de internacionalización (español e inglés) y el layout compartido se mantuvieron centralizados para garantizar coherencia en toda la aplicación.

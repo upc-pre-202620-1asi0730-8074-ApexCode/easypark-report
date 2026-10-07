@@ -1,7 +1,5 @@
 # Conclusiones
 
-## Conclusiones y Recomendaciones
-
 Existe una clara necesidad en el sector de la movilidad urbana y la gestión de estacionamientos de contar con una plataforma digital confiable que permita administrar de manera eficiente la disponibilidad de espacios, controlar los ingresos y salidas, y realizar búsquedas de ubicaciones en tiempo real. Los distintos actores involucrados, como administradores de estacionamientos, personal operativo y conductores, requieren herramientas que centralicen la información y reduzcan los errores operativos derivados del uso de métodos manuales y tickets físicos. 
 
 El análisis de requisitos y las funcionalidades definidas evidencian que los usuarios no solo buscan un lugar para estacionar, sino también contar con un sistema integral que les permita reservar con anticipación, recibir notificaciones sobre el tiempo de permanencia, visualizar la ocupación actual y acceder a reportes operativos que faciliten la toma de decisiones. Esto posiciona a EasyPark como una solución completa para la gestión inteligente de estacionamientos urbanos. 
@@ -13,6 +11,15 @@ Los resultados obtenidos a partir del análisis funcional, la definición de Use
 Durante el desarrollo del proyecto, se utilizaron herramientas de diseño, modelado y dinámicas como el EventStorming que permitieron estructurar de manera clara las funcionalidades del sistema bajo el enfoque de Domain-Driven Design. La elaboración de diagramas (clases, arquitectura de software y base de datos) facilitó la comprensión de la lógica de los Bounded Contexts y la relación entre sus elementos, permitiendo tomar decisiones más acertadas en el diseño técnico. Asimismo, la organización del trabajo mediante el Product Backlog y la priorización de Sprints facilitó una mejor gestión del desarrollo y distribución de tareas dentro del equipo para poder tener resultados como lo fue la Landing Page. 
 
 Finalmente, se concluye que EasyPark no solo responde a una necesidad real de reducir el tiempo y estrés al buscar estacionamiento, sino que también representa una oportunidad para que los negocios mejoren significativamente su eficiencia de control, reduzcan pérdidas por registros erróneos y optimicen su supervisión mediante el uso de tecnología.
+
+# Recomendaciones
+
+• **Sobre la continuidad del desarrollo del sistema**: Se recomienda continuar con la implementación progresiva de las funcionalidades planificadas, priorizando aquellos módulos que representan el valor diferencial de Easypark. Lo cual permitirá consolidar una experiencia de usuario más eficiente y alineada con las necesidades identificadas durante la etapa de investigación.
+
+• **Sobre la experiencia de usuario (UX/UI)**: Se recomienda seguir perfeccionando la interfaz, dando prioridad a que sea accesible, fácil de recorrer y visualmente clara al mostrar disponibilidad, sectores y avisos. También se debe llevar a cabo pruebas de usabilidad con usuarios reales, con el fin de detectar oportunidades de mejora en la interacción y minimizar dificultades al usar la plataforma.
+
+• **Sobre analítica y toma de decisiones**: Para el mediano plazo, se sugiere sumar soluciones de análisis de datos capaces de mostrar tendencias de ocupación, franjas de mayor demanda y conducta de los usuarios. Esto ayudaría a los administradores a decidir mejor y, además, permitiría aprovechar modelos predictivos para mejorar la administración de los estacionamientos.
+
 
 # Bibliografía
 
@@ -44,6 +51,9 @@ Nielsen Norman Group. (s.f.-a). Design systems 101. https://www.nngroup.com/arti
 Nielsen Norman Group. (s.f.-b). Empathy mapping: The first step in design thinking.
 https://www.nngroup.com/articles/empathy-mapping/
 
+Noamtamim. (s.f.). How to use PlantUML with Markdown [Gist]. GitHub.
+https://gist.github.com/noamtamim/f11982b28602bd7e604c233fbe9d910f
+
 Open Practice Library. (s.f.-b). Ubiquitous language: Unambiguously define the terms and concepts of a business
 domain. https://openpracticelibrary.com/practice/ubiquitous-language/
 
@@ -63,10 +73,6 @@ UXPressia. (s.f.-b). User vs. buyer persona: Differences and free template. http
 
 Zhurb, A. [connect2grp]. (s.f.). Using PlantUML for creating clear and concise diagrams. Medium.
 https://connect2grp.medium.com/using-plantuml-for-creating-clear-and-concise-diagrams-2fc621529560
-
-
-noamtamim. (s.f.). How to use PlantUML with Markdown [Gist]. GitHub.
-https://gist.github.com/noamtamim/f11982b28602bd7e604c233fbe9d910f
 
 # Anexos
 

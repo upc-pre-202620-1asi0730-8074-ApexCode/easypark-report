@@ -10,6 +10,10 @@ Los resultados obtenidos a partir del análisis funcional, la definición de Use
 
 Durante el desarrollo del proyecto, se utilizaron herramientas de diseño, modelado y dinámicas como el EventStorming que permitieron estructurar de manera clara las funcionalidades del sistema bajo el enfoque de Domain-Driven Design. La elaboración de diagramas (clases, arquitectura de software y base de datos) facilitó la comprensión de la lógica de los Bounded Contexts y la relación entre sus elementos, permitiendo tomar decisiones más acertadas en el diseño técnico. Asimismo, la organización del trabajo mediante el Product Backlog y la priorización de Sprints facilitó una mejor gestión del desarrollo y distribución de tareas dentro del equipo para poder tener resultados como lo fue la Landing Page. 
 
+Por otro lado, a pesar de no contar aún con un backend en la nube, el equipo logró validar las funcionalidades críticas del Sprint 2 (IAM y Profiles and Vehicles) apoyándose de manera efectiva en una API REST simulada (json-server). Esto permitió verificar la navegación, autenticación mediante tokens y consumo de datos sin bloquear el progreso del Frontend.
+
+La distribución del liderazgo por Bounded Contexts resultó ser una estrategia acertada. Permitió al equipo trabajar en paralelo en sus respectivas ramas y, al mismo tiempo, mantener una alta consistencia visual y funcional en todo el proyecto gracias a la reutilización de componentes de PrimeVue, tokens de diseño y centralización del manejo de internacionalización (i18n).
+
 Finalmente, se concluye que EasyPark no solo responde a una necesidad real de reducir el tiempo y estrés al buscar estacionamiento, sino que también representa una oportunidad para que los negocios mejoren significativamente su eficiencia de control, reduzcan pérdidas por registros erróneos y optimicen su supervisión mediante el uso de tecnología.
 
 # Recomendaciones
@@ -20,6 +24,11 @@ Finalmente, se concluye que EasyPark no solo responde a una necesidad real de re
 
 • **Sobre analítica y toma de decisiones**: Para el mediano plazo, se sugiere sumar soluciones de análisis de datos capaces de mostrar tendencias de ocupación, franjas de mayor demanda y conducta de los usuarios. Esto ayudaría a los administradores a decidir mejor y, además, permitiría aprovechar modelos predictivos para mejorar la administración de los estacionamientos.
 
+• **Adopción exitosa de Arquitectura y Tecnologías**: El equipo logró asentar sólidamente las bases de la Frontend Web Application utilizando Vue 3. La implementación de una arquitectura monolítica modular basada en Domain-Driven Design (DDD) permitió establecer límites claros entre los distintos módulos, organizando el código adecuadamente en las capas de dominio, aplicación, infraestructura y presentación.
+
+• **Priorización del Desarrollo y Despliegue del Backend**: Dado que la validación actual depende de una API simulada (json-server), se recomienda que en el próximo Sprint la prioridad técnica sea el desarrollo del Backend RESTful real en ASP.NET Core y la configuración de la base de datos relacional en la nube. Esto será vital para integrar las lógicas de negocio complejas (como las reservas y el control de ocupación).
+
+• **Refuerzo en la Integración Continua (CI)**: Como los demás Bounded Contexts (Reservations, Monitoring, Access Control) continúan desarrollándose en paralelo por diferentes miembros, se recomienda aumentar la frecuencia de integración de ramas y mantener revisiones de código cruzadas más estrictas para evitar los "pequeños retrasos en la integración" que el equipo ya había identificado como riesgo en el Sprint 1.
 
 # Bibliografía
 

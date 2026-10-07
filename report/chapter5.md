@@ -480,6 +480,10 @@ Para el consumo de datos durante este Sprint se utiliza una API REST simulada co
 
 El despliegue de un backend productivo con base de datos relacional y hosting en la nube está planificado para los siguientes Sprints, una vez que los bounded contexts restantes del equipo estén implementados.
 
+Analíticos de contribución del repositorio con respecto al sprint 2:
+
+![Contribution Sprint2.png](../assets/Contribution%20Sprint2.png)
+
 #### 5.2.2.8 Team Collaboration Insights during Sprint.
 
 El equipo mantuvo un ritmo de trabajo organizado, repartiendo la carga por bounded contexts: en este Sprint se completaron IAM y Profiles and Vehicles, mientras los restantes avanzan en paralelo.

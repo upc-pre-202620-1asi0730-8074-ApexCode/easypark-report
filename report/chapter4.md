@@ -681,9 +681,9 @@ La solución se compone de cuatro contenedores:
 | Landing Page | HTML5, CSS3 y JavaScript | Presentar el modelo de negocio a los dos segmentos y derivar a cada uno, mediante sus call-to-action, a la vista correspondiente de la aplicación. |
 | Web Application | Vue 3, PrimeVue, Pinia, Vue Router y vue-i18n | Ofrecer la experiencia de usuario responsiva de los dos segmentos, resolviendo las rutas según el rol autenticado. |
 | RESTful API | ASP.NET Core 8 con C# y Entity Framework Core | Concentrar la lógica de negocio de los ocho bounded contexts y exponerla como servicios REST documentados con OpenAPI y protegidos con JWT. |
-| Base de Datos | PostgreSQL 16 | Persistir la información de todos los bounded contexts. |
+| Base de Datos | MySQL 8 | Persistir la información de todos los bounded contexts. |
 
-La comunicación entre la Web Application y el API se realiza mediante JSON sobre HTTPS; el API accede a la base de datos a través de Entity Framework Core con el proveedor Npgsql, y consume los dos servicios externos mediante sus API REST. La separación entre el Landing Page y la Web Application responde a la naturaleza de cada producto: el primero es un sitio estático optimizado para posicionamiento y velocidad de carga, mientras que el segundo requiere estado de sesión y actualización frecuente de datos.
+La comunicación entre la Web Application y el API se realiza mediante JSON sobre HTTPS; el API accede a la base de datos a través de Entity Framework Core con el proveedor MySql.EntityFrameworkCore, y consume los dos servicios externos mediante sus API REST. La separación entre el Landing Page y la Web Application responde a la naturaleza de cada producto: el primero es un sitio estático optimizado para posicionamiento y velocidad de carga, mientras que el segundo requiere estado de sesión y actualización frecuente de datos.
 
 Las principales decisiones de arquitectura que se reflejan en los diagramas C4, junto con el estilo o patrón arquitectónico que materializan, son las siguientes:
 
@@ -696,7 +696,7 @@ Las principales decisiones de arquitectura que se reflejan en los diagramas C4, 
 | Acceder a la persistencia y a los servicios externos mediante interfaces declaradas en el dominio | Puertos y adaptadores (repositorios y *gateways*) | Cambiar el proveedor de mapas, de correo o el motor de base de datos no afecta las reglas de negocio. |
 | Propagar los cambios entre contextos mediante eventos de dominio y un motor de políticas en segundo plano | Arquitectura orientada a eventos (en proceso) | Alertas, notificaciones y métricas reaccionan a los movimientos y reservas sin acoplarse a los contextos que los originan. |
 | Autenticar cada solicitud con JWT de corta duración y *refresh tokens* | Autenticación sin estado (*stateless*) | El API no mantiene sesión en memoria, lo que permite escalarlo horizontalmente. |
-| Persistir todos los contextos en una sola base PostgreSQL con tablas propias por contexto | Base de datos compartida con propiedad por contexto | Se conserva la integridad referencial y cada contexto sigue siendo dueño exclusivo de sus tablas. |
+| Persistir todos los contextos en una sola base MySQL con tablas propias por contexto | Base de datos compartida con propiedad por contexto | Se conserva la integridad referencial y cada contexto sigue siendo dueño exclusivo de sus tablas. |
 
 ### 4.6.4. Software Architecture Components Diagrams
 
@@ -718,7 +718,7 @@ La aplicación organiza sus componentes en cuatro grupos: el núcleo (App Shell 
 
 **Figura 4.56.** Diagrama de Componentes (C4, nivel 3) — RESTful API.
 
-El API se estructura en cuatro capas. La **capa de presentación** agrupa un controller por bounded context, documentado con OpenAPI. La **capa de aplicación** contiene los servicios que orquestan comandos y consultas, junto con el motor de políticas, implementado como servicio en segundo plano, que evalúa la permanencia excedida y la capacidad crítica descritas en el EventStorming. La **capa de dominio** concentra agregados, entidades, objetos de valor y reglas de negocio, y no depende de ninguna otra capa. La **capa de infraestructura** implementa los repositorios con Entity Framework Core y las pasarelas hacia los servicios externos, de modo que un cambio de proveedor de mapas o de correo no afecte al dominio. El middleware de seguridad autentica y autoriza cada solicitud antes de que llegue a los controllers.
+El API se estructura en cuatro capas. La **capa de presentación** agrupa un controller por bounded context, documentado con OpenAPI cuyo documento se genera con Microsoft.AspNetCore.OpenApi y se explora mediante Scalar. La **capa de aplicación** contiene los servicios que orquestan comandos y consultas, junto con el motor de políticas, implementado como servicio en segundo plano, que evalúa la permanencia excedida y la capacidad crítica descritas en el EventStorming. La **capa de dominio** concentra agregados, entidades, objetos de valor y reglas de negocio, y no depende de ninguna otra capa. La **capa de infraestructura** implementa los repositorios con Entity Framework Core y las pasarelas hacia los servicios externos, de modo que un cambio de proveedor de mapas o de correo no afecte al dominio. El middleware de seguridad autentica y autoriza cada solicitud antes de que llegue a los controllers.
 
 ## 4.7. Software Object-Oriented Design
 
@@ -784,14 +784,14 @@ Los diagramas de clases aplican las siguientes convenciones de idioma y nomencla
 
 ## 4.8. Database Design
 
-La persistencia se resuelve sobre PostgreSQL 16 mediante Entity Framework Core. El diseño mantiene la separación por bounded context: cada contexto es dueño de sus tablas y las referencias hacia otros contextos se establecen mediante llaves foráneas sobre el identificador, sin duplicar sus datos. El modelo consta de dieciocho tablas.
+La persistencia se resuelve sobre MySQL 8 mediante Entity Framework Core. El diseño mantiene la separación por bounded context: cada contexto es dueño de sus tablas y las referencias hacia otros contextos se establecen mediante llaves foráneas sobre el identificador, sin duplicar sus datos. El modelo consta de dieciocho tablas.
 
 **Convenciones de nomenclatura.** El diseño de la base de datos aplica las siguientes convenciones:
 
 - **Idioma y formato.** Tablas y columnas en inglés y en `snake_case`. Cada tabla lleva el nombre en plural de la clase que persiste (`UserAccount` → `user_accounts`, `ParkingStay` → `parking_stays`) y cada columna corresponde al atributo homónimo de la clase (`plateNumber` → `plate_number`), con dos reglas de correspondencia: el atributo `type` de una clase se almacena como `<concepto>_type` (`Vehicle.type` → `vehicle_type`), para que el nombre no sea ambiguo en consultas que combinan tablas, y los objetos de valor se descomponen en columnas (`Address` → `street`, `district`, `city`; `Money` → monto y `currency`; `DateRange` → `period_start`, `period_end`).
-- **Llaves primarias.** Columna `id` de tipo `uuid`. Las tablas de asociación (`favorite_zones` y `zone_features`) usan una llave primaria compuesta por las columnas que relacionan, lo que impide registrar dos veces el mismo par.
+- **Llaves primarias.** Columna `id` de tipo `char36`. Las tablas de asociación (`favorite_zones` y `zone_features`) usan una llave primaria compuesta por las columnas que relacionan, lo que impide registrar dos veces el mismo par.
 - **Llaves foráneas.** Toda llave foránea termina en `_id` y se nombra con la entidad referenciada en singular (`vehicle_id`, `parking_zone_id`, `notification_template_id`). Cuando apunta a `user_accounts`, o cuando una tabla referencia dos veces a la misma, se nombra con el rol que cumple la fila referenciada (`driver_id`, `operator_id`, `recipient_id`, `entry_movement_id`, `exit_movement_id`).
-- **Tipos de dato.** Instantes en `timestamp` con zona horaria y sufijo `_at` (`created_at`, `occurred_at`); fechas sin hora en `date` (`period_start`); booleanos con prefijo `is_` (`is_default`, `is_revoked`); montos en `decimal` acompañados de la columna `currency`.
+- **Tipos de dato.** Instantes en `datetime(6)` almacenados en UTC y sufijo `_at` (`created_at`, `occurred_at`); fechas sin hora en `date` (`period_start`); booleanos con prefijo `is_` (`is_default`, `is_revoked`); montos en `decimal` acompañados de la columna `currency`.
 - **Estados y clasificaciones.** Los estados se almacenan en una columna `status` y las clasificaciones en `<concepto>_type`, como cadenas controladas que replican las enumeraciones del dominio.
 - **Obligatoriedad.** Las columnas opcionales se señalan como *nullable* en los diagramas; las demás son obligatorias.
 

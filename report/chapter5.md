@@ -578,23 +578,24 @@ Las historias del Sprint 3 se descomponen en tareas técnicas. Los datos de hora
 
 [PENDIENTE: captura del tablero del Sprint 3]
 
-| User Story ID | User Story Title | Task ID | Task Title | Description | Estimation (Hours) | Assigned To | Status |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| US-50 | Acceder a la aplicación web | T3-01 | Endpoints de autenticación | Registro e inicio de sesión de cuentas con contraseñas con hash y emisión de JWT con refresh token. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| TS-01 | Servicio de búsqueda de estacionamientos | T3-02 | Endpoint de búsqueda | Consulta de estacionamientos con filtros por ubicación, disponibilidad y tarifa. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| TS-02 | Servicio de detalle de estacionamiento | T3-03 | Endpoint de detalle | Consulta de un estacionamiento por su identificador, con respuesta 404 si no existe. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| TS-04 / US-04 | Servicio de tarifas / Consultar tarifas | T3-04 | Consulta de tarifas | Exposición de la tarifa por hora de cada estacionamiento en los recursos del API. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| US-05 | Consultar ubicación | T3-05 | Datos de ubicación | Dirección y coordenadas del estacionamiento disponibles para el mapa de la aplicación. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| TS-08 | Servicio de creación de reservas | T3-06 | Endpoint de creación de reservas | Comando de creación de reserva con asignación del espacio y persistencia. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| US-17 | Validar disponibilidad antes de reservar | T3-07 | Validación de disponibilidad | Regla de dominio que rechaza la reserva cuando no hay espacios libres. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| US-12 / TS-09 | Consultar reserva activa / Servicio de consulta de reservas | T3-08 | Consulta de reservas | Consulta de reservas por conductor y de la reserva vigente. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| TS-10 | Servicio de cancelación de reservas | T3-09 | Cancelación de reservas | Cancelación de una reserva y liberación del espacio asociado. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| TS-06 | Servicio de salida de vehículos | T3-10 | Endpoint de salida | Registro de la salida, cierre de la permanencia y liberación del espacio. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| US-01, US-03, US-11, US-19, US-20, US-21, TS-03, TS-05 | Historias del Sprint 2 | T3-11 | Migración a la API real | Disponibilidad, ingreso y ocupación operando sobre el RESTful API en lugar de json-server (sin puntos nuevos). | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| (soporte) | Perfiles y vehículos | T3-12 | Endpoints de perfiles y vehículos | Recursos necesarios para asociar el vehículo a la reserva (sin puntos nuevos). | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| (técnica) | Persistencia y documentación | T3-13 | MySQL, migraciones y OpenAPI | Contexto de datos con EF Core, migraciones por bounded context y documentación OpenAPI con Scalar. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| (técnica) | Integración frontend | T3-14 | Conexión de la Web Application | Sustituir la URL de json-server por la del RESTful API y ajustar los assemblers. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| (técnica) | Integración Landing | T3-15 | Enlaces Landing → Web App | Apuntar los botones de acción del Landing Page a la Web Application. | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
+| User Story ID | User Story Title | Story Points | Task ID | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| :--- | :--- | :---: | :--- | :--- | :--- | :---: | :--- | :--- |
+| US-50 | Acceder a la aplicación web | 2 | T3-01 | Endpoints de autenticación | Registro e inicio de sesión de cuentas con contraseñas con hash y emisión de JWT con refresh token. | 4 | Saravia, Arturo | [PENDIENTE] |
+| TS-01 | Servicio de búsqueda de estacionamientos | 5 | T3-02 | Endpoint de búsqueda | Consulta de estacionamientos con filtros por ubicación, disponibilidad y tarifa. | 6 | Evangelista, Sergio | [PENDIENTE] |
+| TS-02 | Servicio de detalle de estacionamiento | 3 | T3-03 | Endpoint de detalle | Consulta de un estacionamiento por su identificador, con respuesta 404 si no existe. | 4 | Evangelista, Sergio | [PENDIENTE] |
+| TS-04 / US-04 | Servicio de tarifas / Consultar tarifas | 5 | T3-04 | Consulta de tarifas | Exposición de la tarifa por hora de cada estacionamiento en los recursos del API. | 5 | Evangelista, Sergio | [PENDIENTE] |
+| US-05 | Consultar ubicación | 3 | T3-05 | Datos de ubicación | Dirección y coordenadas del estacionamiento disponibles para el mapa de la aplicación. | 4 | Negrón, Cayo | [PENDIENTE] |
+| TS-08 | Servicio de creación de reservas | 5 | T3-06 | Endpoint de creación de reservas | Comando de creación de reserva con asignación del espacio y persistencia. | 6 | Lucas, Alvar | [PENDIENTE] |
+| US-17 | Validar disponibilidad antes de reservar | 3 | T3-07 | Validación de disponibilidad | Regla de dominio que rechaza la reserva cuando no hay espacios libres. | 4 | Lucas, Alvar | [PENDIENTE] |
+| US-12 / TS-09 | Consultar reserva activa / Servicio de consulta de reservas | 6 | T3-08 | Consulta de reservas | Consulta de reservas por conductor y de la reserva vigente. | 7 | Martín, Alexis | [PENDIENTE] |
+| TS-10 | Servicio de cancelación de reservas | 5 | T3-09 | Cancelación de reservas | Cancelación de una reserva y liberación del espacio asociado. | 6 | Lucas, Alvar | [PENDIENTE] |
+| TS-06 | Servicio de salida de vehículos | 5 | T3-10 | Endpoint de salida | Registro de la salida, cierre de la permanencia y liberación del espacio. | 6 | Saravia, Arturo | [PENDIENTE] |
+| US-01, US-03, US-11, US-19, US-20, US-21, TS-03, TS-05 | Historias del Sprint 2 | — | T3-11 | Migración a la API real | Disponibilidad, ingreso y ocupación operando sobre el RESTful API en lugar de json-server (sin puntos nuevos). | 6 | Martín, Alexis | [PENDIENTE] |
+| (soporte) | Perfiles y vehículos | — | T3-12 | Endpoints de perfiles y vehículos | Recursos necesarios para asociar el vehículo a la reserva (sin puntos nuevos). | 5 | Saravia, Arturo | [PENDIENTE] |
+| (técnica) | Persistencia y documentación | — | T3-13 | MySQL, migraciones y OpenAPI | Contexto de datos con EF Core, migraciones por bounded context y documentación OpenAPI con Scalar. | 8 | Martín, Alexis | [PENDIENTE] |
+| (técnica) | Integración frontend | — | T3-14 | Conexión de la Web Application | Sustituir la URL de json-server por la del RESTful API y ajustar los assemblers. | 6 | Negrón, Cayo | [PENDIENTE] |
+| (técnica) | Integración Landing | — | T3-15 | Enlaces Landing → Web App | Apuntar los botones de acción del Landing Page a la Web Application. | 2 | Negrón, Cayo | [PENDIENTE] |
+| | **Total** | **42** | | | | **79** | | |
 
 #### 5.2.3.4 Development Evidence for Sprint Review
 
@@ -659,7 +660,4 @@ En el Sprint 3 el RESTful API y la base de datos MySQL se ejecutan en el entorno
 #### 5.2.3.8 Team Collaboration Insights during Sprint
 
 
-
-[PENDIENTE: análisis del equipo. Incluir las capturas de contribuciones de GitHub de cada repositorio (Insights → Contributors) y 3 a 5 observaciones propias sobre: reparto por bounded context, revisión de Pull Requests antes de integrar a `develop`, adaptación de los assemblers del frontend al contrato real y problemas de integración.]
- 
 ---

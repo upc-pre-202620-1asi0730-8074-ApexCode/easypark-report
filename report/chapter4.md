@@ -864,3 +864,138 @@ Finalmente, el siguiente diagrama integra las dieciocho tablas de la solución y
 ![Diagrama de base de datos integrado](../assets/images/er-09-global.png)
 
 **Figura 4.73.** Diagrama de base de datos integrado de EasyPark.
+
+### 4.8.2. Esquema implementado en el Sprint 3
+
+Los diagramas anteriores representan el diseño objetivo de los ocho bounded contexts. En el Sprint 3 se implementó la persistencia de los cinco contextos del alcance de los Web Services —IAM, Profiles and Vehicles, Parking Management, Reservations y Access Control— con **ocho tablas** creadas por la migración de Entity Framework Core `20261025150000_InitialCreate`. Para mantener el contrato que ya utilizaba la Web Application del Sprint 2, el esquema implementado difiere del diseño en los siguientes puntos:
+
+| Aspecto | Diseño (4.8 y 4.8.1) | Implementado en el Sprint 3 | Motivo |
+| :--- | :--- | :--- | :--- |
+| Llave primaria | `id` `char(36)` | `id` `int` autoincremental | Decisión del Sprint 3 y contrato de la Web Application, que usa IDs enteros |
+| Sede | `parking_zones` | `parking_facilities` (`name`, `address`, `latitude`, `longitude`, `hourly_rate`, `open_time`, `close_time`, `status`) | Recurso REST `/parking-facilities` de la Web Application; la dirección se guarda en una sola columna |
+| Espacio | `parking_spaces` (`parking_zone_id`) | `parking_spots` (`facility_id`, `code`, `level`, `spot_type`, `status`, `version`) | Recurso REST `/parking-spots`; `version` es el control de concurrencia que evita reservar dos veces el mismo espacio |
+| Perfil de operador | `operator_profiles` separado | `company_name` y `job_title` opcionales en `profiles` | Contrato de perfil único de la Web Application |
+| Conductor de la reserva | `driver_id` → `user_accounts` | `driver_profile_id` → `profiles` | Campo `driverProfileId` del contrato |
+| Reserva | `parking_space_id`, `confirmed_at` | `parking_spot_id`, `parking_facility_id` y estado `CONFIRMED` desde su creación | La sede se conserva para consultar las reservas del operador sin recorrer los espacios |
+| Movimiento de acceso | sin placa | `plate_number` como registro histórico de la lectura en el punto de control | Auditoría de la lectura; la placa vigente sigue en `vehicles` |
+| Permanencia | vehículo y horas obtenidos de los movimientos | `vehicle_id`, `parking_facility_id`, `started_at`, `ended_at` | Consultas directas de permanencias abiertas por vehículo, espacio y sede |
+| Tablas aún no implementadas | `refresh_tokens`, `favorite_zones`, `zone_features`, tablas de Monitoring and Alerts, Analytics and Reporting y Notifications | — | Fuera del alcance de los Web Services del Sprint 3 |
+
+Se mantienen las convenciones de 4.8: nombres en inglés y `snake_case`, instantes en `datetime(6)` en UTC con sufijo `_at`, montos `decimal(10,2)` con `currency`, booleanos con prefijo `is_`, estados como cadenas controladas (`AVAILABLE`, `CONFIRMED`, `OPERATOR_ADMIN`, etc.) y unicidad en `user_accounts.email`, `vehicles.plate_number`, `reservations.code` y el par (`facility_id`, `code`) de `parking_spots`.
+
+```mermaid
+erDiagram
+    user_accounts ||--o| profiles : "user_account_id"
+    profiles ||--o{ vehicles : "profile_id (nullable)"
+    profiles ||--o{ parking_facilities : "operator_profile_id"
+    parking_facilities ||--o{ parking_spots : "facility_id"
+    profiles ||--o{ reservations : "driver_profile_id"
+    vehicles ||--o{ reservations : "vehicle_id"
+    parking_facilities ||--o{ reservations : "parking_facility_id"
+    parking_spots ||--o{ reservations : "parking_spot_id"
+    parking_facilities ||--o{ access_movements : "parking_facility_id"
+    vehicles ||--o{ access_movements : "vehicle_id"
+    user_accounts ||--o{ access_movements : "operator_id"
+    parking_spots ||--o{ parking_stays : "parking_spot_id"
+    vehicles ||--o{ parking_stays : "vehicle_id"
+    reservations |o--o{ parking_stays : "reservation_id (nullable)"
+    access_movements ||--o| parking_stays : "entry_movement_id / exit_movement_id"
+
+    user_accounts {
+        int id PK
+        varchar email UK
+        varchar password_hash
+        varchar role
+        varchar status
+        datetime created_at
+        datetime last_login_at
+    }
+    profiles {
+        int id PK
+        int user_account_id FK
+        varchar first_name
+        varchar last_name
+        varchar phone
+        varchar photo_url
+        varchar company_name
+        varchar job_title
+        datetime created_at
+    }
+    vehicles {
+        int id PK
+        int profile_id FK
+        varchar plate_number UK
+        varchar vehicle_type
+        varchar color
+        tinyint is_default
+        datetime created_at
+    }
+    parking_facilities {
+        int id PK
+        int operator_profile_id FK
+        varchar name
+        varchar address
+        decimal latitude
+        decimal longitude
+        decimal hourly_rate
+        varchar open_time
+        varchar close_time
+        varchar status
+        datetime created_at
+    }
+    parking_spots {
+        int id PK
+        int facility_id FK
+        varchar code
+        int level
+        varchar spot_type
+        varchar status
+        int version
+        datetime created_at
+    }
+    reservations {
+        int id PK
+        varchar code UK
+        int driver_profile_id FK
+        int vehicle_id FK
+        int parking_facility_id FK
+        int parking_spot_id FK
+        datetime start_at
+        int duration_minutes
+        decimal estimated_amount
+        varchar currency
+        varchar status
+        datetime created_at
+    }
+    access_movements {
+        int id PK
+        int parking_facility_id FK
+        int vehicle_id FK
+        varchar plate_number
+        int operator_id FK
+        varchar movement_type
+        varchar registration_method
+        varchar status
+        datetime occurred_at
+        varchar note
+    }
+    parking_stays {
+        int id PK
+        int parking_facility_id FK
+        int parking_spot_id FK
+        int vehicle_id FK
+        int reservation_id FK
+        int entry_movement_id FK
+        int exit_movement_id FK
+        decimal charged_amount
+        varchar currency
+        datetime started_at
+        datetime ended_at
+    }
+```
+
+![Esquema implementado en el Sprint 3](../assets/images/er-sprint3-implementado.png)
+
+**Figura 4.74.** Esquema implementado en el Sprint 3 (fuente: configuración de Entity Framework Core y migración inicial del RESTful API).
+
+[PENDIENTE: si el equipo lo requiere, regenerar las figuras 4.65 a 4.73 con PlantUML para reflejar esta versión]

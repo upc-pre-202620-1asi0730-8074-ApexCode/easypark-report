@@ -603,34 +603,18 @@ Principales decisiones de implementación:
 - **Integración:** la Web Application dejó de modificar espacios y reservas desde el navegador y consume los nuevos comandos del API; los módulos fuera del alcance (alertas, notificaciones y reportes) se ocultan hasta contar con sus servicios.
 - **Pruebas:** proyecto `EasyPark.Platform.Tests` con pruebas de dominio y de integración (xUnit y `WebApplicationFactory`).
 
-Repositorio del backend: [PENDIENTE: URL del repositorio de los Web Services]. Repositorio de la Web Application: https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp
-
-Los commits se listan con el siguiente comando, ejecutado en cada repositorio sobre la rama del Sprint 3:
-
-```bash
-git log --since="2026-10-08" --pretty=format:"| %h | %ad | %s |" --date=short
-```
-
-| Repository | Branch | Commit Id | Commit Message | Commited on (Date) |
-| :--- | :--- | :--- | :--- | :--- |
-| [PENDIENTE: pegar la salida real del comando] | | | | |
-
-#### 5.2.3.5 Execution Evidence for Sprint Review
+Repositorio del backend: https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend. Repositorio de la Web Application: https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp
 
 En esta iteración la Web Application deja de depender de json-server para los contextos IAM, Profiles and Vehicles, Parking Management, Reservations y Access Control, y consume el RESTful API. Los datos que el usuario crea se guardan en MySQL.
 
-[PENDIENTE: capturas numeradas del recorrido contra el API real, tomadas por el equipo]
-
-1. Registro e inicio de sesión de un conductor. [captura]
-2. Perfil del conductor y registro de su vehículo. [captura]
-3. Búsqueda de estacionamientos con tarifa, ubicación y espacios disponibles. [captura]
-4. Creación de una reserva confirmada con su código. [captura]
-5. Detalle de la sede para el operador con el espacio en estado *Reservado*. [captura]
-6. Registro del ingreso: espacio *Ocupado* y permanencia abierta. [captura]
-7. Registro de la salida: permanencia cerrada con el importe cobrado. [captura]
-8. Historial de reservas del conductor (reserva completada) y cancelación de otra reserva. [captura]
-9. Reserva, movimientos y espacios guardados en MySQL (consulta en MySQL Workbench, sin columnas de contraseñas). [captura]
-10. Resultado de `dotnet test` del proyecto `EasyPark.Platform.Tests`. [captura]
+1. Registro e inicio de sesión de un conductor. ![APP - Home.png](../assets/images/APP%20-%20Home.png)
+2. Perfil del conductor y registro de su vehículo. ![APP - PROFILE.png](../assets/images/APP%20-%20PROFILE.png)
+3. Búsqueda de estacionamientos con tarifa, ubicación y espacios disponibles. ![APP - Search.png](../assets/images/APP%20-%20Search.png)
+4. Creación de una reserva. ![APP - Booking.png](../assets/images/APP%20-%20Booking.png)
+5. Detalle de la sede para el operador.![APP - Facilities.png](../assets/images/APP%20-%20Facilities.png)
+6. Registro del ingreso: espacio *Ocupado* y permanencia abierta. ![APP - Ocupancy.png](../assets/images/APP%20-%20Ocupancy.png)
+7. Registro de la salida: permanencia cerrada con el importe cobrado. ![APP - Monitoring.png](../assets/images/APP%20-%20Monitoring.png)
+8. Historial de reservas del conductor . ![APP - Bookings.png](../assets/images/APP%20-%20Bookings.png)
 
 **Video de demostración:** [PENDIENTE: URL]
 
@@ -684,11 +668,8 @@ Para el Sprint 3 se preparó la configuración de despliegue de los tres product
 
 La colaboración del Sprint 3 se evidencia con las estadísticas de GitHub de los repositorios del RESTful API y de la Web Application (**Insights → Contributors** y **Insights → Commits**), filtradas al periodo del sprint.
 
-[PENDIENTE: captura de Insights del repositorio del RESTful API]
-
-[PENDIENTE: captura de Insights del repositorio de la Web Application]
-
-[PENDIENTE: breve análisis del equipo sobre la distribución del trabajo por bounded context]
+![backend commit 1.png](../assets/images/backend%20commit%201.png)
+![backend commit 2.png](../assets/images/backend%20commit%202.png)
 
 ## 5.3. Validation Interviews
 
@@ -728,12 +709,12 @@ Las entrevistas de validación deben realizarse con la versión integrada. Esta 
 
 | N.° | Segmento | Entrevistado (nombre o seudónimo, con consentimiento) | Fecha | Duración | Entrevistador | Enlace a la grabación | Resumen de hallazgos |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Conductor | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] | [PENDIENTE] |
-| 2 | Conductor | [PENDIENTE] | | | | | |
-| 3 | Conductor | [PENDIENTE] | | | | | |
-| 4 | Administrador / operador | [PENDIENTE] | | | | | |
-| 5 | Administrador / operador | [PENDIENTE] | | | | | |
-| 6 | Administrador / operador | [PENDIENTE] | | | | | |
+| 1 | Conductor | Kevin Romero | 11/11/2026 | 4:00 | Cayo Negron |  | El entrevistado manifesto una percepcion positiva sobre la interfaz del sistema, comento que le parecio muy intuitiva y facil de usar, que los indicadores son accesibles y que los colores le son pertinentes para identicar el estado de las reservas. Destaco la utilidad de los filtros e indicadores. Como aspecto de mejora indico que se podrian usar iconos o imagenes para que sea mas visual la interfaz. |
+| 2 | Conductor | Joaquin | 12/11/2026 |  | Alexis Martin | | |
+| 3 | Conductor |  | | | | | |
+| 4 | Administrador / operador | Aristides  Aguirre | 11/11/2026 | 6:34 | Cayo Negron| https://youtu.be/aurQ1eyXE3k | El entrevistado indicó que el dashboard permite identificar rápidamente los espacios libres y ocupados que pueda tener su establecimiento, señaló que la información presentada es clara y no genera sobrecarga visual de manera que no resulta complicada de entender.  |
+| 5 | Administrador / operador | Uziel | 12/11/2026 | 13:00 | Arturo Saravia |  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312447_upc_edu_pe/IQDbI5UQgKyxS5anr2PcOXBcAespTfCwwlYeBZXwOzmPvfo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Mgj6hA | |
+| 6 | Administrador / operador | Diego Coartas | 12/11/2026 | 10:38  | Arturo Saravia | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312447_upc_edu_pe/IQD8251027PKTaTYs2rQPy_jAXnGg-O3oCyeju70hK4w9jw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Is9gFR | |
 
 [PENDIENTE: análisis consolidado por segmento: tareas con más errores, valoraciones promedio y cambios priorizados para el Sprint 4]
 
@@ -741,7 +722,7 @@ Las entrevistas de validación deben realizarse con la versión integrada. Esta 
 
 Se aplicará una evaluación heurística a la Web Application integrada usando las diez heurísticas de usabilidad de Jakob Nielsen. Cada hallazgo se registra con la tarea en que apareció, la heurística incumplida, su severidad (0 = no es problema, 1 = cosmético, 2 = menor, 3 = mayor, 4 = catastrófico) y la recomendación.
 
-**Carrera:** Ingeniería de Software · **Curso:** Aplicaciones Web · **Producto:** EasyPark Web Application · **Evaluador(es):** [PENDIENTE] · **Fecha:** [PENDIENTE]
+**Carrera:** Ingeniería de Software · **Curso:** Aplicaciones Web · **Producto:** EasyPark Web Application · **Evaluador(es):** Easypark · **Fecha:** 12/11/2026
 
 **Tareas evaluadas:** registro e inicio de sesión; perfil y vehículos; búsqueda y reserva; cancelación; gestión de sedes y espacios; registro de ingreso y salida.
 
@@ -760,9 +741,10 @@ Se aplicará una evaluación heurística a la Web Application integrada usando l
 
 | N.° | Problema | Tarea / pantalla | Heurística | Severidad | Recomendación |
 | :---: | :--- | :--- | :---: | :---: | :--- |
-| 1 | [PENDIENTE] | | | | |
-| 2 | [PENDIENTE] | | | | |
-| 3 | [PENDIENTE] | | | | |
+| 1 | La tarjeta del estacionamiento no tiene un botón visible de “Reservar” ni parece clicable. | Buscar estacionamiento | H6, H7 | 2 | Agregar un botón “Reservar” y un efecto hover. |
+| 2 | La pantalla de login tiene un separador “or” sin ninguna opción alternativa debajo. | Inicio de sesión	 | H8, H4 | 1 | Mostrar “N/A” o “Sin reservas en el periodo”. |
+| 3 | Hallazgo de la entrevista 1 (Kevin Romero): la interfaz podría usar más íconos o imágenes para ser más visual. | General (conductor) | H8, H6 | 1 | Agregar íconos a los estados de reserva y a las tarjetas de estacionamiento. |
+| 4 | Hallazgo de la entrevista 1 (Kevin Romero): la interfaz podría usar más íconos o imágenes para ser más visual. | General (conductor) | H8, H6 | 1 | Agregar íconos a los estados de reserva y a las tarjetas de estacionamiento. |
 
 ## 5.4. Video About-the-Product
 

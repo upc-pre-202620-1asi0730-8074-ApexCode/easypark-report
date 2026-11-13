@@ -134,15 +134,18 @@ Render. (2026). *Deploy for free*. https://render.com/docs/free
 | Repositorio del Informe del Proyecto | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report       |
 | Repositorio de la Landing Page       | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-landing |
 | Repositorio de la Aplicación Web     | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp |
-| Repositorio de los Web Services (RESTful API) | [PENDIENTE: URL] |
+| Repositorio de los Web Services (RESTful API) | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend |
 
 ## Anexo C. Enlaces de Despliegue (Deployment)
 
 | Descripción                                          | Enlace |
 |------------------------------------------------------|--------|
 | Deployment de la Landing Page en GitHub Pages        | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/ |
-| Deployment de la Aplicación Web | https://easypark-5ffb2.web.app/ (versión publicada anteriormente; [PENDIENTE: confirmar tras desplegar la versión integrada con el API]) |
-| Deployment de los Web Services (Swagger UI) | [PENDIENTE: URL]/swagger |
+| Deployment de la Aplicación Web | https://easypark-webapp.onrender.com |
+| Deployment de los Web Services | https://easypark-backend-fack.onrender.com |
+| Swagger UI | https://easypark-backend-fack.onrender.com/swagger/index.html |
+| Documento OpenAPI | https://easypark-backend-fack.onrender.com/openapi/v1.json |
+| Vista Scalar | https://easypark-backend-fack.onrender.com/scalar/v1 |
 
 ## Anexo D. Diseño
 

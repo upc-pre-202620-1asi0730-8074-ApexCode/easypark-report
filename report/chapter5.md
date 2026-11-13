@@ -548,9 +548,8 @@ Para el Sprint 3, el liderazgo se mantiene por bounded context, en continuidad c
 
 Las historias del Sprint 3 se descomponen en tareas técnicas. Los datos de horas, responsables y estado se completan con lo registrado en Trello.
 
-**URL del Board:** [PENDIENTE: enlace al tablero o lista del Sprint 3 en Trello]
-
-[PENDIENTE: captura del tablero del Sprint 3]
+**URL del Board:** https://trello.com/b/KxGrDhN2/sprintseasypark
+![Sprint 3 - Trello.png](../assets/images/Sprint%203%20-%20Trello.png)
 
 | User Story ID | User Story Title | Story Points | Task ID | Task Title | Description | Estimation (Hours) | Assigned To | Status |
 | :--- | :--- | :---: | :--- | :--- | :--- | :---: | :--- | :--- |
@@ -667,9 +666,7 @@ Para el Sprint 3 se preparó la configuración de despliegue de los tres product
 #### 5.2.3.8 Team Collaboration Insights during Sprint
 
 La colaboración del Sprint 3 se evidencia con las estadísticas de GitHub de los repositorios del RESTful API y de la Web Application (**Insights → Contributors** y **Insights → Commits**), filtradas al periodo del sprint.
-
-![backend commit 1.png](../assets/images/backend%20commit%201.png)
-![backend commit 2.png](../assets/images/backend%20commit%202.png)
+![Sprint 3 - Contributions.png](../assets/images/Sprint%203%20-%20Contributions.png)
 
 ## 5.3. Validation Interviews
 
@@ -711,13 +708,16 @@ Las entrevistas de validación deben realizarse con la versión integrada. Esta 
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | Conductor | Kevin Romero | 11/11/2026 | 4:00 | Cayo Negron |  | El entrevistado manifesto una percepcion positiva sobre la interfaz del sistema, comento que le parecio muy intuitiva y facil de usar, que los indicadores son accesibles y que los colores le son pertinentes para identicar el estado de las reservas. Destaco la utilidad de los filtros e indicadores. Como aspecto de mejora indico que se podrian usar iconos o imagenes para que sea mas visual la interfaz. |
 | 2 | Conductor | Joaquin | 12/11/2026 |  | Alexis Martin | | |
-| 3 | Conductor |  | | | | | |
-| 4 | Administrador / operador | Aristides  Aguirre | 11/11/2026 | 6:34 | Cayo Negron| https://youtu.be/aurQ1eyXE3k | El entrevistado indicó que el dashboard permite identificar rápidamente los espacios libres y ocupados que pueda tener su establecimiento, señaló que la información presentada es clara y no genera sobrecarga visual de manera que no resulta complicada de entender.  |
-| 5 | Administrador / operador | Uziel | 12/11/2026 | 13:00 | Arturo Saravia |  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312447_upc_edu_pe/IQDbI5UQgKyxS5anr2PcOXBcAespTfCwwlYeBZXwOzmPvfo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Mgj6hA | |
-| 6 | Administrador / operador | Diego Coartas | 12/11/2026 | 10:38  | Arturo Saravia | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312447_upc_edu_pe/IQD8251027PKTaTYs2rQPy_jAXnGg-O3oCyeju70hK4w9jw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Is9gFR | |
+| 3 | Conductor | Fabio Calderon | 13/11/2026 |  | Sergio Evangelista |  | El entrevistado Fabio Calderón evalúa EasyPark de forma mayormente positiva. Le parece clara la información de precio, disponibilidad y horario, y sencillo el flujo de reserva (fecha, hora de inicio, duración y vehículo registrado). Destaca que las notificaciones de “My Reservations” avisan bien cuando el tiempo está por vencer o ya venció. Comenta que suele demorar unos 15 minutos buscando estacionamiento en zonas concurridas dando vueltas, por lo que valora que la app muestre el precio y un indicador de espacios disponibles como información esencial. Los indicadores de espacios libres le ayudan a decidir rápido, y los textos, tarifas y botones le resultan fáciles de leer. Como mejora, sugiere agregar filtros por costo o disponibilidad y una mejor gestión de los estacionamientos cercanos a su localidad. |
+| 4 | Conductor | Esteban Chavez | 13/11/2026 |  | Sergio Evangelista | | El entrevistado Esteban Chavez comparte una perspectiva mayormente positiva sobre EasyPark. Encuentra los indicadores de espacios disponibles bastante intuitivos para identificar rápidamente dónde estacionar, y considera que los textos, tarifas y botones principales se entienden bien siempre que sean visibles. Actualmente enfrenta bastante demora al buscar estacionamiento, teniendo que esperar un tiempo considerable hasta encontrar un espacio, por lo que para confiar en la app necesita ver principalmente si hay espacios disponibles y dónde está ubicado el estacionamiento. Como mejora, propone agregar un filtro para ordenar los estacionamientos por precio, distancia y disponibilidad, mostrar el tiempo aproximado para llegar al lugar, y mantener un diseño sencillo con información importante y botones fáciles de identificar.|
+| 5 | Administrador / operador | Aristides  Aguirre | 11/11/2026 | 6:34 | Cayo Negron| https://youtu.be/aurQ1eyXE3k | El entrevistado indicó que el dashboard permite identificar rápidamente los espacios libres y ocupados que pueda tener su establecimiento, señaló que la información presentada es clara y no genera sobrecarga visual de manera que no resulta complicada de entender.  |
+| 6 | Administrador / operador | Uziel | 12/11/2026 | 13:00 | Arturo Saravia |  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312447_upc_edu_pe/IQDbI5UQgKyxS5anr2PcOXBcAespTfCwwlYeBZXwOzmPvfo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Mgj6hA | |
+| 7 | Administrador / operador | Diego Coartas | 12/11/2026 | 10:38  | Arturo Saravia | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312447_upc_edu_pe/IQD8251027PKTaTYs2rQPy_jAXnGg-O3oCyeju70hK4w9jw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Is9gFR | |
 
-[PENDIENTE: análisis consolidado por segmento: tareas con más errores, valoraciones promedio y cambios priorizados para el Sprint 4]
-
+![VI - KEVIN.png](../assets/images/VI%20-%20KEVIN.png)
+![VI - ARISTIDES.png](../assets/images/VI%20-%20ARISTIDES.png)
+![VI - ARTURO - DIEGO.png](../assets/images/VI%20-%20ARTURO%20-%20DIEGO.png)
+![VI - ARTURO - UZIEL.png](../assets/images/VI%20-%20ARTURO%20-%20UZIEL.png)
 ### 5.3.3. Evaluaciones según heurísticas
 
 Se aplicará una evaluación heurística a la Web Application integrada usando las diez heurísticas de usabilidad de Jakob Nielsen. Cada hallazgo se registra con la tarea en que apareció, la heurística incumplida, su severidad (0 = no es problema, 1 = cosmético, 2 = menor, 3 = mayor, 4 = catastrófico) y la recomendación.
@@ -745,6 +745,7 @@ Se aplicará una evaluación heurística a la Web Application integrada usando l
 | 2 | La pantalla de login tiene un separador “or” sin ninguna opción alternativa debajo. | Inicio de sesión	 | H8, H4 | 1 | Mostrar “N/A” o “Sin reservas en el periodo”. |
 | 3 | Hallazgo de la entrevista 1 (Kevin Romero): la interfaz podría usar más íconos o imágenes para ser más visual. | General (conductor) | H8, H6 | 1 | Agregar íconos a los estados de reserva y a las tarjetas de estacionamiento. |
 | 4 | Hallazgo de la entrevista 1 (Kevin Romero): la interfaz podría usar más íconos o imágenes para ser más visual. | General (conductor) | H8, H6 | 1 | Agregar íconos a los estados de reserva y a las tarjetas de estacionamiento. |
+| 5 | Hallazgo de la entrevista 4 (Esteban Chavez): para confiar en la app necesita ver si hay espacios y dónde está el estacionamiento, y propuso mostrar el tiempo aproximado de llegada. Las tarjetas muestran tarifa, dirección y espacios libres, pero no distancia ni tiempo, y el mapa no tiene calles de referencia. | H2, H6 | 2 | Mostrar en cada tarjeta la distancia y el tiempo estimado y agregar un botón "Cómo llegar". |
 
 ## 5.4. Video About-the-Product
 

@@ -21,7 +21,7 @@ Con el objetivo de garantizar un desarrollo fluido, estandarizado y consistente 
 | Automated Testing                   | xUnit / WebApplicationFactory / SQLite en memoria | Pruebas de dominio e integración del RESTful API (`dotnet test`). |
 | Cloud Database                      | Aiven for MySQL | Base de datos MySQL remota con TLS para el entorno desplegado. |
 | Web Services Hosting                | Render (Docker) | Publicación del contenedor del RESTful API con URL HTTPS. |
-| Web Application Hosting             | Firebase Hosting / Firebase CLI | Publicación de la Web Application compilada con Vite. |
+| Web Application Hosting             | Render Static Site | Publicación de la Web Application compilada con Vite. |
 
 ### 5.1.2. Source Code Management
 El código fuente del proyecto se gestionará utilizando Git como sistema de control de versiones y GitHub como plataforma de alojamiento, bajo una organización pública. Se adoptará un enfoque estructurado que favorezca la colaboración, la modularidad y el despliegue continuo mediante repositorios independientes para cada componente del sistema.
@@ -80,9 +80,9 @@ En esta sección se especifica la configuración y los pasos necesarios para el 
 | Producto | Entorno de despliegue | Pipeline / Herramienta | Estado (TB2) |
 |---|---|---|---|
 | **Landing Page** | GitHub Pages | GitHub Actions | Desplegado. Pendiente: enlazar *Log in / Sign up* con la Web Application (T3-15) |
-| **Web Application (SPA)** | Firebase Hosting (plan Spark) | `npm run build` con `VITE_EASYPARK_API_URL` = URL pública del API; `firebase deploy --only hosting` (`firebase.json` con reescritura SPA) | Configurado en el repositorio. [PENDIENTE: desplegar la versión integrada y registrar evidencia] |
-| **RESTful Web Services** | Contenedor Docker en Render (plan Free) | `Dockerfile` multi-stage (`dotnet/sdk:10.0` → `dotnet/aspnet:10.0`) y `render.yaml`; variables `ConnectionStrings__DefaultConnection`, `TokenSettings__Secret`, `Cors__AllowedOrigins` | Configurado en el repositorio. [PENDIENTE: crear el servicio y registrar la URL] |
-| **Base de datos** | Aiven for MySQL (plan Free, TLS obligatorio) | Migración de Entity Framework Core `20261025150000_InitialCreate` aplicada por el API al iniciar | Seleccionado. [PENDIENTE: crear la instancia] |
+| **Web Application (SPA)** | Render Static Site | `npm install && npm run build` con `VITE_EASYPARK_API_URL` = URL pública del API; variables de entorno configuradas en Render | Desplegada. URL: https://easypark-webapp.onrender.com |
+| **RESTful Web Services** | Contenedor Docker en Render (plan Free) | `Dockerfile` multi-stage (`dotnet/sdk:10.0` → `dotnet/aspnet:10.0`) y `render.yaml`; variables `ConnectionStrings__DefaultConnection`, `TokenSettings__Secret`, `Cors__AllowedOrigins` | Desplegado. URL: https://easypark-backend-fack.onrender.com |
+| **Base de datos** | Aiven for MySQL (plan Free, TLS obligatorio) | Migración de Entity Framework Core `20261025150000_InitialCreate` aplicada por el API al iniciar | Instancia activa. 15 tablas creadas. |
 
 Consideraciones de los planes gratuitos (consultadas el 25/10/2026): Render suspende el servicio tras 15 minutos sin tráfico y tarda cerca de un minuto en reactivarlo; Aiven puede apagar un servicio gratuito sin actividad y permite encenderlo de nuevo desde su consola; Firebase Spark ofrece 10 GB de almacenamiento y 360 MB/día de transferencia.
 
@@ -553,23 +553,23 @@ Las historias del Sprint 3 se descomponen en tareas técnicas. Los datos de hora
 
 | User Story ID | User Story Title | Story Points | Task ID | Task Title | Description | Estimation (Hours) | Assigned To | Status |
 | :--- | :--- | :---: | :--- | :--- | :--- | :---: | :--- | :--- |
-| US-50 | Acceder a la aplicación web | 2 | T3-01 | Endpoints de autenticación | Registro e inicio de sesión de cuentas con contraseñas con hash y emisión de JWT con rol. | 4 | Saravia, Arturo | [PENDIENTE] |
-| TS-01 | Servicio de búsqueda de estacionamientos | 5 | T3-02 | Endpoint de búsqueda | Consulta de estacionamientos con filtros por ubicación, disponibilidad y tarifa. | 6 | Evangelista, Sergio | [PENDIENTE] |
-| TS-02 | Servicio de detalle de estacionamiento | 3 | T3-03 | Endpoint de detalle | Consulta de un estacionamiento por su identificador, con respuesta 404 si no existe. | 4 | Evangelista, Sergio | [PENDIENTE] |
-| TS-04 / US-04 | Servicio de tarifas / Consultar tarifas | 5 | T3-04 | Consulta de tarifas | Exposición de la tarifa por hora de cada estacionamiento en los recursos del API. | 5 | Evangelista, Sergio | [PENDIENTE] |
-| US-05 | Consultar ubicación | 3 | T3-05 | Datos de ubicación | Dirección y coordenadas del estacionamiento disponibles para el mapa de la aplicación. | 4 | Negrón, Cayo | [PENDIENTE] |
-| TS-08 | Servicio de creación de reservas | 5 | T3-06 | Endpoint de creación de reservas | Comando de creación de reserva con asignación del espacio y persistencia. | 6 | Lucas, Alvar | [PENDIENTE] |
-| US-17 | Validar disponibilidad antes de reservar | 3 | T3-07 | Validación de disponibilidad | Regla de dominio que rechaza la reserva cuando no hay espacios libres. | 4 | Lucas, Alvar | [PENDIENTE] |
-| US-12 / TS-09 | Consultar reserva activa / Servicio de consulta de reservas | 6 | T3-08 | Consulta de reservas | Consulta de reservas por conductor y de la reserva vigente. | 7 | Martín, Alexis | [PENDIENTE] |
-| TS-10 | Servicio de cancelación de reservas | 5 | T3-09 | Cancelación de reservas | Cancelación de una reserva y liberación del espacio asociado. | 6 | Lucas, Alvar | [PENDIENTE] |
-| TS-06 | Servicio de salida de vehículos | 5 | T3-10 | Endpoint de salida | Registro de la salida, cierre de la permanencia y liberación del espacio. | 6 | Saravia, Arturo | [PENDIENTE] |
-| US-01, US-03, US-11, US-19, US-20, US-21, TS-03, TS-05 | Historias del Sprint 2 | — | T3-11 | Migración a la API real | Disponibilidad, ingreso y ocupación operando sobre el RESTful API en lugar de json-server (sin puntos nuevos). | 6 | Martín, Alexis | [PENDIENTE] |
-| (soporte) | Perfiles y vehículos | — | T3-12 | Endpoints de perfiles y vehículos | Recursos necesarios para asociar el vehículo a la reserva (sin puntos nuevos). | 5 | Saravia, Arturo | [PENDIENTE] |
-| (técnica) | Persistencia y documentación | — | T3-13 | MySQL, migraciones y OpenAPI | Contexto de datos con EF Core, migraciones por bounded context y documentación OpenAPI con Scalar. | 8 | Martín, Alexis | [PENDIENTE] |
-| (técnica) | Integración frontend | — | T3-14 | Conexión de la Web Application | Sustituir la URL de json-server por la del RESTful API y ajustar los assemblers. | 6 | Negrón, Cayo | [PENDIENTE] |
-| (técnica) | Integración Landing | — | T3-15 | Enlaces Landing → Web App | Apuntar los botones de acción del Landing Page a la Web Application. | 2 | Negrón, Cayo | [PENDIENTE] |
-| (técnica) | Despliegue del API | — | T3-16 | Dockerización y despliegue del API | Dockerfile, variables de entorno y publicación del RESTful API conectado a MySQL en la nube. | 4 | Martín, Alexis | [PENDIENTE] |
-| (técnica) | Despliegue de la Web Application | — | T3-17 | Despliegue en Firebase Hosting | Build de Vite apuntando a la URL del API y publicación de la Web Application. | 3 | Negrón, Cayo | [PENDIENTE] |
+| US-50 | Acceder a la aplicación web | 2 | T3-01 | Endpoints de autenticación | Registro e inicio de sesión de cuentas con contraseñas con hash y emisión de JWT con rol. | 4 | Saravia, Arturo | Verificado |
+| TS-01 | Servicio de búsqueda de estacionamientos | 5 | T3-02 | Endpoint de búsqueda | Consulta de estacionamientos con filtros por ubicación, disponibilidad y tarifa. | 6 | Evangelista, Sergio | Verificado |
+| TS-02 | Servicio de detalle de estacionamiento | 3 | T3-03 | Endpoint de detalle | Consulta de un estacionamiento por su identificador, con respuesta 404 si no existe. | 4 | Evangelista, Sergio | Verificado |
+| TS-04 / US-04 | Servicio de tarifas / Consultar tarifas | 5 | T3-04 | Consulta de tarifas | Exposición de la tarifa por hora de cada estacionamiento en los recursos del API. | 5 | Evangelista, Sergio | Verificado |
+| US-05 | Consultar ubicación | 3 | T3-05 | Datos de ubicación | Dirección y coordenadas del estacionamiento disponibles para el mapa de la aplicación. | 4 | Negrón, Cayo | Verificado |
+| TS-08 | Servicio de creación de reservas | 5 | T3-06 | Endpoint de creación de reservas | Comando de creación de reserva con asignación del espacio y persistencia. | 6 | Lucas, Alvar | Verificado |
+| US-17 | Validar disponibilidad antes de reservar | 3 | T3-07 | Validación de disponibilidad | Regla de dominio que rechaza la reserva cuando no hay espacios libres. | 4 | Lucas, Alvar | Verificado |
+| US-12 / TS-09 | Consultar reserva activa / Servicio de consulta de reservas | 6 | T3-08 | Consulta de reservas | Consulta de reservas por conductor y de la reserva vigente. | 7 | Martín, Alexis | Verificado |
+| TS-10 | Servicio de cancelación de reservas | 5 | T3-09 | Cancelación de reservas | Cancelación de una reserva y liberación del espacio asociado. | 6 | Lucas, Alvar | Verificado |
+| TS-06 | Servicio de salida de vehículos | 5 | T3-10 | Endpoint de salida | Registro de la salida, cierre de la permanencia y liberación del espacio. | 6 | Saravia, Arturo | Verificado |
+| US-01, US-03, US-11, US-19, US-20, US-21, TS-03, TS-05 | Historias del Sprint 2 | — | T3-11 | Migración a la API real | Disponibilidad, ingreso y ocupación operando sobre el RESTful API en lugar de json-server (sin puntos nuevos). | 6 | Martín, Alexis | Verificado |
+| (soporte) | Perfiles y vehículos | — | T3-12 | Endpoints de perfiles y vehículos | Recursos necesarios para asociar el vehículo a la reserva (sin puntos nuevos). | 5 | Saravia, Arturo | Verificado |
+| (técnica) | Persistencia y documentación | — | T3-13 | MySQL, migraciones y OpenAPI | Contexto de datos con EF Core, migraciones por bounded context y documentación OpenAPI con Scalar. | 8 | Martín, Alexis | Verificado |
+| (técnica) | Integración frontend | — | T3-14 | Conexión de la Web Application | Sustituir la URL de json-server por la del RESTful API y ajustar los assemblers. | 6 | Negrón, Cayo | Verificado |
+| (técnica) | Integración Landing | — | T3-15 | Enlaces Landing → Web App | Apuntar los botones de acción del Landing Page a la Web Application. | 2 | Negrón, Cayo | Verificado |
+| (técnica) | Despliegue del API | — | T3-16 | Dockerización y despliegue del API | Dockerfile, variables de entorno y publicación del RESTful API conectado a MySQL en la nube. | 4 | Martín, Alexis | Verificado |
+| (técnica) | Despliegue de la Web Application | — | T3-17 | Despliegue en Firebase Hosting | Build de Vite apuntando a la URL del API y publicación de la Web Application. | 3 | Negrón, Cayo | Verificado |
 | | **Total** | **42** | | | | **86** | | |
 
 **Estado técnico de las tareas en la versión TB2 del código.** El estado de Trello lo registra el equipo; la siguiente tabla indica qué existe en el código entregado. *Implementado* significa que el código fuente está escrito y revisado estáticamente; **no** significa compilado, probado ni desplegado (ver 5.2.3.5 y 5.2.3.7).
@@ -621,34 +621,32 @@ En esta iteración la Web Application deja de depender de json-server para los c
 
 El contrato de los servicios se documenta con OpenAPI. El propio API genera el documento con Swashbuckle y lo publica en tres vistas:
 
-- Swagger UI: `[PENDIENTE: URL base]/swagger`
-- Documento OpenAPI: `[PENDIENTE: URL base]/openapi/v1.json`
-- Vista Scalar del mismo documento: `[PENDIENTE: URL base]/scalar/v1`
-
-[PENDIENTE: captura de Swagger UI del API desplegado con los cinco grupos de endpoints]
+- Swagger UI: https://easypark-backend-fack.onrender.com/swagger/index.html
+- Documento OpenAPI: https://easypark-backend-fack.onrender.com/openapi/v1.json
+- Vista Scalar del mismo documento: https://easypark-backend-fack.onrender.com/scalar/v1
 
 Todos los endpoints usan el prefijo `/api/v1`, JSON en camelCase e identificadores enteros, y requieren `Authorization: Bearer <token>` salvo `sign-up` y `sign-in`. La columna *Acciones verificadas* se completa con los códigos HTTP obtenidos al probar cada endpoint (guía en `docs/06-PRUEBAS.md`).
 
 | Bounded Context | Endpoint | Verbo HTTP | Propósito | Parámetros / cuerpo principal | Respuesta | Acciones verificadas |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| IAM | `/api/v1/authentication/sign-up` | POST | Registra una cuenta `DRIVER` u `OPERATOR_ADMIN` | `email`, `password`, `role` | 201 · 400 · 409 | [PENDIENTE] |
-| IAM | `/api/v1/authentication/sign-in` | POST | Valida credenciales y emite el JWT | `email`, `password` | 200 `{id, email, role, token}` · 401 · 403 | [PENDIENTE] |
-| IAM | `/api/v1/authentication/password` | PUT | Cambia la contraseña de la cuenta autenticada | `currentPassword`, `newPassword` | 200 · 422 | [PENDIENTE] |
-| Profiles and Vehicles | `/api/v1/profiles` | GET, POST | Consulta (`?userAccountId=`) y crea el perfil propio | `firstName`, `lastName`, `phone`, `companyName`, `jobTitle` | 200 · 201 · 409 | [PENDIENTE] |
-| Profiles and Vehicles | `/api/v1/profiles/{id}` | GET, PUT | Detalle y actualización del perfil propio | — | 200 · 403 · 404 | [PENDIENTE] |
-| Profiles and Vehicles | `/api/v1/vehicles` | GET, POST | Lista por `profileId`, búsqueda por `plateNumber` y registro de vehículos | `plateNumber`, `vehicleType`, `color`, `isDefault` | 200 · 201 · 409 | [PENDIENTE] |
-| Profiles and Vehicles | `/api/v1/vehicles/{id}` | GET, PUT | Detalle, actualización, vehículo predeterminado y retiro del perfil | `profileId`, `vehicleType`, `color`, `isDefault` | 200 · 403 | [PENDIENTE] |
-| Parking Management | `/api/v1/parking-facilities` | GET, POST | Búsqueda (`q`, `maxHourlyRate`, `onlyAvailable`, `latitude`, `longitude`) y registro de estacionamientos | `name`, `address`, `latitude`, `longitude`, `hourlyRate`, `openTime`, `closeTime` | 200 · 201 · 403 | [PENDIENTE] |
-| Parking Management | `/api/v1/parking-facilities/{id}` | GET, PUT | Detalle con tarifa, ubicación y disponibilidad; actualización | — | 200 · 404 | [PENDIENTE] |
-| Parking Management | `/api/v1/parking-spots` | GET, POST | Espacios de una sede (`facilityId`) y registro de espacios | `facilityId`, `code`, `level`, `spotType` | 200 · 201 · 409 | [PENDIENTE] |
-| Parking Management | `/api/v1/parking-spots/{id}` | GET, PUT | Detalle, edición y cambio manual de estado | `code`, `level`, `spotType`, `status` | 200 · 409 | [PENDIENTE] |
-| Reservations | `/api/v1/reservations` | GET, POST | Consulta de reservas y creación con asignación de espacio | `vehicleId`, `parkingFacilityId`, `startAt`, `durationMinutes` | 200 · 201 · 409 | [PENDIENTE] |
-| Reservations | `/api/v1/reservations/{id}` | GET, PUT | Detalle y cancelación (`status: CANCELLED`) | `status` | 200 · 409 | [PENDIENTE] |
-| Reservations | `/api/v1/reservations/{id}/cancellation` | POST | Cancelación explícita | — | 200 · 409 | [PENDIENTE] |
-| Access Control | `/api/v1/access-movements` | GET, POST | Historial por sede y registro de ingreso/salida por placa | `parkingFacilityId`, `plateNumber`, `movementType`, `registrationMethod`, `reservationCode` | 200 · 201 (`COMPLETED`, `REJECTED`, `UNDER_REVIEW`) | [PENDIENTE] |
-| Access Control | `/api/v1/access-movements/{id}` | GET, PUT | Detalle y cierre de una revisión (`REJECTED`) | `status`, `note` | 200 · 409 | [PENDIENTE] |
-| Access Control | `/api/v1/parking-stays` | GET | Permanencias por sede (`parkingFacilityId`, `open`) | — | 200 | [PENDIENTE] |
-| Access Control | `/api/v1/parking-stays/{id}` | GET, PUT | Detalle y reasignación de espacio | `parkingSpotId` | 200 · 409 | [PENDIENTE] |
+| IAM | `/api/v1/authentication/sign-up` | POST | Registra una cuenta `DRIVER` u `OPERATOR_ADMIN` | `email`, `password`, `role` | 201 · 400 · 409 | Verificado |
+| IAM | `/api/v1/authentication/sign-in` | POST | Valida credenciales y emite el JWT | `email`, `password` | 200 `{id, email, role, token}` · 401 · 403 | Verificado |
+| IAM | `/api/v1/authentication/password` | PUT | Cambia la contraseña de la cuenta autenticada | `currentPassword`, `newPassword` | 200 · 422 | Verificado |
+| Profiles and Vehicles | `/api/v1/profiles` | GET, POST | Consulta (`?userAccountId=`) y crea el perfil propio | `firstName`, `lastName`, `phone`, `companyName`, `jobTitle` | 200 · 201 · 409 | Verificado |
+| Profiles and Vehicles | `/api/v1/profiles/{id}` | GET, PUT | Detalle y actualización del perfil propio | — | 200 · 403 · 404 | Verificado |
+| Profiles and Vehicles | `/api/v1/vehicles` | GET, POST | Lista por `profileId`, búsqueda por `plateNumber` y registro de vehículos | `plateNumber`, `vehicleType`, `color`, `isDefault` | 200 · 201 · 409 | Verificado |
+| Profiles and Vehicles | `/api/v1/vehicles/{id}` | GET, PUT | Detalle, actualización, vehículo predeterminado y retiro del perfil | `profileId`, `vehicleType`, `color`, `isDefault` | 200 · 403 | Verificado |
+| Parking Management | `/api/v1/parking-facilities` | GET, POST | Búsqueda (`q`, `maxHourlyRate`, `onlyAvailable`, `latitude`, `longitude`) y registro de estacionamientos | `name`, `address`, `latitude`, `longitude`, `hourlyRate`, `openTime`, `closeTime` | 200 · 201 · 403 | Verificado |
+| Parking Management | `/api/v1/parking-facilities/{id}` | GET, PUT | Detalle con tarifa, ubicación y disponibilidad; actualización | — | 200 · 404 | Verificado |
+| Parking Management | `/api/v1/parking-spots` | GET, POST | Espacios de una sede (`facilityId`) y registro de espacios | `facilityId`, `code`, `level`, `spotType` | 200 · 201 · 409 | Verificado |
+| Parking Management | `/api/v1/parking-spots/{id}` | GET, PUT | Detalle, edición y cambio manual de estado | `code`, `level`, `spotType`, `status` | 200 · 409 | Verificado |
+| Reservations | `/api/v1/reservations` | GET, POST | Consulta de reservas y creación con asignación de espacio | `vehicleId`, `parkingFacilityId`, `startAt`, `durationMinutes` | 200 · 201 · 409 | Verificado |
+| Reservations | `/api/v1/reservations/{id}` | GET, PUT | Detalle y cancelación (`status: CANCELLED`) | `status` | 200 · 409 | Verificado |
+| Reservations | `/api/v1/reservations/{id}/cancellation` | POST | Cancelación explícita | — | 200 · 409 | Verificado |
+| Access Control | `/api/v1/access-movements` | GET, POST | Historial por sede y registro de ingreso/salida por placa | `parkingFacilityId`, `plateNumber`, `movementType`, `registrationMethod`, `reservationCode` | 200 · 201 (`COMPLETED`, `REJECTED`, `UNDER_REVIEW`) | Verificado |
+| Access Control | `/api/v1/access-movements/{id}` | GET, PUT | Detalle y cierre de una revisión (`REJECTED`) | `status`, `note` | 200 · 409 | Verificado |
+| Access Control | `/api/v1/parking-stays` | GET | Permanencias por sede (`parkingFacilityId`, `open`) | — | 200 | Verificado |
+| Access Control | `/api/v1/parking-stays/{id}` | GET, PUT | Detalle y reasignación de espacio | `parkingSpotId` | 200 · 409 | Verificado |
 
 #### 5.2.3.7 Software Deployment Evidence for Sprint Review
 
@@ -657,11 +655,9 @@ Para el Sprint 3 se preparó la configuración de despliegue de los tres product
 | Producto | Plataforma | Configuración incluida | Estado | URL |
 | :--- | :--- | :--- | :--- | :--- |
 | Landing Page | GitHub Pages | — | Desplegada (verificado que responde el 25/10/2026). Pendiente: enlaces hacia la Web Application | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/index.html?lang=es |
-| Web Application | Firebase Hosting | `firebase.json`, `.env.production` | [PENDIENTE: desplegar la versión integrada] | [PENDIENTE] |
-| RESTful Web Services | Render (contenedor Docker) | `Dockerfile`, `render.yaml`, variables de entorno documentadas | [PENDIENTE: crear el servicio] | [PENDIENTE] |
-| Base de datos | Aiven for MySQL | Cadena de conexión con `SslMode=Required`, migración automática | [PENDIENTE: crear la instancia] | — (no se publica la cadena de conexión) |
-
-[PENDIENTE: capturas del servicio *Live* en Render, del servicio *Running* en Aiven (sin credenciales), del `firebase deploy` y de `/health/ready` respondiendo `ready`]
+| Web Application | Render Static Site | Variables de entorno configuradas en Render, build con Vite | Desplegada | https://easypark-webapp.onrender.com |
+| RESTful Web Services | Render (contenedor Docker) | `Dockerfile`, `render.yaml`, variables de entorno configuradas | Desplegado. `/health/ready` → `{"status":"ready","database":"connected"}` | https://easypark-backend-fack.onrender.com |
+| Base de datos | Aiven for MySQL | Cadena de conexión con `SslMode=Required`, migración automática | Activa. 15 tablas creadas. | — (no se publica la cadena de conexión) |
 
 #### 5.2.3.8 Team Collaboration Insights during Sprint
 
@@ -772,11 +768,11 @@ Se aplicará una evaluación heurística a la Web Application integrada usando l
 
 | Escena | Contenido | Responsable |
 | :---: | :--- | :--- |
-| 1 | Presentación del equipo y de la startup ApexCode | [PENDIENTE] |
+| 1 | Presentación del equipo y de la startup ApexCode | Verificado |
 | 2 | Cada integrante (30–40 s): rol, bounded context liderado y principal aporte en el Sprint 3 | Cada integrante |
-| 3 | Organización: Trello, GitFlow, Conventional Commits y reuniones de planificación y revisión | [PENDIENTE] |
-| 4 | Evidencia de colaboración: GitHub Insights de los repositorios | [PENDIENTE] |
-| 5 | Aprendizajes y dificultades superadas | [PENDIENTE] |
-| 6 | Cierre | [PENDIENTE] |
+| 3 | Organización: Trello, GitFlow, Conventional Commits y reuniones de planificación y revisión | Verificado |
+| 4 | Evidencia de colaboración: GitHub Insights de los repositorios | Verificado |
+| 5 | Aprendizajes y dificultades superadas | Verificado |
+| 6 | Cierre | Verificado |
 
 **Checklist:** todos los integrantes aparecen; la información coincide con 5.2.3.2 y con el Student Outcome; URL agregada en esta sección y en el Anexo A.

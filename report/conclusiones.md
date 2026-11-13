@@ -16,6 +16,10 @@ La distribución del liderazgo por Bounded Contexts resultó ser una estrategia 
 
 Finalmente, se concluye que EasyPark no solo responde a una necesidad real de reducir el tiempo y estrés al buscar estacionamiento, sino que también representa una oportunidad para que los negocios mejoren significativamente su eficiencia de control, reduzcan pérdidas por registros erróneos y optimicen su supervisión mediante el uso de tecnología.
 
+**Avance de conclusiones del Sprint 3 (TB2).** En este sprint se construyó la primera versión de los Web Services de EasyPark en ASP.NET Core 10, con los bounded contexts de IAM, Profiles and Vehicles, Parking Management, Reservations y Access Control organizados en capas de dominio, aplicación, infraestructura e interfaces, y persistencia en MySQL mediante Entity Framework Core. Trasladar al servidor las reglas que antes resolvía el navegador —asignar y bloquear el espacio al reservar, y registrar ingresos y salidas con su permanencia y su cobro en una sola transacción— corrige inconsistencias del Sprint 2 y es la base para que la información de disponibilidad sea confiable, que era una de las necesidades más repetidas en las entrevistas.
+
+La integración con la Web Application mostró que mantener el contrato REST definido en el Sprint 2 (rutas, nombres de campos e identificadores enteros) reduce el costo de reemplazar la API simulada, y que las diferencias con el diseño de base de datos del capítulo IV deben documentarse en cada iteración (sección 4.8.2). [PENDIENTE: completar esta conclusión con los resultados reales de las pruebas, del despliegue y de las entrevistas de validación del Sprint 3.]
+
 # Recomendaciones
 
 • **Sobre la continuidad del desarrollo del sistema**: Se recomienda continuar con la implementación progresiva de las funcionalidades planificadas, priorizando aquellos módulos que representan el valor diferencial de Easypark. Lo cual permitirá consolidar una experiencia de usuario más eficiente y alineada con las necesidades identificadas durante la etapa de investigación.
@@ -29,6 +33,12 @@ Finalmente, se concluye que EasyPark no solo responde a una necesidad real de re
 • **Priorización del Desarrollo y Despliegue del Backend**: Dado que la validación actual depende de una API simulada (json-server), se recomienda que en el próximo Sprint la prioridad técnica sea el desarrollo del Backend RESTful real en ASP.NET Core y la configuración de la base de datos relacional en la nube. Esto será vital para integrar las lógicas de negocio complejas (como las reservas y el control de ocupación).
 
 • **Refuerzo en la Integración Continua (CI)**: Como los demás Bounded Contexts (Reservations, Monitoring, Access Control) continúan desarrollándose en paralelo por diferentes miembros, se recomienda aumentar la frecuencia de integración de ramas y mantener revisiones de código cruzadas más estrictas para evitar los "pequeños retrasos en la integración" que el equipo ya había identificado como riesgo en el Sprint 1.
+
+• **Sobre la verificación del Sprint 3**: ejecutar las pruebas automatizadas del RESTful API y el recorrido funcional contra MySQL antes de registrar evidencias, y desplegar el API, la base de datos y la Web Application siguiendo las guías del paquete del Sprint 3.
+
+• **Sobre los planes gratuitos de despliegue**: considerar que el servicio gratuito de Render se suspende tras 15 minutos sin tráfico y que Aiven puede apagar una base gratuita sin actividad; activar ambos servicios antes de cada demostración.
+
+• **Sobre los contextos pendientes**: implementar en los siguientes sprints los Web Services de Monitoring and Alerts, Notifications y Analytics and Reporting, que hoy se muestran solo con datos simulados.
 
 # Bibliografía
 
@@ -83,6 +93,28 @@ UXPressia. (s.f.-b). User vs. buyer persona: Differences and free template. http
 Zhurb, A. [connect2grp]. (s.f.). Using PlantUML for creating clear and concise diagrams. Medium.
 https://connect2grp.medium.com/using-plantuml-for-creating-clear-and-concise-diagrams-2fc621529560
 
+Aiven. (2026). *Aiven for MySQL free tier*. https://aiven.io/docs/products/mysql/concepts/mysql-free-tier
+
+Docker Inc. (s.f.). *Docker Compose overview*. https://docs.docker.com/compose/
+
+Google. (s.f.). *Firebase pricing*. https://firebase.google.com/pricing
+
+Jones, M., Bradley, J., & Sakimura, N. (2015). *JSON Web Token (JWT)* (RFC 7519). IETF. https://www.rfc-editor.org/rfc/rfc7519
+
+Microsoft. (s.f.-a). *ASP.NET Core documentation*. https://learn.microsoft.com/aspnet/core/
+
+Microsoft. (s.f.-b). *Entity Framework Core: Migrations overview*. https://learn.microsoft.com/ef/core/managing-schemas/migrations/
+
+Microsoft. (s.f.-c). *Integration tests in ASP.NET Core*. https://learn.microsoft.com/aspnet/core/test/integration-tests
+
+Nielsen, J. (1994). *10 usability heuristics for user interface design*. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
+
+Oracle. (s.f.). *MySQL Connector/NET Developer Guide: Entity Framework Core support*. https://dev.mysql.com/doc/connector-net/en/connector-net-entityframework-core.html
+
+OpenAPI Initiative. (s.f.). *OpenAPI Specification*. https://spec.openapis.org/oas/latest.html
+
+Render. (2026). *Deploy for free*. https://render.com/docs/free
+
 # Anexos
 
 ## Anexo A. Videos de Exposiciones
@@ -91,6 +123,9 @@ https://connect2grp.medium.com/using-plantuml-for-creating-clear-and-concise-dia
 |--------|----------------------------------------------------------------------------------------------------------|---------------|
 | AV1 | Presentación de la propuesta de negocio, Lean UX Process y primera versión del Landing Page| https://lix.li/U50Z |
 | TB1 | Especificación de requisitos (User Stories, Technical Stories, Impact Mapping y Product Backlog) y propuesta de Product Design | https://lix.li/uZ4zu |
+| TB2 | Exposición del Sprint 3 | [PENDIENTE: URL] |
+| TB2 | Video About-the-Product (primera versión) | [PENDIENTE: URL] |
+| TB2 | Video About-the-Team (primera versión) | [PENDIENTE: URL] |
 
 ## Anexo B. Repositorios del Proyecto
 
@@ -99,13 +134,15 @@ https://connect2grp.medium.com/using-plantuml-for-creating-clear-and-concise-dia
 | Repositorio del Informe del Proyecto | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report       |
 | Repositorio de la Landing Page       | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-landing |
 | Repositorio de la Aplicación Web     | https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp |
+| Repositorio de los Web Services (RESTful API) | [PENDIENTE: URL] |
 
 ## Anexo C. Enlaces de Despliegue (Deployment)
 
 | Descripción                                          | Enlace |
 |------------------------------------------------------|--------|
 | Deployment de la Landing Page en GitHub Pages        | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/ |
-| Deployment de la Aplicación Web | https://easypark-5ffb2.web.app/ |
+| Deployment de la Aplicación Web | https://easypark-5ffb2.web.app/ (versión publicada anteriormente; [PENDIENTE: confirmar tras desplegar la versión integrada con el API]) |
+| Deployment de los Web Services (Swagger UI) | [PENDIENTE: URL]/swagger |
 
 ## Anexo D. Diseño
 

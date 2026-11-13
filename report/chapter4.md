@@ -681,9 +681,9 @@ La solución se compone de cuatro contenedores:
 | Landing Page | HTML5, CSS3 y JavaScript | Presentar el modelo de negocio a los dos segmentos y derivar a cada uno, mediante sus call-to-action, a la vista correspondiente de la aplicación. |
 | Web Application | Vue 3, PrimeVue, Pinia, Vue Router y vue-i18n | Ofrecer la experiencia de usuario responsiva de los dos segmentos, resolviendo las rutas según el rol autenticado. |
 | RESTful API | ASP.NET Core 8 con C# y Entity Framework Core | Concentrar la lógica de negocio de los ocho bounded contexts y exponerla como servicios REST documentados con OpenAPI y protegidos con JWT. |
-| Base de Datos | PostgreSQL 16 | Persistir la información de todos los bounded contexts. |
+| Base de Datos | MySQL 8 | Persistir la información de todos los bounded contexts. |
 
-La comunicación entre la Web Application y el API se realiza mediante JSON sobre HTTPS; el API accede a la base de datos a través de Entity Framework Core con el proveedor Npgsql, y consume los dos servicios externos mediante sus API REST. La separación entre el Landing Page y la Web Application responde a la naturaleza de cada producto: el primero es un sitio estático optimizado para posicionamiento y velocidad de carga, mientras que el segundo requiere estado de sesión y actualización frecuente de datos.
+La comunicación entre la Web Application y el API se realiza mediante JSON sobre HTTPS; el API accede a la base de datos a través de Entity Framework Core con el proveedor MySql.EntityFrameworkCore, y consume los dos servicios externos mediante sus API REST. La separación entre el Landing Page y la Web Application responde a la naturaleza de cada producto: el primero es un sitio estático optimizado para posicionamiento y velocidad de carga, mientras que el segundo requiere estado de sesión y actualización frecuente de datos.
 
 Las principales decisiones de arquitectura que se reflejan en los diagramas C4, junto con el estilo o patrón arquitectónico que materializan, son las siguientes:
 
@@ -696,7 +696,7 @@ Las principales decisiones de arquitectura que se reflejan en los diagramas C4, 
 | Acceder a la persistencia y a los servicios externos mediante interfaces declaradas en el dominio | Puertos y adaptadores (repositorios y *gateways*) | Cambiar el proveedor de mapas, de correo o el motor de base de datos no afecta las reglas de negocio. |
 | Propagar los cambios entre contextos mediante eventos de dominio y un motor de políticas en segundo plano | Arquitectura orientada a eventos (en proceso) | Alertas, notificaciones y métricas reaccionan a los movimientos y reservas sin acoplarse a los contextos que los originan. |
 | Autenticar cada solicitud con JWT de corta duración y *refresh tokens* | Autenticación sin estado (*stateless*) | El API no mantiene sesión en memoria, lo que permite escalarlo horizontalmente. |
-| Persistir todos los contextos en una sola base PostgreSQL con tablas propias por contexto | Base de datos compartida con propiedad por contexto | Se conserva la integridad referencial y cada contexto sigue siendo dueño exclusivo de sus tablas. |
+| Persistir todos los contextos en una sola base MySQL con tablas propias por contexto | Base de datos compartida con propiedad por contexto | Se conserva la integridad referencial y cada contexto sigue siendo dueño exclusivo de sus tablas. |
 
 ### 4.6.4. Software Architecture Components Diagrams
 
@@ -718,7 +718,7 @@ La aplicación organiza sus componentes en cuatro grupos: el núcleo (App Shell 
 
 **Figura 4.56.** Diagrama de Componentes (C4, nivel 3) — RESTful API.
 
-El API se estructura en cuatro capas. La **capa de presentación** agrupa un controller por bounded context, documentado con OpenAPI. La **capa de aplicación** contiene los servicios que orquestan comandos y consultas, junto con el motor de políticas, implementado como servicio en segundo plano, que evalúa la permanencia excedida y la capacidad crítica descritas en el EventStorming. La **capa de dominio** concentra agregados, entidades, objetos de valor y reglas de negocio, y no depende de ninguna otra capa. La **capa de infraestructura** implementa los repositorios con Entity Framework Core y las pasarelas hacia los servicios externos, de modo que un cambio de proveedor de mapas o de correo no afecte al dominio. El middleware de seguridad autentica y autoriza cada solicitud antes de que llegue a los controllers.
+El API se estructura en cuatro capas. La **capa de presentación** agrupa un controller por bounded context, documentado con OpenAPI cuyo documento se genera con Microsoft.AspNetCore.OpenApi y se explora mediante Scalar. La **capa de aplicación** contiene los servicios que orquestan comandos y consultas, junto con el motor de políticas, implementado como servicio en segundo plano, que evalúa la permanencia excedida y la capacidad crítica descritas en el EventStorming. La **capa de dominio** concentra agregados, entidades, objetos de valor y reglas de negocio, y no depende de ninguna otra capa. La **capa de infraestructura** implementa los repositorios con Entity Framework Core y las pasarelas hacia los servicios externos, de modo que un cambio de proveedor de mapas o de correo no afecte al dominio. El middleware de seguridad autentica y autoriza cada solicitud antes de que llegue a los controllers.
 
 ## 4.7. Software Object-Oriented Design
 
@@ -784,14 +784,14 @@ Los diagramas de clases aplican las siguientes convenciones de idioma y nomencla
 
 ## 4.8. Database Design
 
-La persistencia se resuelve sobre PostgreSQL 16 mediante Entity Framework Core. El diseño mantiene la separación por bounded context: cada contexto es dueño de sus tablas y las referencias hacia otros contextos se establecen mediante llaves foráneas sobre el identificador, sin duplicar sus datos. El modelo consta de dieciocho tablas.
+La persistencia se resuelve sobre MySQL 8 mediante Entity Framework Core. El diseño mantiene la separación por bounded context: cada contexto es dueño de sus tablas y las referencias hacia otros contextos se establecen mediante llaves foráneas sobre el identificador, sin duplicar sus datos. El modelo consta de dieciocho tablas.
 
 **Convenciones de nomenclatura.** El diseño de la base de datos aplica las siguientes convenciones:
 
 - **Idioma y formato.** Tablas y columnas en inglés y en `snake_case`. Cada tabla lleva el nombre en plural de la clase que persiste (`UserAccount` → `user_accounts`, `ParkingStay` → `parking_stays`) y cada columna corresponde al atributo homónimo de la clase (`plateNumber` → `plate_number`), con dos reglas de correspondencia: el atributo `type` de una clase se almacena como `<concepto>_type` (`Vehicle.type` → `vehicle_type`), para que el nombre no sea ambiguo en consultas que combinan tablas, y los objetos de valor se descomponen en columnas (`Address` → `street`, `district`, `city`; `Money` → monto y `currency`; `DateRange` → `period_start`, `period_end`).
-- **Llaves primarias.** Columna `id` de tipo `uuid`. Las tablas de asociación (`favorite_zones` y `zone_features`) usan una llave primaria compuesta por las columnas que relacionan, lo que impide registrar dos veces el mismo par.
+- **Llaves primarias.** Columna `id` de tipo `char36`. Las tablas de asociación (`favorite_zones` y `zone_features`) usan una llave primaria compuesta por las columnas que relacionan, lo que impide registrar dos veces el mismo par.
 - **Llaves foráneas.** Toda llave foránea termina en `_id` y se nombra con la entidad referenciada en singular (`vehicle_id`, `parking_zone_id`, `notification_template_id`). Cuando apunta a `user_accounts`, o cuando una tabla referencia dos veces a la misma, se nombra con el rol que cumple la fila referenciada (`driver_id`, `operator_id`, `recipient_id`, `entry_movement_id`, `exit_movement_id`).
-- **Tipos de dato.** Instantes en `timestamp` con zona horaria y sufijo `_at` (`created_at`, `occurred_at`); fechas sin hora en `date` (`period_start`); booleanos con prefijo `is_` (`is_default`, `is_revoked`); montos en `decimal` acompañados de la columna `currency`.
+- **Tipos de dato.** Instantes en `datetime(6)` almacenados en UTC y sufijo `_at` (`created_at`, `occurred_at`); fechas sin hora en `date` (`period_start`); booleanos con prefijo `is_` (`is_default`, `is_revoked`); montos en `decimal` acompañados de la columna `currency`.
 - **Estados y clasificaciones.** Los estados se almacenan en una columna `status` y las clasificaciones en `<concepto>_type`, como cadenas controladas que replican las enumeraciones del dominio.
 - **Obligatoriedad.** Las columnas opcionales se señalan como *nullable* en los diagramas; las demás son obligatorias.
 
@@ -864,3 +864,138 @@ Finalmente, el siguiente diagrama integra las dieciocho tablas de la solución y
 ![Diagrama de base de datos integrado](../assets/images/er-09-global.png)
 
 **Figura 4.73.** Diagrama de base de datos integrado de EasyPark.
+
+### 4.8.2. Esquema implementado en el Sprint 3
+
+Los diagramas anteriores representan el diseño objetivo de los ocho bounded contexts. En el Sprint 3 se implementó la persistencia de los cinco contextos del alcance de los Web Services —IAM, Profiles and Vehicles, Parking Management, Reservations y Access Control— con **ocho tablas** creadas por la migración de Entity Framework Core `20261025150000_InitialCreate`. Para mantener el contrato que ya utilizaba la Web Application del Sprint 2, el esquema implementado difiere del diseño en los siguientes puntos:
+
+| Aspecto | Diseño (4.8 y 4.8.1) | Implementado en el Sprint 3 | Motivo |
+| :--- | :--- | :--- | :--- |
+| Llave primaria | `id` `char(36)` | `id` `int` autoincremental | Decisión del Sprint 3 y contrato de la Web Application, que usa IDs enteros |
+| Sede | `parking_zones` | `parking_facilities` (`name`, `address`, `latitude`, `longitude`, `hourly_rate`, `open_time`, `close_time`, `status`) | Recurso REST `/parking-facilities` de la Web Application; la dirección se guarda en una sola columna |
+| Espacio | `parking_spaces` (`parking_zone_id`) | `parking_spots` (`facility_id`, `code`, `level`, `spot_type`, `status`, `version`) | Recurso REST `/parking-spots`; `version` es el control de concurrencia que evita reservar dos veces el mismo espacio |
+| Perfil de operador | `operator_profiles` separado | `company_name` y `job_title` opcionales en `profiles` | Contrato de perfil único de la Web Application |
+| Conductor de la reserva | `driver_id` → `user_accounts` | `driver_profile_id` → `profiles` | Campo `driverProfileId` del contrato |
+| Reserva | `parking_space_id`, `confirmed_at` | `parking_spot_id`, `parking_facility_id` y estado `CONFIRMED` desde su creación | La sede se conserva para consultar las reservas del operador sin recorrer los espacios |
+| Movimiento de acceso | sin placa | `plate_number` como registro histórico de la lectura en el punto de control | Auditoría de la lectura; la placa vigente sigue en `vehicles` |
+| Permanencia | vehículo y horas obtenidos de los movimientos | `vehicle_id`, `parking_facility_id`, `started_at`, `ended_at` | Consultas directas de permanencias abiertas por vehículo, espacio y sede |
+| Tablas aún no implementadas | `refresh_tokens`, `favorite_zones`, `zone_features`, tablas de Monitoring and Alerts, Analytics and Reporting y Notifications | — | Fuera del alcance de los Web Services del Sprint 3 |
+
+Se mantienen las convenciones de 4.8: nombres en inglés y `snake_case`, instantes en `datetime(6)` en UTC con sufijo `_at`, montos `decimal(10,2)` con `currency`, booleanos con prefijo `is_`, estados como cadenas controladas (`AVAILABLE`, `CONFIRMED`, `OPERATOR_ADMIN`, etc.) y unicidad en `user_accounts.email`, `vehicles.plate_number`, `reservations.code` y el par (`facility_id`, `code`) de `parking_spots`.
+
+```mermaid
+erDiagram
+    user_accounts ||--o| profiles : "user_account_id"
+    profiles ||--o{ vehicles : "profile_id (nullable)"
+    profiles ||--o{ parking_facilities : "operator_profile_id"
+    parking_facilities ||--o{ parking_spots : "facility_id"
+    profiles ||--o{ reservations : "driver_profile_id"
+    vehicles ||--o{ reservations : "vehicle_id"
+    parking_facilities ||--o{ reservations : "parking_facility_id"
+    parking_spots ||--o{ reservations : "parking_spot_id"
+    parking_facilities ||--o{ access_movements : "parking_facility_id"
+    vehicles ||--o{ access_movements : "vehicle_id"
+    user_accounts ||--o{ access_movements : "operator_id"
+    parking_spots ||--o{ parking_stays : "parking_spot_id"
+    vehicles ||--o{ parking_stays : "vehicle_id"
+    reservations |o--o{ parking_stays : "reservation_id (nullable)"
+    access_movements ||--o| parking_stays : "entry_movement_id / exit_movement_id"
+
+    user_accounts {
+        int id PK
+        varchar email UK
+        varchar password_hash
+        varchar role
+        varchar status
+        datetime created_at
+        datetime last_login_at
+    }
+    profiles {
+        int id PK
+        int user_account_id FK
+        varchar first_name
+        varchar last_name
+        varchar phone
+        varchar photo_url
+        varchar company_name
+        varchar job_title
+        datetime created_at
+    }
+    vehicles {
+        int id PK
+        int profile_id FK
+        varchar plate_number UK
+        varchar vehicle_type
+        varchar color
+        tinyint is_default
+        datetime created_at
+    }
+    parking_facilities {
+        int id PK
+        int operator_profile_id FK
+        varchar name
+        varchar address
+        decimal latitude
+        decimal longitude
+        decimal hourly_rate
+        varchar open_time
+        varchar close_time
+        varchar status
+        datetime created_at
+    }
+    parking_spots {
+        int id PK
+        int facility_id FK
+        varchar code
+        int level
+        varchar spot_type
+        varchar status
+        int version
+        datetime created_at
+    }
+    reservations {
+        int id PK
+        varchar code UK
+        int driver_profile_id FK
+        int vehicle_id FK
+        int parking_facility_id FK
+        int parking_spot_id FK
+        datetime start_at
+        int duration_minutes
+        decimal estimated_amount
+        varchar currency
+        varchar status
+        datetime created_at
+    }
+    access_movements {
+        int id PK
+        int parking_facility_id FK
+        int vehicle_id FK
+        varchar plate_number
+        int operator_id FK
+        varchar movement_type
+        varchar registration_method
+        varchar status
+        datetime occurred_at
+        varchar note
+    }
+    parking_stays {
+        int id PK
+        int parking_facility_id FK
+        int parking_spot_id FK
+        int vehicle_id FK
+        int reservation_id FK
+        int entry_movement_id FK
+        int exit_movement_id FK
+        decimal charged_amount
+        varchar currency
+        datetime started_at
+        datetime ended_at
+    }
+```
+
+![Esquema implementado en el Sprint 3](../assets/images/er-sprint3-implementado.png)
+
+**Figura 4.74.** Esquema implementado en el Sprint 3 (fuente: configuración de Entity Framework Core y migración inicial del RESTful API).
+
+[PENDIENTE: si el equipo lo requiere, regenerar las figuras 4.65 a 4.73 con PlantUML para reflejar esta versión]

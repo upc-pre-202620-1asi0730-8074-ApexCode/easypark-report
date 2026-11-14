@@ -646,6 +646,11 @@ El contrato de los servicios se documenta con OpenAPI. El propio API genera el d
 - Documento OpenAPI: https://easypark-backend-qheu.onrender.com/openapi/v1.json
 - Vista Scalar del mismo documento: https://easypark-backend-qheu.onrender.com/scalar/v1
 
+![swagger 1.png](../assets/images/swagger%201.png)
+![swagger 2.png](../assets/images/swagger%202.png)
+![swagger 3.png](../assets/images/swagger%203.png)
+![Escalar Api.png](../assets/images/Escalar%20Api.png)
+
 Todos los endpoints usan el prefijo `/api/v1`, JSON en camelCase e identificadores enteros, y requieren `Authorization: Bearer <token>` salvo `sign-up` y `sign-in`. La columna *Estado de pruebas* se completa con los códigos HTTP obtenidos al probar cada endpoint (guía en `docs/06-PRUEBAS.md`).
 
 | Bounded Context | Endpoint | Verbo HTTP | Propósito | Parámetros / cuerpo principal | Respuesta | Estado de pruebas |

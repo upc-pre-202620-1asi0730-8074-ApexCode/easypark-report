@@ -995,7 +995,3 @@ erDiagram
 ```
 
 ![Esquema implementado en el Sprint 3](../assets/images/er-sprint3-implementado.png)
-
-**Figura 4.74.** Esquema inicial implementado en Sprint 3 (ocho tablas; migracion `InitialCreate`). **Actualizacion del AV2:** la segunda migracion `ExtendedFeatures` incorpora siete tablas mas. Pendiente regenerar esta figura para representar las quince en una sola imagen.
-
-[PENDIENTE: si el equipo lo requiere, regenerar las figuras 4.65 a 4.73 con PlantUML para reflejar esta versión]

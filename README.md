@@ -21,7 +21,7 @@ Este repositorio incluye la documentación del proyecto, abarcando la investigac
 - Facultad: Ingenieria
 - Carrera: Ingenieria de Software
 - Periodo: 2026-20
-- Curso: Desarrollo de Aplicaciones Open Source (1ASI0730)
+- Curso: Aplicaciones Web (1ASI0730)
 - NRC: 8074
 - Profesor: Sánchez Ponce, Alex Humberto
 - Startup: ApexCode

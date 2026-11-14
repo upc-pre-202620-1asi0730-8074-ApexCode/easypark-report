@@ -123,9 +123,9 @@ Render. (2026). *Deploy for free*. https://render.com/docs/free
 |--------|----------------------------------------------------------------------------------------------------------|---------------|
 | AV1 | Presentación de la propuesta de negocio, Lean UX Process y primera versión del Landing Page| https://lix.li/U50Z |
 | TB1 | Especificación de requisitos (User Stories, Technical Stories, Impact Mapping y Product Backlog) y propuesta de Product Design | https://lix.li/uZ4zu |
-| AV2 | Exposición del Sprint 3 | Enlace por incorporar |
-| AV2 | Video About-the-Product (primera versión) | Enlace por incorporar |
-| AV2 | Video About-the-Team (primera versión) | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202324461_upc_edu_pe/IQCBzmfFLcZ6Rp8LmBJWbQEHAYx-5DytgR0AkkIYVTtGzsU?e=VfEVqR&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| AV2 | Exposición del Sprint 3 | https://lix.li/Z4XVX5 |
+| AV2 | Video About-the-Product (primera versión) | https://youtu.be/5vQjvJ_VTxE |
+| AV2 | Video About-the-Team (primera versión) | https://youtu.be/QKnrOvBO4II |
 
 ## Anexo B. Repositorios del Proyecto
 

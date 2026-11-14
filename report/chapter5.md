@@ -789,7 +789,7 @@ Se aplicará una evaluación heurística a la Web Application integrada usando l
 | 4 | Esteban Chávez señaló que la ubicación y la disponibilidad son decisivas al elegir un estacionamiento y propuso incorporar el tiempo estimado de llegada. | Búsqueda y detalle del estacionamiento | H2, H6 | 2 | Mostrar distancia y tiempo estimado y ofrecer un acceso directo a las indicaciones de ruta. |
 ## 5.4. Video About-the-Product
 
-**Estado:** el enlace del video About-the-Product se incorporará al informe cuando la grabación esté disponible.
+**Enlace del video About-the-Product:** https://youtu.be/5vQjvJ_VTxE
 
 **Objetivo:** mostrar en 3 a 5 minutos el problema, la propuesta de valor y el funcionamiento real de EasyPark con la Web Application conectada al RESTful API.
 
@@ -806,7 +806,7 @@ Se aplicará una evaluación heurística a la Web Application integrada usando l
 
 ## 5.5. Video About-the-Team
 
-**Enlace:** disponible en el Anexo A del informe. La duración debe comprobarse directamente en la grabación.
+**Enlace del video About-the-Team:** https://youtu.be/QKnrOvBO4II
 
 **Objetivo:** mostrar en 3 a 5 minutos cómo trabajó el equipo ApexCode durante el proyecto.
 

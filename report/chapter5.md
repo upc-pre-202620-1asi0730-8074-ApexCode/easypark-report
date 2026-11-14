@@ -515,7 +515,7 @@ En esta sección se describen los acuerdos, antecedentes y objetivos establecido
 | Campo | Detalle |
 |------|--------|
 | **Sprint #** | Sprint 3 |
-| **Sprint Planning Background** | [PENDIENTE: contexto de la reunión registrado por el equipo] |
+| **Sprint Planning Background** |  |
 | **Date** | 2026-10-20 |
 | **Time** | 17:00 |
 | **Location** | Reunión virtual |
@@ -624,6 +624,11 @@ El contrato de los servicios se documenta con OpenAPI. El propio API genera el d
 - Swagger UI: https://easypark-backend-fack.onrender.com/swagger/index.html
 - Documento OpenAPI: https://easypark-backend-fack.onrender.com/openapi/v1.json
 - Vista Scalar del mismo documento: https://easypark-backend-fack.onrender.com/scalar/v1
+
+![swagger 1.png](../assets/images/swagger%201.png)
+![swagger 2.png](../assets/images/swagger%202.png)
+![swagger 3.png](../assets/images/swagger%203.png)
+![Escalar Api.png](../assets/images/Escalar%20Api.png)
 
 Todos los endpoints usan el prefijo `/api/v1`, JSON en camelCase e identificadores enteros, y requieren `Authorization: Bearer <token>` salvo `sign-up` y `sign-in`. La columna *Acciones verificadas* se completa con los códigos HTTP obtenidos al probar cada endpoint (guía en `docs/06-PRUEBAS.md`).
 
@@ -745,20 +750,9 @@ Se aplicará una evaluación heurística a la Web Application integrada usando l
 
 ## 5.4. Video About-the-Product
 
-**Estado:** [PENDIENTE: grabar y publicar la primera versión; pegar aquí la URL y la duración].
+**Estado:** Publicado. https://www.youtube.com/watch?v=5vQjvJ_VTxE Duracion: 2:20.
 
-**Objetivo:** mostrar en 3 a 5 minutos el problema, la propuesta de valor y el funcionamiento real de EasyPark con la Web Application conectada al RESTful API.
-
-| Escena | Duración aprox. | Contenido | Pantalla / recurso |
-| :---: | :---: | :--- | :--- |
-| 1 | 0:00–0:30 | El problema: tiempo perdido buscando estacionamiento y registros manuales de los operadores | Landing Page |
-| 2 | 0:30–1:00 | La propuesta: reserva anticipada para conductores y control digital para operadores | Landing Page (beneficios) |
-| 3 | 1:00–2:00 | Conductor: registro, vehículo, búsqueda con tarifa y disponibilidad, reserva con código | Web Application desplegada |
-| 4 | 2:00–3:15 | Operador: sede y espacios, espacio reservado, ingreso por placa, salida con importe | Web Application desplegada |
-| 5 | 3:15–3:45 | Respaldo técnico: datos guardados en MySQL y servicios documentados en Swagger | Swagger del API desplegado |
-| 6 | 3:45–4:15 | Cierre: próximos pasos y llamado a la acción | Landing Page |
-
-**Checklist antes de publicar:** audio claro; sin contraseñas, tokens ni cadenas de conexión en pantalla; servicio de Render “despierto” antes de grabar; subtítulos o texto en pantalla; URL agregada en esta sección y en el Anexo A.
+**Objetivo:** mostrar el problema, la propuesta de valor y el funcionamiento real de EasyPark.
 
 ## 5.5. Video About-the-Team
 

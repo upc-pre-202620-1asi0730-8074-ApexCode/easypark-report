@@ -506,7 +506,7 @@ El equipo mantuvo un ritmo de trabajo organizado, repartiendo la carga por bound
 
 ### 5.2.3 Sprint 3
 
-En esta sección se detalla la evolución del proyecto durante el Sprint 3, que marca la transición de la API simulada con json-server hacia un RESTful API real desarrollado en ASP.NET Core 10 con persistencia en MySQL. El alcance comprende los servicios web de los contextos Identity and Access Management, Profiles and Vehicles, Parking Management, Reservations y Access Control, la documentación del contrato con OpenAPI, el despliegue en la nube de los tres productos y la conexión de la Web Application con la nueva API.
+En esta sección se detalla la evolución del proyecto durante el Sprint 3, que marca la transición de la API simulada con json-server hacia un RESTful API real desarrollado en ASP.NET Core 10 con persistencia en MySQL. El alcance comprende los servicios web de Identity and Access Management, Profiles and Vehicles, Parking Management, Reservations y Access Control, así como la incorporación de Monitoring & Alerts, Notifications y Analytics & Reporting. Incluye también la documentación con OpenAPI, la persistencia en MySQL, el despliegue de la aplicación y del backend, y su integración mediante la API.
 
 #### 5.2.3.1 Sprint Planning 3
 
@@ -515,7 +515,7 @@ En esta sección se describen los acuerdos, antecedentes y objetivos establecido
 | Campo | Detalle |
 |------|--------|
 | **Sprint #** | Sprint 3 |
-| **Sprint Planning Background** | [PENDIENTE: contexto de la reunión registrado por el equipo] |
+| **Sprint Planning Background** | La planificación partió del Sprint 2, cuando la aplicación web consumía datos simulados con json-server. Para el Sprint 3 se priorizó implementar el RESTful API en ASP.NET Core, almacenar los datos en MySQL, conectar el frontend a los nuevos servicios y preparar el despliegue y la documentación de la solución. |
 | **Date** | 2026-10-20 |
 | **Time** | 17:00 |
 | **Location** | Reunión virtual |
@@ -534,19 +534,20 @@ En esta sección se describen los acuerdos, antecedentes y objetivos establecido
 
 #### 5.2.3.2 Aspect Leaders and Collaborators
 
-Para el Sprint 3, el liderazgo se mantiene por bounded context, en continuidad con el Sprint 2, y se incorporan dos aspectos transversales: la persistencia y documentación del API, y la integración con el frontend.
+Durante el Sprint 3, el desarrollo se repartió por módulos del backend y por tareas de integración. La siguiente distribución refleja la implementación registrada en GitHub; las asignaciones iniciales del tablero de Trello se conservan en el Sprint Backlog.
 
-| **Team Member (Last Name, First Name)** | **GitHub Username** | **IAM y Profiles and Vehicles** | **Parking Management** | **Reservations** | **Access Control** | **Persistencia y OpenAPI** | **Integración Frontend** |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Evangelista Ygnacio, Sergio Joaquin | Sergi9017 | C | L | C | C | C | C |
-| Saravia Huaricancha, Arturo Axel | thunder053 | L | C | C | L | C | C |
-| Negrón Muñoz, Cayo Manuel Stefano | fano1106-n | C | C | C | C | C | L |
-| Martín Farro, Alexis Sebastián | axismf | C | C | C | C | L | C |
-| Lucas Córdova, Alvar | Alvarl | C | C | L | C | C | C |
+| Integrante | Usuario de GitHub | Responsabilidad principal | Colaboración e integración | Evidencia de commits |
+| :--- | :--- | :--- | :--- | :--- |
+| Sergio Evangelista | `Sergi9017` | Parking Management: sedes, espacios, servicios, repositorios y controladores | Integración de ramas, ajustes de configuración y URL de la API | `0dd56a4`, `0228484`, `0b3e4c8`, `826a0b3` |
+| Stefano Negrón | `Fano1106` / `fano1106-n` | Infraestructura compartida, EF Core, MySQL y migraciones de quince tablas | Pruebas del núcleo compartido, entrevistas y evaluación heurística | `4d9bf0e`, `bd295cf`, `27aec3c`, `82fad59` |
+| Alexis Martín | `axismf` | Monitoring & Alerts, Notifications y Analytics & Reporting | Pruebas, configuración de Docker/Render y documentación del informe | `85da43f`, `ee4511c`, `f7ac288`, `7c92df6` |
+| Alvar Córdova | `AlvarLC` | IAM y Profiles and Vehicles | Pruebas, integración del frontend con API real y resolución de conflictos | `08e3800`, `4475679`, `412ff28`, `a8da93d` |
+| Arturo Saravia | `thunder053` | Reservations y Access Control | Pruebas de integración, configuración de servicios y dependencias | `a853f2e`, `2947f22`, `2478752`, `defd344` |
 
+Los commits de integración pueden incluir trabajo previo de otros integrantes. Por ello se distingue entre autor de un commit de fusión y autor de los cambios implementados. Las evidencias se detallan en 5.2.3.8.
 #### 5.2.3.3 Sprint Backlog 3
 
-Las historias del Sprint 3 se descomponen en tareas técnicas. Los datos de horas, responsables y estado se completan con lo registrado en Trello.
+Las historias del Sprint 3 se descomponen en tareas técnicas. Las horas, responsables y estados corresponden a la planificación del tablero de Trello; las personas que implementaron los servicios se identifican por los commits en las secciones 5.2.3.2 y 5.2.3.8. La asignación de una tarea no equivale necesariamente a la autoría de su código.
 
 **URL del Board:** https://trello.com/b/KxGrDhN2/sprintseasypark
 ![Sprint 3 - Trello.png](../assets/images/Sprint%203%20-%20Trello.png)
@@ -567,7 +568,7 @@ Las historias del Sprint 3 se descomponen en tareas técnicas. Los datos de hora
 | (soporte) | Perfiles y vehículos | — | T3-12 | Endpoints de perfiles y vehículos | Recursos necesarios para asociar el vehículo a la reserva (sin puntos nuevos). | 5 | Saravia, Arturo | Verificado |
 | (técnica) | Persistencia y documentación | — | T3-13 | MySQL, migraciones y OpenAPI | Contexto de datos con EF Core, migraciones por bounded context y documentación OpenAPI con Scalar. | 8 | Martín, Alexis | Verificado |
 | (técnica) | Integración frontend | — | T3-14 | Conexión de la Web Application | Sustituir la URL de json-server por la del RESTful API y ajustar los assemblers. | 6 | Negrón, Cayo | Verificado |
-| (técnica) | Integración Landing | — | T3-15 | Enlaces Landing → Web App | Apuntar los botones de acción del Landing Page a la Web Application. | 2 | Negrón, Cayo | Verificado |
+| (técnica) | Integración Landing | — | T3-15 | Enlaces Landing → Web App | Apuntar los botones de acción del Landing Page a la Web Application. | 2 | Negrón, Cayo | Pendiente |
 | (técnica) | Despliegue del API | — | T3-16 | Dockerización y despliegue del API | Dockerfile, variables de entorno y publicación del RESTful API conectado a MySQL en la nube. | 4 | Martín, Alexis | Done |
 | (técnica) | Despliegue de la Web Application | — | T3-17 | Despliegue en Firebase Hosting | Build de Vite apuntando a la URL del API y publicacion de la Web Application en Firebase Hosting. | 3 | Negrón, Cayo | Done |
 | | **Total** | **42** | | | | **86** | | |
@@ -585,7 +586,7 @@ Las historias del Sprint 3 se descomponen en tareas técnicas. Los datos de hora
 | T3-11 / T3-14 | Implementado: la Web Application usa el RESTful API; las reglas de reserva y acceso se ejecutan en el servidor | `src/*/infrastructure`, `src/*/application` |
 | T3-12 | Implementado: perfiles y vehículos con reglas de propiedad | `EasyPark.Platform/Profiles` |
 | T3-13 | Implementado: EF Core + MySQL, migración inicial, OpenAPI (Swagger UI y vista Scalar) | `EasyPark.Platform/Shared`, `Program.cs` |
-| T3-15 | Enlaces Landing a Web App pendientes de verificacion en el sitio publico; no afirmar completado sin evidencia | `easypark-landing/index.html` |
+| T3-15 | Pendiente: los botones de inicio de sesión y registro de `index.html` llevan a secciones internas de la Landing Page y no a la Web Application | `easypark-landing/index.html` |
 | T3-16 | Desplegado en Render: `/health/live` HTTP 200 y `/health/ready` HTTP 200 con `database: connected` | `easypark-backend` y Render |
 | T3-17 | Desplegado en Firebase Hosting (42 archivos; `Deploy complete!`); prueba en navegador realizada | `easypark-webapp/firebase.json` y Firebase |
 
@@ -615,7 +616,7 @@ En esta iteración la Web Application deja de depender de json-server para los c
 7. Registro de la salida: permanencia cerrada con el importe cobrado. ![APP - Monitoring.png](../assets/images/APP%20-%20Monitoring.png)
 8. Historial de reservas del conductor . ![APP - Bookings.png](../assets/images/APP%20-%20Bookings.png)
 
-**Video de demostración:** [PENDIENTE: agregar enlace real del equipo; no confundir capturas de la interfaz con pruebas E2E].
+**Video de demostración:** aún no se ha incorporado el enlace de la grabación. Las capturas del sistema y las pruebas técnicas descritas en el informe no sustituyen la demostración de un recorrido completo.
 
 #### 5.2.3.5 Execution Evidence for Sprint Review
 
@@ -635,7 +636,7 @@ En esta entrega se comprobaron la compilacion del frontend y la conectividad del
 | Alertas, notificaciones y reportes | Pantallas y servicios disponibles en codigo | Pendiente comprobar ciclo funcional y persistencia |
 | Publicacion | `firebase deploy --only hosting --project easypark-5ffb2` | `Deploy complete!`; 42 archivos publicados |
 
-**Evidencias graficas por adjuntar:** capturas del login, perfil, sede creada y dos espacios libres tomados en la version desplegada; captura de `/health/ready`; historial de despliegues en Firebase y Render. Evitar mostrar JWT, contrasenas o cadenas de conexion.
+Las imágenes del registro, perfil, búsqueda, instalaciones, reservas y monitoreo aparecen en el apartado 5.2.3.4. Son evidencia visual de las pantallas del producto, pero no prueban por sí solas el funcionamiento completo del recorrido. Queda por incorporar la evidencia gráfica específica de `/health/ready` y del historial de despliegues en Firebase y Render. En las capturas deben ocultarse contraseñas, tokens y cadenas de conexión.
 
 **Incidencias no cerradas:** el navegador muestra `Invalid PrimeUI License`, pese a que se incluyo una clave Community en el build; `npm audit` reporto siete vulnerabilidades de severidad alta. Se registran como pendientes para el siguiente ciclo, no como pruebas aprobadas.
 #### 5.2.3.6 Services Documentation Evidence for Sprint Review
@@ -680,7 +681,7 @@ El equipo publico la Web Application en Firebase Hosting y la conecto al RESTful
 
 | Producto | Plataforma | Estado observado | URL |
 | :--- | :--- | :--- | :--- |
-| Landing Page | GitHub Pages | Publicada con anterioridad; enlaces a la app pendientes de comprobacion | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/ |
+| Landing Page | GitHub Pages | Publicada; los botones de acceso a la Web Application requieren actualización | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/ |
 | Web Application | Firebase Hosting | Nueva compilacion publicada; 42 archivos, `Deploy complete!` | https://easypark-5ffb2.web.app/ |
 | RESTful Web Services | Render | HTTP 200 en `/health/live`, `/health/ready`, Swagger y OpenAPI; CORS validado | https://easypark-backend-qheu.onrender.com |
 | Base de datos | Aiven MySQL | Conexion confirmada desde Render (`database: connected`); dos migraciones definen 15 tablas | No publicar credenciales |
@@ -688,26 +689,26 @@ El equipo publico la Web Application en Firebase Hosting y la conecto al RESTful
 En la defensa se deben mostrar capturas del panel de despliegue y el recorrido completo que pueda demostrarse; no se debe declarar que reservas, entradas, salidas o notificaciones estan validadas hasta probarlas. El aviso de licencia PrimeUI sigue pendiente y no afecta la verificacion de salud del API.
 #### 5.2.3.8 Team Collaboration Insights during Sprint
 
-La colaboración del Sprint 3 se evidencia con las estadísticas de GitHub de los repositorios del RESTful API y de la Web Application (**Insights → Contributors** y **Insights → Commits**), filtradas al periodo del sprint.
+El trabajo del Sprint 3 se puede seguir en los repositorios de GitHub del backend, la aplicación web y el informe. La figura muestra la actividad de contribución registrada por el equipo.
+
 ![Sprint 3 - Contributions.png](../assets/images/Sprint%203%20-%20Contributions.png)
 
+A continuación se relacionan los principales aportes con commits específicos. La autoría corresponde al historial de Git y, en el caso de las fusiones, identifica la integración del trabajo sin atribuir al autor del merge todo el código incorporado.
 
-**Commits comprobados en GitHub (SHA abreviado).** Se presenta la evidencia por repositorio sin atribuir automaticamente la autoria individual; cada integrante debe verificar sus aportes con `git log --author` y GitHub Insights.
+| Integrante | Repositorio | Aporte documentado | Commits |
+| :--- | :--- | :--- | :--- |
+| Sergio Evangelista | Backend | Agregados y servicios de Parking Management, repositorios, recursos y controladores REST | [`0dd56a4`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/0dd56a4), [`361b527`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/361b527), [`0228484`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/0228484) |
+| Sergio Evangelista | Backend y Web Application | Integración de funcionalidades, restauración del núcleo compartido y configuración del API | [`0b3e4c8`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/0b3e4c8), [`b3d2533`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/b3d2533), [`826a0b3`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/826a0b3) |
+| Stefano Negrón | Backend | Estructura inicial, núcleo compartido, persistencia y migraciones para quince tablas | [`4d9bf0e`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/4d9bf0e), [`b016fca`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/b016fca), [`bd295cf`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/bd295cf) |
+| Stefano Negrón | Backend e informe | Pruebas del núcleo compartido, evaluación heurística y registro de entrevistas | [`27aec3c`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/27aec3c), [`82fad59`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report/commit/82fad59), [`e5a9e08`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report/commit/e5a9e08) |
+| Alexis Martín | Backend | Modelos, servicios REST y pruebas de monitoreo, alertas, notificaciones y reportes | [`85da43f`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/85da43f), [`ee4511c`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/ee4511c), [`b9cc923`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/b9cc923) |
+| Alexis Martín | Backend e informe | Configuración de despliegue, documentación de servicios, esquema de datos y evidencias de Sprint 3 | [`f7ac288`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/f7ac288), [`3c9ac35`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/3c9ac35), [`7c92df6`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report/commit/7c92df6) |
+| Alvar Córdova | Backend | Dominio IAM, autenticación JWT, perfiles, vehículos, persistencia y pruebas | [`daff530`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/daff530), [`08e3800`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/08e3800), [`4475679`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/4475679), [`c3e97d6`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/c3e97d6) |
+| Alvar Córdova | Web Application | Integración API-only del frontend, pruebas de contrato y resolución de conflictos de integración | [`412ff28`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/412ff28), [`a5bf352`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/a5bf352), [`a8da93d`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/a8da93d) |
+| Arturo Saravia | Backend | Dominio y API de Reservations y Access Control, persistencia de movimientos y permanencias | [`a853f2e`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/a853f2e), [`b3e5012`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/b3e5012), [`2947f22`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/2947f22) |
+| Arturo Saravia | Backend | Pruebas de integración, comprobaciones del API y corrección de dependencias | [`2478752`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/2478752), [`9df8cd7`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/9df8cd7), [`defd344`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/defd344) |
 
-| Repositorio | Commit | Evidencia de desarrollo o integracion |
-| :--- | :--- | :--- |
-| Web Application | [`412ff28`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/412ff28715e0a059b50115ebf6768fd569fb2c6c) | Integracion API-only, eliminacion de `json-server` y cuatro pruebas de contrato |
-| Web Application | [`a5bf352`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/a5bf352ec) | Incorporacion de `main` con resolucion de conflictos |
-| Web Application | [`6274136`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/6274136a) | Integracion de la rama de IAM |
-| Web Application | [`30d50bd`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/30d50bd657ac6c5d82c1409df65cf3fcd743fad0) | Integracion de pantallas Parking Management |
-| Web Application | [`a8da93d`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/a8da93d208184fc0dc8d33efbfcba3f41c6d07dc) | Cierre final de integracion; `main` y `develop` apuntaron al mismo commit |
-| Backend | [`0b3e4c8`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/0b3e4c80f) | Integracion de las funcionalidades extendidas |
-| Backend | [`b3d2533`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/b3d25338a) | Restauracion del kernel compartido |
-| Backend | [`1ab47fb`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/1ab47fb4c2518b1cc640b846a63de1e4679336af) | Cambio de la ruta raiz a la documentacion Scalar |
-| Informe | [`e2eabb53`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report/commit/e2eabb53b) | Evidencias y enlaces de despliegue de Sprint 3 |
-
-**Trazabilidad pendiente del equipo:** adjuntar captura de GitHub Insights/Contributors, responsables definitivos de cada tarea de Trello y los enlaces al video de demostracion. La fecha y asistentes de la reunion de planning se mantienen segun la documentacion existente.
-
+La distribución por componentes permitió desarrollar varios servicios de forma paralela. La integración posterior exigió conciliar contratos, dependencias y archivos compartidos; el historial de commits conserva esos cambios. Las tareas asignadas en Trello se revisan junto con estos registros para distinguir lo planificado de lo implementado.
 ## 5.3. Validation Interviews
 
 ### 5.3.1. Diseño de Entrevistas
@@ -742,7 +743,7 @@ La colaboración del Sprint 3 se evidencia con las estadísticas de GitHub de lo
 
 ### 5.3.2. Registro de Entrevistas
 
-Las entrevistas de validación deben realizarse con la versión integrada. Esta sección se completa con los datos reales de cada sesión; no contiene datos inventados.
+Este registro reúne las entrevistas realizadas a conductores y administradores de estacionamientos. Se presentan los datos de cada sesión y los comentarios que quedaron documentados.
 
 | N.° | Segmento | Entrevistado (nombre o seudónimo, con consentimiento) | Fecha | Duración | Entrevistador | Enlace a la grabación | Resumen de hallazgos |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -754,6 +755,7 @@ Las entrevistas de validación deben realizarse con la versión integrada. Esta 
 | 6 | Administrador / operador | Uziel | 12/11/2026 | 13:00 | Arturo Saravia |  https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312447_upc_edu_pe/IQDbI5UQgKyxS5anr2PcOXBcAespTfCwwlYeBZXwOzmPvfo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Mgj6hA | |
 | 7 | Administrador / operador | Diego Coartas | 12/11/2026 | 10:38  | Arturo Saravia | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312447_upc_edu_pe/IQD8251027PKTaTYs2rQPy_jAXnGg-O3oCyeju70hK4w9jw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Is9gFR | |
 
+En el registro constan siete participantes: cuatro conductores y tres administradores u operadores. Los comentarios documentados valoran la claridad de las tarifas, la disponibilidad de espacios y la facilidad de uso de las pantallas. Entre las mejoras sugeridas figuran reforzar los elementos visuales y facilitar la comparación por precio, distancia y disponibilidad. Las duraciones, grabaciones o respuestas que no aparecen en el registro original se mantienen sin atribuirles resultados no documentados.
 ![VI - KEVIN.png](../assets/images/VI%20-%20KEVIN.png)
 ![VI - ARISTIDES.png](../assets/images/VI%20-%20ARISTIDES.png)
 ![VI - ARTURO - DIEGO.png](../assets/images/VI%20-%20ARTURO%20-%20DIEGO.png)
@@ -781,15 +783,13 @@ Se aplicará una evaluación heurística a la Web Application integrada usando l
 
 | N.° | Problema | Tarea / pantalla | Heurística | Severidad | Recomendación |
 | :---: | :--- | :--- | :---: | :---: | :--- |
-| 1 | La tarjeta del estacionamiento no tiene un botón visible de “Reservar” ni parece clicable. | Buscar estacionamiento | H6, H7 | 2 | Agregar un botón “Reservar” y un efecto hover. |
-| 2 | La pantalla de login tiene un separador “or” sin ninguna opción alternativa debajo. | Inicio de sesión	 | H8, H4 | 1 | Mostrar “N/A” o “Sin reservas en el periodo”. |
-| 3 | Hallazgo de la entrevista 1 (Kevin Romero): la interfaz podría usar más íconos o imágenes para ser más visual. | General (conductor) | H8, H6 | 1 | Agregar íconos a los estados de reserva y a las tarjetas de estacionamiento. |
-| 4 | Hallazgo de la entrevista 1 (Kevin Romero): la interfaz podría usar más íconos o imágenes para ser más visual. | General (conductor) | H8, H6 | 1 | Agregar íconos a los estados de reserva y a las tarjetas de estacionamiento. |
-| 5 | Hallazgo de la entrevista 4 (Esteban Chavez): para confiar en la app necesita ver si hay espacios y dónde está el estacionamiento, y propuso mostrar el tiempo aproximado de llegada. Las tarjetas muestran tarifa, dirección y espacios libres, pero no distancia ni tiempo, y el mapa no tiene calles de referencia. | H2, H6 | 2 | Mostrar en cada tarjeta la distancia y el tiempo estimado y agregar un botón "Cómo llegar". |
-
+| 1 | La tarjeta del estacionamiento no presenta una acción de reserva suficientemente visible. | Búsqueda de estacionamientos | H6, H7 | 2 | Añadir un botón de reserva claramente identificable y un estado visual cuando el usuario pasa el cursor. |
+| 2 | La pantalla de inicio de sesión muestra el separador «or» sin ofrecer otra modalidad de acceso. | Inicio de sesión | H4, H8 | 1 | Eliminar el separador mientras no exista una segunda opción de autenticación. |
+| 3 | Durante la entrevista con Kevin Romero se sugirió incorporar más iconos o imágenes para facilitar la lectura de la interfaz. | Vistas del conductor | H6, H8 | 1 | Reforzar con iconos los estados de las reservas y las acciones principales de las tarjetas. |
+| 4 | Esteban Chávez señaló que la ubicación y la disponibilidad son decisivas al elegir un estacionamiento y propuso incorporar el tiempo estimado de llegada. | Búsqueda y detalle del estacionamiento | H2, H6 | 2 | Mostrar distancia y tiempo estimado y ofrecer un acceso directo a las indicaciones de ruta. |
 ## 5.4. Video About-the-Product
 
-**Estado:** [PENDIENTE: grabar y publicar la primera versión; pegar aquí la URL y la duración].
+**Estado:** el enlace del video About-the-Product se incorporará al informe cuando la grabación esté disponible.
 
 **Objetivo:** mostrar en 3 a 5 minutos el problema, la propuesta de valor y el funcionamiento real de EasyPark con la Web Application conectada al RESTful API.
 
@@ -806,7 +806,7 @@ Se aplicará una evaluación heurística a la Web Application integrada usando l
 
 ## 5.5. Video About-the-Team
 
-**Estado:** [PENDIENTE: grabar y publicar la primera versión; pegar aquí la URL y la duración].
+**Enlace:** disponible en el Anexo A del informe. La duración debe comprobarse directamente en la grabación.
 
 **Objetivo:** mostrar en 3 a 5 minutos cómo trabajó el equipo ApexCode durante el proyecto.
 

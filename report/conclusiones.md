@@ -16,9 +16,9 @@ La distribución del liderazgo por Bounded Contexts resultó ser una estrategia 
 
 Finalmente, se concluye que EasyPark no solo responde a una necesidad real de reducir el tiempo y estrés al buscar estacionamiento, sino que también representa una oportunidad para que los negocios mejoren significativamente su eficiencia de control, reduzcan pérdidas por registros erróneos y optimicen su supervisión mediante el uso de tecnología.
 
-**Avance de conclusiones del Sprint 3 (TB2).** En este sprint se construyó la primera versión de los Web Services de EasyPark en ASP.NET Core 10, con los bounded contexts de IAM, Profiles and Vehicles, Parking Management, Reservations y Access Control organizados en capas de dominio, aplicación, infraestructura e interfaces, y persistencia en MySQL mediante Entity Framework Core. Trasladar al servidor las reglas que antes resolvía el navegador —asignar y bloquear el espacio al reservar, y registrar ingresos y salidas con su permanencia y su cobro en una sola transacción— corrige inconsistencias del Sprint 2 y es la base para que la información de disponibilidad sea confiable, que era una de las necesidades más repetidas en las entrevistas.
+**Avance de conclusiones del Sprint 3 (AV2).** En este sprint se construyó la primera versión de los Web Services de EasyPark en ASP.NET Core 10, con los bounded contexts de IAM, Profiles and Vehicles, Parking Management, Reservations y Access Control organizados en capas de dominio, aplicación, infraestructura e interfaces, y persistencia en MySQL mediante Entity Framework Core. Trasladar al servidor las reglas que antes resolvía el navegador —asignar y bloquear el espacio al reservar, y registrar ingresos y salidas con su permanencia y su cobro en una sola transacción— corrige inconsistencias del Sprint 2 y es la base para que la información de disponibilidad sea confiable, que era una de las necesidades más repetidas en las entrevistas.
 
-La integración con la Web Application mostró que mantener el contrato REST definido en el Sprint 2 (rutas, nombres de campos e identificadores enteros) reduce el costo de reemplazar la API simulada, y que las diferencias con el diseño de base de datos del capítulo IV deben documentarse en cada iteración (sección 4.8.2). [PENDIENTE: completar esta conclusión con los resultados reales de las pruebas, del despliegue y de las entrevistas de validación del Sprint 3.]
+La integracion con la Web Application permitio registrar cuentas, editar perfiles y comprobar que una sede creada por el administrador aparezca en la busqueda del conductor con su tarifa y dos espacios disponibles. La API de Render devolvio `ready` y `database: connected`; la aplicacion fue publicada en Firebase. Se requiere completar las pruebas funcionales de reservas, accesos, notificaciones y reportes y adjuntar las evidencias correspondientes a las entrevistas.
 
 # Recomendaciones
 
@@ -30,15 +30,15 @@ La integración con la Web Application mostró que mantener el contrato REST def
 
 • **Adopción exitosa de Arquitectura y Tecnologías**: El equipo logró asentar sólidamente las bases de la Frontend Web Application utilizando Vue 3. La implementación de una arquitectura monolítica modular basada en Domain-Driven Design (DDD) permitió establecer límites claros entre los distintos módulos, organizando el código adecuadamente en las capas de dominio, aplicación, infraestructura y presentación.
 
-• **Priorización del Desarrollo y Despliegue del Backend**: Dado que la validación actual depende de una API simulada (json-server), se recomienda que en el próximo Sprint la prioridad técnica sea el desarrollo del Backend RESTful real en ASP.NET Core y la configuración de la base de datos relacional en la nube. Esto será vital para integrar las lógicas de negocio complejas (como las reservas y el control de ocupación).
+• **Verificacion posterior al despliegue del backend**: Render y MySQL ya estan conectados; priorizar pruebas de reserva, cancelacion, ingreso/salida y restricciones de autorizacion, con evidencias de datos persistidos.
 
 • **Refuerzo en la Integración Continua (CI)**: Como los demás Bounded Contexts (Reservations, Monitoring, Access Control) continúan desarrollándose en paralelo por diferentes miembros, se recomienda aumentar la frecuencia de integración de ramas y mantener revisiones de código cruzadas más estrictas para evitar los "pequeños retrasos en la integración" que el equipo ya había identificado como riesgo en el Sprint 1.
 
-• **Sobre la verificación del Sprint 3**: ejecutar las pruebas automatizadas del RESTful API y el recorrido funcional contra MySQL antes de registrar evidencias, y desplegar el API, la base de datos y la Web Application siguiendo las guías del paquete del Sprint 3.
+• **Sobre la verificacion del Sprint 3**: ya se comprobaron compilacion, cuatro pruebas de contrato, endpoints de salud, CORS y despliegue Firebase. Falta ejecutar el recorrido completo de reservas, accesos y reportes antes de considerarlos validados.
 
 • **Sobre los planes gratuitos de despliegue**: considerar que el servicio gratuito de Render se suspende tras 15 minutos sin tráfico y que Aiven puede apagar una base gratuita sin actividad; activar ambos servicios antes de cada demostración.
 
-• **Sobre los contextos pendientes**: implementar en los siguientes sprints los Web Services de Monitoring and Alerts, Notifications y Analytics and Reporting, que hoy se muestran solo con datos simulados.
+• **Sobre los contextos de soporte**: revisar en produccion los flujos de Monitoring and Alerts, Notifications y Analytics and Reporting, que ya cuentan con implementacion en el repositorio; no declarar que todos operan sin pruebas.
 
 # Bibliografía
 
@@ -123,9 +123,9 @@ Render. (2026). *Deploy for free*. https://render.com/docs/free
 |--------|----------------------------------------------------------------------------------------------------------|---------------|
 | AV1 | Presentación de la propuesta de negocio, Lean UX Process y primera versión del Landing Page| https://lix.li/U50Z |
 | TB1 | Especificación de requisitos (User Stories, Technical Stories, Impact Mapping y Product Backlog) y propuesta de Product Design | https://lix.li/uZ4zu |
-| TB2 | Exposición del Sprint 3 | [PENDIENTE: URL] |
-| TB2 | Video About-the-Product (primera versión) | [PENDIENTE: URL] |
-| TB2 | Video About-the-Team (primera versión) | [PENDIENTE: URL] |
+| AV2 | Exposición del Sprint 3 | [PENDIENTE: URL] |
+| AV2 | Video About-the-Product (primera versión) | [PENDIENTE: URL] |
+| AV2 | Video About-the-Team (primera versión) | [PENDIENTE: URL] |
 
 ## Anexo B. Repositorios del Proyecto
 
@@ -141,11 +141,11 @@ Render. (2026). *Deploy for free*. https://render.com/docs/free
 | Descripción                                          | Enlace |
 |------------------------------------------------------|--------|
 | Deployment de la Landing Page en GitHub Pages        | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/ |
-| Deployment de la Aplicación Web | https://easypark-webapp.onrender.com |
-| Deployment de los Web Services | https://easypark-backend-fack.onrender.com |
-| Swagger UI | https://easypark-backend-fack.onrender.com/swagger/index.html |
-| Documento OpenAPI | https://easypark-backend-fack.onrender.com/openapi/v1.json |
-| Vista Scalar | https://easypark-backend-fack.onrender.com/scalar/v1 |
+| Deployment de la Aplicación Web | https://easypark-5ffb2.web.app/ |
+| Deployment de los Web Services | https://easypark-backend-qheu.onrender.com |
+| Swagger UI | https://easypark-backend-qheu.onrender.com/swagger/index.html |
+| Documento OpenAPI | https://easypark-backend-qheu.onrender.com/openapi/v1.json |
+| Vista Scalar | https://easypark-backend-qheu.onrender.com/scalar/v1 |
 
 ## Anexo D. Diseño
 

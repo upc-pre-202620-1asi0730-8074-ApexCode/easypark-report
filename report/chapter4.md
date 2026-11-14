@@ -867,7 +867,7 @@ Finalmente, el siguiente diagrama integra las dieciocho tablas de la solución y
 
 ### 4.8.2. Esquema implementado en el Sprint 3
 
-Los diagramas anteriores representan el diseño objetivo de los ocho bounded contexts. En el Sprint 3 se implementó la persistencia de los cinco contextos del alcance de los Web Services —IAM, Profiles and Vehicles, Parking Management, Reservations y Access Control— con **ocho tablas** creadas por la migración de Entity Framework Core `20261025150000_InitialCreate`. Para mantener el contrato que ya utilizaba la Web Application del Sprint 2, el esquema implementado difiere del diseño en los siguientes puntos:
+Los diagramas anteriores representan el diseño objetivo de los ocho bounded contexts. En el Sprint 3 la migracion `20261025150000_InitialCreate` definio ocho tablas de IAM, Profiles and Vehicles, Parking Management, Reservations y Access Control. La migracion `20261102000000_ExtendedFeatures` agrego siete tablas (`alert_rules`, `alerts`, `notification_templates`, `notifications`, `occupancy_metrics`, `reports` y `refresh_tokens`), para un total de **quince tablas** definidas por el codigo fuente. Para mantener el contrato que ya utilizaba la Web Application del Sprint 2, el esquema implementado difiere del diseño en los siguientes puntos:
 
 | Aspecto | Diseño (4.8 y 4.8.1) | Implementado en el Sprint 3 | Motivo |
 | :--- | :--- | :--- | :--- |
@@ -879,7 +879,7 @@ Los diagramas anteriores representan el diseño objetivo de los ocho bounded con
 | Reserva | `parking_space_id`, `confirmed_at` | `parking_spot_id`, `parking_facility_id` y estado `CONFIRMED` desde su creación | La sede se conserva para consultar las reservas del operador sin recorrer los espacios |
 | Movimiento de acceso | sin placa | `plate_number` como registro histórico de la lectura en el punto de control | Auditoría de la lectura; la placa vigente sigue en `vehicles` |
 | Permanencia | vehículo y horas obtenidos de los movimientos | `vehicle_id`, `parking_facility_id`, `started_at`, `ended_at` | Consultas directas de permanencias abiertas por vehículo, espacio y sede |
-| Tablas aún no implementadas | `refresh_tokens`, `favorite_zones`, `zone_features`, tablas de Monitoring and Alerts, Analytics and Reporting y Notifications | — | Fuera del alcance de los Web Services del Sprint 3 |
+| Extension del esquema | Contextos adicionales del diseno objetivo | Siete tablas nuevas: `alert_rules`, `alerts`, `notification_templates`, `notifications`, `occupancy_metrics`, `reports` y `refresh_tokens` | Segunda migracion `20261102000000_ExtendedFeatures`; verificar la aplicacion del esquema completo en la DB real |
 
 Se mantienen las convenciones de 4.8: nombres en inglés y `snake_case`, instantes en `datetime(6)` en UTC con sufijo `_at`, montos `decimal(10,2)` con `currency`, booleanos con prefijo `is_`, estados como cadenas controladas (`AVAILABLE`, `CONFIRMED`, `OPERATOR_ADMIN`, etc.) y unicidad en `user_accounts.email`, `vehicles.plate_number`, `reservations.code` y el par (`facility_id`, `code`) de `parking_spots`.
 
@@ -996,6 +996,6 @@ erDiagram
 
 ![Esquema implementado en el Sprint 3](../assets/images/er-sprint3-implementado.png)
 
-**Figura 4.74.** Esquema implementado en el Sprint 3 (fuente: configuración de Entity Framework Core y migración inicial del RESTful API).
+**Figura 4.74.** Esquema inicial implementado en Sprint 3 (ocho tablas; migracion `InitialCreate`). **Actualizacion del AV2:** la segunda migracion `ExtendedFeatures` incorpora siete tablas mas. Pendiente regenerar esta figura para representar las quince en una sola imagen.
 
 [PENDIENTE: si el equipo lo requiere, regenerar las figuras 4.65 a 4.73 con PlantUML para reflejar esta versión]

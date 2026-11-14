@@ -1,4 +1,4 @@
-﻿# Capítulo V: Product Implementation, Validation & Deployment
+# Capítulo V: Product Implementation, Validation & Deployment
 
 ## 5.1. Software Configuration Management
 ### 5.1.1. Software Development Environment Configuration
@@ -21,7 +21,7 @@ Con el objetivo de garantizar un desarrollo fluido, estandarizado y consistente 
 | Automated Testing                   | xUnit / WebApplicationFactory / SQLite en memoria | Pruebas de dominio e integración del RESTful API (`dotnet test`). |
 | Cloud Database                      | Aiven for MySQL | Base de datos MySQL remota con TLS para el entorno desplegado. |
 | Web Services Hosting                | Render (Docker) | Publicación del contenedor del RESTful API con URL HTTPS. |
-| Web Application Hosting             | Render Static Site | Publicación de la Web Application compilada con Vite. |
+| Web Application Hosting             | Firebase Hosting | Publicación de la Web Application compilada con Vite. |
 
 ### 5.1.2. Source Code Management
 El código fuente del proyecto se gestionará utilizando Git como sistema de control de versiones y GitHub como plataforma de alojamiento, bajo una organización pública. Se adoptará un enfoque estructurado que favorezca la colaboración, la modularidad y el despliegue continuo mediante repositorios independientes para cada componente del sistema.
@@ -77,12 +77,12 @@ Para mantener un historial claro, consistente y facilitar la generación automá
 
 En esta sección se especifica la configuración y los pasos necesarios para el despliegue de cada uno de los productos que conforman la solución **EasyPark**. Se ha adoptado un enfoque de **Continuous Deployment (CD)** para asegurar que los cambios validados en los repositorios de GitHub se reflejen automáticamente en los entornos de producción mediante **GitHub Actions**.
 
-| Producto | Entorno de despliegue | Pipeline / Herramienta | Estado (TB2) |
+| Producto | Entorno de despliegue | Pipeline / Herramienta | Estado (AV2) |
 |---|---|---|---|
 | **Landing Page** | GitHub Pages | GitHub Actions | Desplegado. Pendiente: enlazar *Log in / Sign up* con la Web Application (T3-15) |
-| **Web Application (SPA)** | Render Static Site | `npm install && npm run build` con `VITE_EASYPARK_API_URL` = URL pública del API; variables de entorno configuradas en Render | Desplegada. URL: https://easypark-webapp.onrender.com |
-| **RESTful Web Services** | Contenedor Docker en Render (plan Free) | `Dockerfile` multi-stage (`dotnet/sdk:10.0` → `dotnet/aspnet:10.0`) y `render.yaml`; variables `ConnectionStrings__DefaultConnection`, `TokenSettings__Secret`, `Cors__AllowedOrigins` | Desplegado. URL: https://easypark-backend-fack.onrender.com |
-| **Base de datos** | Aiven for MySQL (plan Free, TLS obligatorio) | Migración de Entity Framework Core `20261025150000_InitialCreate` aplicada por el API al iniciar | Instancia activa. 15 tablas creadas. |
+| **Web Application (SPA)** | Firebase Hosting | `npm ci`, `npm run build` y `firebase deploy --only hosting --project easypark-5ffb2` | Desplegada: https://easypark-5ffb2.web.app |
+| **RESTful Web Services** | Render (ASP.NET Core 10) | Docker, CORS, JWT, migraciones de EF Core y conexion MySQL TLS | Desplegado: https://easypark-backend-qheu.onrender.com |
+| **Base de datos** | Aiven for MySQL | Migraciones `20261025150000_InitialCreate` y `20261102000000_ExtendedFeatures`; TLS obligatorio | Servicio accesible desde Render; esquema previsto de 15 tablas |
 
 Consideraciones de los planes gratuitos (consultadas el 25/10/2026): Render suspende el servicio tras 15 minutos sin tráfico y tarda cerca de un minuto en reactivarlo; Aiven puede apagar un servicio gratuito sin actividad y permite encenderlo de nuevo desde su consola; Firebase Spark ofrece 10 GB de almacenamiento y 360 MB/día de transferencia.
 
@@ -569,10 +569,10 @@ Las historias del Sprint 3 se descomponen en tareas técnicas. Los datos de hora
 | (técnica) | Integración frontend | — | T3-14 | Conexión de la Web Application | Sustituir la URL de json-server por la del RESTful API y ajustar los assemblers. | 6 | Negrón, Cayo | Verificado |
 | (técnica) | Integración Landing | — | T3-15 | Enlaces Landing → Web App | Apuntar los botones de acción del Landing Page a la Web Application. | 2 | Negrón, Cayo | Verificado |
 | (técnica) | Despliegue del API | — | T3-16 | Dockerización y despliegue del API | Dockerfile, variables de entorno y publicación del RESTful API conectado a MySQL en la nube. | 4 | Martín, Alexis | Done |
-| (técnica) | Despliegue de la Web Application | — | T3-17 | Despliegue en Render Static Site | Build de Vite apuntando a la URL del API y publicación de la Web Application en Render. | 3 | Negrón, Cayo | Done |
+| (técnica) | Despliegue de la Web Application | — | T3-17 | Despliegue en Firebase Hosting | Build de Vite apuntando a la URL del API y publicacion de la Web Application en Firebase Hosting. | 3 | Negrón, Cayo | Done |
 | | **Total** | **42** | | | | **86** | | |
 
-**Estado técnico de las tareas en la versión TB2 del código.** El estado de Trello lo registra el equipo; la siguiente tabla indica qué existe en el código entregado. *Implementado* significa que el código fuente está escrito y revisado estáticamente; **no** significa compilado, probado ni desplegado (ver 5.2.3.5 y 5.2.3.7).
+**Estado técnico de las tareas en el AV2.** El estado de Trello lo registra el equipo; la siguiente tabla indica qué existe en el código entregado. *Implementado* significa que el código fuente está escrito y revisado estáticamente; **no** significa compilado, probado ni desplegado (ver 5.2.3.5 y 5.2.3.7).
 
 | Task ID | Resultado en el código | Ubicación |
 | :--- | :--- | :--- |
@@ -582,24 +582,24 @@ Las historias del Sprint 3 se descomponen en tareas técnicas. Los datos de hora
 | T3-08 | Implementado: consulta por conductor, por vehículo, por estado y por id | `EasyPark.Platform/Reservations` |
 | T3-09 | Implementado: cancelación con liberación del espacio y vencimiento automático de reservas sin ingreso | `EasyPark.Platform/Reservations` |
 | T3-10 | Implementado: salida con cierre de permanencia, cobro y liberación del espacio (además del ingreso) | `EasyPark.Platform/AccessControl` |
-| T3-11 / T3-14 | Implementado: la Web Application usa el RESTful API; las reglas de reserva y acceso se ejecutan en el servidor | `frontend/src/*/infrastructure`, `frontend/src/*/application` |
+| T3-11 / T3-14 | Implementado: la Web Application usa el RESTful API; las reglas de reserva y acceso se ejecutan en el servidor | `src/*/infrastructure`, `src/*/application` |
 | T3-12 | Implementado: perfiles y vehículos con reglas de propiedad | `EasyPark.Platform/Profiles` |
 | T3-13 | Implementado: EF Core + MySQL, migración inicial, OpenAPI (Swagger UI y vista Scalar) | `EasyPark.Platform/Shared`, `Program.cs` |
-| T3-15 | Pendiente: el repositorio de la Landing no formó parte de este trabajo | — |
-| T3-16 | Preparado: `Dockerfile`, `docker-compose.yml`, `render.yaml`; pendiente el despliegue | `backend/`, raíz |
-| T3-17 | Preparado: `firebase.json` y `.env.production`; pendiente el despliegue | `frontend/` |
+| T3-15 | Enlaces Landing a Web App pendientes de verificacion en el sitio publico; no afirmar completado sin evidencia | `easypark-landing/index.html` |
+| T3-16 | Desplegado en Render: `/health/live` HTTP 200 y `/health/ready` HTTP 200 con `database: connected` | `easypark-backend` y Render |
+| T3-17 | Desplegado en Firebase Hosting (42 archivos; `Deploy complete!`); prueba en navegador realizada | `easypark-webapp/firebase.json` y Firebase |
 
 #### 5.2.3.4 Development Evidence for Sprint Review
 
-En el Sprint 3 se implementó la primera versión de los Web Services de EasyPark, **EasyPark Platform**, en C# con ASP.NET Core 10. El código se organiza como un monolito modular con un directorio por bounded context —`Iam`, `Profiles`, `ParkingManagement`, `Reservations` y `AccessControl`— y un núcleo compartido (`Shared`). Cada contexto se divide en las capas `Domain` (agregados, objetos de valor, comandos, consultas y contratos de repositorio), `Application` (servicios de comandos y consultas y fachada ACL), `Infrastructure` (configuración de Entity Framework Core y repositorios) e `Interfaces` (controladores REST, recursos y *assemblers*), siguiendo la estructura del proyecto de referencia del curso.
+En el Sprint 3 se implementó la primera versión de los Web Services de EasyPark, **EasyPark Platform**, en C# con ASP.NET Core 10. El codigo se organiza como un monolito modular que inicio con cinco bounded contexts —`Iam`, `Profiles`, `ParkingManagement`, `Reservations` y `AccessControl`— y se extendio con `MonitoringAlerts`, `Notifications` y `AnalyticsReporting` y un núcleo compartido (`Shared`). Cada contexto se divide en las capas `Domain` (agregados, objetos de valor, comandos, consultas y contratos de repositorio), `Application` (servicios de comandos y consultas y fachada ACL), `Infrastructure` (configuración de Entity Framework Core y repositorios) e `Interfaces` (controladores REST, recursos y *assemblers*), siguiendo la estructura del proyecto de referencia del curso.
 
 Principales decisiones de implementación:
 
-- **Persistencia:** Entity Framework Core 10 con el proveedor `MySql.EntityFrameworkCore` sobre MySQL 8; ocho tablas con identificadores enteros y columnas en `snake_case` (ver 4.8.2); migración `20261025150000_InitialCreate` aplicada al iniciar el API.
+- **Persistencia:** Entity Framework Core 10 con el proveedor `MySql.EntityFrameworkCore` sobre MySQL 8; quince tablas previstas por dos migraciones de EF Core: ocho iniciales (`20261025150000_InitialCreate`) y siete adicionales (`20261102000000_ExtendedFeatures`); columnas en `snake_case` (ver 4.8.2).
 - **Seguridad:** contraseñas con BCrypt, JWT firmado (HS256) con los claims `sub`, `email` y `role`, autorización por rol (`DRIVER`, `OPERATOR_ADMIN`, `OPERATOR_STAFF`) y verificación de propiedad en cada caso de uso.
 - **Reglas de negocio en el servidor:** la creación de una reserva asigna y bloquea el espacio en la misma transacción (control de concurrencia optimista en `parking_spots.version`); el registro de un ingreso o una salida valida la reserva, abre o cierra la permanencia, calcula el cobro y actualiza el espacio y la reserva en una sola transacción; las reservas sin ingreso vencen automáticamente.
 - **Errores:** respuestas `application/problem+json` con un `code` estable que la Web Application traduce (por ejemplo `no-availability`).
-- **Integración:** la Web Application dejó de modificar espacios y reservas desde el navegador y consume los nuevos comandos del API; los módulos fuera del alcance (alertas, notificaciones y reportes) se ocultan hasta contar con sus servicios.
+- **Integración:** la Web Application dejó de modificar espacios y reservas desde el navegador y consume los nuevos comandos del API; los módulos de alertas, notificaciones y reportes también tienen implementación de API y frontend en el repositorio integrado; sus flujos completos quedan pendientes de validacion funcional.
 - **Pruebas:** proyecto `EasyPark.Platform.Tests` con pruebas de dominio y de integración (xUnit y `WebApplicationFactory`).
 
 Repositorio del backend: https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend. Repositorio de la Web Application: https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp
@@ -615,54 +615,93 @@ En esta iteración la Web Application deja de depender de json-server para los c
 7. Registro de la salida: permanencia cerrada con el importe cobrado. ![APP - Monitoring.png](../assets/images/APP%20-%20Monitoring.png)
 8. Historial de reservas del conductor . ![APP - Bookings.png](../assets/images/APP%20-%20Bookings.png)
 
-**Video de demostración:** [PENDIENTE: URL]
+**Video de demostración:** [PENDIENTE: agregar enlace real del equipo; no confundir capturas de la interfaz con pruebas E2E].
 
+#### 5.2.3.5 Execution Evidence for Sprint Review
+
+En esta entrega se comprobaron la compilacion del frontend y la conectividad del API desplegado; los recorridos funcionales se documentan separando resultados observados y pruebas aun no realizadas. Esta distincion impide presentar capturas de interfaz como pruebas de todo el ciclo de reserva.
+
+| Prueba | Ejecucion / evidencia | Resultado |
+| :--- | :--- | :--- |
+| Compilacion de la Web Application | `npm run build` (Vite 8.3.2) | Correcta; 974 modulos transformados |
+| Pruebas de contrato API-only | `node --test tests/api-only-contract.test.mjs` | 4/4 correctas: sin json-server, reservas y accesos por API, URL de Render |
+| Backend activo | `GET /health/live` | HTTP 200 |
+| API y persistencia | `GET /health/ready` | HTTP 200; `{"status":"ready","database":"connected"}` |
+| Documentacion de servicios | `GET /swagger`, `GET /openapi/v1.json` | HTTP 200 en ambas rutas |
+| CORS del frontend publico | Preflight `OPTIONS /api/v1/authentication/sign-in` desde `https://easypark-5ffb2.web.app` | HTTP 204 con `access-control-allow-origin` correcto |
+| IAM y perfiles | Registro/inicio de sesion con cuentas nuevas de conductor y operador; consulta/edicion de perfil | Recorrido manual observado desde la Web Application |
+| Parking Management | El operador creo la sede `Prueba1`; el conductor la visualizo primero sin espacios y despues con dos espacios libres | Intercambio de datos observado entre roles, con API y MySQL conectados |
+| Reservas y control de acceso | Crear/cancelar reserva, entrada/salida, importe y liberacion del espacio | Pendiente de prueba funcional completa; no afirmar verificado |
+| Alertas, notificaciones y reportes | Pantallas y servicios disponibles en codigo | Pendiente comprobar ciclo funcional y persistencia |
+| Publicacion | `firebase deploy --only hosting --project easypark-5ffb2` | `Deploy complete!`; 42 archivos publicados |
+
+**Evidencias graficas por adjuntar:** capturas del login, perfil, sede creada y dos espacios libres tomados en la version desplegada; captura de `/health/ready`; historial de despliegues en Firebase y Render. Evitar mostrar JWT, contrasenas o cadenas de conexion.
+
+**Incidencias no cerradas:** el navegador muestra `Invalid PrimeUI License`, pese a que se incluyo una clave Community en el build; `npm audit` reporto siete vulnerabilidades de severidad alta. Se registran como pendientes para el siguiente ciclo, no como pruebas aprobadas.
 #### 5.2.3.6 Services Documentation Evidence for Sprint Review
 
 El contrato de los servicios se documenta con OpenAPI. El propio API genera el documento con Swashbuckle y lo publica en tres vistas:
 
-- Swagger UI: https://easypark-backend-fack.onrender.com/swagger/index.html
-- Documento OpenAPI: https://easypark-backend-fack.onrender.com/openapi/v1.json
-- Vista Scalar del mismo documento: https://easypark-backend-fack.onrender.com/scalar/v1
+- Swagger UI: https://easypark-backend-qheu.onrender.com/swagger/index.html
+- Documento OpenAPI: https://easypark-backend-qheu.onrender.com/openapi/v1.json
+- Vista Scalar del mismo documento: https://easypark-backend-qheu.onrender.com/scalar/v1
 
-Todos los endpoints usan el prefijo `/api/v1`, JSON en camelCase e identificadores enteros, y requieren `Authorization: Bearer <token>` salvo `sign-up` y `sign-in`. La columna *Acciones verificadas* se completa con los códigos HTTP obtenidos al probar cada endpoint (guía en `docs/06-PRUEBAS.md`).
+Todos los endpoints usan el prefijo `/api/v1`, JSON en camelCase e identificadores enteros, y requieren `Authorization: Bearer <token>` salvo `sign-up` y `sign-in`. La columna *Estado de pruebas* se completa con los códigos HTTP obtenidos al probar cada endpoint (guía en `docs/06-PRUEBAS.md`).
 
-| Bounded Context | Endpoint | Verbo HTTP | Propósito | Parámetros / cuerpo principal | Respuesta | Acciones verificadas |
+| Bounded Context | Endpoint | Verbo HTTP | Propósito | Parámetros / cuerpo principal | Respuesta | Estado de pruebas |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| IAM | `/api/v1/authentication/sign-up` | POST | Registra una cuenta `DRIVER` u `OPERATOR_ADMIN` | `email`, `password`, `role` | 201 · 400 · 409 | Verificado |
-| IAM | `/api/v1/authentication/sign-in` | POST | Valida credenciales y emite el JWT | `email`, `password` | 200 `{id, email, role, token}` · 401 · 403 | Verificado |
-| IAM | `/api/v1/authentication/password` | PUT | Cambia la contraseña de la cuenta autenticada | `currentPassword`, `newPassword` | 200 · 422 | Verificado |
-| Profiles and Vehicles | `/api/v1/profiles` | GET, POST | Consulta (`?userAccountId=`) y crea el perfil propio | `firstName`, `lastName`, `phone`, `companyName`, `jobTitle` | 200 · 201 · 409 | Verificado |
-| Profiles and Vehicles | `/api/v1/profiles/{id}` | GET, PUT | Detalle y actualización del perfil propio | — | 200 · 403 · 404 | Verificado |
-| Profiles and Vehicles | `/api/v1/vehicles` | GET, POST | Lista por `profileId`, búsqueda por `plateNumber` y registro de vehículos | `plateNumber`, `vehicleType`, `color`, `isDefault` | 200 · 201 · 409 | Verificado |
-| Profiles and Vehicles | `/api/v1/vehicles/{id}` | GET, PUT | Detalle, actualización, vehículo predeterminado y retiro del perfil | `profileId`, `vehicleType`, `color`, `isDefault` | 200 · 403 | Verificado |
-| Parking Management | `/api/v1/parking-facilities` | GET, POST | Búsqueda (`q`, `maxHourlyRate`, `onlyAvailable`, `latitude`, `longitude`) y registro de estacionamientos | `name`, `address`, `latitude`, `longitude`, `hourlyRate`, `openTime`, `closeTime` | 200 · 201 · 403 | Verificado |
-| Parking Management | `/api/v1/parking-facilities/{id}` | GET, PUT | Detalle con tarifa, ubicación y disponibilidad; actualización | — | 200 · 404 | Verificado |
-| Parking Management | `/api/v1/parking-spots` | GET, POST | Espacios de una sede (`facilityId`) y registro de espacios | `facilityId`, `code`, `level`, `spotType` | 200 · 201 · 409 | Verificado |
-| Parking Management | `/api/v1/parking-spots/{id}` | GET, PUT | Detalle, edición y cambio manual de estado | `code`, `level`, `spotType`, `status` | 200 · 409 | Verificado |
-| Reservations | `/api/v1/reservations` | GET, POST | Consulta de reservas y creación con asignación de espacio | `vehicleId`, `parkingFacilityId`, `startAt`, `durationMinutes` | 200 · 201 · 409 | Verificado |
-| Reservations | `/api/v1/reservations/{id}` | GET, PUT | Detalle y cancelación (`status: CANCELLED`) | `status` | 200 · 409 | Verificado |
-| Reservations | `/api/v1/reservations/{id}/cancellation` | POST | Cancelación explícita | — | 200 · 409 | Verificado |
-| Access Control | `/api/v1/access-movements` | GET, POST | Historial por sede y registro de ingreso/salida por placa | `parkingFacilityId`, `plateNumber`, `movementType`, `registrationMethod`, `reservationCode` | 200 · 201 (`COMPLETED`, `REJECTED`, `UNDER_REVIEW`) | Verificado |
-| Access Control | `/api/v1/access-movements/{id}` | GET, PUT | Detalle y cierre de una revisión (`REJECTED`) | `status`, `note` | 200 · 409 | Verificado |
-| Access Control | `/api/v1/parking-stays` | GET | Permanencias por sede (`parkingFacilityId`, `open`) | — | 200 | Verificado |
-| Access Control | `/api/v1/parking-stays/{id}` | GET, PUT | Detalle y reasignación de espacio | `parkingSpotId` | 200 · 409 | Verificado |
+| IAM | `/api/v1/authentication/sign-up` | POST | Registra una cuenta `DRIVER` u `OPERATOR_ADMIN` | `email`, `password`, `role` | 201 · 400 · 409 | Endpoint documentado; prueba individual pendiente |
+| IAM | `/api/v1/authentication/sign-in` | POST | Valida credenciales y emite el JWT | `email`, `password` | 200 `{id, email, role, token}` · 401 · 403 | Endpoint documentado; prueba individual pendiente |
+| IAM | `/api/v1/authentication/password` | PUT | Cambia la contraseña de la cuenta autenticada | `currentPassword`, `newPassword` | 200 · 422 | Endpoint documentado; prueba individual pendiente |
+| Profiles and Vehicles | `/api/v1/profiles` | GET, POST | Consulta (`?userAccountId=`) y crea el perfil propio | `firstName`, `lastName`, `phone`, `companyName`, `jobTitle` | 200 · 201 · 409 | Endpoint documentado; prueba individual pendiente |
+| Profiles and Vehicles | `/api/v1/profiles/{id}` | GET, PUT | Detalle y actualización del perfil propio | — | 200 · 403 · 404 | Endpoint documentado; prueba individual pendiente |
+| Profiles and Vehicles | `/api/v1/vehicles` | GET, POST | Lista por `profileId`, búsqueda por `plateNumber` y registro de vehículos | `plateNumber`, `vehicleType`, `color`, `isDefault` | 200 · 201 · 409 | Endpoint documentado; prueba individual pendiente |
+| Profiles and Vehicles | `/api/v1/vehicles/{id}` | GET, PUT | Detalle, actualización, vehículo predeterminado y retiro del perfil | `profileId`, `vehicleType`, `color`, `isDefault` | 200 · 403 | Endpoint documentado; prueba individual pendiente |
+| Parking Management | `/api/v1/parking-facilities` | GET, POST | Búsqueda (`q`, `maxHourlyRate`, `onlyAvailable`, `latitude`, `longitude`) y registro de estacionamientos | `name`, `address`, `latitude`, `longitude`, `hourlyRate`, `openTime`, `closeTime` | 200 · 201 · 403 | Endpoint documentado; prueba individual pendiente |
+| Parking Management | `/api/v1/parking-facilities/{id}` | GET, PUT | Detalle con tarifa, ubicación y disponibilidad; actualización | — | 200 · 404 | Endpoint documentado; prueba individual pendiente |
+| Parking Management | `/api/v1/parking-spots` | GET, POST | Espacios de una sede (`facilityId`) y registro de espacios | `facilityId`, `code`, `level`, `spotType` | 200 · 201 · 409 | Endpoint documentado; prueba individual pendiente |
+| Parking Management | `/api/v1/parking-spots/{id}` | GET, PUT | Detalle, edición y cambio manual de estado | `code`, `level`, `spotType`, `status` | 200 · 409 | Endpoint documentado; prueba individual pendiente |
+| Reservations | `/api/v1/reservations` | GET, POST | Consulta de reservas y creación con asignación de espacio | `vehicleId`, `parkingFacilityId`, `startAt`, `durationMinutes` | 200 · 201 · 409 | Endpoint documentado; prueba individual pendiente |
+| Reservations | `/api/v1/reservations/{id}` | GET, PUT | Detalle y cancelación (`status: CANCELLED`) | `status` | 200 · 409 | Endpoint documentado; prueba individual pendiente |
+| Reservations | `/api/v1/reservations/{id}/cancellation` | POST | Cancelación explícita | — | 200 · 409 | Endpoint documentado; prueba individual pendiente |
+| Access Control | `/api/v1/access-movements` | GET, POST | Historial por sede y registro de ingreso/salida por placa | `parkingFacilityId`, `plateNumber`, `movementType`, `registrationMethod`, `reservationCode` | 200 · 201 (`COMPLETED`, `REJECTED`, `UNDER_REVIEW`) | Endpoint documentado; prueba individual pendiente |
+| Access Control | `/api/v1/access-movements/{id}` | GET, PUT | Detalle y cierre de una revisión (`REJECTED`) | `status`, `note` | 200 · 409 | Endpoint documentado; prueba individual pendiente |
+| Access Control | `/api/v1/parking-stays` | GET | Permanencias por sede (`parkingFacilityId`, `open`) | — | 200 | Endpoint documentado; prueba individual pendiente |
+| Access Control | `/api/v1/parking-stays/{id}` | GET, PUT | Detalle y reasignación de espacio | `parkingSpotId` | 200 · 409 | Endpoint documentado; prueba individual pendiente |
 
 #### 5.2.3.7 Software Deployment Evidence for Sprint Review
 
-Para el Sprint 3 se preparó la configuración de despliegue de los tres productos. El despliegue en sí y sus evidencias quedan a cargo del equipo, siguiendo las guías `docs/02-MYSQL-REMOTO.md`, `docs/04-DESPLIEGUE-BACKEND.md` y `docs/05-DESPLIEGUE-FRONTEND.md` del paquete del Sprint 3.
+El equipo publico la Web Application en Firebase Hosting y la conecto al RESTful API de Render, con base de datos MySQL remota de Aiven. El enlace a Landing Page se conserva, pero sus botones de acceso deben verificarse directamente. La evidencia final incluye las comprobaciones de salud, CORS, Swagger y el despliegue de Vite en Firebase.
 
-| Producto | Plataforma | Configuración incluida | Estado | URL |
-| :--- | :--- | :--- | :--- | :--- |
-| Landing Page | GitHub Pages | — | Desplegada (verificado que responde el 25/10/2026). Pendiente: enlaces hacia la Web Application | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/index.html?lang=es |
-| Web Application | Render Static Site | Variables de entorno configuradas en Render, build con Vite | Desplegada | https://easypark-webapp.onrender.com |
-| RESTful Web Services | Render (contenedor Docker) | `Dockerfile`, `render.yaml`, variables de entorno configuradas | Desplegado. `/health/ready` → `{"status":"ready","database":"connected"}` | https://easypark-backend-fack.onrender.com |
-| Base de datos | Aiven for MySQL | Cadena de conexión con `SslMode=Required`, migración automática | Activa. 15 tablas creadas. | — (no se publica la cadena de conexión) |
+| Producto | Plataforma | Estado observado | URL |
+| :--- | :--- | :--- | :--- |
+| Landing Page | GitHub Pages | Publicada con anterioridad; enlaces a la app pendientes de comprobacion | https://upc-pre-202620-1asi0730-8074-apexcode.github.io/easypark-landing/ |
+| Web Application | Firebase Hosting | Nueva compilacion publicada; 42 archivos, `Deploy complete!` | https://easypark-5ffb2.web.app/ |
+| RESTful Web Services | Render | HTTP 200 en `/health/live`, `/health/ready`, Swagger y OpenAPI; CORS validado | https://easypark-backend-qheu.onrender.com |
+| Base de datos | Aiven MySQL | Conexion confirmada desde Render (`database: connected`); dos migraciones definen 15 tablas | No publicar credenciales |
 
+En la defensa se deben mostrar capturas del panel de despliegue y el recorrido completo que pueda demostrarse; no se debe declarar que reservas, entradas, salidas o notificaciones estan validadas hasta probarlas. El aviso de licencia PrimeUI sigue pendiente y no afecta la verificacion de salud del API.
 #### 5.2.3.8 Team Collaboration Insights during Sprint
 
 La colaboración del Sprint 3 se evidencia con las estadísticas de GitHub de los repositorios del RESTful API y de la Web Application (**Insights → Contributors** y **Insights → Commits**), filtradas al periodo del sprint.
 ![Sprint 3 - Contributions.png](../assets/images/Sprint%203%20-%20Contributions.png)
+
+
+**Commits comprobados en GitHub (SHA abreviado).** Se presenta la evidencia por repositorio sin atribuir automaticamente la autoria individual; cada integrante debe verificar sus aportes con `git log --author` y GitHub Insights.
+
+| Repositorio | Commit | Evidencia de desarrollo o integracion |
+| :--- | :--- | :--- |
+| Web Application | [`412ff28`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/412ff28715e0a059b50115ebf6768fd569fb2c6c) | Integracion API-only, eliminacion de `json-server` y cuatro pruebas de contrato |
+| Web Application | [`a5bf352`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/a5bf352ec) | Incorporacion de `main` con resolucion de conflictos |
+| Web Application | [`6274136`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/6274136a) | Integracion de la rama de IAM |
+| Web Application | [`30d50bd`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/30d50bd657ac6c5d82c1409df65cf3fcd743fad0) | Integracion de pantallas Parking Management |
+| Web Application | [`a8da93d`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-webapp/commit/a8da93d208184fc0dc8d33efbfcba3f41c6d07dc) | Cierre final de integracion; `main` y `develop` apuntaron al mismo commit |
+| Backend | [`0b3e4c8`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/0b3e4c80f) | Integracion de las funcionalidades extendidas |
+| Backend | [`b3d2533`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/b3d25338a) | Restauracion del kernel compartido |
+| Backend | [`1ab47fb`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-backend/commit/1ab47fb4c2518b1cc640b846a63de1e4679336af) | Cambio de la ruta raiz a la documentacion Scalar |
+| Informe | [`e2eabb53`](https://github.com/upc-pre-202620-1asi0730-8074-ApexCode/easypark-report/commit/e2eabb53b) | Evidencias y enlaces de despliegue de Sprint 3 |
+
+**Trazabilidad pendiente del equipo:** adjuntar captura de GitHub Insights/Contributors, responsables definitivos de cada tarea de Trello y los enlaces al video de demostracion. La fecha y asistentes de la reunion de planning se mantienen segun la documentacion existente.
 
 ## 5.3. Validation Interviews
 
